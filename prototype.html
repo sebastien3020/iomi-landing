@@ -185,6 +185,13 @@ tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#26BC4B',hover:'#21A742'
   .bcard:hover,.bphoto:hover,.ban:hover{transform:none}
   .bphoto:hover .bphoto-img,.ban:hover .ban-img{transform:scale(1.03)}
 }
+
+/* --- comparison table --- */
+.cmp-row{transition:background .25s}
+.cmp-row:hover{background:rgba(255,255,255,.02)}
+.cmp-iomi{background:rgba(38,188,75,.07);border-left:1px solid rgba(38,188,75,.22);border-right:1px solid rgba(38,188,75,.22)}
+.cmp-iomi-h{background:rgba(38,188,75,.07);border-left:1px solid rgba(38,188,75,.22);border-right:1px solid rgba(38,188,75,.22);border-top:1px solid rgba(38,188,75,.22);border-radius:12px 12px 0 0}
+tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radius:0 0 12px 12px}
 </style>
 </head>
 <body>
@@ -589,6 +596,27 @@ tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#26BC4B',hover:'#21A742'
   </div>
 </section>
 
+<!-- PROOF: OUTPERFORMANCE + TESTIMONIAL -->
+<section class="py-20 px-5 border-t border-bord fade">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 items-stretch">
+    <div class="rounded-[18px] p-7 flex flex-col" style="background:#111212;border:1px solid rgba(255,255,255,0.10)">
+      <h3 class="text-xl font-semibold mb-1">Outperformance that compounds</h3>
+      <p class="text-xs text-td mb-6">IOMI portfolio vs S&amp;P 500 — trailing 12 months</p>
+      <div class="flex-1"></div>
+      <svg viewBox="0 0 560 200" class="w-full" aria-hidden="true"><defs><linearGradient id="og" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#26BC4B28"/><stop offset="100%" stop-color="#26BC4B00"/></linearGradient></defs><line x1="0" y1="20" x2="560" y2="20" stroke="#ffffff08" stroke-width="1"/><line x1="0" y1="70" x2="560" y2="70" stroke="#ffffff08" stroke-width="1"/><line x1="0" y1="120" x2="560" y2="120" stroke="#ffffff08" stroke-width="1"/><line x1="0" y1="170" x2="560" y2="170" stroke="#ffffff08" stroke-width="1"/><path class="fillfade" d="M0,150 L51,142 L102,146 L153,132 L204,136 L255,120 L306,124 L357,104 L408,96 L459,84 L510,72 L560,58 L560,200 L0,200 Z" fill="url(#og)"/><path class="draw" d="M0,172 L51,168 L102,170 L153,162 L204,165 L255,158 L306,160 L357,152 L408,154 L459,146 L510,148 L560,140" fill="none" stroke="#6b6f6c" stroke-width="1.5"/><path class="draw" d="M0,150 L51,142 L102,146 L153,132 L204,136 L255,120 L306,124 L357,104 L408,96 L459,84 L510,72 L560,58" fill="none" stroke="#26BC4B" stroke-width="2"/></svg>
+      <div class="hidden sm:flex justify-between text-[9px] text-tm mt-2 px-1"><span>Jan</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span><span>Nov</span></div>
+      <div class="flex items-center justify-between mt-4 text-[11px]"><div class="flex gap-5"><span class="flex items-center gap-1.5"><span class="inline-block w-4 h-0.5 rounded" style="background:#26BC4B"></span> IOMI portfolio</span><span class="flex items-center gap-1.5 text-td"><span class="inline-block w-4 h-0.5 rounded" style="background:#6b6f6c"></span> S&amp;P 500</span></div><span class="font-semibold" style="color:#26BC4B">+6.2% alpha</span></div>
+    </div>
+    <div class="rounded-[18px] p-8 flex flex-col relative overflow-hidden" style="background:#26BC4B;color:#041308">
+      <div class="absolute -right-16 -top-16 w-56 h-56 rounded-full pointer-events-none" style="background:rgba(255,255,255,.08)"></div>
+      <p class="text-[16px] leading-relaxed font-medium mb-7 relative">"IOMI found $180k sitting idle in week one. That decision alone paid for years of the subscription — like having an analyst by my side all day."</p>
+      <div class="flex items-center gap-3 relative"><img src="assets/avatar.png" alt="Early-access user portrait" class="w-10 h-10 rounded-full object-cover"><div><div class="text-sm font-bold">Early-access user</div><div class="text-xs" style="opacity:.65">Founder · 2 entities</div></div></div>
+      <div class="flex-1"></div>
+      <div class="relative mt-8"><div class="cnt text-5xl font-bold tracking-tight">$180,000</div><div class="text-xs mt-1.5" style="opacity:.75">found idle in year one</div></div>
+    </div>
+  </div>
+</section>
+
 <!-- IDLE CASH CALCULATOR -->
 <section id="calc" class="relative py-24 px-5 overflow-hidden fade">
   <img src="assets/brief-bg.png" alt="" class="absolute inset-0 w-full h-full object-cover">
@@ -631,6 +659,22 @@ tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#26BC4B',hover:'#21A742'
       <div class="flex items-start gap-4"><span class="pfi" style="margin-top:2px">✓</span><div><div class="text-[15px] font-semibold mb-1">IOMI can never touch your money</div><div class="text-xs text-td leading-relaxed">Read-only via Plaid — it never even sees your bank password.</div></div></div>
       <div class="flex items-start gap-4"><span class="pfi" style="margin-top:2px">✓</span><div><div class="text-[15px] font-semibold mb-1">Nothing moves without you</div><div class="text-xs text-td leading-relaxed">No payments, no transfers, no changes to your accounts. Ever.</div></div></div>
       <div class="flex items-start gap-4"><span class="pfi" style="margin-top:2px">✓</span><div><div class="text-[15px] font-semibold mb-1">Encrypted end to end</div><div class="text-xs text-td leading-relaxed">Even the AI never sees your account numbers.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON: SEE THE DIFFERENCE -->
+<section class="py-20 px-5 border-t border-bord fade">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">See the difference</h2>
+      <p class="text-td text-sm max-w-md mx-auto">IOMI does what no spreadsheet can — and what no bank will.</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full" style="min-width:640px;border-collapse:separate;border-spacing:0">
+        <thead><tr><th class="pb-4 pr-4 text-left text-xs font-normal text-tm w-[34%]"></th><th class="pb-4 px-4 text-center text-xs font-semibold text-td w-[22%]">Bank apps</th><th class="pb-4 px-4 text-center text-xs font-semibold text-td w-[22%]">Spreadsheets</th><th class="cmp-iomi-h pb-4 px-4 text-center text-xs font-bold w-[22%]" style="color:#26BC4B">IOMI</th></tr></thead>
+        <tbody><tr class="cmp-row border-t border-bord"><td class="py-4 pr-4 text-sm">Net worth in real time</td><td class="py-4 px-4 text-center text-tm">✗</td><td class="py-4 px-4 text-center text-tm">✗</td><td class="cmp-iomi py-4 px-4 text-center font-semibold" style="color:#42DC68">✓</td></tr><tr class="cmp-row border-t border-bord"><td class="py-4 pr-4 text-sm">All asset classes</td><td class="py-4 px-4 text-center text-tm">✗</td><td class="py-4 px-4 text-center text-td text-xs">Manual</td><td class="cmp-iomi py-4 px-4 text-center font-semibold" style="color:#42DC68">✓</td></tr><tr class="cmp-row border-t border-bord"><td class="py-4 pr-4 text-sm">Business + personal, separated</td><td class="py-4 px-4 text-center text-tm">✗</td><td class="py-4 px-4 text-center text-tm">✗</td><td class="cmp-iomi py-4 px-4 text-center font-semibold" style="color:#42DC68">✓</td></tr><tr class="cmp-row border-t border-bord"><td class="py-4 pr-4 text-sm">AI recommendations</td><td class="py-4 px-4 text-center text-tm">✗</td><td class="py-4 px-4 text-center text-tm">✗</td><td class="cmp-iomi py-4 px-4 text-center font-semibold" style="color:#42DC68">✓</td></tr><tr class="cmp-row border-t border-bord"><td class="py-4 pr-4 text-sm">Goals that track themselves</td><td class="py-4 px-4 text-center text-tm">✗</td><td class="py-4 px-4 text-center text-td text-xs">Manual</td><td class="cmp-iomi py-4 px-4 text-center font-semibold" style="color:#42DC68">✓</td></tr><tr class="cmp-row border-t border-bord"><td class="py-4 pr-4 text-sm">Capital Efficiency Score</td><td class="py-4 px-4 text-center text-tm">✗</td><td class="py-4 px-4 text-center text-tm">✗</td><td class="cmp-iomi py-4 px-4 text-center font-semibold" style="color:#42DC68">✓</td></tr><tr class="cmp-row border-t border-bord"><td class="py-4 pr-4 text-sm">Time it takes you</td><td class="py-4 px-4 text-center text-td text-xs">Hours</td><td class="py-4 px-4 text-center text-td text-xs">A weekend</td><td class="cmp-iomi py-4 px-4 text-center font-semibold" style="color:#42DC68">30 sec</td></tr></tbody>
+      </table>
     </div>
   </div>
 </section>
