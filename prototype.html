@@ -206,6 +206,10 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 .cta-arr{width:40px;height:40px;border-radius:999px;background:#0b0d0c;display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.22,1,.36,1)}
 .cta-rings:hover .cta-main{transform:scale(1.02);box-shadow:0 8px 36px rgba(0,0,0,.4),0 0 70px rgba(38,188,75,.2)}
 .cta-rings:hover .cta-arr{transform:rotate(45deg)}
+
+.cta-play{width:58px;height:58px;border-radius:999px;background:#F9F9F9;display:flex;align-items:center;justify-content:center;margin-left:34px;box-shadow:0 6px 30px rgba(0,0,0,.35),0 0 40px rgba(38,188,75,.10);position:relative;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.cta-play:before{content:"";position:absolute;inset:-10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);pointer-events:none}
+.cta-play:hover{transform:scale(1.07)}
 </style>
 </head>
 <body>
@@ -230,6 +234,7 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
     <p class="hero-in text-lg sm:text-xl text-td max-w-2xl mx-auto mb-6 leading-relaxed" style="--hd:.16s">Bank accounts, company equity, real estate, crypto — even the watch on your wrist. One dashboard. One score. One plan.</p>
     <div class="hero-in flex items-center justify-center mt-2 mb-2" style="--hd:.24s">
       <a href="#pricing" class="cta-rings"><span class="cta-main">Start for free<span class="cta-arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+      <button type="button" onclick="playVideo()" class="cta-play" aria-label="Watch the tour"><svg width="15" height="15" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#0a0c0b"/></svg></button>
     </div>
     <p class="hero-in text-xs text-tm mt-4" style="--hd:.32s">1-month free trial · No credit card required</p>
   </div>
