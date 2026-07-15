@@ -218,6 +218,19 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 @media (max-width:767px){.sheet-arrow svg{transform:rotate(90deg)}}
 @keyframes sheetArrow{0%,100%{transform:translateX(0);opacity:.7}50%{transform:translateX(8px);opacity:1}}
 @media (prefers-reduced-motion: reduce){.sheet-arrow{animation:none}}
+
+/* --- hero wave transition --- */
+.hero-wave{position:absolute;left:-3%;right:-3%;bottom:-2px;height:170px;z-index:4;pointer-events:none;will-change:transform}
+.hw{position:absolute;left:0;right:0;bottom:0;width:100%;height:100%;will-change:transform}
+.hw1{animation:hwA 16s ease-in-out infinite alternate}
+.hw2{animation:hwB 21s ease-in-out infinite alternate}
+@keyframes hwA{from{transform:translateX(-1.5%) translateY(0)}to{transform:translateX(1.5%) translateY(3px)}}
+@keyframes hwB{from{transform:translateX(1%) translateY(2px)}to{transform:translateX(-1%) translateY(-2px)}}
+.hw-blend{position:absolute;left:0;right:0;bottom:120px;height:120px;background:linear-gradient(180deg,transparent,rgba(10,12,11,.45))}
+@media (max-width:1024px){.hero-wave{height:110px}.hw-blend{bottom:80px;height:90px}
+  @keyframes hwA{from{transform:translateX(-1.1%) translateY(0)}to{transform:translateX(1.1%) translateY(2px)}}}
+@media (max-width:640px){.hero-wave{height:72px}.hw-blend{bottom:50px;height:60px}}
+@media (prefers-reduced-motion: reduce){.hw1,.hw2{animation:none}}
 </style>
 </head>
 <body>
@@ -282,6 +295,11 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
       </div>
     </div>
     <p class="text-xs text-tm mt-6 text-center">Synced via <span class="text-tp font-medium">Plaid</span> — plus everything Plaid can&#39;t see: real estate, collectibles, private equity.</p>
+  </div>
+  <div class="hero-wave" aria-hidden="true">
+    <div class="hw-blend"></div>
+    <svg class="hw hw2" viewBox="0 0 1600 180" preserveAspectRatio="none"><path fill="#0a0c0b" fill-opacity="0.16" d="M0,120 C200,88 380,64 560,84 C760,106 880,140 1060,124 C1220,110 1330,70 1470,78 C1520,81 1570,92 1600,100 L1600,180 L0,180 Z"/></svg>
+    <svg class="hw hw1" viewBox="0 0 1600 180" preserveAspectRatio="none"><path fill="#0a0c0b" d="M0,96 C180,60 340,118 520,104 C700,90 820,34 1010,52 C1180,68 1290,128 1440,118 C1520,112 1570,96 1600,88 L1600,180 L0,180 Z"/></svg>
   </div>
 </section>
 
@@ -1059,6 +1077,19 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
     gsap.fromTo('.ban-img',{y:-8},{y:8,ease:'none',scrollTrigger:{trigger:'#benefits',start:'top bottom',end:'bottom top',scrub:1}});
   }
   benePar();
+})();
+</script>
+
+<script>
+(function(){
+  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function waveInit(){
+    if(!window.gsap || !window.ScrollTrigger) return setTimeout(waveInit,400);
+    if(rm) return;
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to('.hero-wave',{y:10,ease:'none',scrollTrigger:{trigger:'#hero',start:'center top',end:'bottom top',scrub:1}});
+  }
+  waveInit();
 })();
 </script>
 </body>
