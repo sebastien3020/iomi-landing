@@ -120,7 +120,7 @@ tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#26BC4B',hover:'#21A742'
 .pw-sub-l{font-size:9px;color:#63675f;display:flex;align-items:center;gap:4px;white-space:nowrap}
 .pw-sub-l span{font-size:7px}
 .pw-sub-v{font-size:13px;font-weight:700;color:#101211;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.proc-content{position:relative}
+.proc-content{position:relative;overflow:hidden}
 .ptxt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;pointer-events:none;padding:0 46px}
 @media (max-width:1100px){.ptxt{padding:0 30px}}
 .pvis:not([data-step="0"]),.ptxt:not([data-step="0"]){opacity:0}
@@ -878,9 +878,9 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
       var vis=gsap.utils.toArray('.pvis'), txt=gsap.utils.toArray('.ptxt'), dots=gsap.utils.toArray('.pdot');
       var fill=document.getElementById('proc-fill'), inner=document.querySelector('.proc-inner');
       var lastIdx=-1;
-      vis.forEach(function(v,i){ if(i>0) gsap.set(v,{opacity:0}); });
-      txt.forEach(function(t,i){ gsap.set(t,{opacity:1}); if(i>0) gsap.set(t.querySelectorAll('.pel'),{opacity:0}); });
-      var tl=gsap.timeline({defaults:{ease:'power2.inOut'},scrollTrigger:{
+      vis.forEach(function(v,i){ if(i>0) gsap.set(v,{opacity:0}); gsap.set(v,{willChange:'transform,opacity,filter'}); });
+      txt.forEach(function(t,i){ gsap.set(t,{opacity:i?0:1,willChange:'transform,opacity,filter'}); });
+      var tl=gsap.timeline({defaults:{ease:'power3.out'},scrollTrigger:{
         trigger:wrap, start:'top top', end:'bottom bottom', scrub:0.8, invalidateOnRefresh:true,
         onUpdate:function(st){
           var p=st.progress;
@@ -893,18 +893,14 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
           }
         }
       }});
+      // reference-exact criss-cross: image exits UP / enters from BOTTOM, text exits DOWN / enters from TOP (staggered)
+      var K=0.42;
       for(var i=0;i<3;i++){
-        var base=i+0.75;
-        tl.to(vis[i],{opacity:0,y:-45,scale:0.96,filter:'blur(3px) brightness(.88)',duration:0.35,ease:'power2.in'},base);
-        tl.fromTo(vis[i+1],
-          {opacity:0,y:70,scale:1.06,clipPath:'inset(12% 0% 0% 0%)',filter:'blur(5px) brightness(1)'},
-          {opacity:1,y:0,scale:1,clipPath:'inset(0% 0% 0% 0%)',filter:'blur(0px) brightness(1)',duration:0.45,ease:'power2.out'},base+0.1);
-        var w=vis[i+1].querySelectorAll('.pwidget');
-        if(w.length) tl.fromTo(w,{opacity:0,y:30,scale:0.94},{opacity:1,y:0,scale:1,duration:0.3,ease:'power2.out'},base+0.28);
-        tl.to(txt[i].querySelectorAll('.pel'),{opacity:0,y:-18,filter:'blur(3px)',duration:0.22,stagger:0.02,ease:'power2.in'},base);
-        tl.fromTo(txt[i+1].querySelectorAll('.pel'),
-          {opacity:0,y:28,filter:'blur(4px)'},
-          {opacity:1,y:0,filter:'blur(0px)',duration:0.3,stagger:0.05,ease:'power2.out'},base+0.18);
+        var base=i+0.72;
+        tl.to(vis[i],{yPercent:-100,opacity:0,filter:'blur(3px)',duration:0.8*K,ease:'power2.inOut'},base);
+        tl.fromTo(vis[i+1],{yPercent:100,opacity:0,filter:'blur(3px)'},{yPercent:0,opacity:1,filter:'blur(0px)',duration:1.0*K},base);
+        tl.to(txt[i],{yPercent:100,opacity:0,filter:'blur(3px)',duration:0.8*K,ease:'power2.inOut'},base);
+        tl.fromTo(txt[i+1],{yPercent:-100,opacity:0,filter:'blur(3px)'},{yPercent:0,opacity:1,filter:'blur(0px)',duration:1.0*K},base+0.3*K);
       }
       vis.forEach(function(v,i){
         var img=v.querySelector('.pimg');
