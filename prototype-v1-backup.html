@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IOMI — The AI Wealth OS for Entrepreneurs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#26BC4B',hover:'#21A742',bright:'#42DC68'},base:'#0a0c0b',el1:'#111212',el2:'#1E1F1F',bord:'rgba(255,255,255,0.10)',bords:'rgba(254,255,254,0.20)',tp:'#F9F9F9',td:'#9BA29D',tm:'#7F7D83'},fontFamily:{sans:['Archivo','-apple-system','Segoe UI','sans-serif']}}}}
+</script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{background:#0a0c0b;color:#F9F9F9;font-family:'Archivo',-apple-system,'Segoe UI',sans-serif;overflow-x:hidden}
+  .grad{background:linear-gradient(135deg,#26BC4B,#42DC68);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .bar{height:6px;border-radius:3px;background:rgba(255,255,255,0.10);overflow:hidden}
+  .barf{height:100%;border-radius:3px;background:#26BC4B}
+  .pill{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,#019426,#008622);border:1.2px solid #005D17;border-radius:999px;padding:6px 20px 6px 6px;font-weight:600;font-size:15px;color:#fff;transition:all .2s;cursor:pointer}
+  .pill:hover{filter:brightness(1.12)}
+  .pill .ic{width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,0.14);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .pill .ic svg *{stroke:#fff}
+  .pill.ghost{background:transparent;border-color:rgba(254,255,254,0.20);color:#9BA29D}.pill.ghost .ic{background:#1E1F1F}.pill.ghost .ic svg *{stroke:#9BA29D}
+  .pill.ghost:hover{filter:none;border-color:#9BA29D}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#111212;border:1px solid rgba(255,255,255,0.10);border-radius:999px;padding:5px 14px 5px 6px;font-size:12px;color:#9BA29D}
+  .eyebrow .dot{width:20px;height:20px;border-radius:999px;background:#26BC4B22;display:flex;align-items:center;justify-content:center;color:#26BC4B;font-size:11px}
+  .fade{opacity:0;transform:translateY(28px);transition:all .7s cubic-bezier(.2,.7,.2,1)}
+  .fade.in{opacity:1;transform:none}
+  /* Goals — 3-step scroll narrative */
+  .step-panel{position:relative;scroll-margin-top:96px}
+  .gcard{background:#161717;border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:16px;transition:border-color .25s,transform .25s}
+  .gcard:hover{border-color:rgba(254,255,254,0.20);transform:translateY(-2px)}
+  .goal-steps{position:sticky;top:42vh}
+  .goal-steps::before{content:'';position:absolute;right:5px;top:26px;bottom:26px;width:2px;background:#26262a;border-radius:1px;z-index:-1}
+  .gs-item{display:flex;align-items:center;justify-content:flex-end;gap:12px;cursor:pointer;height:52px}
+  .gs-dot{width:11px;height:11px;border-radius:50%;border:2px solid #34343a;background:transparent;transition:all .35s cubic-bezier(.2,.7,.2,1);flex-shrink:0}
+  .gs-item:hover .gs-dot{border-color:#26BC4B}
+  .gs-item.active .gs-dot{background:#26BC4B;border-color:#26BC4B;transform:scale(1.35);box-shadow:0 0 0 4px #26BC4B22}
+  .gs-label{font-size:12px;color:#71717a;opacity:.5;transition:all .35s;white-space:nowrap;text-align:right}
+  .gs-item.active .gs-label{opacity:1;color:#f4f4f5;font-weight:600}
+  .stripebar{background:repeating-linear-gradient(90deg,rgba(54,180,96,.6) 0 2px,rgba(54,180,96,.12) 2px 4px)}
+  .tri-bar{background:linear-gradient(90deg,#26BC4B 0%,#ECB72C 30.8%,#ED2020 100%)}
+  .typing span{display:inline-block;width:4px;height:4px;border-radius:50%;background:#71717a;margin:0 1px;animation:blink 1.2s infinite}
+  .typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
+  @keyframes blink{0%,60%,100%{opacity:.2}30%{opacity:1}}
+  .marquee{display:flex;gap:16px;width:max-content;animation:scroll 45s linear infinite}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+  .logo-chip{display:flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:12px 20px;white-space:nowrap}
+  .logo-chip img{height:26px;width:26px;object-fit:contain;border-radius:6px}.logo-chip span{font-size:14px;color:#1c1c1f;font-weight:600}
+  .tcol{display:flex;flex-direction:column;gap:16px;animation:tscroll 32s linear infinite}
+  .tcol.rev{animation-direction:reverse;animation-duration:40s}
+  @keyframes tscroll{to{transform:translateY(-50%)}}
+  .tmarquee-wrap:hover .tcol{animation-play-state:paused}
+  .float{animation:float 6s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  .conn-bubble{position:absolute;width:64px;height:64px;border-radius:999px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.4);animation:float 6s ease-in-out infinite}
+  .nav-tr{background:transparent;border-bottom-color:transparent}
+  .nav-sd{background:rgba(10,12,11,.85);border-bottom-color:rgba(255,255,255,0.10)}
+  .conn-bubble:nth-child(3){animation-delay:.8s}.conn-bubble:nth-child(4){animation-delay:1.6s}.conn-bubble:nth-child(5){animation-delay:.4s}.conn-bubble:nth-child(6){animation-delay:1.2s}.conn-bubble:nth-child(7){animation-delay:2s}.conn-bubble:nth-child(8){animation-delay:.6s}.conn-bubble:nth-child(9){animation-delay:1.4s}
+  .conn-bubble img{width:34px;height:34px;object-fit:contain;border-radius:8px}
+  .mock{background:#111212;border:1px solid rgba(255,255,255,0.10);border-radius:14px;overflow:hidden}
+  .mock-top{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.10);background:rgba(30,31,31,.4)}
+  .dotm{width:9px;height:9px;border-radius:50%}
+  /* carousel */
+  .carousel{scroll-snap-type:x mandatory;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .carousel::-webkit-scrollbar{display:none}
+  .carousel>*{scroll-snap-align:start}
+  .car-dot{width:8px;height:8px;border-radius:50%;background:#34343a;transition:all .3s;cursor:pointer}
+  .car-dot.active{background:#26BC4B;width:24px;border-radius:4px}
+  /* arc logo */
+  .logodot{position:absolute;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.3);transition:opacity .8s}
+  .logodot img{object-fit:contain;border-radius:5px}
+  @keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  .logodot.float{animation:logoFloat var(--dur) ease-in-out infinite;animation-delay:var(--del)}
+  @keyframes arcRotate{0%{transform:rotate(0deg)}100%{transform:rotate(2deg)}}
+  .arc-group{animation:arcRotate 20s ease-in-out infinite alternate}
+  .reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  .car-panel{padding:0 4px}
+  /* motion system */
+  :root{--eo:cubic-bezier(.16,1,.3,1)}
+  .hero-in{opacity:0;transform:translateY(16px);animation:heroIn .9s var(--eo) var(--hd,0s) both}
+  @keyframes heroIn{to{opacity:1;transform:none}}
+  .logodot.arc-in{animation:arcIn .7s var(--eo) var(--ad,0s) both}
+  @keyframes arcIn{from{opacity:0;filter:blur(6px)}to{opacity:var(--op,1);filter:blur(0)}}
+  .pill:hover{transform:translateY(-1px)}
+  .pill:active{transform:scale(.98)}
+  .nl{position:relative;padding-bottom:2px}
+  .nl::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:2px;border-radius:1px;background:#26BC4B;transform:scaleX(0);transform-origin:left;transition:transform .3s var(--eo)}
+  .nl.active{color:#f4f4f5}
+  .nl.active::after{transform:scaleX(1)}
+  .bub-in{animation:msgIn .45s var(--eo) both}
+  @keyframes msgIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .step-panel.fade .gcard{opacity:0}
+  .step-panel.fade.in .gcard{animation:cardIn .55s var(--eo) both;animation-delay:calc(var(--i,0)*70ms)}
+  @keyframes cardIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .fillfade{opacity:0;transition:opacity 1.1s var(--eo) .5s}
+  .fillfade.on{opacity:1}
+  /* sales-page rhythm additions */
+  .fade.fl{transform:translateX(-28px)}
+  .fade.fr{transform:translateX(28px)}
+  .fade.zi{transform:scale(.95)}
+  .prob-line{opacity:0;transform:translateY(26px);transition:all .8s var(--eo)}
+  #problem.in .prob-line{opacity:1;transform:none;transition-delay:calc(var(--i,0)*.35s)}
+  .fade .hiw-chip{opacity:0}
+  .fade.in .hiw-chip{animation:cardIn .5s var(--eo) both;animation-delay:calc(.25s + var(--i,0)*.09s)}
+  .morph-a{transition:all 1s var(--eo) .8s}
+  .morph-b{opacity:0;transform:scale(.96) translateY(14px);transition:all 1s var(--eo) 1.05s}
+  #morph.in .morph-a{opacity:0;transform:scale(.965) rotate(-1.2deg)}
+  #morph.in .morph-b{opacity:1;transform:none}
+  .glowbiz{animation:none}
+  .fade.in .glowbiz{animation:bizGlow 1.6s var(--eo) .3s 1}
+  @keyframes bizGlow{0%{box-shadow:0 0 0px rgba(38,188,75,0)}45%{box-shadow:0 0 70px rgba(38,188,75,.28)}100%{box-shadow:0 0 40px rgba(38,188,75,.07)}}
+  .stripe-logos img{height:20px;width:20px;object-fit:contain;border-radius:5px}
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    .fade,.reveal,.step-panel.fade .gcard,.bub-in,.hero-in,.prob-line,.fade .hiw-chip,.morph-b{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 nav-tr" style="backdrop-filter:blur(0px)">
+  <div class="max-w-7xl mx-auto px-5 flex items-center justify-between h-16">
+    <a href="#hero" class="flex items-center"><img src="assets/iomi-logo.png" alt="IOMI" class="h-10 w-auto"></a>
+    <div class="hidden md:flex items-center gap-7 text-sm text-td"><a href="#ai" class="nl hover:text-tp transition">AI</a><a href="#dashboard" class="nl hover:text-tp transition">Dashboard</a><a href="#goals" class="nl hover:text-tp transition">Goals</a><a href="#capital-ideas" class="nl hover:text-tp transition">Capital Ideas</a><a href="#performance" class="nl hover:text-tp transition">Performance</a><a href="#pricing" class="nl hover:text-tp transition">Pricing</a></div>
+    <a href="#pricing" class="pill"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Create account</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="relative min-h-screen flex flex-col px-5 text-center overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_45%_at_center_top,_#26BC4B14_0%,_transparent_60%)] pointer-events-none"></div>
+  <div class="absolute inset-0 opacity-[0.015] pointer-events-none" style="background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,#26BC4B 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,#26BC4B 40px)"></div>
+  <div class="flex-1 flex flex-col items-center justify-center max-w-4xl mx-auto relative z-10 pt-20 pb-48 sm:pb-0">
+    <div class="hero-in inline-flex items-center gap-2 mb-6 text-sm text-td border border-bord rounded-full px-4 py-1.5 bg-el1/50" style="--hd:0s"><span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse"></span> Built for founders, operators & modern wealth builders</div>
+    <h1 class="hero-in text-5xl sm:text-7xl font-bold leading-[1.05] tracking-tight mb-6" style="--hd:.08s">Your wealth,<br /><span class="grad">intelligently organized.</span></h1>
+    <p class="hero-in text-lg sm:text-xl text-td max-w-2xl mx-auto mb-6 leading-relaxed" style="--hd:.16s">See, understand, and optimize your full financial picture across personal assets, business, real estate, investments, cash, and crypto — all in one unified dashboard.</p>
+    <div class="hero-in flex flex-col sm:flex-row items-center justify-center gap-3" style="--hd:.24s">
+      <a href="#pricing" class="pill"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Create your account</a>
+      <a href="javascript:void(0)" onclick="playVideo()" class="pill ghost"><span class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7z" fill="#a1a1aa"/></svg></span>Watch the tour</a>
+    </div>
+    <p class="hero-in text-xs text-tm mt-4" style="--hd:.32s">1-month free trial · No credit card required</p>
+  </div>
+  <div class="hero-in hidden lg:flex absolute right-[7%] top-[26%] z-10 items-center gap-2.5 px-4 py-2.5 rounded-2xl float" style="--hd:.5s;background:rgba(17,18,18,.7);border:1px solid rgba(254,255,254,0.14);backdrop-filter:blur(10px)"><span class="w-2 h-2 rounded-full" style="background:#26BC4B"></span><span class="text-sm font-semibold">$2.5B+</span><span class="text-xs text-td">assets tracked</span></div>
+  <div class="hero-in hidden lg:flex absolute left-[7%] top-[58%] z-10 items-center gap-2.5 px-4 py-2.5 rounded-2xl float" style="--hd:.65s;--dur:7s;background:rgba(17,18,18,.7);border:1px solid rgba(254,255,254,0.14);backdrop-filter:blur(10px)"><img src="assets/icon-ai-magic.svg" width="14" height="14" alt=""><span class="text-xs text-td">CES score</span><span class="text-sm font-semibold" style="color:#26BC4B">74</span></div>
+  <!-- Bank Stack Arc -->
+  <div class="absolute inset-0 pointer-events-none arc-group" id="arc-container">
+    <svg id="arc-line" class="absolute inset-0 w-full h-full"></svg>
+    <div id="logo-arc" class="absolute inset-0"></div>
+  </div>
+  <p class="hero-in relative z-10 text-xs text-tm pb-8 text-center" style="--hd:.55s">Securely connected via <span class="text-tp font-medium">Plaid</span> · You control what you connect</p>
+</section>
+
+<!-- VIDEO MODAL -->
+<div id="video-modal" class="fixed inset-0 z-[100] bg-black/70 backdrop-blur hidden items-center justify-center" onclick="closeVideo()">
+  <div class="relative w-full max-w-4xl mx-5 aspect-video rounded-2xl overflow-hidden" onclick="event.stopPropagation()">
+    <button onclick="closeVideo()" class="absolute -top-10 right-0 text-white/60 hover:text-white text-sm z-10">Close ✕</button>
+    <iframe id="video-frame" class="w-full h-full" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- SOCIAL PROOF STRIPE -->
+<section class="py-5 px-5 border-t border-b border-bord bg-el1/40 fade">
+  <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-td">
+    <span class="stripe-logos flex items-center gap-2"><img src="logos/chase.com.png" alt="Chase"><img src="logos/fidelity.com.png" alt="Fidelity"><img src="logos/coinbase.com.png" alt="Coinbase"><img src="logos/vanguard.com.png" alt="Vanguard"><img src="logos/schwab.com.png" alt="Schwab"></span>
+    <span><b class="text-tp">12,000+</b> institutions connectable</span>
+    <span class="hidden sm:inline text-tm">·</span>
+    <span>Trusted by <b class="text-tp">500+</b> founders &amp; operators</span>
+    <span class="hidden sm:inline text-tm">·</span>
+    <span>Secured via <b class="text-tp">Plaid</b></span>
+  </div>
+</section>
+
+<!-- PROBLEM AGITATE -->
+<section id="problem" class="relative py-28 sm:py-36 px-5 overflow-hidden fade">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_center,_#26BC4B08_0%,_transparent_60%)] pointer-events-none"></div>
+  <div class="max-w-3xl mx-auto relative z-10">
+    <h2 class="prob-line text-3xl sm:text-5xl font-bold leading-tight mb-10" style="--i:0">You're worth more than your bank account knows.</h2>
+    <div class="space-y-5 text-xl sm:text-2xl font-medium leading-snug">
+      <p class="prob-line text-td" style="--i:1">Your net worth isn't in one place.</p>
+      <p class="prob-line text-td" style="--i:2">Your business assets are scattered.</p>
+      <p class="prob-line text-td" style="--i:3">Your tax picture is a black box.</p>
+      <p class="prob-line text-td" style="--i:4">Your "spare cash" is doing nothing.</p>
+    </div>
+    <p class="prob-line mt-12 text-lg sm:text-xl font-semibold" style="--i:5"><span class="grad">IOMI puts your entire financial life on one screen.</span></p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="py-20 px-5 border-t border-bord">
+  <div class="max-w-3xl mx-auto text-center mb-16 fade">
+    <span class="eyebrow mb-4"><span class="dot">➜</span> How it works</span>
+    <h2 class="text-3xl sm:text-4xl font-bold mt-4 mb-4 leading-tight">From scattered accounts to your first insight.</h2>
+    <p class="text-td leading-relaxed max-w-xl mx-auto">Three steps. About ten minutes. No spreadsheet.</p>
+  </div>
+  <div class="max-w-5xl mx-auto space-y-20">
+
+    <div class="grid md:grid-cols-2 gap-10 items-center fade fl">
+      <div>
+        <div class="flex items-center gap-3 mb-4"><span class="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white" style="background:linear-gradient(90deg,#019426,#008622)">1</span><span class="text-xs text-tm uppercase tracking-wider">Step one</span></div>
+        <h3 class="text-2xl font-bold mb-3">Connect your accounts</h3>
+        <p class="text-td text-sm leading-relaxed max-w-md">Banks, brokerages, crypto exchanges, real estate, business entities — linked in minutes through Plaid. Read-only, encrypted, and you decide exactly what's shared.</p>
+      </div>
+      <div class="mock p-5">
+        <div class="flex items-center gap-3 rounded-[10px] p-3 mb-4" style="border:1px solid rgba(254,255,254,0.2)"><img src="logos/plaid.com.png" alt="Plaid" class="w-8 h-8 rounded-lg object-contain bg-white p-1"><div class="flex-1"><div class="text-sm font-medium">Connect with Plaid</div><div class="text-[10px] text-td">Bank-grade encryption · Read-only</div></div><span class="text-xs font-semibold text-white px-3.5 py-1.5 rounded-full" style="background:linear-gradient(90deg,#019426,#008622);border:1.2px solid #005D17">Connect</span></div>
+        <div class="grid grid-cols-4 gap-2.5">
+          <div class="hiw-chip flex flex-col items-center gap-1.5 py-3 rounded-[10px] border border-bord" style="--i:0"><img src="logos/chase.com.png" class="w-7 h-7 rounded-md object-contain" alt="Chase"><span class="text-[9px] text-td">Chase</span></div>
+          <div class="hiw-chip flex flex-col items-center gap-1.5 py-3 rounded-[10px] border border-bord" style="--i:1"><img src="logos/fidelity.com.png" class="w-7 h-7 rounded-md object-contain" alt="Fidelity"><span class="text-[9px] text-td">Fidelity</span></div>
+          <div class="hiw-chip flex flex-col items-center gap-1.5 py-3 rounded-[10px] border border-bord" style="--i:2"><img src="logos/coinbase.com.png" class="w-7 h-7 rounded-md object-contain" alt="Coinbase"><span class="text-[9px] text-td">Coinbase</span></div>
+          <div class="hiw-chip flex flex-col items-center gap-1.5 py-3 rounded-[10px] border border-bord" style="--i:3"><img src="logos/schwab.com.png" class="w-7 h-7 rounded-md object-contain" alt="Schwab"><span class="text-[9px] text-td">Schwab</span></div>
+          <div class="hiw-chip flex flex-col items-center gap-1.5 py-3 rounded-[10px] border border-bord" style="--i:4"><img src="logos/robinhood.com.png" class="w-7 h-7 rounded-md object-contain" alt="Robinhood"><span class="text-[9px] text-td">Robinhood</span></div>
+          <div class="hiw-chip flex flex-col items-center gap-1.5 py-3 rounded-[10px] border border-bord" style="--i:5"><img src="logos/kraken.com.png" class="w-7 h-7 rounded-md object-contain" alt="Kraken"><span class="text-[9px] text-td">Kraken</span></div>
+          <div class="hiw-chip flex flex-col items-center gap-1.5 py-3 rounded-[10px] border border-bord" style="--i:6"><img src="logos/bankofamerica.com.png" class="w-7 h-7 rounded-md object-contain" alt="Bank of America"><span class="text-[9px] text-td">BofA</span></div>
+          <div class="hiw-chip flex flex-col items-center justify-center gap-1.5 py-3 rounded-[10px] border border-dashed border-bords" style="--i:7"><span class="text-td text-lg leading-none">+</span><span class="text-[9px] text-td">12,000 more</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center fade fr">
+      <div class="md:order-2">
+        <div class="flex items-center gap-3 mb-4"><span class="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white" style="background:linear-gradient(90deg,#019426,#008622)">2</span><span class="text-xs text-tm uppercase tracking-wider">Step two</span></div>
+        <h3 class="text-2xl font-bold mb-3">IOMI maps your wealth</h3>
+        <p class="text-td text-sm leading-relaxed max-w-md">Every account becomes one living picture — net worth, allocation, liquidity, and your Capital Efficiency Score. Business and personal, side by side but never mixed.</p>
+      </div>
+      <div class="mock p-5 md:order-1">
+        <svg viewBox="0 0 400 190" class="w-full">
+          <line x1="70" y1="35" x2="180" y2="95" stroke="#26BC4B33" stroke-width="1"/>
+          <line x1="60" y1="95" x2="180" y2="95" stroke="#26BC4B33" stroke-width="1"/>
+          <line x1="70" y1="155" x2="180" y2="95" stroke="#26BC4B33" stroke-width="1"/>
+          <circle cx="70" cy="35" r="14" fill="#161717" stroke="#26BC4B55"/><text x="70" y="39" text-anchor="middle" fill="#9BA29D" font-size="9">🏦</text>
+          <circle cx="60" cy="95" r="14" fill="#161717" stroke="#26BC4B55"/><text x="60" y="99" text-anchor="middle" fill="#9BA29D" font-size="9">📈</text>
+          <circle cx="70" cy="155" r="14" fill="#161717" stroke="#26BC4B55"/><text x="70" y="159" text-anchor="middle" fill="#9BA29D" font-size="9">₿</text>
+          <circle cx="180" cy="95" r="17" fill="#0E2916" stroke="#26BC4B"/><text x="180" y="99" text-anchor="middle" fill="#42DC68" font-size="8" font-weight="700">IOMI</text>
+          <path class="draw" d="M212,130 L245,118 L270,124 L300,98 L330,106 L360,78 L390,60" fill="none" stroke="#26BC4B" stroke-width="2"/>
+          <text x="300" y="45" text-anchor="middle" fill="#F9F9F9" font-size="15" font-weight="600">$900,000</text>
+          <text x="300" y="60" text-anchor="middle" fill="#9BA29D" font-size="8">NET WORTH · LIVE</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center fade fl">
+      <div>
+        <div class="flex items-center gap-3 mb-4"><span class="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white" style="background:linear-gradient(90deg,#019426,#008622)">3</span><span class="text-xs text-tm uppercase tracking-wider">Step three</span></div>
+        <h3 class="text-2xl font-bold mb-3">Get your first insight</h3>
+        <p class="text-td text-sm leading-relaxed max-w-md">Within minutes, IOMI shows where your next dollar works hardest — and exactly what's dragging your score down.</p>
+      </div>
+      <div class="mock p-5">
+        <div class="flex items-center justify-between mb-3"><span class="text-sm font-semibold">Next Dollar Allocation</span><span class="text-[10px] px-2 py-0.5 rounded-xl" style="background:rgba(38,188,75,0.2);color:#26BC4B">First insight</span></div>
+        <div class="grid grid-cols-2 gap-3 mb-3">
+          <div class="border border-bord rounded-[10px] p-3"><div class="text-[11px] text-td">Invest 50%</div><div class="text-xl font-medium my-0.5">$25K</div><div class="text-[11px] text-td mb-2">Investments</div><div class="bar !h-1" style="background:#1E1F1F"><div class="barf" style="width:70%;background:#ADB42A"></div></div></div>
+          <div class="border border-bord rounded-[10px] p-3"><div class="text-[11px] text-td">Invest 25%</div><div class="text-xl font-medium my-0.5">$13K</div><div class="text-[11px] text-td mb-2">Real Estate</div><div class="bar !h-1" style="background:#1E1F1F"><div class="barf" style="width:50%;background:#1776D2"></div></div></div>
+        </div>
+        <div class="flex items-center gap-3 rounded-[10px] p-3 bg-el2"><span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="15" height="15" alt=""></span><span class="text-xs text-tp">Deploying idle cash here would lift your CES by <span style="color:#26BC4B">+6 pts</span></span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 1: DASHBOARD -->
+<section id="dashboard" class="py-20 px-5 border-t border-bord bg-el1/30 fade">
+  <div class="max-w-3xl mx-auto text-center mb-6">
+    <span class="eyebrow mb-4"><span class="dot">◎</span> Unified dashboard</span>
+    <h2 class="text-3xl sm:text-4xl font-bold mt-4 mb-4 leading-tight">Every asset, one view.</h2>
+    <p class="text-td leading-relaxed max-w-xl mx-auto">Connect banks, brokerages, real estate, business equity, crypto, and liabilities — personal and business, side by side. Your net worth and allocation update automatically as accounts sync.</p>
+  </div>
+  <div class="flex items-center justify-center mb-5">
+    <div class="inline-flex items-center rounded-full bg-el2 p-1">
+      <button onclick="setDash('personal')" id="d-personal" class="px-6 py-2 rounded-full text-sm font-medium text-tp transition" style="background:#111212">Personal</button>
+      <button onclick="setDash('business')" id="d-business" class="px-6 py-2 rounded-full text-sm text-td transition">Business</button>
+    </div>
+  </div>
+  <p class="text-center text-xs text-tm mb-6">↑ Switch the view — see how IOMI keeps personal and business wealth separate.</p>
+  <div class="max-w-6xl mx-auto mock overflow-hidden" id="dash-mock">
+    <div class="mock-top"><span class="dotm bg-[#ff5f57]"></span><span class="dotm bg-[#febc2e]"></span><span class="dotm bg-[#28c840]"></span></div>
+    <div class="flex">
+      <div class="hidden md:flex flex-col w-52 shrink-0 border-r border-bord p-4">
+        <div class="mb-7 px-2"><img src="assets/iomi-logo.png" alt="IOMI" class="h-9 w-auto"></div>
+        <span class="flex items-center gap-3 text-sm text-td px-3 py-2.5 rounded-[10px]"><img src="assets/icon-home.svg" width="17" height="17" alt="">Home</span>
+        <span class="flex items-center gap-3 text-sm text-td px-3 py-2.5 rounded-[10px]"><img src="assets/icon-insights.svg" width="17" height="17" alt="">Insights</span>
+        <span class="flex items-center gap-3 text-sm text-tp px-3 py-2.5 rounded-[10px] font-medium" style="background:rgba(205,255,218,0.1)"><img src="assets/icon-accounts.svg" width="17" height="17" alt="">Accounts</span>
+        <span class="flex items-center gap-3 text-sm text-td px-3 py-2.5 rounded-[10px]"><img src="assets/icon-goals.svg" width="17" height="17" alt="">Goals</span>
+        <div class="mt-auto pt-6">
+          <div class="flex items-center gap-2.5 px-1"><img src="assets/avatar.png" alt="" class="w-9 h-9 rounded-full shrink-0 object-cover"><div class="min-w-0"><div class="flex items-center gap-1.5"><span class="text-[11px] text-td truncate">@calvin453</span><span class="text-[9px] font-medium px-1.5 py-0.5 rounded-full text-white" style="background:#019426">Pro</span></div><div class="text-xs font-medium truncate">Calvin Mercer</div></div></div>
+        </div>
+      </div>
+      <div class="flex-1 p-5 min-w-0">
+        <div class="flex items-center justify-end mb-6">
+          <div class="flex items-center gap-2">
+            <span class="hidden sm:flex w-8 h-8 rounded-full items-center justify-center" style="border:1px solid rgba(254,255,254,0.2)"><img src="assets/icon-moon.svg" width="14" height="14" alt=""></span>
+            <span class="hidden sm:flex w-8 h-8 rounded-full items-center justify-center" style="border:1px solid rgba(254,255,254,0.2)"><img src="assets/icon-bell.svg" width="14" height="14" alt=""></span>
+            <button id="d-addbtn" class="flex items-center gap-1.5 text-white text-xs font-semibold pl-3 pr-4 py-2 rounded-full transition" style="background:linear-gradient(90deg,#019426,#008622);border:1.2px solid #005D17"><img src="assets/icon-plus.svg" width="13" height="13" alt="">Add Account</button>
+          </div>
+        </div>
+        <div id="d-bizhead" class="hidden mb-6">
+          <div class="flex items-center gap-2.5 mb-4"><div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#2651BC">AH</div><span class="text-sm font-semibold">Alpha Holdings LLC</span><span class="text-[10px] px-2 py-0.5 rounded" style="background:#092913;color:#26BC4B">Operator</span></div>
+          <div class="grid grid-cols-2 divide-x divide-[rgba(255,255,255,0.1)] border border-bord rounded-[10px]">
+            <div class="p-4"><div class="text-[11px] text-td mb-1">Book Value</div><div class="text-2xl font-medium">$1,030,000</div><div class="text-[11px]" style="color:#26BC4B">+$645,000 · +4.6% <span class="text-tm">vs last month</span></div></div>
+            <div class="p-4"><div class="text-[11px] text-td mb-1">Company Valuation</div><div class="text-2xl font-medium">$5,000,000</div><div class="text-[11px]" style="color:#26BC4B">+$4,900,000 · +490% <span class="text-tm">since founding</span></div></div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between mb-1">
+          <div class="flex items-center gap-1.5 text-sm font-semibold" id="d-nwlabel">Net Worth <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div class="flex items-center gap-2">
+            <div class="hidden sm:flex gap-0.5 text-[10px] text-td bg-el2 rounded-full p-0.5"><span class="px-2 py-1 rounded-full">1D</span><span class="px-2 py-1 rounded-full">1W</span><span class="px-2 py-1 rounded-full">1M</span><span class="px-2 py-1 rounded-full text-tp font-medium" style="background:#111212">1Y</span><span class="px-2 py-1 rounded-full">YTD</span><span class="px-2 py-1 rounded-full">ALL</span></div>
+            <span class="hidden sm:inline text-[10px] text-td bg-el2 rounded-full px-2.5 py-1.5">All Assets ▾</span>
+          </div>
+        </div>
+        <div class="text-[11px] text-tm mb-0.5">Feb 10, 2026</div>
+        <div class="flex items-baseline gap-2 mb-4"><span class="cnt text-3xl font-bold" id="d-nw">$900,000</span><span class="text-[11px] text-tm">1Y P&L</span><span class="text-xs font-medium" id="d-change" style="color:#26BC4B">+$135,000</span><span class="text-[11px] px-1.5 py-0.5 rounded" id="d-changepct" style="color:#26BC4B;background:#26BC4B15">+17.6%</span></div>
+        <div id="d-legend" class="items-center gap-4 text-[10px] text-td mb-2" style="display:none"><span class="flex items-center gap-1.5"><span class="w-3 h-0.5 inline-block" style="background:#978FE0"></span>Valuation</span><span class="flex items-center gap-1.5"><span class="w-3 h-0.5 inline-block" style="background:#57E776"></span>Book value</span></div>
+        <div class="flex gap-2 mb-8">
+          <div class="hidden sm:flex flex-col justify-between text-[10px] text-tm py-1 shrink-0 h-32"><span>$150K</span><span>$120K</span><span>$90K</span><span>$60K</span><span>$30K</span><span>$10K</span></div>
+          <div class="flex-1 min-w-0">
+            <svg viewBox="0 0 620 130" class="w-full h-32" preserveAspectRatio="none"><defs><linearGradient id="da" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#26BC4B30"/><stop offset="100%" stop-color="#26BC4B00"/></linearGradient></defs><line x1="0" y1="8" x2="620" y2="8" stroke="#ffffff08" stroke-width="1"/><line x1="0" y1="32" x2="620" y2="32" stroke="#ffffff08" stroke-width="1"/><line x1="0" y1="56" x2="620" y2="56" stroke="#ffffff08" stroke-width="1"/><line x1="0" y1="80" x2="620" y2="80" stroke="#ffffff08" stroke-width="1"/><line x1="0" y1="104" x2="620" y2="104" stroke="#ffffff08" stroke-width="1"/><path id="d-area" class="fillfade" d="M0,95 L62,82 L124,88 L186,58 L248,72 L310,48 L372,62 L434,38 L496,54 L558,30 L620,42 L620,130 L0,130 Z" fill="url(#da)"/><path id="d-line" class="draw" d="M0,95 L62,82 L124,88 L186,58 L248,72 L310,48 L372,62 L434,38 L496,54 L558,30 L620,42" fill="none" stroke="#26BC4B" stroke-width="2"/><path id="d-line2" d="" fill="none" stroke="#57E776" stroke-width="1.5" stroke-dasharray="5 4" style="display:none"/></svg>
+            <div class="hidden sm:flex justify-between text-[9px] text-tm mt-1.5 px-1"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>June</span><span>July</span><span>Aug</span><span>Sept</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="flex items-center gap-1.5 mb-3"><span class="text-lg font-semibold">Assets</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#71717a" stroke-width="1.6"/><path d="M12 11v5M12 8h.01" stroke="#71717a" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <div class="flex items-center gap-3 rounded-[10px] p-3 mb-4 bg-el2"><span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="15" height="15" alt=""></span><p class="text-xs text-tp leading-relaxed" id="d-assets-ai">Assets are well diversified, but liquidity is below optimal. Increasing the proportion of cash or short-term investments could help.</p></div>
+          <div class="grid lg:grid-cols-[1.5fr_1fr] gap-6 items-center">
+            <div>
+              <div class="grid grid-cols-[1.5fr_1fr_1fr] gap-2 text-[10px] text-tm px-3 pb-2 border-b border-bord"><span>Name</span><span class="text-right">Value</span><span class="text-right">P&L</span></div>
+              <div id="d-arows"></div>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="relative"><svg width="150" height="150" viewBox="0 0 150 150" class="-rotate-90" id="d-adonut"></svg><div class="absolute inset-0 flex flex-col items-center justify-center"><div class="text-lg font-bold" id="d-atotal">$1,250,000</div><div class="text-[10px] text-tm">Total Assets</div></div></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5 mb-3"><span class="text-lg font-semibold">Liabilities</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#71717a" stroke-width="1.6"/><path d="M12 11v5M12 8h.01" stroke="#71717a" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <div class="flex items-center gap-3 rounded-[10px] p-3 mb-4 bg-el2"><span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="15" height="15" alt=""></span><p class="text-xs text-tp leading-relaxed" id="d-liab-ai">The debt burden is concentrated in loans. Reducing or refinancing the debt could improve cash flow.</p></div>
+          <div class="grid lg:grid-cols-[1.5fr_1fr] gap-6 items-center">
+            <div>
+              <div class="grid grid-cols-[1.5fr_1fr_1fr] gap-2 text-[10px] text-tm px-3 pb-2 border-b border-bord"><span>Name</span><span class="text-right">Value</span><span class="text-right">P&L</span></div>
+              <div id="d-lrows"></div>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="relative"><svg width="150" height="150" viewBox="0 0 150 150" class="-rotate-90" id="d-ldonut"></svg><div class="absolute inset-0 flex flex-col items-center justify-center"><div class="text-lg font-bold" id="d-ltotal">$350,000</div><div class="text-[10px] text-tm">Total Liabilities</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS COUNTER ROW -->
+<section class="py-16 px-5 border-t border-bord bg-el1/30 fade">
+  <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div><div class="cnt text-3xl sm:text-4xl font-bold mb-1">$2.5B+</div><div class="text-xs text-td leading-snug">Assets tracked</div></div>
+    <div><div class="cnt text-3xl sm:text-4xl font-bold mb-1">12,000+</div><div class="text-xs text-td leading-snug">Institutions connected</div></div>
+    <div><div class="cnt text-3xl sm:text-4xl font-bold mb-1">500+</div><div class="text-xs text-td leading-snug">Founders trusting IOMI</div></div>
+    <div><div class="cnt text-3xl sm:text-4xl font-bold mb-1" style="color:#26BC4B">99.9%</div><div class="text-xs text-td leading-snug">Uptime SLA</div></div>
+  </div>
+</section>
+
+<!-- SECTION 2: AI & INTELLIGENCE -->
+<section id="ai" class="py-20 px-5 border-t border-bord fade">
+  <div class="max-w-6xl mx-auto text-center mb-10">
+    <span class="eyebrow mb-4"><span class="dot">✦</span> AI & intelligence</span>
+    <h2 class="text-3xl sm:text-4xl font-bold mt-4 mb-4 leading-tight">Your wealth, understood.</h2>
+    <p class="text-td max-w-xl mx-auto leading-relaxed">Ask, brief, and score your financial picture. IOMI's intelligence layer works across three dimensions.</p>
+  </div>
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+    <div class="mock flex flex-col" style="border:1px solid rgba(254,255,254,0.2)">
+      <div class="flex items-center justify-between px-5 py-4"><span class="text-[15px] font-semibold">Ask IOMI AI</span><img src="assets/chat-close.svg" width="18" height="18" alt="Close" class="opacity-80"></div>
+      <div id="chat-box" class="px-5 pb-4 flex flex-col justify-end gap-4 overflow-hidden" style="height:430px"></div>
+      <div class="px-4 pb-4 pt-1"><div class="flex items-center gap-2 rounded-full pl-4 pr-1.5 py-1.5" style="border:1px solid rgba(254,255,254,0.2)"><span class="flex-1 text-sm text-td truncate">Ask about your portfolio, risk, goals…</span><span class="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style="background:linear-gradient(110.5deg,rgba(87,231,118,0.12) 55.4%,rgba(255,252,162,0.12) 109.3%);border:1px solid rgba(254,255,254,0.12)"><img src="assets/send-arrow.svg" width="18" height="18" alt="Send"></span></div></div>
+    </div>
+    <div class="flex flex-col gap-5">
+      <div class="mock p-5">
+        <div class="flex items-center gap-2 mb-4 flex-wrap"><span class="text-[15px] font-semibold">Capital Efficiency Score</span><span class="text-[10px] px-2 py-0.5 rounded-xl" style="background:rgba(38,188,75,0.2);color:#26BC4B">+3 pts this month</span></div>
+        <div class="flex items-center gap-5 flex-wrap sm:flex-nowrap">
+          <div class="relative shrink-0 mx-auto" style="width:148px;height:148px">
+            <svg width="148" height="148" viewBox="0 0 150 150">
+              <defs><linearGradient id="cesg" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#019426"/><stop offset="55%" stop-color="#26BC4B"/><stop offset="100%" stop-color="#ECB72C"/></linearGradient></defs>
+              <circle cx="75" cy="75" r="62" fill="none" stroke="#1E1F1F" stroke-width="12" stroke-linecap="round" stroke-dasharray="292.2 97.4" transform="rotate(135 75 75)"/>
+              <circle id="ces-ring" data-fill="216.2" cx="75" cy="75" r="62" fill="none" stroke="url(#cesg)" stroke-width="12" stroke-linecap="round" stroke-dasharray="0 389.6" transform="rotate(135 75 75)"/>
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center"><div class="cnt text-3xl font-bold">74</div><div class="text-[10px] text-td">Optimized</div></div>
+          </div>
+          <div class="flex-1 min-w-0 w-full">
+            <div class="text-xs font-semibold mb-2">Score Breakdown</div>
+            <div class="space-y-2.5">
+              <div><div class="flex justify-between text-[11px] mb-1"><span>Liquidity</span><span>85<span class="text-tm">/100</span></span></div><div class="bar !h-1"><div class="barf tri-bar" style="width:85%"></div></div></div>
+              <div><div class="flex justify-between text-[11px] mb-1"><span>Drag (Debt &amp; Fees)</span><span>72<span class="text-tm">/100</span></span></div><div class="bar !h-1"><div class="barf tri-bar" style="width:72%"></div></div></div>
+              <div><div class="flex justify-between text-[11px] mb-1"><span>Risk Balance</span><span>68<span class="text-tm">/100</span></span></div><div class="bar !h-1"><div class="barf tri-bar" style="width:68%"></div></div></div>
+              <div><div class="flex justify-between text-[11px] mb-1"><span>Idle Capital</span><span>62<span class="text-tm">/100</span></span></div><div class="bar !h-1"><div class="barf tri-bar" style="width:62%"></div></div></div>
+              <div><div class="flex justify-between text-[11px] mb-1"><span>Concentration</span><span>55<span class="text-tm">/100</span></span></div><div class="bar !h-1"><div class="barf tri-bar" style="width:55%"></div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 rounded-[10px] p-3 mt-4 bg-el2 flex-wrap"><span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="15" height="15" alt=""></span><span class="flex-1 text-xs text-tp leading-relaxed min-w-[180px]">Your capital is efficiently structured, but idle cash and concentration are limiting optimization <span style="color:#26BC4B">+3 pts</span> this month</span><button class="text-[11px] px-3.5 py-2 rounded-full text-white font-medium transition hover:brightness-110" style="background:linear-gradient(90deg,#019426,#008622);border:1.2px solid #005D17">Improve my Score</button></div>
+      </div>
+      <div class="mock relative overflow-hidden">
+        <img src="assets/brief-bg.png" alt="" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(1,3,2,.62),rgba(1,3,2,.28) 45%,rgba(1,3,2,.62))"></div>
+        <div class="relative z-10 p-5">
+          <div class="flex items-center gap-2 text-[10px] mb-8 flex-wrap"><span class="font-semibold tracking-wide" style="color:#26BC4B">• IOMI AI - DAILY BRIEFING</span><span class="text-td">• Thu, June 11, 2026 - 9:42 AM</span></div>
+          <h3 class="text-lg font-medium leading-snug mb-2">You're +14.8% YTD and ahead of pace on 2 of 3 annual goals. Your cash buffer needs attention - Behind pace, ~$34k/mo to catch up.</h3>
+          <p class="text-xs text-td leading-relaxed mb-6">Crypto allocation rose to 15.6% (target 10%) after Bitcoin's rally. Consider trimming and reallocating to Cash to meet your Q4 buffer target.</p>
+          <div class="flex items-center justify-between"><button class="text-sm font-semibold text-white px-5 py-2.5 rounded-full transition hover:brightness-110" style="background:linear-gradient(90deg,#019426,#008622);border:1.2px solid #005D17">See full breakdown →</button><span class="flex gap-1.5 items-center"><span class="w-1.5 h-1.5 rounded-full" style="background:#26BC4B"></span><span class="w-1.5 h-1.5 rounded-full bg-el2"></span></span></div>
+        </div>
+      </div>
+      <div class="text-center"><a href="#pricing" class="pill"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Try IOMI AI</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPREADSHEET MORPH BREAK -->
+<section id="morph" class="py-20 px-5 border-t border-bord fade">
+  <div class="max-w-3xl mx-auto text-center mb-10">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">Your spreadsheet had a good run.</h2>
+    <p class="text-td max-w-xl mx-auto leading-relaxed">Manual updates, broken formulas, stale numbers. Watch it retire.</p>
+  </div>
+  <div class="max-w-2xl mx-auto relative">
+    <div class="morph-a mock p-0 absolute inset-0">
+      <div class="mock-top"><span class="dotm bg-[#ff5f57]"></span><span class="dotm bg-[#febc2e]"></span><span class="dotm bg-[#28c840]"></span><span class="text-xs text-tm ml-2">networth_FINAL_v7 (2).xlsx</span></div>
+      <div class="p-4 text-[10px]" style="font-variant-numeric:tabular-nums">
+        <div class="grid grid-cols-5 gap-px rounded-lg overflow-hidden" style="background:rgba(255,255,255,0.06)">
+          <div class="bg-el2 px-2 py-1.5 text-tm font-semibold">Account</div><div class="bg-el2 px-2 py-1.5 text-tm font-semibold">Value</div><div class="bg-el2 px-2 py-1.5 text-tm font-semibold">Updated</div><div class="bg-el2 px-2 py-1.5 text-tm font-semibold">Type</div><div class="bg-el2 px-2 py-1.5 text-tm font-semibold">Notes</div>
+          <div class="bg-el1 px-2 py-1.5 text-td">Chase checking</div><div class="bg-el1 px-2 py-1.5 text-td">$54,900?</div><div class="bg-el1 px-2 py-1.5" style="color:#FF9500">3 mo ago</div><div class="bg-el1 px-2 py-1.5 text-td">Cash</div><div class="bg-el1 px-2 py-1.5 text-tm">check this</div>
+          <div class="bg-el1 px-2 py-1.5 text-td">Fidelity</div><div class="bg-el1 px-2 py-1.5" style="color:#ED3622">#REF!</div><div class="bg-el1 px-2 py-1.5 text-td">—</div><div class="bg-el1 px-2 py-1.5 text-td">Stocks</div><div class="bg-el1 px-2 py-1.5 text-tm">formula broke</div>
+          <div class="bg-el1 px-2 py-1.5 text-td">Coinbase</div><div class="bg-el1 px-2 py-1.5 text-td">$85,000</div><div class="bg-el1 px-2 py-1.5" style="color:#FF9500">6 wk ago</div><div class="bg-el1 px-2 py-1.5 text-td">Crypto</div><div class="bg-el1 px-2 py-1.5 text-tm"></div>
+          <div class="bg-el1 px-2 py-1.5 text-td">Duplex (est.)</div><div class="bg-el1 px-2 py-1.5 text-td">$610k??</div><div class="bg-el1 px-2 py-1.5" style="color:#ED3622">2023</div><div class="bg-el1 px-2 py-1.5 text-td">RE</div><div class="bg-el1 px-2 py-1.5 text-tm">zestimate</div>
+          <div class="bg-el1 px-2 py-1.5 text-td">LLC equity</div><div class="bg-el1 px-2 py-1.5" style="color:#ED3622">#VALUE!</div><div class="bg-el1 px-2 py-1.5 text-td">—</div><div class="bg-el1 px-2 py-1.5 text-td">Biz</div><div class="bg-el1 px-2 py-1.5 text-tm">ask CPA</div>
+        </div>
+        <div class="mt-3 text-tm italic">Last opened: 47 days ago</div>
+      </div>
+    </div>
+    <div class="morph-b mock p-0 relative">
+      <div class="mock-top"><span class="dotm bg-[#ff5f57]"></span><span class="dotm bg-[#febc2e]"></span><span class="dotm bg-[#28c840]"></span><span class="text-xs text-tm ml-2">IOMI · Live</span></div>
+      <div class="p-5">
+        <div class="flex items-baseline gap-2 mb-1"><span class="text-2xl font-bold">$900,000</span><span class="text-xs px-1.5 py-0.5 rounded" style="color:#26BC4B;background:rgba(38,188,75,0.15)">+17.6%</span><span class="text-[10px] text-tm">synced 2 min ago</span></div>
+        <div class="text-[11px] text-td mb-4">Net worth · all accounts · live</div>
+        <svg viewBox="0 0 400 80" class="w-full h-20 mb-4" preserveAspectRatio="none"><defs><linearGradient id="mg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#26BC4B30"/><stop offset="100%" stop-color="#26BC4B00"/></linearGradient></defs><path d="M0,62 L57,52 L114,56 L171,38 L228,45 L285,28 L342,33 L400,16 L400,80 L0,80 Z" fill="url(#mg)"/><path d="M0,62 L57,52 L114,56 L171,38 L228,45 L285,28 L342,33 L400,16" fill="none" stroke="#26BC4B" stroke-width="2"/></svg>
+        <div class="flex items-center gap-3 rounded-[10px] p-3 bg-el2"><span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="15" height="15" alt=""></span><span class="text-xs text-tp">Every number current. Every account in one place. Zero formulas.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: GOALS -->
+<section id="goals" class="py-20 px-5 border-t border-bord overflow-hidden">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-14 fade">
+      <span class="eyebrow mb-4"><span class="dot">◉</span> Goals &amp; milestones</span>
+      <h2 class="text-3xl sm:text-4xl font-bold mt-4 mb-4 leading-tight">Define what matters, track what counts.</h2>
+      <p class="text-td max-w-xl mx-auto leading-relaxed">From setting a goal to reaching it — IOMI turns intentions into a tracked, guided plan. Scroll through the three steps.</p>
+    </div>
+
+    <div class="flex gap-6 lg:gap-10">
+      <!-- Panels -->
+      <div class="flex-1 min-w-0 flex flex-col gap-16 sm:gap-24">
+
+        <!-- Panel 1: Set what matters -->
+        <div class="step-panel fade" data-step="0">
+          <div class="mb-6">
+            <div class="text-xs font-semibold text-brand mb-2 tracking-wide">STEP 1</div>
+            <h3 class="text-2xl font-bold mb-2">Set what matters to you</h3>
+            <p class="text-td text-sm leading-relaxed max-w-lg">Pick from IOMI's goal library — proven templates with realistic targets, timelines and success rates — or define your own.</p>
+          </div>
+          <div class="mock">
+            <div class="mock-top"><span class="dotm bg-[#ff5f57]"></span><span class="dotm bg-[#febc2e]"></span><span class="dotm bg-[#28c840]"></span><span class="text-xs text-tm ml-2">Add Goal</span></div>
+            <div class="p-5">
+              <div class="flex items-center gap-3 rounded-[10px] p-3 mb-4" style="border:1px solid rgba(254,255,254,0.2)"><img src="assets/icon-check-circle.svg" width="16" height="16" alt="" class="shrink-0"><span class="text-xs flex-1"><b>Your risk profile:</b> <span class="text-td">Balanced · 3–7 years · Irregular income · $8,200/mo expenses</span></span><span class="text-xs text-tm">Edit</span></div>
+              <div class="grid grid-cols-2 gap-2 mb-5">
+                <div class="text-center text-xs py-2 rounded-[10px] font-medium" style="background:rgba(205,255,218,0.1);color:#26BC4B">Add Long-term goal</div>
+                <div class="text-center text-xs py-2 rounded-[10px] text-td border border-bord" style="background:#111212">Add annual goal</div>
+              </div>
+              <div class="text-xs text-td mb-2.5">Wealth Target</div>
+              <div class="grid sm:grid-cols-2 gap-3 mb-5">
+                <div class="gcard" style="--i:0;background:#111212;border:1px solid rgba(254,255,254,0.2)">
+                  <div class="flex items-start justify-between mb-2.5"><div class="w-9 h-9 rounded-lg border border-el2 flex items-center justify-center"><img src="assets/icon-dollar-coin.svg" width="18" height="18" alt=""></div><span class="text-tm text-sm">↗</span></div>
+                  <div class="text-sm font-medium">Reach $1M Net Worth</div>
+                  <div class="text-[11px] text-td mb-3">The classic millionaire milestone</div>
+                  <div class="space-y-1.5 text-[11px]">
+                    <div class="flex justify-between"><span class="text-td">Default Target</span><span>$1,000,000</span></div>
+                    <div class="flex justify-between"><span class="text-td">Typical Timeline</span><span>36 months</span></div>
+                    <div class="flex justify-between items-center"><span class="text-td">Difficulty</span><span class="px-2 py-0.5 rounded-xl text-[10px]" style="background:rgba(220,189,66,0.2);color:#DCBD42">Medium</span></div>
+                    <div class="flex justify-between"><span class="text-td">Success Rate</span><span>47%</span></div>
+                  </div>
+                </div>
+                <div class="gcard" style="--i:1;background:#111212;border:1px solid rgba(254,255,254,0.2)">
+                  <div class="flex items-start justify-between mb-2.5"><div class="w-9 h-9 rounded-lg border border-el2 flex items-center justify-center"><img src="assets/icon-diamond.svg" width="18" height="18" alt=""></div><span class="text-tm text-sm">↗</span></div>
+                  <div class="text-sm font-medium">Reach $5M Net Worth</div>
+                  <div class="text-[11px] text-td mb-3">High net worth individual status</div>
+                  <div class="space-y-1.5 text-[11px]">
+                    <div class="flex justify-between"><span class="text-td">Default Target</span><span>$5,000,000</span></div>
+                    <div class="flex justify-between"><span class="text-td">Typical Timeline</span><span>120 months</span></div>
+                    <div class="flex justify-between items-center"><span class="text-td">Difficulty</span><span class="px-2 py-0.5 rounded-xl text-[10px]" style="background:rgba(255,149,0,0.2);color:#FF9500">Hard</span></div>
+                    <div class="flex justify-between"><span class="text-td">Success Rate</span><span>24%</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-xs text-td mb-2.5">Life Milestones</div>
+              <div class="grid sm:grid-cols-2 gap-3 mb-5">
+                <div class="gcard" style="--i:2;background:#111212;border:1px solid rgba(254,255,254,0.2)">
+                  <div class="flex items-start justify-between mb-2.5"><div class="w-9 h-9 rounded-lg border border-el2 flex items-center justify-center"><img src="assets/icon-real-estate.svg" width="18" height="18" alt=""></div><span class="text-tm text-sm">↗</span></div>
+                  <div class="text-sm font-medium">Buy Primary Residence</div>
+                  <div class="text-[11px] text-td mb-3">Save for down payment on home</div>
+                  <div class="space-y-1.5 text-[11px]">
+                    <div class="flex justify-between"><span class="text-td">Default Target</span><span>$300,000 <span class="text-tm">(down payment)</span></span></div>
+                    <div class="flex justify-between"><span class="text-td">Typical Timeline</span><span>48 months</span></div>
+                    <div class="flex justify-between items-center"><span class="text-td">Difficulty</span><span class="px-2 py-0.5 rounded-xl text-[10px]" style="background:rgba(220,189,66,0.2);color:#DCBD42">Medium</span></div>
+                    <div class="flex justify-between"><span class="text-td">Success Rate</span><span>73%</span></div>
+                  </div>
+                </div>
+                <div class="gcard" style="--i:3;background:#111212;border:1px solid rgba(254,255,254,0.2)">
+                  <div class="flex items-start justify-between mb-2.5"><div class="w-9 h-9 rounded-lg border border-el2 flex items-center justify-center"><img src="assets/icon-garage-home.svg" width="18" height="18" alt=""></div><span class="text-tm text-sm">↗</span></div>
+                  <div class="text-sm font-medium">Buy Investment Property</div>
+                  <div class="text-[11px] text-td mb-3">Down payment for rental property</div>
+                  <div class="space-y-1.5 text-[11px]">
+                    <div class="flex justify-between"><span class="text-td">Default Target</span><span>$200,000</span></div>
+                    <div class="flex justify-between"><span class="text-td">Typical Timeline</span><span>36 months</span></div>
+                    <div class="flex justify-between items-center"><span class="text-td">Difficulty</span><span class="px-2 py-0.5 rounded-xl text-[10px]" style="background:rgba(220,189,66,0.2);color:#DCBD42">Medium</span></div>
+                    <div class="flex justify-between"><span class="text-td">Success Rate</span><span>66%</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-xs text-td mb-2.5">Saving Goals</div>
+              <div class="grid sm:grid-cols-2 gap-3 mb-4">
+                <div class="gcard" style="--i:4;background:#111212;border:1px solid rgba(254,255,254,0.2)">
+                  <div class="flex items-start justify-between mb-2.5"><div class="w-9 h-9 rounded-lg border border-el2 flex items-center justify-center"><img src="assets/icon-wallet.svg" width="18" height="18" alt=""></div><span class="text-tm text-sm">↗</span></div>
+                  <div class="text-sm font-medium">6-Month Emergency Fund</div>
+                  <div class="text-[11px] text-td mb-3">Financial safety net</div>
+                  <div class="space-y-1.5 text-[11px]">
+                    <div class="flex justify-between"><span class="text-td">Calculation</span><span>Monthly Expenses × 6</span></div>
+                    <div class="flex justify-between"><span class="text-td">Typical Timeline</span><span>18 months</span></div>
+                    <div class="flex justify-between items-center"><span class="text-td">Difficulty</span><span class="px-2 py-0.5 rounded-xl text-[10px]" style="background:rgba(66,220,104,0.2);color:#42DC68">Easy</span></div>
+                    <div class="flex justify-between"><span class="text-td">Success Rate</span><span>91%</span></div>
+                  </div>
+                </div>
+                <div class="gcard" style="--i:5;background:#111212;border:1px solid rgba(254,255,254,0.2)">
+                  <div class="flex items-start justify-between mb-2.5"><div class="w-9 h-9 rounded-lg border border-el2 flex items-center justify-center"><img src="assets/icon-payments.svg" width="18" height="18" alt=""></div><span class="text-tm text-sm">↗</span></div>
+                  <div class="text-sm font-medium">Save for Child's Education</div>
+                  <div class="text-[11px] text-td mb-3">College savings fund</div>
+                  <div class="space-y-1.5 text-[11px]">
+                    <div class="flex justify-between"><span class="text-td">Default Target</span><span>$100,000</span></div>
+                    <div class="flex justify-between"><span class="text-td">Typical Timeline</span><span>96 months <span class="text-tm">(8 years)</span></span></div>
+                    <div class="flex justify-between items-center"><span class="text-td">Difficulty</span><span class="px-2 py-0.5 rounded-xl text-[10px]" style="background:rgba(66,220,104,0.2);color:#42DC68">Easy</span></div>
+                    <div class="flex justify-between"><span class="text-td">Success Rate</span><span>84%</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center"><span class="inline-block text-xs text-td px-4 py-2 rounded-full" style="background:#282929;border:1px solid rgba(254,255,254,0.2)">+ Add custom goal</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: AI Plan -->
+        <div class="step-panel fade" data-step="1">
+          <div class="mb-6">
+            <div class="text-xs font-semibold text-brand mb-2 tracking-wide">STEP 2</div>
+            <h3 class="text-2xl font-bold mb-2">AI turns it into a plan</h3>
+            <p class="text-td text-sm leading-relaxed max-w-lg">Feasibility, required monthly effort, probability of success and milestone checkpoints — computed from your real numbers.</p>
+          </div>
+          <div class="mock">
+            <div class="mock-top"><span class="dotm bg-[#ff5f57]"></span><span class="dotm bg-[#febc2e]"></span><span class="dotm bg-[#28c840]"></span><span class="text-xs text-tm ml-2">AI Plan</span></div>
+            <div class="p-5">
+              <div class="text-[15px] font-semibold mb-4">Reach $1,000,000 Net Worth by December 2027</div>
+              <div class="border border-bord rounded-[10px] p-4 mb-4 space-y-2.5 text-xs">
+                <div class="flex justify-between gap-3"><span class="text-td">Current Position</span><span>$847,320</span></div>
+                <div class="flex justify-between gap-3"><span class="text-td">Gap to Close</span><span style="color:#FF9500">$152,680</span></div>
+                <div class="flex justify-between gap-3"><span class="text-td">Your Saving Capacity</span><span class="text-right">$1,800 / month <span class="text-tm">(income – expenses)</span></span></div>
+                <div class="flex justify-between gap-3"><span class="text-td">Required Monthly</span><span class="text-right">+$370 / month <span style="color:#26BC4B">· 21% of your capacity</span></span></div>
+                <div class="flex justify-between gap-3"><span class="text-td">Probability of Success</span><span style="color:#26BC4B">89%</span></div>
+              </div>
+              <div class="border border-bord rounded-[10px] p-4 mb-4">
+                <div class="text-xs font-semibold mb-3">AI Assistant</div>
+                <div class="flex items-start gap-3 rounded-[10px] p-3 bg-el2 mb-3"><span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="15" height="15" alt=""></span><span class="text-xs leading-relaxed">Required $370/mo represents just <span style="color:#26BC4B">21%</span> of your $1,800/mo saving capacity. You have plenty of headroom — even with conservative returns (7.5% given your Balanced profile), you'll reach this goal <span style="color:#26BC4B">3 months early</span>.</span></div>
+                <div class="space-y-2.5 text-xs text-td">
+                  <div class="flex items-center gap-2.5"><img src="assets/icon-check-circle.svg" width="15" height="15" alt="">Your current pace exceeds requirements</div>
+                  <div class="flex items-center gap-2.5"><img src="assets/icon-check-circle.svg" width="15" height="15" alt="">Portfolio is well-diversified</div>
+                  <div class="flex items-center gap-2.5"><img src="assets/icon-alert.svg" width="15" height="15" alt="">Crypto concentration needs attention</div>
+                </div>
+              </div>
+              <div class="border border-bord rounded-[10px] p-4 mb-4">
+                <div class="text-xs font-semibold mb-3">Milestones</div>
+                <div class="grid grid-cols-[1.2fr_1fr_1fr_auto] gap-2 items-center text-[10px] text-tm uppercase tracking-wider px-3 py-2 rounded-lg bg-el2 mb-1"><span>Amount</span><span>Percentage</span><span>Date</span><span>Status</span></div>
+                <div class="grid grid-cols-[1.2fr_1fr_1fr_auto] gap-2 items-center text-xs px-3 py-2.5 border-b border-bord"><span>$900,000</span><span class="text-td">25%</span><span class="text-td">Feb 2026</span><span class="text-[10px] px-2 py-0.5 rounded-xl justify-self-end" style="background:rgba(38,188,75,0.2);color:#26BC4B">On Track</span></div>
+                <div class="grid grid-cols-[1.2fr_1fr_1fr_auto] gap-2 items-center text-xs px-3 py-2.5 border-b border-bord"><span>$950,000</span><span class="text-td">50%</span><span class="text-td">Jul 2026</span><span class="text-[10px] px-2 py-0.5 rounded-xl justify-self-end" style="background:rgba(38,188,75,0.2);color:#26BC4B">On Track</span></div>
+                <div class="grid grid-cols-[1.2fr_1fr_1fr_auto] gap-2 items-center text-xs px-3 py-2.5"><span>$1,000,000</span><span class="text-td">100%</span><span class="text-td">Dec 2027</span><span class="text-[10px] px-2 py-0.5 rounded-xl justify-self-end" style="background:rgba(38,188,75,0.2);color:#26BC4B">On Track</span></div>
+              </div>
+              <div class="flex items-center justify-between flex-wrap gap-2"><span class="text-xs text-td px-4 py-2 rounded-full" style="background:#282929;border:1px solid rgba(254,255,254,0.2)">← Adjust Parameters</span><span class="text-xs font-semibold text-white px-4 py-2 rounded-full" style="background:linear-gradient(90deg,#019426,#008622);border:1.2px solid #005D17">Create Goal →</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: Track your progress -->
+        <div class="step-panel fade" data-step="2">
+          <div class="mb-6">
+            <div class="text-xs font-semibold text-brand mb-2 tracking-wide">STEP 3</div>
+            <h3 class="text-2xl font-bold mb-2">Track your progress at a glance</h3>
+            <p class="text-td text-sm leading-relaxed max-w-lg">Every goal, measured against pace and timeline — with a plain-language read on exactly where you stand.</p>
+          </div>
+          <div class="mock">
+            <div class="mock-top"><span class="dotm bg-[#ff5f57]"></span><span class="dotm bg-[#febc2e]"></span><span class="dotm bg-[#28c840]"></span><span class="text-xs text-tm ml-2">Goals</span></div>
+            <div class="p-5">
+              <div class="flex items-center justify-between mb-4"><div class="flex items-center gap-2.5"><span class="text-[16px] font-semibold">This year</span><span class="text-[11px] px-2 py-0.5 rounded-xl" style="background:rgba(66,220,104,0.2)"><span style="color:#42DC68">2026</span><span class="text-td"> · 7 months left</span></span></div><span class="text-xs text-tm">+ Add short-term goal</span></div>
+              <div class="grid sm:grid-cols-3 gap-3 mb-7">
+                <div class="gcard !p-3.5">
+                  <div class="flex items-center gap-2.5 mb-3"><div class="w-9 h-9 rounded-lg border border-el2 flex items-center justify-center shrink-0"><img src="assets/icon-garage-home.svg" width="18" height="18" alt=""></div><div class="min-w-0"><div class="text-sm font-semibold truncate">Real Estate</div><div class="text-[10px] text-td truncate">2 properties tracked</div></div><div class="ml-auto w-6 h-6 rounded-md bg-el1 border border-el2 flex items-center justify-center shrink-0"><img src="assets/icon-more-horiz.svg" width="12" height="12" alt=""></div></div>
+                  <div class="flex items-baseline justify-between mb-1.5"><span class="text-[16px] font-semibold">$1.05M</span><span class="text-[11px] font-semibold text-td">$1.3M</span></div>
+                  <div class="bar !h-[3px] mb-1.5"><div class="barf tri-bar" style="width:17%"></div></div>
+                  <div class="flex justify-between text-[10px] mb-2.5"><span class="text-td"><b class="text-tp font-semibold">17%</b> to target</span><span style="color:#42DC68">On track</span></div>
+                  <div class="text-[10px] text-tm pt-2.5 border-t border-bord">Started on 06.06.2026</div>
+                </div>
+                <div class="gcard !p-3.5">
+                  <div class="flex items-center gap-2.5 mb-3"><div class="w-9 h-9 rounded-lg border border-el2 flex items-center justify-center shrink-0"><img src="assets/icon-wallet.svg" width="18" height="18" alt=""></div><div class="min-w-0"><div class="text-sm font-semibold truncate">Cash &amp; Liquid</div><div class="text-[10px] text-td truncate">4 accounts · HYSA + Checking</div></div><div class="ml-auto w-6 h-6 rounded-md bg-el1 border border-el2 flex items-center justify-center shrink-0"><img src="assets/icon-more-horiz.svg" width="12" height="12" alt=""></div></div>
+                  <div class="flex items-baseline justify-between mb-1.5"><span class="text-[16px] font-semibold">$260k</span><span class="text-[11px] font-semibold text-td">$500k</span></div>
+                  <div class="bar !h-[3px] mb-1.5"><div class="barf tri-bar" style="width:20%"></div></div>
+                  <div class="flex justify-between text-[10px] mb-2.5"><span class="text-td"><b class="text-tp font-semibold">20%</b> to target</span><span style="color:#FF9500">Behind pace</span></div>
+                  <div class="text-[10px] text-tm pt-2.5 border-t border-bord">Started on 06.06.2026</div>
+                </div>
+                <div class="gcard !p-3.5">
+                  <div class="flex items-center gap-2.5 mb-3"><div class="w-9 h-9 rounded-lg border border-el2 flex items-center justify-center shrink-0"><img src="assets/icon-bar-chart.svg" width="18" height="18" alt=""></div><div class="min-w-0"><div class="text-sm font-semibold truncate">Stocks &amp; ETFs</div><div class="text-[10px] text-td truncate">Fidelity · Schwab</div></div><div class="ml-auto w-6 h-6 rounded-md bg-el1 border border-el2 flex items-center justify-center shrink-0"><img src="assets/icon-more-horiz.svg" width="12" height="12" alt=""></div></div>
+                  <div class="flex items-baseline justify-between mb-1.5"><span class="text-[16px] font-semibold">$112k</span><span class="text-[11px] font-semibold text-td">$150k</span></div>
+                  <div class="bar !h-[3px] mb-1.5"><div class="barf tri-bar" style="width:46%"></div></div>
+                  <div class="flex justify-between text-[10px] mb-2.5"><span class="text-td"><b class="text-tp font-semibold">46%</b> to target</span><span style="color:#64ACFF">On track</span></div>
+                  <div class="text-[10px] text-tm pt-2.5 border-t border-bord">Started on 06.06.2026</div>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mb-4"><div class="flex items-center gap-2"><span class="text-[16px] font-semibold">Multi-year aspirations</span><span class="text-xs text-td">(Long-term)</span></div><span class="text-xs text-tm">+ Aspirations</span></div>
+              <div class="grid sm:grid-cols-2 gap-3">
+                <div class="rounded-[10px] p-3.5" style="background:#111212">
+                  <div class="flex items-center gap-2.5 pb-3 mb-3 border-b border-bord"><img src="assets/icon-dollar-coin.svg" width="22" height="22" alt="" class="shrink-0"><span class="text-sm">Reach $1M Net Worth</span><span class="ml-auto text-[10px] shrink-0"><span class="text-td">Time left: </span><span class="text-tp">8 months</span></span></div>
+                  <div class="relative h-8 rounded-[10px] overflow-hidden mb-2.5" style="background:rgba(255,255,255,0.05)">
+                    <div class="barf stripebar absolute inset-y-0 left-0 !rounded-none" style="width:82%"></div>
+                    <div class="relative z-10 flex items-center justify-between h-full px-2.5"><span class="text-xs">Progress</span><span class="flex items-center gap-1.5"><span class="text-[10px] text-td">$847,000 / <b class="text-tp font-medium">$1,000,000</b></span><span class="text-[10px] px-1.5 py-px rounded-xl text-td" style="background:#353131;border:1px solid #494545">82%</span></span></div>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-[10px] p-3 bg-el2"><span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="15" height="15" alt=""></span><span class="text-xs">You're right where you need to be</span></div>
+                </div>
+                <div class="rounded-[10px] p-3.5" style="background:#111212">
+                  <div class="flex items-center gap-2.5 pb-3 mb-3 border-b border-bord"><img src="assets/icon-diamond.svg" width="22" height="22" alt="" class="shrink-0"><span class="text-sm">Reach $5M Net Worth</span><span class="ml-auto text-[10px] shrink-0"><span class="text-td">Time left: </span><span class="text-tp">18 months</span></span></div>
+                  <div class="relative h-8 rounded-[10px] overflow-hidden mb-2.5" style="background:rgba(255,255,255,0.05)">
+                    <div class="barf stripebar absolute inset-y-0 left-0 !rounded-none" style="width:34%"></div>
+                    <div class="relative z-10 flex items-center justify-between h-full px-2.5"><span class="text-xs">Progress</span><span class="flex items-center gap-1.5"><span class="text-[10px] text-td">$170,000 / <b class="text-tp font-medium">$500,000</b></span><span class="text-[10px] px-1.5 py-px rounded-xl text-td" style="background:#353131;border:1px solid #494545">34%</span></span></div>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-[10px] p-3 bg-el2"><span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="15" height="15" alt=""></span><span class="text-xs">A small adjustment can get you back on track</span></div>
+                </div>
+                <div class="rounded-[10px] p-3.5" style="background:#111212">
+                  <div class="flex items-center gap-2.5 pb-3 mb-3 border-b border-bord"><img src="assets/icon-real-estate.svg" width="22" height="22" alt="" class="shrink-0"><span class="text-sm">Buy Primary Residence</span><span class="ml-auto text-[10px] shrink-0"><span class="text-td">Time left: </span><span class="text-tp">8 months</span></span></div>
+                  <div class="relative h-8 rounded-[10px] overflow-hidden mb-2.5" style="background:rgba(255,255,255,0.05)">
+                    <div class="barf stripebar absolute inset-y-0 left-0 !rounded-none" style="width:24%"></div>
+                    <div class="relative z-10 flex items-center justify-between h-full px-2.5"><span class="text-xs">Progress</span><span class="flex items-center gap-1.5"><span class="text-[10px] text-td">$68,000 / <b class="text-tp font-medium">$300,000</b></span><span class="text-[10px] px-1.5 py-px rounded-xl text-td" style="background:#353131;border:1px solid #494545">24%</span></span></div>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-[10px] p-3 bg-el2"><span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="15" height="15" alt=""></span><span class="text-xs">Your goal needs attention</span></div>
+                </div>
+                <div class="rounded-[10px] p-3.5" style="background:#111212">
+                  <div class="flex items-center gap-2.5 pb-3 mb-3 border-b border-bord"><img src="assets/icon-payments.svg" width="22" height="22" alt="" class="shrink-0"><span class="text-sm">Save for Child's Education</span><span class="ml-auto text-[10px] shrink-0"><span class="text-td">Time left: </span><span class="text-tp">8 months</span></span></div>
+                  <div class="relative h-8 rounded-[10px] overflow-hidden mb-2.5" style="background:rgba(255,255,255,0.05)">
+                    <div class="barf stripebar absolute inset-y-0 left-0 !rounded-none" style="width:50%"></div>
+                    <div class="relative z-10 flex items-center justify-between h-full px-2.5"><span class="text-xs">Progress</span><span class="flex items-center gap-1.5"><span class="text-[10px] text-td">$50,000 / <b class="text-tp font-medium">$100,000</b></span><span class="text-[10px] px-1.5 py-px rounded-xl text-td" style="background:#353131;border:1px solid #494545">50%</span></span></div>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-[10px] p-3 bg-el2"><span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="15" height="15" alt=""></span><span class="text-xs">You're ahead of schedule!</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-8">
+            <a href="#pricing" class="pill mx-auto" style="width:fit-content"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Set your goals</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Step indicator -->
+      <div class="hidden lg:block w-36 shrink-0">
+        <div class="goal-steps flex flex-col gap-2 pr-1">
+          <div class="gs-item active" data-step="0"><span class="gs-label">Set your goals</span><span class="gs-dot"></span></div>
+          <div class="gs-item" data-step="1"><span class="gs-label">AI builds the plan</span><span class="gs-dot"></span></div>
+          <div class="gs-item" data-step="2"><span class="gs-label">Track progress</span><span class="gs-dot"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: CAPITAL IDEAS -->
+<section id="capital-ideas" class="py-20 px-5 border-t border-bord fade">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="eyebrow mb-4"><span class="dot">➤</span> Capital Ideas</span>
+      <h2 class="text-3xl sm:text-4xl font-bold mt-4 mb-4 leading-tight">Where could your next dollar go?</h2>
+      <p class="text-td max-w-xl mx-auto leading-relaxed">IOMI surfaces ideas for putting new capital to work — grounded in your portfolio gaps and CES sub-scores, updated daily. Model the move before you make it.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div class="mock">
+        <div class="mock-top"><span class="dotm bg-[#ff5f57]"></span><span class="dotm bg-[#febc2e]"></span><span class="dotm bg-[#28c840]"></span></div>
+        <div class="p-5">
+          <div class="flex items-center justify-between mb-1 flex-wrap gap-2"><div class="text-[15px] font-semibold">Next Dollar Allocation</div><div class="flex items-center rounded-full bg-el2 p-0.5 text-[11px]"><span class="px-2.5 py-1 rounded-full text-td">$10k</span><span class="px-2.5 py-1 rounded-full text-tp font-medium" style="background:#111212">$50k</span><span class="px-2.5 py-1 rounded-full text-td">$100k</span><span class="px-2.5 py-1 rounded-full text-td">Custom</span></div></div>
+          <div class="text-xs text-td mb-4">Best places to deploy new capital right now</div>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="border border-bord rounded-[10px] p-3"><div class="text-[11px] text-td">Invest 50%</div><div class="text-xl font-medium my-0.5">$25K</div><div class="text-[11px] text-td mb-2">Investments</div><span class="inline-block text-[10px] px-2 py-0.5 rounded-xl mb-2" style="background:rgba(155,162,157,0.15);color:#26BC4B">+4 pts CES</span><div class="bar !h-1" style="background:#1E1F1F"><div class="barf" style="width:70%;background:#ADB42A"></div></div></div>
+            <div class="border border-bord rounded-[10px] p-3"><div class="text-[11px] text-td">Invest 25%</div><div class="text-xl font-medium my-0.5">$13K</div><div class="text-[11px] text-td mb-2">Real Estate</div><span class="inline-block text-[10px] px-2 py-0.5 rounded-xl mb-2" style="background:rgba(155,162,157,0.15);color:#26BC4B">+3 pts CES</span><div class="bar !h-1" style="background:#1E1F1F"><div class="barf" style="width:50%;background:#1776D2"></div></div></div>
+            <div class="border border-bord rounded-[10px] p-3"><div class="text-[11px] text-td">Invest 15%</div><div class="text-xl font-medium my-0.5">$7.5K</div><div class="text-[11px] text-td mb-2">Private Equity</div><span class="inline-block text-[10px] px-2 py-0.5 rounded-xl mb-2" style="background:rgba(155,162,157,0.15);color:#26BC4B">+2 pts CES</span><div class="bar !h-1" style="background:#1E1F1F"><div class="barf" style="width:35%;background:#7A1FA2"></div></div></div>
+            <div class="border border-bord rounded-[10px] p-3"><div class="text-[11px] text-td">Invest 10%</div><div class="text-xl font-medium my-0.5">$5.0K</div><div class="text-[11px] text-td mb-2">Cash &amp; Accounts</div><span class="inline-block text-[10px] px-2 py-0.5 rounded-xl mb-2" style="background:rgba(155,162,157,0.15);color:#F9F9F9">0 pts</span><div class="bar !h-1" style="background:#1E1F1F"><div class="barf" style="width:20%;background:#3A8F3C"></div></div></div>
+          </div>
+          <div class="text-[11px] text-td mt-4 pt-4 border-t border-bord flex flex-wrap items-center gap-2"><span>Not recommended right now:</span><span>Cryptocurrency</span><span class="px-2 py-0.5 rounded-xl" style="background:rgba(155,162,157,0.15)">Over target</span><span>Physical Assets</span><span class="px-2 py-0.5 rounded-xl" style="background:rgba(155,162,157,0.15)">At target</span></div>
+          <div class="flex items-center justify-between mt-3 pt-3 border-t border-bord flex-wrap gap-2"><span class="text-[10px] text-tm">Based on your portfolio gaps &amp; CES sub-scores · Updated daily</span><div class="flex gap-2"><button class="text-[11px] px-3.5 py-1.5 rounded-[20px] text-tp transition hover:brightness-125" style="background:#282929;border:1px solid rgba(254,255,254,0.2)">Simulate</button><button class="text-[11px] px-3.5 py-1.5 rounded-[20px] text-tp transition hover:brightness-125" style="background:#282929;border:1px solid rgba(254,255,254,0.2)">Deploy capital</button></div></div>
+        </div>
+      </div>
+      <div class="mock">
+        <div class="mock-top"><span class="dotm bg-[#ff5f57]"></span><span class="dotm bg-[#febc2e]"></span><span class="dotm bg-[#28c840]"></span></div>
+        <div class="p-5">
+          <div class="flex flex-wrap items-center gap-2 mb-4 text-xs"><div class="rounded-[20px] pl-3 pr-2 py-1.5 bg-el2 flex items-center gap-1.5"><span class="text-td">From </span>Cash<img src="assets/chevron-down.svg" width="14" height="14" alt=""></div><img src="assets/arrow-transfer.svg" width="16" height="16" alt=""><div class="rounded-[20px] pl-3 pr-2 py-1.5 bg-el2 flex items-center gap-1.5"><span class="text-td">To </span>Investments<img src="assets/chevron-down.svg" width="14" height="14" alt=""></div><div class="ml-auto font-medium" style="color:#26BC4B">$100,000</div></div>
+          <div class="grid grid-cols-3 mb-4 divide-x divide-[rgba(255,255,255,0.1)] border border-bord rounded-[10px]">
+            <div class="p-3"><div class="text-[10px] text-td">Baseline 5Y</div><div class="text-[16px] font-medium">$1.53M</div></div>
+            <div class="p-3"><div class="text-[10px] text-td">Scenario 5Y</div><div class="text-[16px] font-medium">$1.57M</div></div>
+            <div class="p-3"><div class="text-[10px] text-td">Difference</div><div class="text-[16px] font-medium" style="color:#26BC4B">+$37,526</div></div>
+          </div>
+          <div class="flex items-center gap-3 mb-4 rounded-[10px] p-3" style="background:#161717"><div class="text-center"><div class="text-[10px] text-td">CES now</div><div class="text-lg font-medium">69</div></div><img src="assets/arrow-transfer.svg" width="16" height="16" alt=""><div class="text-center"><div class="text-[10px] text-td">After move</div><div class="text-lg font-medium" style="color:#26BC4B">75</div></div><div class="ml-auto text-[11px] px-2 py-0.5 rounded-xl" style="background:rgba(38,188,75,0.2);color:#26BC4B">+6 pts</div></div>
+          <svg viewBox="0 0 400 90" class="w-full h-24" preserveAspectRatio="none"><defs><linearGradient id="sa" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#26BC4B30"/><stop offset="100%" stop-color="#26BC4B00"/></linearGradient></defs><path class="fillfade" d="M0,75 L66,62 L133,50 L200,38 L266,26 L333,16 L400,8 L400,90 L0,90 Z" fill="url(#sa)"/><path class="draw" d="M0,75 L66,62 L133,50 L200,38 L266,26 L333,16 L400,8" fill="none" stroke="#26BC4B" stroke-width="2"/><path d="M0,77 L66,68 L133,60 L200,50 L266,42 L333,34 L400,26" fill="none" stroke="#71717a" stroke-width="1.5" stroke-dasharray="4 4"/></svg>
+          <div class="text-[11px] text-tm mt-2">— Scenario · ---- Baseline</div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <p class="text-xs text-tm italic mb-4">Illustrative ideas, not personalized financial advice. Projections are illustrative estimates, not guarantees of future results.</p>
+      <a href="#pricing" class="pill"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Explore your options</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL SPOTLIGHT -->
+<section class="py-20 px-5 border-t border-bord fade zi">
+  <div class="max-w-4xl mx-auto">
+    <div class="grid md:grid-cols-[1fr_auto] gap-10 items-center">
+      <div>
+        <div class="flex gap-1 mb-5" style="color:#26BC4B">★★★★★</div>
+        <blockquote class="text-2xl sm:text-3xl font-medium leading-snug mb-6">"IOMI found $180k sitting idle in week one. I moved it the same day — that decision alone paid for years of the subscription."</blockquote>
+        <div class="flex items-center gap-3"><img src="assets/avatar.png" alt="" class="w-11 h-11 rounded-full"><div><div class="text-sm font-semibold">Early-access user</div><div class="text-xs text-td">Founder · 2 entities · $4M+ tracked</div></div></div>
+      </div>
+      <div class="hidden md:block text-center px-8 py-10 rounded-2xl bg-el1 border border-bord">
+        <div class="cnt text-4xl font-bold mb-1" style="color:#26BC4B">+12</div>
+        <div class="text-xs text-td leading-snug">CES points gained<br>in 3 months</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: PERFORMANCE + INSIGHTS -->
+<section id="performance" class="py-20 px-5 border-t border-bord bg-el1/30 fade">
+  <div class="max-w-6xl mx-auto text-center mb-10">
+    <span class="eyebrow mb-4"><span class="dot">◹</span> Performance & insights</span>
+    <h2 class="text-3xl sm:text-4xl font-bold mt-4 mb-4 leading-tight">Your portfolio vs the market, and what to look at next.</h2>
+    <p class="text-td max-w-xl mx-auto leading-relaxed">Your portfolio vs the market. Ideas surfaced, sorted by urgency.</p>
+  </div>
+  <div class="max-w-6xl mx-auto">
+  <div class="grid md:grid-cols-3 gap-4">
+    <div class="mock md:col-span-2">
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-4 flex-wrap gap-2"><div class="text-[15px] font-semibold">Performance</div><div class="flex items-center rounded-full bg-el2 p-0.5 text-[11px]"><span class="px-2 py-1 rounded-full text-td">1D</span><span class="px-2 py-1 rounded-full text-td">1W</span><span class="px-2 py-1 rounded-full text-td">1M</span><span class="px-2 py-1 rounded-full text-tp font-medium" style="background:#111212">1Y</span><span class="px-2 py-1 rounded-full text-td">YTD</span><span class="px-2 py-1 rounded-full text-td">ALL</span></div></div>
+        <div class="grid grid-cols-2 gap-4 pb-4 mb-4 border-b border-bord">
+          <div><div class="text-[11px] text-td mb-1">Your</div><div class="flex items-center gap-2 text-lg font-medium"><span class="w-2 h-2 rounded-full shrink-0" style="background:#26BC4B"></span>Portfolio <span class="text-tm text-xs">▾</span></div><div class="text-[11px] text-td mt-0.5">Past 12 months <span style="color:#26BC4B">+$185,000</span></div></div>
+          <div class="pl-4 border-l border-bord"><div class="text-[11px] text-td mb-1">Compared to ⓘ</div><div class="flex items-center gap-2 text-lg font-medium"><span class="w-2 h-2 rounded-full shrink-0" style="background:#1776D2"></span>Blended <span class="text-tm text-xs">▾</span></div><div class="text-[11px] text-td mt-0.5">Past 12 months <span style="color:#26BC4B">+$140,000</span></div></div>
+        </div>
+        <div class="flex gap-2">
+          <div class="hidden sm:flex flex-col justify-between text-[10px] text-tm py-1 shrink-0" style="height:128px"><span>$1M</span><span>$900K</span><span>$800K</span><span>$700K</span><span>$600K</span><span>$500K</span></div>
+          <div class="flex-1 min-w-0">
+            <svg viewBox="0 0 400 120" class="w-full" preserveAspectRatio="none" style="height:128px">
+              <line x1="0" y1="20" x2="400" y2="20" stroke="#ffffff06" stroke-width="1"/>
+              <line x1="0" y1="45" x2="400" y2="45" stroke="#ffffff06" stroke-width="1"/>
+              <line x1="0" y1="70" x2="400" y2="70" stroke="#ffffff06" stroke-width="1"/>
+              <line x1="0" y1="95" x2="400" y2="95" stroke="#ffffff06" stroke-width="1"/>
+              <path class="draw" d="M0,95 L36,99 L72,90 L109,80 L145,84 L182,70 L218,76 L254,60 L291,68 L327,52 L363,58 L400,42" fill="none" stroke="#26BC4B" stroke-width="2"/>
+              <path class="draw" d="M0,98 L36,94 L72,96 L109,86 L145,90 L182,80 L218,70 L254,64 L291,74 L327,66 L363,54 L400,34" fill="none" stroke="#1776D2" stroke-width="2"/>
+            </svg>
+            <div class="hidden sm:flex justify-between text-[9px] text-tm mt-1.5 px-1"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>June</span><span>July</span><span>Aug</span><span>Sept</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
+          </div>
+        </div>
+        <p class="text-[10px] text-tm mt-4">"Portfolio" = your marketable assets only: cash, stocks &amp; ETFs, crypto. Private equity and real estate are excluded — they're marked too infrequently to benchmark honestly. See net worth for the full picture.</p>
+      </div>
+    </div>
+    <div class="flex flex-col gap-4">
+      <div class="mock p-4">
+        <div class="pb-3 mb-3 border-b border-bord"><div class="text-[11px] text-td mb-0.5">Portfolio return</div><div class="cnt text-xl font-semibold" style="color:#26BC4B">+14.8%</div><div class="text-[10px] text-tm">Past 12 months</div></div>
+        <div class="pb-3 mb-3 border-b border-bord"><div class="text-[11px] text-td mb-0.5">Blended</div><div class="cnt text-xl font-semibold" style="color:#26BC4B">+11.2%</div><div class="text-[10px] text-tm">Benchmark return</div></div>
+        <div><div class="text-[11px] text-td mb-0.5">Alpha</div><div class="cnt text-xl font-semibold">+3.6%</div><div class="text-[10px] text-tm">Outperforming your blended benchmark</div></div>
+      </div>
+      <div class="mock p-4 flex-1">
+        <div class="flex items-center justify-between mb-3"><span class="text-xs font-semibold">AI Recommendations</span><span class="text-[10px] px-2 py-0.5 rounded-xl" style="background:rgba(38,188,75,0.1);color:#26BC4B">6 open</span></div>
+        <div class="rounded-[10px] p-2.5 mb-2" style="background:#161717"><div class="flex items-center gap-2"><span class="w-6 h-6 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="11" height="11" alt=""></span><div class="flex-1 min-w-0"><div class="flex items-center gap-1.5"><span class="text-[11px] truncate">Reduce crypto concentration</span><span class="text-[8px] text-white px-1.5 py-0.5 rounded-full shrink-0" style="background:#ED3622">Urgent</span></div><div class="text-[10px] text-tm truncate">22% vs 10–15% comfort range</div></div><span class="text-[10px] shrink-0" style="color:#26BC4B">+9</span></div></div>
+        <div class="rounded-[10px] p-2.5 mb-2" style="background:#161717"><div class="flex items-center gap-2"><span class="w-6 h-6 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="11" height="11" alt=""></span><div class="flex-1 min-w-0"><div class="flex items-center gap-1.5"><span class="text-[11px] truncate">Deploy idle cash above target</span><span class="text-[8px] text-white px-1.5 py-0.5 rounded-full shrink-0" style="background:#ED3622">Urgent</span></div><div class="text-[10px] text-tm truncate">$180k in low-yield accounts</div></div><span class="text-[10px] shrink-0" style="color:#26BC4B">+6</span></div></div>
+        <div class="rounded-[10px] p-2.5 mb-3" style="background:#161717"><div class="flex items-center gap-2"><span class="w-6 h-6 rounded-full flex items-center justify-center shrink-0" style="border:1px solid #57E776;background:linear-gradient(110.5deg,rgba(87,231,118,0.1) 55%,rgba(255,252,162,0.1) 109%)"><img src="assets/icon-ai-magic.svg" width="11" height="11" alt=""></span><div class="flex-1 min-w-0"><div class="flex items-center gap-1.5"><span class="text-[11px] truncate">Refinance high-interest liability</span><span class="text-[8px] text-white px-1.5 py-0.5 rounded-full shrink-0" style="background:#ADB42A">Quick win</span></div><div class="text-[10px] text-tm truncate">8.9% APR → 5–6% refinance</div></div><span class="text-[10px] shrink-0" style="color:#26BC4B">+4</span></div></div>
+        <div class="text-center text-[11px] text-td">3 more in the app →</div>
+      </div>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-3 gap-4 mt-4">
+    <div class="mock p-4">
+      <div class="text-xs font-semibold mb-3">Liquidity Profile</div>
+      <div class="flex items-center justify-center mb-3">
+        <div class="relative"><svg width="110" height="110" viewBox="0 0 110 110" class="-rotate-90"><circle cx="55" cy="55" r="44" fill="none" stroke="#1E1F1F" stroke-width="12"/><circle cx="55" cy="55" r="44" fill="none" stroke="#26BC4B" stroke-width="12" stroke-linecap="round" stroke-dasharray="189.5 86.9"/><circle cx="55" cy="55" r="44" fill="none" stroke="#0295A5" stroke-width="12" stroke-linecap="round" stroke-dasharray="78.9 197.5" stroke-dashoffset="-193.5"/></svg><div class="absolute inset-0 flex flex-col items-center justify-center"><span class="cnt text-lg font-bold">70%</span><span class="text-[9px] text-tm">Liquid</span></div></div>
+      </div>
+      <div class="flex justify-center gap-4 text-[10px] flex-wrap"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full" style="background:#0295A5"></span><span class="text-td">Illiquid Assets</span> <b>30%</b></span><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full" style="background:#26BC4B"></span><span class="text-td">Liquid Assets</span> <b>70%</b></span></div>
+    </div>
+    <div class="mock p-4">
+      <div class="flex items-center gap-1.5 mb-3"><span class="text-xs font-semibold">Current vs Target</span><span class="text-tm text-[10px]">ⓘ</span></div>
+      <div class="space-y-3.5">
+        <div><div class="flex justify-between text-[11px] mb-1.5"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full" style="background:#26BC4B"></span>Equities</span><span><b>61%</b> <span class="text-tm">target 65%</span></span></div><div class="bar !h-1"><div class="barf" style="width:61%;background:#26BC4B"></div></div></div>
+        <div><div class="flex justify-between text-[11px] mb-1.5"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full" style="background:#ADB42A"></span>Fixed income</span><span><b>8%</b> <span class="text-tm">target 25%</span></span></div><div class="bar !h-1"><div class="barf" style="width:8%;background:#ADB42A"></div></div></div>
+        <div><div class="flex justify-between text-[11px] mb-1.5"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full" style="background:#F9C02B"></span>Alternatives</span><span><b>22%</b> <span class="text-tm">target 15%</span></span></div><div class="bar !h-1"><div class="barf" style="width:22%;background:#F9C02B"></div></div></div>
+        <div><div class="flex justify-between text-[11px] mb-1.5"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full" style="background:#0295A5"></span>Cash</span><span><b>9%</b> <span class="text-tm">target 5%</span></span></div><div class="bar !h-1"><div class="barf" style="width:9%;background:#0295A5"></div></div></div>
+      </div>
+    </div>
+    <div class="mock p-4">
+      <div class="text-xs font-semibold mb-3">Asset allocation</div>
+      <div class="space-y-2">
+        <div class="flex items-center gap-2.5 text-[11px]"><span class="w-6 h-6 rounded-md border border-el2 flex items-center justify-center shrink-0"><img src="assets/icon-payments.svg" width="12" height="12" alt=""></span><span class="flex-1">Cash &amp; Accounts</span><b>15.6%</b></div>
+        <div class="flex items-center gap-2.5 text-[11px]"><span class="w-6 h-6 rounded-md border border-el2 flex items-center justify-center shrink-0"><img src="assets/icon-bar-chart.svg" width="12" height="12" alt=""></span><span class="flex-1">Investments (Public Markets)</span><b>26.3%</b></div>
+        <div class="flex items-center gap-2.5 text-[11px]"><span class="w-6 h-6 rounded-md border border-el2 flex items-center justify-center shrink-0"><img src="assets/icon-business.svg" width="12" height="12" alt=""></span><span class="flex-1">Company</span><b>17.5%</b></div>
+        <div class="flex items-center gap-2.5 text-[11px]"><span class="w-6 h-6 rounded-md border border-el2 flex items-center justify-center shrink-0"><img src="assets/icon-bitcoin.svg" width="12" height="12" alt=""></span><span class="flex-1">Crypto &amp; Digital Assets</span><b>15.6%</b></div>
+        <div class="flex items-center gap-2.5 text-[11px]"><span class="w-6 h-6 rounded-md border border-el2 flex items-center justify-center shrink-0"><img src="assets/icon-real-estate.svg" width="12" height="12" alt=""></span><span class="flex-1">Real Estate</span><b>6.6%</b></div>
+        <div class="flex items-center gap-2.5 text-[11px]"><span class="w-6 h-6 rounded-md border border-el2 flex items-center justify-center shrink-0"><img src="assets/icon-diamond.svg" width="12" height="12" alt=""></span><span class="flex-1">Other Assets</span><b>3.2%</b></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="text-center mt-10">
+    <p class="text-xs text-tm italic mb-4">Past performance is illustrative and does not guarantee future results.</p>
+    <a href="#pricing" class="pill"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Track your performance</a>
+    <p class="text-xs text-td mt-4">Join <b class="text-tp">500+</b> entrepreneurs already running their wealth on IOMI.</p>
+  </div>
+</section>
+
+<!-- LOGO CLOUD -->
+<section class="py-16 px-5 border-t border-bord bg-el1/30 fade">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="text-xs text-tm uppercase tracking-wider mb-8">Connects with the institutions you already use</p>
+    <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-6" style="filter:grayscale(1);opacity:.55">
+      <img src="logos/chase.com.png" class="h-7 w-7 object-contain" alt="Chase"><img src="logos/bankofamerica.com.png" class="h-7 w-7 object-contain" alt="Bank of America"><img src="logos/fidelity.com.png" class="h-7 w-7 object-contain" alt="Fidelity"><img src="logos/vanguard.com.png" class="h-7 w-7 object-contain" alt="Vanguard"><img src="logos/schwab.com.png" class="h-7 w-7 object-contain" alt="Schwab"><img src="logos/citi.com.png" class="h-7 w-7 object-contain" alt="Citi"><img src="logos/wellsfargo.com.png" class="h-7 w-7 object-contain" alt="Wells Fargo"><img src="logos/robinhood.com.png" class="h-7 w-7 object-contain" alt="Robinhood"><img src="logos/coinbase.com.png" class="h-7 w-7 object-contain" alt="Coinbase"><img src="logos/kraken.com.png" class="h-7 w-7 object-contain" alt="Kraken"><img src="logos/binance.com.png" class="h-7 w-7 object-contain" alt="Binance"><img src="logos/plaid.com.png" class="h-7 w-7 object-contain" alt="Plaid">
+    </div>
+    <p class="text-xs text-tm mt-8">…and 12,000+ more via Plaid.</p>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="py-20 px-5 border-t border-bord fade">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">You have three options.</h2>
+      <p class="text-td max-w-xl mx-auto leading-relaxed">Only one of them works while you sleep.</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm" style="border-collapse:separate;border-spacing:0">
+        <thead><tr class="text-left text-xs text-td">
+          <th class="py-3 pr-4 font-normal"></th>
+          <th class="py-3 px-4 font-medium">Spreadsheets</th>
+          <th class="py-3 px-4 font-medium">Generic trackers</th>
+          <th class="py-3 px-4 font-semibold rounded-t-xl text-tp" style="background:rgba(38,188,75,0.08);border:1px solid rgba(38,188,75,0.25);border-bottom:none">IOMI</th>
+        </tr></thead>
+        <tbody class="text-td">
+          <tr class="border-t border-bord"><td class="py-3.5 pr-4 text-tp">Real-time net worth</td><td class="py-3.5 px-4">Manual updates</td><td class="py-3.5 px-4" style="color:#26BC4B">✓</td><td class="py-3.5 px-4" style="background:rgba(38,188,75,0.08);border-left:1px solid rgba(38,188,75,0.25);border-right:1px solid rgba(38,188,75,0.25);color:#26BC4B">✓</td></tr>
+          <tr class="border-t border-bord"><td class="py-3.5 pr-4 text-tp">Business + personal, separated</td><td class="py-3.5 px-4">Two files, one mess</td><td class="py-3.5 px-4 text-tm">✗</td><td class="py-3.5 px-4" style="background:rgba(38,188,75,0.08);border-left:1px solid rgba(38,188,75,0.25);border-right:1px solid rgba(38,188,75,0.25);color:#26BC4B">✓ Up to 3 entities</td></tr>
+          <tr class="border-t border-bord"><td class="py-3.5 pr-4 text-tp">Tells you what to do next</td><td class="py-3.5 px-4 text-tm">✗</td><td class="py-3.5 px-4 text-tm">✗</td><td class="py-3.5 px-4" style="background:rgba(38,188,75,0.08);border-left:1px solid rgba(38,188,75,0.25);border-right:1px solid rgba(38,188,75,0.25);color:#26BC4B">✓ AI recommendations</td></tr>
+          <tr class="border-t border-bord"><td class="py-3.5 pr-4 text-tp">Models a move before you make it</td><td class="py-3.5 px-4">If you build it</td><td class="py-3.5 px-4 text-tm">✗</td><td class="py-3.5 px-4" style="background:rgba(38,188,75,0.08);border-left:1px solid rgba(38,188,75,0.25);border-right:1px solid rgba(38,188,75,0.25);color:#26BC4B">✓ Simulator</td></tr>
+          <tr class="border-t border-bord"><td class="py-3.5 pr-4 text-tp">One score for capital efficiency</td><td class="py-3.5 px-4 text-tm">✗</td><td class="py-3.5 px-4 text-tm">✗</td><td class="py-3.5 px-4" style="background:rgba(38,188,75,0.08);border-left:1px solid rgba(38,188,75,0.25);border-right:1px solid rgba(38,188,75,0.25);color:#26BC4B">✓ CES</td></tr>
+          <tr class="border-t border-bord"><td class="py-3.5 pr-4 text-tp">Your time, monthly</td><td class="py-3.5 px-4" style="color:#FF9500">~6 hours</td><td class="py-3.5 px-4">~1 hour</td><td class="py-3.5 px-4 rounded-b-xl" style="background:rgba(38,188,75,0.08);border:1px solid rgba(38,188,75,0.25);border-top:none;color:#26BC4B">Minutes</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY & TRUST -->
+<section class="py-20 px-5 border-t border-bord fade">
+  <div class="max-w-5xl mx-auto text-center">
+    <span class="eyebrow mb-4"><span class="dot">🛡</span> Security & privacy</span>
+    <h2 class="text-3xl sm:text-4xl font-bold mt-4 mb-4">Your data, protected at every layer.</h2>
+    <p class="text-td max-w-2xl mx-auto leading-relaxed mb-10">IOMI never sees your bank credentials — connections go through Plaid, trusted by leading financial apps. Every credential we do hold is encrypted at rest with AES-256, and all traffic is encrypted in transit over HTTPS/TLS.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+      <div class="bg-base border border-bord rounded-xl p-5"><div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center mb-3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="#26BC4B" stroke-width="1.6"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="#26BC4B" stroke-width="1.6" stroke-linecap="round"/></svg></div><div class="text-sm font-semibold mb-1">AES-256 encryption</div><p class="text-xs text-tm leading-relaxed">Bank tokens, API keys, and secrets are encrypted at rest with AES-256-GCM — versioned and upgradeable.</p></div>
+      <div class="bg-base border border-bord rounded-xl p-5"><div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center mb-3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#26BC4B"/></svg></div><div class="text-sm font-semibold mb-1">Argon2id hashing</div><p class="text-xs text-tm leading-relaxed">Your password is never stored — only hashed with Argon2id, the OWASP-recommended gold standard.</p></div>
+      <div class="bg-base border border-bord rounded-xl p-5"><div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center mb-3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#26BC4B" stroke-width="1.6"/><path d="M12 7v5l3 3" stroke="#26BC4B" stroke-width="1.6" stroke-linecap="round"/></svg></div><div class="text-sm font-semibold mb-1">2FA & session alerts</div><p class="text-xs text-tm leading-relaxed">Optional TOTP two-factor authentication (authenticator app) and new-device login alerts via email.</p></div>
+      <div class="bg-base border border-bord rounded-xl p-5"><div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center mb-3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 0110 10c0 5-4 9-10 9S2 17 2 12 7 2 12 2z" stroke="#26BC4B" stroke-width="1.6" fill="none"/><path d="M8 12l2 2 4-4" stroke="#26BC4B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="text-sm font-semibold mb-1">AI privacy by design</div><p class="text-xs text-tm leading-relaxed">Account numbers, routing numbers, and personal identifiers are never sent to the AI model — only aggregated figures.</p></div>
+    </div>
+    <p class="text-xs text-tm mt-8 max-w-lg mx-auto leading-relaxed">Full account numbers are never stored — only the last 4 digits for display. Rate-limited endpoints, parameterized queries, and strict access controls protect against unauthorized access. <a href="#" class="text-brand hover:underline">See the full security overview →</a></p>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF + TESTIMONIALS -->
+<section class="py-20 px-5 border-t border-bord fade overflow-hidden">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="eyebrow mb-4"><span class="dot">★</span> Trusted by modern wealth builders</span>
+      <h2 class="text-3xl sm:text-4xl font-bold mt-4 mb-4">Built for how you actually build wealth.</h2>
+      <p class="text-td max-w-xl mx-auto leading-relaxed mb-8">More than a tracker. Not a robo-advisor. IOMI is a decision layer for your financial life.</p>
+      <div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto mb-10"><span class="px-4 py-2 rounded-full border border-bord bg-el1 text-sm text-td">Founders</span><span class="px-4 py-2 rounded-full border border-bord bg-el1 text-sm text-td">Business operators</span><span class="px-4 py-2 rounded-full border border-bord bg-el1 text-sm text-td">High-income professionals</span><span class="px-4 py-2 rounded-full border border-bord bg-el1 text-sm text-td">Real estate investors</span><span class="px-4 py-2 rounded-full border border-bord bg-el1 text-sm text-td">Crypto investors</span><span class="px-4 py-2 rounded-full border border-bord bg-el1 text-sm text-td">Self-directed investors</span></div>
+      <div class="grid grid-cols-3 gap-8 max-w-md mx-auto">
+        <div class="text-center"><div class="text-2xl font-bold text-brand">100%</div><div class="text-xs text-tm mt-1">Your data, your control</div></div>
+        <div class="text-center"><div class="text-2xl font-bold text-brand">6+</div><div class="text-xs text-tm mt-1">Asset types</div></div>
+        <div class="text-center"><div class="text-2xl font-bold text-brand">1</div><div class="text-xs text-tm mt-1">Unified picture</div></div>
+      </div>
+    </div>
+    <!-- Carousel horizontal avec dots -->
+    <div class="carousel flex gap-5 pb-4" id="testimonial-carousel">
+      <div class="min-w-[85%] sm:min-w-[45%] lg:min-w-[30%] car-panel bg-el1 border border-bord rounded-xl p-6"><p class="text-sm text-td mb-4">"I finally see my business and personal wealth in one place, and I understand what to look at next."</p><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand/40 to-el2"></div><div class="text-xs text-tm">Early-access user · Founder</div></div></div>
+      <div class="min-w-[85%] sm:min-w-[45%] lg:min-w-[30%] car-panel bg-el1 border border-bord rounded-xl p-6"><p class="text-sm text-td mb-4">"The Capital Efficiency Score changed how I think about idle cash and concentration."</p><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand/40 to-el2"></div><div class="text-xs text-tm">Early-access user · Operator</div></div></div>
+      <div class="min-w-[85%] sm:min-w-[45%] lg:min-w-[30%] car-panel bg-el1 border border-bord rounded-xl p-6"><p class="text-sm text-td mb-4">"The simulator let me weigh paying down debt vs investing with my real numbers."</p><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand/40 to-el2"></div><div class="text-xs text-tm">Early-access user · Investor</div></div></div>
+      <div class="min-w-[85%] sm:min-w-[45%] lg:min-w-[30%] car-panel bg-el1 border border-bord rounded-xl p-6"><p class="text-sm text-td mb-4">"Crypto, real estate and my brokerage in one view — no other tool gave me that."</p><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand/40 to-el2"></div><div class="text-xs text-tm">Early-access user · Crypto investor</div></div></div>
+      <div class="min-w-[85%] sm:min-w-[45%] lg:min-w-[30%] car-panel bg-el1 border border-bord rounded-xl p-6"><p class="text-sm text-td mb-4">"The next-dollar view is something I didn't know I needed."</p><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand/40 to-el2"></div><div class="text-xs text-tm">Early-access user · Professional</div></div></div>
+      <div class="min-w-[85%] sm:min-w-[45%] lg:min-w-[30%] car-panel bg-el1 border border-bord rounded-xl p-6"><p class="text-sm text-td mb-4">"Clean, fast, and it explains the why behind every insight."</p><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-gradient-to-br from-brand/40 to-el2"></div><div class="text-xs text-tm">Early-access user · Founder</div></div></div>
+    </div>
+    <div class="flex justify-center gap-1.5 mt-4" id="testimonial-dots"></div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-20 px-5 border-t border-bord fade">
+  <div class="max-w-6xl mx-auto text-center mb-8"><div class="inline-block text-xs text-brand border border-brand/30 rounded-full px-4 py-1.5 mb-5">1-month free trial · no credit card required</div><h2 class="text-3xl sm:text-5xl font-bold mb-3">Your wealth, fully under control.</h2><p class="text-td mb-8">Choose the plan that matches your financial life.</p><div class="inline-flex items-center gap-3 text-sm"><span id="lbl-monthly" class="text-tp font-medium">Monthly</span><button onclick="toggleBilling()" id="billing-toggle" class="relative w-12 h-6 rounded-full bg-brand transition"><span id="billing-knob" class="absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white transition-transform"></span></button><span id="lbl-annual" class="text-td">Annual</span><span class="text-[11px] bg-el2 text-td px-2 py-1 rounded-full">2 months free</span></div></div>
+  <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+    <div class="bg-el1 rounded-2xl p-8 border border-bord flex flex-col"><div class="flex items-baseline gap-1 mb-1"><span class="text-4xl font-bold" data-monthly="$29" data-annual="$24">$29</span><span class="text-sm text-tm">/ per month</span></div><div class="text-[11px] text-tm mb-4">Billed monthly</div><div class="text-xs uppercase tracking-widest text-tm mb-2">Personal</div><p class="text-sm text-td mb-6">Full visibility and the complete intelligence layer for your personal wealth.</p><a href="#" class="w-full text-center border border-bords hover:border-tm text-tp font-semibold py-3 rounded-full text-sm transition mb-2">Start free trial</a><p class="text-[11px] text-tm text-center italic mb-6">1 month free · Cancel anytime</p><div class="border-t border-bord pt-5 space-y-3 text-sm"><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Link unlimited personal accounts</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>All personal asset classes & liabilities</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Net worth dashboard, real-time</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Liquidity profile</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Emergency fund tracker</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Cash flow & forecast</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Goals & milestones</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Portfolio benchmarking</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Capital Efficiency Score (CES)</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Next Dollar Allocation</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>AI insights <span class="text-tm">· standard usage</span></div></div></div>
+    <div class="glowbiz bg-el1 rounded-2xl p-8 border border-brand/40 flex flex-col relative" style="box-shadow:0 0 40px #26BC4B12"><div class="absolute -top-3 left-8 bg-brand text-black text-[11px] font-semibold px-3 py-1 rounded-full">Founding member</div><div class="flex items-baseline gap-1 mb-1"><span class="text-4xl font-bold" data-monthly="$39" data-annual="$33">$39</span><span class="text-sm text-tm">/ per month</span></div><div class="text-[11px] text-tm mb-1">Billed monthly · <span class="line-through">$79</span> after launch</div><div class="text-[11px] text-brand mb-4">🔒 Locked at this price while you stay subscribed</div><div class="text-xs uppercase tracking-widest text-tm mb-2">Business</div><p class="text-sm text-td mb-6">For founders and owners running personal <strong>and</strong> business wealth — unified across your entities.</p><a href="#" class="w-full text-center bg-brand hover:bg-brand-hover text-black font-semibold py-3 rounded-full text-sm transition mb-2">Start free trial</a><p class="text-[11px] text-tm text-center italic mb-6">1 month free · Cancel anytime</p><div class="border-t border-bord pt-5 grid grid-cols-1 gap-3 text-sm"><div class="text-xs text-tm mb-1">Everything in Personal, plus:</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Link unlimited <strong>business</strong> accounts</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span><strong>Business tab</strong> — assets & liabilities per entity (up to 3)</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Per-entity attribution + consolidated view</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span><strong>Higher AI limits</strong> — priority AI usage</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Priority support</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span>Early access to new & beta features</div><div class="flex gap-2 text-td"><span class="text-brand">✓</span><span>Connect <strong>IOMI MCP</strong> to your favorite AI tools <span class="text-[9px] bg-brand/20 text-brand px-1.5 py-0.5 rounded-full whitespace-nowrap">Coming soon</span></span></div></div></div>
+  </div>
+  <p class="text-center text-xs text-tm mt-8 max-w-lg mx-auto">Both plans include a <span class="text-tp font-medium">1-month free trial</span> with full access — no credit card required. Cancel anytime before the trial ends and you won't be charged. Founding-member pricing is locked for as long as your subscription stays active.</p>
+  <div class="max-w-4xl mx-auto mt-12 rounded-2xl p-8 sm:p-10 bg-el1 border border-bord relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_center,_#26BC4B0A_0%,_transparent_60%)] pointer-events-none"></div>
+    <div class="relative z-10">
+      <h3 class="text-xl sm:text-2xl font-bold mb-6 text-center">What actually changes</h3>
+      <div class="grid sm:grid-cols-3 gap-6 text-center">
+        <div><div class="text-sm font-semibold mb-1.5">You know your net worth in real time</div><p class="text-xs text-td leading-relaxed">Not last quarter's guess. The number, right now, across everything you own.</p></div>
+        <div><div class="text-sm font-semibold mb-1.5">You stop guessing where money should go</div><p class="text-xs text-td leading-relaxed">Every new dollar has a ranked destination before it hits your account.</p></div>
+        <div><div class="text-sm font-semibold mb-1.5">One dashboard for your whole financial life</div><p class="text-xs text-td leading-relaxed">Personal, business, liquid, illiquid — one screen, always current.</p></div>
+      </div>
+      <p class="text-center text-sm mt-8"><span class="text-tp font-semibold">Cancel anytime. No questions asked.</span> <span class="text-td">Your data exports with you.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-20 px-5 border-t border-bord fade"><div class="max-w-3xl mx-auto"><h2 class="text-3xl sm:text-4xl font-bold text-center mb-10">Frequently asked questions</h2><div class="space-y-3" id="faq-list"></div><p class="text-center mt-8"><a href="#" class="text-brand hover:text-brand-hover text-sm font-medium">Contact us →</a></p></div></section>
+
+<!-- FINAL CTA -->
+<section class="py-24 px-5 border-t border-bord relative overflow-hidden text-center fade"><div class="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_center,_#26BC4B0C_0%,_transparent_60%)] pointer-events-none"></div><div class="max-w-3xl mx-auto relative z-10"><h2 class="text-3xl sm:text-5xl font-bold mb-5">Start building your intelligent wealth picture.</h2><p class="text-td max-w-lg mx-auto mb-8 leading-relaxed">Organize your full financial life in one place. Track your net worth, understand your allocation, and explore how your capital could work harder.</p><a href="#pricing" class="pill mx-auto"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Create your account</a><p class="text-xs text-tm mt-4">1-month free trial · No credit card required</p>
+<div class="mt-12"><p class="text-[10px] text-tm uppercase tracking-widest mb-4">As seen in</p><div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-sm font-semibold" style="opacity:.4"><span>FOUNDERS WEEKLY</span><span>THE OPERATOR</span><span>FINTECH BRIEF</span><span>WEALTH SIGNAL</span></div></div>
+</div></section>
+
+<!-- FOOTER -->
+<footer class="py-16 px-5 border-t border-bord bg-el1/40"><div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-5 gap-8"><div class="lg:col-span-2"><div class="flex items-center mb-3"><img src="assets/iomi-logo.png" alt="IOMI" class="h-9 w-auto"></div><p class="text-sm text-td max-w-xs leading-relaxed">A Wealth Operating System that helps modern wealth builders see, understand, and optimize their full financial picture.</p></div><div><h4 class="text-sm font-semibold mb-4">Product</h4><ul class="space-y-2 text-sm text-td"><li><a href="#ai" class="hover:text-tp">AI</a></li><li><a href="#dashboard" class="hover:text-tp">Dashboard</a></li><li><a href="#goals" class="hover:text-tp">Goals</a></li><li><a href="#capital-ideas" class="hover:text-tp">Capital Ideas</a></li><li><a href="#performance" class="hover:text-tp">Performance</a></li><li><a href="#pricing" class="hover:text-tp">Pricing</a></li></ul></div><div><h4 class="text-sm font-semibold mb-4">Resources</h4><ul class="space-y-2 text-sm text-td"><li><a href="#faq" class="hover:text-tp">FAQ</a></li><li><a href="#" class="hover:text-tp">Early access</a></li></ul></div><div><h4 class="text-sm font-semibold mb-4">Legal</h4><ul class="space-y-2 text-sm text-td"><li><a href="#" class="hover:text-tp">Terms</a></li><li><a href="#" class="hover:text-tp">Privacy</a></li><li><a href="#" class="hover:text-tp">Disclosures</a></li></ul></div></div><div class="max-w-6xl mx-auto mt-10 pt-6 border-t border-bord"><p class="text-xs text-tm leading-relaxed mb-3">IOMI provides educational tools, analytics, and scenario modeling to help users better understand their financial picture. IOMI does not provide personalized investment, legal, tax, insurance, or financial advice. Projections and scores are illustrative and not guarantees of future results. All securities and past performance references are for illustrative purposes only.</p><p class="text-xs text-tm">© 2026 IOMI Inc. All rights reserved.</p></div></footer>
+
+<script>
+const LOGOS = [
+  { file:'chase.com.png', name:'Chase'},{file:'fidelity.com.png', name:'Fidelity'},
+  {file:'coinbase.com.png', name:'Coinbase'},{file:'schwab.com.png', name:'Schwab'},
+  {file:'robinhood.com.png', name:'Robinhood'},{file:'binance.com.png', name:'Binance'},
+  {file:'bankofamerica.com.png', name:'Bank of America'},{file:'citi.com.png', name:'Citi'},
+  {file:'kraken.com.png', name:'Kraken'},{file:'vanguard.com.png', name:'Vanguard'},
+  {file:'wellsfargo.com.png', name:'Wells Fargo'},{file:'plaid.com.png', name:'Plaid'}
+];
+const RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const EO='cubic-bezier(.16,1,.3,1)';
+function buildArc(){
+  const container=document.getElementById('logo-arc');
+  const svg=document.getElementById('arc-line');
+  if(!container||!svg)return;
+  const W=container.offsetWidth,H=container.offsetHeight;
+  if(!W||!H)return;
+  const mobile=W<640;
+  const count=mobile?9:16;
+  // Wide U: edges high on the sides, dipping low at center — circle through both
+  const topY=H*(mobile?0.76:0.20), botY=H*(mobile?0.90:0.84);
+  const sag=botY-topY;
+  const half=W/2+(mobile?10:30); // extend slightly past the viewport edges
+  const R=(half*half+sag*sag)/(2*sag);
+  const cx=W/2, cy=botY-R;
+  const thL=Math.atan2(topY-cy,-half), thR=Math.atan2(topY-cy,half);
+  // faint connecting line
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  let d='';
+  for(let i=0;i<=60;i++){const th=thL+(thR-thL)*i/60;d+=(i?'L':'M')+(cx+R*Math.cos(th)).toFixed(1)+' '+(cy+R*Math.sin(th)).toFixed(1)+' ';}
+  svg.innerHTML=`<path d="${d}" fill="none" stroke="#ffffff14" stroke-width="1.5"/>`;
+  const entrance=!window._arcPlayed&&!RM;
+  if(entrance){
+    const p=svg.querySelector('path'),L=p.getTotalLength();
+    p.style.strokeDasharray=L;p.style.strokeDashoffset=L;p.getBoundingClientRect();
+    p.style.transition=`stroke-dashoffset 1.6s ${EO} .15s`;p.style.strokeDashoffset='0';
+  }
+  // logos on the line — bigger & brighter toward center-bottom, small & faded at the edges
+  const els=[];
+  for(let i=0;i<count;i++){
+    const t=i/(count-1);
+    const th=thL+(thR-thL)*t;
+    const x=cx+R*Math.cos(th), y=cy+R*Math.sin(th);
+    const c=1-Math.abs(2*t-1);
+    const size=Math.round(mobile?30+16*c:34+28*c);
+    const op=0.22+0.78*c;
+    const l=LOGOS[i%LOGOS.length];
+    els.push(`<div class="logodot float${entrance?' arc-in':''}" style="left:${(x-size/2).toFixed(1)}px;top:${(y-size/2).toFixed(1)}px;width:${size}px;height:${size}px;--op:${op.toFixed(2)};opacity:var(--op);--ad:${(0.2+i*0.07).toFixed(2)}s;--dur:${(4+Math.random()*3).toFixed(1)}s;--del:${(Math.random()*2).toFixed(1)}s"><img src="logos/${l.file}" alt="${l.name}" style="width:${Math.round(size*0.5)}px;height:${Math.round(size*0.5)}px"></div>`);
+  }
+  container.innerHTML=els.join('');
+  window._arcPlayed=true;
+}
+window.addEventListener('load',buildArc);
+let arcT;window.addEventListener('resize',()=>{clearTimeout(arcT);arcT=setTimeout(buildArc,150)});
+
+// Carousel dots
+function initCarousel(id,dotsId,panelsPerView){
+  const el=document.getElementById(id);
+  const dots=document.getElementById(dotsId);
+  const total=el.children.length;
+  const panels=Math.max(1,Math.ceil(total/panelsPerView));
+  for(let i=0;i<panels;i++){
+    const d=document.createElement('div');d.className='car-dot'+(i===0?' active':'');d.dataset.i=i;
+    d.onclick=()=>{el.children[i]&&el.children[i].scrollIntoView({behavior:'smooth',inline:'start'})};
+    dots.appendChild(d);
+  }
+  el.addEventListener('scroll',()=>{
+    const idx=Math.round(el.scrollLeft/el.clientWidth);
+    dots.querySelectorAll('.car-dot').forEach((d,i)=>d.className='car-dot'+(i===idx?' active':''));
+  });
+}
+window.addEventListener('load',()=>{
+  initCarousel('testimonial-carousel','testimonial-dots',window.innerWidth<640?1:window.innerWidth<1024?2:3);
+});
+
+// Dashboard switcher
+const DASH={
+  personal:{c:'#26BC4B',nw:'$900,000',ch:'+$135,000',pct:'+17.6%',total:'$1,250,000',ltotal:'$350,000',
+    assetsAI:'Assets are well diversified, but liquidity is below optimal. Increasing the proportion of cash or short-term investments could help.',
+    liabAI:'The debt burden is concentrated in loans. Reducing or refinancing the debt could improve cash flow.',
+    line:'M0,95 L62,82 L124,88 L186,58 L248,72 L310,48 L372,62 L434,38 L496,54 L558,30 L620,42',
+    assets:[['Cash & Accounts','$55,000','4.4%','+$800','+1.5%',1,'#B89010'],['Investments','$260,000','20.8%','+$19,000','+7.9%',1,'#1A9090'],['Crypto & Digital Assets','$85,000','6.8%','-$5,400','-6.0%',0,'#7848C0'],['Real Estate','$620,000','49.6%','+$24,000','+4.0%',1,'#2048A0'],['Physical Assets','$35,000','2.8%','+$2,100','+6.4%',1,'#5858B8']],
+    adonut:[[4.4,'#B89010'],[20.8,'#1A9090'],[6.8,'#7848C0'],[49.6,'#2048A0'],[2.8,'#5858B8'],[15.6,'#26BC4B']],
+    liab:[['Loans','$320,000','91.4%','-$6,800','-2.1%',0,'#B8720A'],['Credit Card','$20,000','5.7%','-$1,200','-6.0%',0,'#C8680A'],['Others Debts','$7,000','2.0%','-$350','-5.0%',0,'#8A6A50']],
+    ldonut:[[91.4,'#B8720A'],[5.7,'#C8680A'],[2.0,'#8A6A50']]},
+  business:{c:'#978FE0',line2:'M0,118 L62,112 L124,108 L186,102 L248,96 L310,92 L372,84 L434,78 L496,72 L558,66 L620,60',nw:'$1,030,000',ch:'+$4,900,000',pct:'+490%',total:'$1,380,000',ltotal:'$350,000',
+    assetsAI:'Book value is $1.03M with a company valuation of $5.0M. Concentration in intellectual property and real estate is high — diversifying operating cash could reduce risk.',
+    liabAI:'Supplier payables and loans drive most of the debt. Renegotiating terms could improve working capital.',
+    line:'M0,110 L62,102 L124,96 L186,88 L248,78 L310,70 L372,58 L434,50 L496,40 L558,30 L620,22',
+    assets:[['Cash & Accounts','$125,000','9.06%','+$1,500','+1.2%',0,'#B89010'],['Investments','$85,000','6.16%','+$2,000','+2.35%',1,'#1A9090'],['Cryptos & Digital Assets','$210,000','15.22%','+$9,000','+7.14%',1,'#7848C0'],['Real Estate','$180,000','13.04%','+$8,000','+8.87%',1,'#2048A0'],['Physical Assets','$95,000','6.88%','+$500','+0.53%',1,'#5858B8'],['Intellectual Property','$150,000','10.87%','+$2,000','+2.00%',1,'#8878C8']],
+    adonut:[[9.06,'#B89010'],[6.16,'#1A9090'],[15.22,'#7848C0'],[13.04,'#2048A0'],[6.88,'#5858B8'],[10.87,'#8878C8'],[38.77,'#978FE0']],
+    liab:[['Loans','$320,000','91.4%','-$6,800','-2.1%',0,'#B8720A'],['Credit Card','$20,000','5.7%','-$1,200','-6.0%',0,'#C8680A'],['Vendor & Supplier','$2,000','0.6%','-$60','-4.0%',0,'#8A6A50'],['Taxes & Obligations','$1,000','0.3%','-$40','-4.0%',0,'#6A503C']],
+    ldonut:[[91.4,'#B8720A'],[5.7,'#C8680A'],[0.6,'#8A6A50'],[0.3,'#6A503C']]}
+};
+const DONUTS={};
+function donutSVG(id,segs){DONUTS[id]=segs;const el=document.getElementById(id);let off=0,circ=2*Math.PI*60;const gap=3;let svg='<circle cx="75" cy="75" r="60" fill="none" stroke="#1E1F1F" stroke-width="16"/>';
+  segs.forEach((seg,i)=>{const len=Math.max(0,circ*seg[0]/100-gap);svg+=`<circle cx="75" cy="75" r="60" fill="none" stroke="${seg[1]}" stroke-width="16" stroke-linecap="round" stroke-dasharray="${RM?len+' '+(circ-len):'0 '+circ}" stroke-dashoffset="${-off}" style="transition:stroke-dasharray .9s ${EO} ${i*90}ms"/>`;off+=len+gap});
+  el.innerHTML=svg;
+  if(!RM)requestAnimationFrame(()=>requestAnimationFrame(()=>{[...el.querySelectorAll('circle')].slice(1).forEach((c,i)=>{const len=Math.max(0,circ*segs[i][0]/100-gap);c.setAttribute('stroke-dasharray',`${len} ${circ-len}`)})}));}
+function rowsHTML(list){return list.map(r=>{const pc=r[5]?'#26BC4B':'#FF6464',pb=r[5]?'rgba(38,188,75,0.2)':'rgba(255,100,100,0.2)';
+  return `<div class="grid grid-cols-[1.5fr_1fr_1fr] gap-2 items-center px-3 py-2.5 rounded-[10px] mb-1.5" style="background:#161717"><div class="flex items-center gap-2 min-w-0"><span class="w-2 h-2 rounded-full shrink-0" style="background:${r[6]}"></span><span class="text-xs text-tp truncate">${r[0]}</span></div><div class="text-right"><div class="text-xs text-tp">${r[1]}</div><span class="text-[10px] px-1.5 py-px rounded-xl text-td" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15)">${r[2]}</span></div><div class="text-right"><div class="text-[11px]" style="color:${pc}">${r[3]}</div><span class="text-[10px] px-1.5 py-px rounded-xl" style="color:${pc};background:${pb}">${r[4]}</span></div></div>`}).join('');}
+function setDash(m){const d=DASH[m];
+  const pers=m==='personal';
+  document.getElementById('d-personal').className='px-6 py-2 rounded-full text-sm transition '+(pers?'font-medium text-tp':'text-td');
+  document.getElementById('d-personal').style.background=pers?'#111212':'transparent';
+  document.getElementById('d-business').className='px-6 py-2 rounded-full text-sm transition '+(!pers?'font-medium text-tp':'text-td');
+  document.getElementById('d-business').style.background=!pers?'#111212':'transparent';
+  document.getElementById('d-bizhead').className=pers?'hidden mb-6':'block mb-6';
+  document.getElementById('d-nwlabel').firstChild.textContent=pers?'Net Worth ':'Total Net Worth ';
+  document.getElementById('d-nw').textContent=d.nw;
+  const ch=document.getElementById('d-change');ch.textContent=d.ch;ch.style.color=d.c;
+  const cp=document.getElementById('d-changepct');cp.textContent=d.pct;cp.style.color=d.c;cp.style.background=d.c+'15';
+  document.getElementById('d-atotal').textContent=d.total;
+  document.getElementById('d-ltotal').textContent=d.ltotal;
+  document.getElementById('d-assets-ai').textContent=d.assetsAI;
+  document.getElementById('d-liab-ai').textContent=d.liabAI;
+  document.getElementById('d-line').setAttribute('d',d.line);
+  document.getElementById('d-area').setAttribute('d',d.line+' L620,130 L0,130 Z');
+  document.getElementById('d-line').setAttribute('stroke',d.c);
+  const l2=document.getElementById('d-line2'),lg=document.getElementById('d-legend');
+  if(d.line2){l2.setAttribute('d',d.line2);l2.style.display='';lg.style.display='flex'}else{l2.style.display='none';lg.style.display='none'}
+  document.querySelector('#da stop').setAttribute('stop-color',d.c+'30');
+  document.querySelector('#da stop:last-child').setAttribute('stop-color',d.c+'00');
+  document.getElementById('d-addbtn').style.background=pers?'linear-gradient(90deg,#019426,#008622)':'linear-gradient(90deg,#978FE0,#5F5D8F)';
+  document.getElementById('d-addbtn').style.borderColor=pers?'#005D17':'#52507A';
+  document.getElementById('d-arows').innerHTML=rowsHTML(d.assets);
+  document.getElementById('d-lrows').innerHTML=rowsHTML(d.liab);
+  donutSVG('d-adonut',d.adonut);
+  donutSVG('d-ldonut',d.ldonut);
+}
+setDash('personal');
+function toggleBilling(){const t=document.getElementById('billing-toggle');const on=t.dataset.on==='1';t.dataset.on=on?'0':'1';document.getElementById('billing-knob').style.transform=on?'translateX(0)':'translateX(24px)';document.getElementById('lbl-monthly').className=on?'text-tp font-medium':'text-td';document.getElementById('lbl-annual').className=on?'text-td':'text-tp font-medium';document.querySelectorAll('[data-monthly]').forEach(el=>{el.textContent=on?el.dataset.monthly:el.dataset.annual})}
+function closeVideo(){var m=document.getElementById('video-modal');m.classList.add('hidden');document.getElementById('video-frame').src=''}function playVideo(){var m=document.getElementById('video-modal');m.classList.remove('hidden');document.getElementById('video-frame').src='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1'}
+const FAQS=[['What is IOMI?','A Wealth Operating System that helps you see, understand, model, and optimize your full financial picture — personal and business.'],['Is IOMI a financial advisor?','No. IOMI provides educational tools, analytics, and scenario modeling — not personalized investment, legal, or tax advice.'],['What can I connect?','Banks, brokerages, retirement and crypto accounts, plus manual entries for real estate, business interests, and private assets.'],['What is the Capital Efficiency Score?','A signal beyond net worth reflecting liquidity, allocation, risk, concentration, and tax considerations.'],['How is my data protected?','Encryption in transit and at rest, strict access controls, and full user control over what you connect.'],['Who is IOMI for?','Founders, operators, high-income professionals, real estate and crypto investors — anyone whose finances outgrew spreadsheets.']];
+document.getElementById('faq-list').innerHTML=FAQS.map(f=>`<details class="group bg-el1 rounded-xl border border-bord overflow-hidden"><summary class="flex items-center justify-between p-5 cursor-pointer font-medium text-sm">${f[0]}<span class="text-tm group-open:rotate-180 transition-transform">▾</span></summary><div class="px-5 pb-5 text-sm text-td leading-relaxed">${f[1]}</div></details>`).join('');
+function animCounter(el){const t=+el.dataset.target,suf=el.dataset.suffix||'';let c=0;const step=Math.max(1,Math.ceil(t/40));const iv=setInterval(()=>{c+=step;if(c>=t){c=t;clearInterval(iv)}el.textContent=c+suf},25)}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll?.('.counter').forEach(c=>{if(!c.dataset.done){c.dataset.done=1;animCounter(c)}})}}),{threshold:.12});
+  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+  const nav=document.getElementById('navbar'),hero=document.getElementById('hero');
+  function onScroll(){if(window.scrollY>hero.offsetHeight-120){nav.classList.remove('nav-tr');nav.classList.add('nav-sd');nav.style.backdropFilter='blur(12px)'}else{nav.classList.remove('nav-sd');nav.classList.add('nav-tr');nav.style.backdropFilter='blur(0px)'}}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Goals — step indicator sync
+  (function(){
+    const panels=[...document.querySelectorAll('#goals .step-panel')];
+    const items=[...document.querySelectorAll('#goals .gs-item')];
+    if(!panels.length||!items.length)return;
+    const gio=new IntersectionObserver(es=>{
+      es.forEach(e=>{if(e.isIntersecting){const i=+e.target.dataset.step;items.forEach((it,j)=>it.classList.toggle('active',j===i))}});
+    },{threshold:0,rootMargin:'-45% 0px -45% 0px'});
+    panels.forEach(p=>gio.observe(p));
+    items.forEach((it,i)=>it.addEventListener('click',()=>panels[i]?.scrollIntoView({behavior:'smooth',block:'center'})));
+  })();
+
+  // AI chat — scripted typewriter loop (Figma conversation, coded — no video)
+  (function(){
+    const box=document.getElementById('chat-box');if(!box)return;
+    const G='#26BC4B';
+    const CONVO=[
+      {role:'u',text:'What changed this week?'},
+      {role:'a',blocks:[
+        {tag:'t',segs:[{t:'📊 Weekly Portfolio Update'}]},
+        {tag:'b',segs:[{t:'Portfolio value: '},{t:'+0.8%',g:1},{t:' this week'}]},
+        {tag:'b',segs:[{t:'Biggest driver: '},{t:'NVDA +6.1%',g:1}]},
+        {tag:'b',segs:[{t:'Crypto exposure: '},{t:'unchanged (28%)',s:1}]},
+        {tag:'b',segs:[{t:'Risk level: '},{t:'Medium → Medium',s:1}]},
+        {tag:'p',segs:[{t:'Your gains came from a small number of tech positions.'}]},
+        {tag:'p',segs:[{t:'Diversification has not improved.'}]}
+      ]},
+      {role:'u',text:"Why didn't diversification improve?"},
+      {role:'a',blocks:[
+        {tag:'p',segs:[{t:'Your top 3 positions still make up '},{t:'52%',s:1},{t:' of your portfolio.'}]},
+        {tag:'p',segs:[{t:'Even though NVDA performed well, no new assets were added and no rebalancing happened.'}]},
+        {tag:'p',segs:[{t:'Suggestion:',s:1}]},
+        {tag:'p',segs:[{t:'Consider reducing one oversized position by 10–15% and reallocating to a broad index fund or cash.'}]}
+      ]}
+    ];
+    function el(tag,cls,css){const e=document.createElement(tag);if(cls)e.className=cls;if(css)Object.assign(e.style,css);return e}
+    function segSpan(s){const sp=el('span');if(s.g){sp.style.color=G;sp.style.fontWeight='600'}else if(s.s){sp.style.fontWeight='600'}return sp}
+    function blockNode(tag){
+      if(tag==='t')return el('div','text-[15px] mb-1');
+      if(tag==='b'){const n=el('div','pl-4 relative');const d=el('span','text-td',{position:'absolute',left:'2px'});d.textContent='•';n.appendChild(d);return n}
+      return el('div');
+    }
+    function userRow(text,anim){const row=el('div','flex justify-end'+(anim?' bub-in':''));const b=el('div','text-sm px-3.5 py-3 max-w-[80%]',{background:'rgba(76,81,81,0.3)',borderRadius:'8px',boxShadow:'0 4px 4px rgba(0,0,0,0.25)',letterSpacing:'-0.28px'});b.textContent=text;row.appendChild(b);return row}
+    function aiWrap(){return el('div','text-sm space-y-2.5',{letterSpacing:'-0.28px',lineHeight:'20px'})}
+    const wait=ms=>new Promise(r=>setTimeout(r,ms));
+    async function typeSegs(node,segs){
+      for(const s of segs){const sp=segSpan(s);node.appendChild(sp);
+        for(let i=0;i<s.t.length;i++){sp.textContent+=s.t[i];if(i%2)await wait(9)}}
+    }
+    async function run(){
+      box.innerHTML='';
+      for(const m of CONVO){
+        if(m.role==='u'){box.appendChild(userRow(m.text,true));await wait(700);}
+        else{
+          const t=el('div','bub-in');t.innerHTML='<span class="typing"><span></span><span></span><span></span></span>';box.appendChild(t);
+          await wait(900);t.remove();
+          const wrap=aiWrap();box.appendChild(wrap);
+          for(const b of m.blocks){const n=blockNode(b.tag);wrap.appendChild(n);await typeSegs(n,b.segs);await wait(140);}
+          await wait(1000);
+        }
+      }
+    }
+    function renderStatic(){
+      box.innerHTML='';
+      CONVO.forEach(m=>{
+        if(m.role==='u'){box.appendChild(userRow(m.text,false))}
+        else{const wrap=aiWrap();m.blocks.forEach(b=>{const n=blockNode(b.tag);b.segs.forEach(s=>{const sp=segSpan(s);sp.textContent=s.t;n.appendChild(sp)});wrap.appendChild(n)});box.appendChild(wrap)}
+      });
+    }
+    if(RM){renderStatic();return}
+    let visible=false,playing=false;
+    async function loop(){if(playing)return;playing=true;while(visible){await run();await wait(4200)}playing=false}
+    const vio=new IntersectionObserver(es=>es.forEach(e=>{visible=e.isIntersecting;if(visible)loop()}),{threshold:.3});
+    vio.observe(box);
+  })();
+
+  // Motion engine — counters, bars, chart draw-ins, gauge, donut replay, scrollspy
+  (function(){
+    function countUp(el){
+      const m=el.textContent.trim().match(/^([^\d]*)([\d,]+(?:\.\d+)?)(.*)$/);if(!m)return;
+      const dec=(m[2].split('.')[1]||'').length,commas=m[2].includes(','),T=parseFloat(m[2].replace(/,/g,''));
+      const t0=performance.now(),D=1100;
+      (function f(n){
+        const k=Math.min(1,(n-t0)/D),v=T*(1-Math.pow(1-k,3));
+        let s=(k>=1?T:v).toFixed(dec);
+        if(commas)s=(+s).toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec});
+        el.textContent=m[1]+s+m[3];
+        if(k<1)requestAnimationFrame(f);
+      })(t0);
+    }
+    if(!RM){
+      const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){cio.unobserve(e.target);countUp(e.target)}}),{threshold:.6});
+      document.querySelectorAll('.cnt').forEach(el=>cio.observe(el));
+      // progress bars fill on reveal
+      const bars=[...document.querySelectorAll('.barf')];
+      bars.forEach(b=>{b.dataset.w=b.style.width;b.style.width='0%'});
+      const bio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const b=e.target;bio.unobserve(b);
+        const g=b.closest('.grid'),sib=g?[...g.querySelectorAll('.barf')]:[b],dl=Math.max(0,sib.indexOf(b))*80;
+        b.style.transition=`width .9s ${EO} ${dl}ms`;requestAnimationFrame(()=>b.style.width=b.dataset.w)}),{threshold:.5});
+      bars.forEach(b=>bio.observe(b));
+      // chart lines draw on reveal
+      const draws=[...document.querySelectorAll('path.draw')];
+      draws.forEach(p=>{const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L});
+      const dio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const p=e.target;dio.unobserve(p);
+        const L=p.getTotalLength();p.style.transition='none';p.style.strokeDasharray=L;p.style.strokeDashoffset=L;p.getBoundingClientRect();
+        p.style.transition=`stroke-dashoffset 1.3s ${EO} .15s`;p.style.strokeDashoffset='0';
+        p.addEventListener('transitionend',()=>{p.style.strokeDasharray='none'},{once:true})}),{threshold:.3});
+      draws.forEach(p=>dio.observe(p));
+      // area fills fade after lines
+      const fio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){fio.unobserve(e.target);e.target.classList.add('on')}}),{threshold:.3});
+      document.querySelectorAll('.fillfade').forEach(p=>fio.observe(p));
+      // CES ring sweep (270° gauge)
+      const ring=document.getElementById('ces-ring');
+      if(ring){const gio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;gio.unobserve(ring);
+        ring.style.transition=`stroke-dasharray 1.4s ${EO} .2s`;ring.setAttribute('stroke-dasharray',`${ring.dataset.fill} 389.6`)}),{threshold:.5});
+        gio.observe(ring);}
+      // donuts replay their sweep on first reveal
+      const dnio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;dnio.unobserve(e.target);
+        const id=e.target.id;if(DONUTS[id])donutSVG(id,DONUTS[id])}),{threshold:.4});
+      ['d-adonut','d-ldonut'].forEach(id=>{const el=document.getElementById(id);el&&dnio.observe(el)});
+    }else{
+      const ring=document.getElementById('ces-ring');if(ring)ring.setAttribute('stroke-dasharray',`${ring.dataset.fill} 389.6`);
+      document.querySelectorAll('.fillfade').forEach(p=>p.classList.add('on'));
+    }
+    // scrollspy nav
+    const nls={};document.querySelectorAll('.nl').forEach(a=>nls[a.getAttribute('href').slice(1)]=a);
+    const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){Object.values(nls).forEach(a=>a.classList.remove('active'));if(nls[e.target.id])nls[e.target.id].classList.add('active')}}),{rootMargin:'-35% 0px -55% 0px'});
+    Object.keys(nls).forEach(id=>{const s=document.getElementById(id);s&&sio.observe(s)});
+  })();
+</script>
+</body>
+</html>
