@@ -227,6 +227,18 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
   html,body{overflow-x:hidden}
   #navbar .dotcta{display:none}
   #hero .hero-in.rounded-full{font-size:11px;padding:4px 12px;gap:6px}
+  /* step cards stack on scroll */
+  #process .space-y-6 > div{position:sticky;box-shadow:0 -18px 36px rgba(0,0,0,.55)}
+  #process .space-y-6 > div:nth-child(1){top:70px}
+  #process .space-y-6 > div:nth-child(2){top:78px}
+  #process .space-y-6 > div:nth-child(3){top:86px}
+  #process .space-y-6 > div:nth-child(4){top:94px}
+  /* asset rows: full titles */
+  .pt-row[style]{padding-left:8px!important}
+  .pt-th{width:24px;height:24px}
+  .pt-name{font-size:11px}
+  .pt-val{font-size:11px}
+  .pt-pill{font-size:9px;padding:2px 6px}
   #hero h1{font-size:2.5rem}
   .cta-rings{margin:20px 4px}
   .hring{display:none}
@@ -703,8 +715,10 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
         const g=b.closest('.grid'),sib=g?[...g.querySelectorAll('.barf')]:[b],dl=Math.max(0,sib.indexOf(b))*80;
         b.style.transition=`width .9s ${EO} ${dl}ms`;requestAnimationFrame(()=>b.style.width=b.dataset.w)}),{threshold:.5});
       bars.forEach(b=>bio.observe(b));
-      // chart lines draw on reveal
-      const draws=[...document.querySelectorAll('path.draw')];
+      // chart lines draw on reveal (static on mobile: no hide-then-reveal)
+      const MOB=window.matchMedia('(max-width:767px)').matches;
+      const draws=MOB?[]:[...document.querySelectorAll('path.draw')];
+      if(MOB)document.querySelectorAll('.fillfade').forEach(p=>p.classList.add('on'));
       draws.forEach(p=>{const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L});
       const dio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const p=e.target;dio.unobserve(p);
         const L=p.getTotalLength();p.style.transition='none';p.style.strokeDasharray=L;p.style.strokeDashoffset=L;p.getBoundingClientRect();
@@ -713,7 +727,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
       draws.forEach(p=>dio.observe(p));
       // area fills fade after lines
       const fio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){fio.unobserve(e.target);e.target.classList.add('on')}}),{threshold:.3});
-      document.querySelectorAll('.fillfade').forEach(p=>fio.observe(p));
+      if(!MOB)document.querySelectorAll('.fillfade').forEach(p=>fio.observe(p));
       // CES ring sweep (270° gauge)
       const ring=document.getElementById('ces-ring');
       if(ring){const gio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;gio.unobserve(ring);
