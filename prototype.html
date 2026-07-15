@@ -192,6 +192,20 @@ tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#26BC4B',hover:'#21A742'
 .cmp-iomi{background:rgba(38,188,75,.07);border-left:1px solid rgba(38,188,75,.22);border-right:1px solid rgba(38,188,75,.22)}
 .cmp-iomi-h{background:rgba(38,188,75,.07);border-left:1px solid rgba(38,188,75,.22);border-right:1px solid rgba(38,188,75,.22);border-top:1px solid rgba(38,188,75,.22);border-radius:12px 12px 0 0}
 tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radius:0 0 12px 12px}
+
+/* --- hero: two-tone title, play pill, ringed CTA --- */
+.hdim{color:#63685F}
+.hplay{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;width:1.5em;height:.74em;border-radius:999px;background:#0f1a12;border:1px solid rgba(38,188,75,.55);box-shadow:0 0 26px rgba(38,188,75,.35),inset 0 0 18px rgba(38,188,75,.14);margin:0 .1em;transform:translateY(-.07em);cursor:pointer;transition:transform .3s,box-shadow .3s}
+.hplay:hover{transform:translateY(-.07em) scale(1.07);box-shadow:0 0 40px rgba(38,188,75,.55),inset 0 0 22px rgba(38,188,75,.2)}
+.hplay svg{width:.32em;height:.32em}
+.cta-rings{position:relative;display:inline-flex;border-radius:999px;margin:22px}
+.cta-rings:before,.cta-rings:after{content:"";position:absolute;border-radius:999px;pointer-events:none}
+.cta-rings:before{inset:-10px;border:1px solid rgba(255,255,255,.12)}
+.cta-rings:after{inset:-21px;border:1px solid rgba(255,255,255,.05)}
+.cta-main{display:inline-flex;align-items:center;gap:18px;background:#F9F9F9;color:#0a0c0b;border-radius:999px;padding:9px 9px 9px 30px;font-weight:600;font-size:15px;box-shadow:0 6px 30px rgba(0,0,0,.35),0 0 50px rgba(38,188,75,.12);transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+.cta-arr{width:40px;height:40px;border-radius:999px;background:#0b0d0c;display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.cta-rings:hover .cta-main{transform:scale(1.02);box-shadow:0 8px 36px rgba(0,0,0,.4),0 0 70px rgba(38,188,75,.2)}
+.cta-rings:hover .cta-arr{transform:rotate(45deg)}
 </style>
 </head>
 <body>
@@ -209,14 +223,13 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 <section id="hero" class="relative min-h-screen flex flex-col px-5 text-center overflow-hidden">
   <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_45%_at_center_top,_#26BC4B12_0%,_transparent_60%)] pointer-events-none"></div>
   <div class="absolute inset-0 opacity-[0.015] pointer-events-none" style="background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,#26BC4B 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,#26BC4B 40px)"></div>
-  <div class="absolute left-1/2 -translate-x-1/2 pointer-events-none" style="bottom:-32vh;width:140vw;height:70vh;background:radial-gradient(ellipse 50% 50% at center,rgba(38,188,75,.16) 0%,rgba(38,188,75,.05) 45%,transparent 70%);filter:blur(30px)"></div>
+  <div class="absolute inset-x-0 bottom-0 pointer-events-none" style="height:78vh;background:radial-gradient(42% 55% at 68% 95%,rgba(66,220,104,.26),transparent 65%),radial-gradient(48% 60% at 28% 105%,rgba(1,148,38,.22),transparent 70%),radial-gradient(85% 85% at 50% 125%,rgba(38,188,75,.16),transparent 75%);filter:blur(48px)"></div>
   <div class="flex flex-col items-center max-w-4xl mx-auto relative z-10 pt-32 sm:pt-36 pb-12">
     <div class="hero-in inline-flex items-center gap-2 mb-6 text-sm text-td border border-bord rounded-full px-4 py-1.5 bg-el1/50" style="--hd:0s"><span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse"></span> Built for founders, operators &amp; modern wealth builders</div>
-    <h1 class="hero-in text-5xl sm:text-7xl font-bold leading-[1.05] tracking-tight mb-6" style="--hd:.08s">Where wealth-building<br /><span class="grad">meets your ambitions.</span></h1>
+    <h1 class="hero-in text-5xl sm:text-7xl font-bold leading-[1.08] tracking-tight mb-6" style="--hd:.08s">Wealth-building <button type="button" onclick="playVideo()" class="hplay" aria-label="Watch the tour"><svg viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7z" fill="#42DC68"/></svg></button> <span class="hdim">meets</span><br /><span class="hdim">your ambitions.</span></h1>
     <p class="hero-in text-lg sm:text-xl text-td max-w-2xl mx-auto mb-6 leading-relaxed" style="--hd:.16s">Bank accounts, company equity, real estate, crypto — even the watch on your wrist. One dashboard. One score. One plan.</p>
-    <div class="hero-in flex flex-col sm:flex-row items-center justify-center gap-3" style="--hd:.24s">
-      <a href="#pricing" class="pill"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Create your account</a>
-      <a href="javascript:void(0)" onclick="playVideo()" class="flex items-center gap-2.5 text-[15px] font-semibold text-td hover:text-tp transition"><span class="w-9 h-9 rounded-full bg-el2 flex items-center justify-center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7z" fill="#9BA29D"/></svg></span>Watch the tour</a>
+    <div class="hero-in flex items-center justify-center mt-2 mb-2" style="--hd:.24s">
+      <a href="#pricing" class="cta-rings"><span class="cta-main">Start for free<span class="cta-arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
     </div>
     <p class="hero-in text-xs text-tm mt-4" style="--hd:.32s">1-month free trial · No credit card required</p>
   </div>
