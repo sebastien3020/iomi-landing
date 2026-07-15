@@ -149,10 +149,24 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 .hring.hr1{inset:-11px}
 .hring.hr2{inset:-22px;border-color:rgba(255,255,255,.08)}
 .hring.hr3{inset:-33px;border-color:rgba(255,255,255,.04)}
-.cta-main{display:inline-flex;align-items:center;gap:18px;background:#F9F9F9;color:#0a0c0b;border-radius:999px;padding:9px 9px 9px 30px;font-weight:600;font-size:15px;box-shadow:0 6px 30px rgba(0,0,0,.35),0 0 50px rgba(38,188,75,.12);transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
-.cta-arr{width:40px;height:40px;border-radius:999px;background:#0b0d0c;display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.22,1,.36,1)}
-.cta-rings:hover .cta-main{transform:scale(1.02);box-shadow:0 8px 36px rgba(0,0,0,.4),0 0 70px rgba(38,188,75,.2)}
-.cta-rings:hover .cta-arr{transform:rotate(45deg)}
+.cta-main{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:18px;background:#F9F9F9;color:#0a0c0b;border-radius:999px;padding:9px 9px 9px 30px;font-weight:600;font-size:15px;box-shadow:0 6px 30px rgba(0,0,0,.35),0 0 50px rgba(38,188,75,.12);transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s}
+.cta-label{position:relative;z-index:1;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.cta-arr{position:relative;z-index:1;width:40px;height:40px;border-radius:999px;background:#0b0d0c;display:flex;align-items:center;justify-content:center;transition:transform .46s cubic-bezier(.22,1,.36,1),background .4s}
+.cta-dot{position:absolute;width:48px;height:48px;border-radius:50%;background:#26BC4B;left:var(--cta-x,26px);top:var(--cta-y,50%);transform:translate(-50%,-50%) scale(0);opacity:0;pointer-events:none;transition:transform .5s cubic-bezier(.4,0,.2,1),opacity .25s ease .22s}
+.cta-rings:focus-visible{outline:2px solid #42DC68;outline-offset:5px;border-radius:999px}
+@media (hover:hover) and (pointer:fine){
+  .cta-rings:hover .cta-dot,.cta-rings:focus-visible .cta-dot{transform:translate(-50%,-50%) scale(14);opacity:1;transition:opacity .15s ease-out,transform .66s cubic-bezier(.22,1,.36,1) .05s}
+  .cta-rings:hover .cta-label,.cta-rings:focus-visible .cta-label{transform:translateX(4px)}
+  .cta-rings:hover .cta-arr,.cta-rings:focus-visible .cta-arr{transform:translateX(5px);background:#000}
+  .cta-rings:hover .cta-main,.cta-rings:focus-visible .cta-main{transform:translateY(-2px) scale(1.01);box-shadow:0 10px 38px rgba(0,0,0,.4),0 0 70px rgba(38,188,75,.22)}
+}
+.cta-rings:active .cta-main{transform:translateY(-1px) scale(.985);transition-duration:.12s}
+@media (prefers-reduced-motion: reduce){
+  .cta-dot{transition:opacity .15s!important;transform:translate(-50%,-50%) scale(14)!important}
+  .cta-rings:hover .cta-label,.cta-rings:focus-visible .cta-label{transform:none!important}
+  .cta-rings:hover .cta-arr,.cta-rings:focus-visible .cta-arr{transform:none!important}
+  .cta-rings:hover .cta-main,.cta-rings:focus-visible .cta-main{transform:none!important}
+}
 
 .cta-play{width:58px;height:58px;border-radius:999px;background:#F9F9F9;display:flex;align-items:center;justify-content:center;margin-left:46px;box-shadow:0 6px 30px rgba(0,0,0,.35),0 0 40px rgba(38,188,75,.10);position:relative;transition:transform .35s cubic-bezier(.22,1,.36,1)}
 .cta-play .hring.hr1{inset:-10px}
@@ -200,7 +214,7 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
     <h1 class="hero-in text-5xl sm:text-7xl font-bold leading-[1.08] tracking-tight mb-6" style="--hd:.08s">Wealth intelligence<br /><span class="hdim">made for how you build</span></h1>
     <p class="hero-in text-lg sm:text-xl text-td max-w-2xl mx-auto mb-6 leading-relaxed" style="--hd:.16s">Bank accounts, company equity, real estate, crypto — even the watch on your wrist. One dashboard. One score. One plan.</p>
     <div class="hero-in flex items-center justify-center mt-2 mb-2" style="--hd:.24s">
-      <a href="#pricing" class="cta-rings"><span class="hring hr1"></span><span class="hring hr2"></span><span class="hring hr3"></span><span class="cta-main">Start for free<span class="cta-arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+      <a href="#pricing" class="cta-rings"><span class="hring hr1"></span><span class="hring hr2"></span><span class="hring hr3"></span><span class="cta-main"><span class="cta-dot" aria-hidden="true"></span><span class="cta-label">Start for free</span><span class="cta-arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
       <button type="button" onclick="playVideo()" class="cta-play" aria-label="Watch the tour"><span class="hring hr1"></span><span class="hring hr2"></span><span class="hring hr3"></span><svg width="15" height="15" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#0a0c0b"/></svg></button>
     </div>
     <p class="hero-in text-xs text-tm mt-4" style="--hd:.32s">1-month free trial · No credit card required</p>
@@ -985,6 +999,21 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
     gsap.to('.hero-wave',{y:10,ease:'none',scrollTrigger:{trigger:'#hero',start:'center top',end:'bottom top',scrub:1}});
   }
   waveInit();
+})();
+</script>
+
+<script>
+(function(){
+  if(!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  var b=document.querySelector('.cta-rings'); if(!b) return;
+  var m=b.querySelector('.cta-main');
+  b.addEventListener('pointerenter',function(e){
+    var r=m.getBoundingClientRect();
+    var x=Math.max(0,Math.min(e.clientX-r.left,r.width));
+    var y=Math.max(0,Math.min(e.clientY-r.top,r.height));
+    m.style.setProperty('--cta-x',x+'px');
+    m.style.setProperty('--cta-y',y+'px');
+  });
 })();
 </script>
 </body>
