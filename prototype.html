@@ -149,23 +149,25 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 .hring.hr1{inset:-11px}
 .hring.hr2{inset:-22px;border-color:rgba(255,255,255,.08)}
 .hring.hr3{inset:-33px;border-color:rgba(255,255,255,.04)}
-.cta-main{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:18px;background:#F9F9F9;color:#0a0c0b;border-radius:999px;padding:9px 9px 9px 30px;font-weight:600;font-size:15px;box-shadow:0 6px 30px rgba(0,0,0,.35),0 0 50px rgba(38,188,75,.12);transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s}
-.cta-label{position:relative;z-index:1;transition:transform .45s cubic-bezier(.22,1,.36,1)}
-.cta-arr{position:relative;z-index:1;width:40px;height:40px;border-radius:999px;background:#0b0d0c;display:flex;align-items:center;justify-content:center;transition:transform .46s cubic-bezier(.22,1,.36,1),background .4s}
-.cta-dot{position:absolute;width:48px;height:48px;border-radius:50%;background:#26BC4B;left:var(--cta-x,26px);top:var(--cta-y,50%);transform:translate(-50%,-50%) scale(0);opacity:0;pointer-events:none;transition:transform .5s cubic-bezier(.4,0,.2,1),opacity .25s ease .22s}
-.cta-rings:focus-visible{outline:2px solid #42DC68;outline-offset:5px;border-radius:999px}
+.cta-main{display:inline-flex;align-items:center;gap:18px;background:#F9F9F9;color:#0a0c0b;border-radius:999px;padding:9px 9px 9px 30px;font-weight:600;font-size:15px;box-shadow:0 6px 30px rgba(0,0,0,.35),0 0 50px rgba(38,188,75,.12);transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+.cta-arr{width:40px;height:40px;border-radius:999px;background:#0b0d0c;display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.cta-rings:hover .cta-main{transform:scale(1.02);box-shadow:0 8px 36px rgba(0,0,0,.4),0 0 70px rgba(38,188,75,.2)}
+.cta-rings:hover .cta-arr{transform:rotate(45deg)}
+/* --- ink-drop CTA (generic) --- */
+.inkbtn{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:10px;background:#F9F9F9;color:#0a0c0b;border-radius:999px;font-weight:600;font-size:14px;padding:13px 26px;transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s}
+.ink-dot{position:absolute;width:48px;height:48px;border-radius:50%;background:#26BC4B;left:var(--cta-x,26px);top:var(--cta-y,50%);transform:translate(-50%,-50%) scale(0);opacity:0;pointer-events:none;transition:transform .5s cubic-bezier(.4,0,.2,1),opacity .25s ease .22s}
+.ink-label,.ink-arr{position:relative;z-index:1;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.inkbtn:focus-visible{outline:2px solid #42DC68;outline-offset:4px}
 @media (hover:hover) and (pointer:fine){
-  .cta-rings:hover .cta-dot,.cta-rings:focus-visible .cta-dot{transform:translate(-50%,-50%) scale(14);opacity:1;transition:opacity .15s ease-out,transform .66s cubic-bezier(.22,1,.36,1) .05s}
-  .cta-rings:hover .cta-label,.cta-rings:focus-visible .cta-label{transform:translateX(4px)}
-  .cta-rings:hover .cta-arr,.cta-rings:focus-visible .cta-arr{transform:translateX(5px);background:#000}
-  .cta-rings:hover .cta-main,.cta-rings:focus-visible .cta-main{transform:translateY(-2px) scale(1.01);box-shadow:0 10px 38px rgba(0,0,0,.4),0 0 70px rgba(38,188,75,.22)}
+  .inkbtn:hover .ink-dot,.inkbtn:focus-visible .ink-dot{transform:translate(-50%,-50%) scale(16);opacity:1;transition:opacity .15s ease-out,transform .66s cubic-bezier(.22,1,.36,1) .05s}
+  .inkbtn:hover .ink-label,.inkbtn:focus-visible .ink-label{transform:translateX(4px)}
+  .inkbtn:hover .ink-arr,.inkbtn:focus-visible .ink-arr{transform:translateX(5px)}
+  .inkbtn:hover,.inkbtn:focus-visible{transform:translateY(-2px) scale(1.01);box-shadow:0 10px 30px rgba(0,0,0,.35)}
 }
-.cta-rings:active .cta-main{transform:translateY(-1px) scale(.985);transition-duration:.12s}
+.inkbtn:active{transform:translateY(-1px) scale(.985);transition-duration:.12s}
 @media (prefers-reduced-motion: reduce){
-  .cta-dot{transition:opacity .15s!important;transform:translate(-50%,-50%) scale(14)!important}
-  .cta-rings:hover .cta-label,.cta-rings:focus-visible .cta-label{transform:none!important}
-  .cta-rings:hover .cta-arr,.cta-rings:focus-visible .cta-arr{transform:none!important}
-  .cta-rings:hover .cta-main,.cta-rings:focus-visible .cta-main{transform:none!important}
+  .ink-dot{transition:opacity .15s!important;transform:translate(-50%,-50%) scale(16)!important}
+  .inkbtn:hover .ink-label,.inkbtn:hover .ink-arr,.inkbtn:hover{transform:none!important}
 }
 
 .cta-play{width:58px;height:58px;border-radius:999px;background:#F9F9F9;display:flex;align-items:center;justify-content:center;margin-left:46px;box-shadow:0 6px 30px rgba(0,0,0,.35),0 0 40px rgba(38,188,75,.10);position:relative;transition:transform .35s cubic-bezier(.22,1,.36,1)}
@@ -179,14 +181,7 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 @keyframes sheetArrow{0%,100%{transform:translateX(0);opacity:.7}50%{transform:translateX(8px);opacity:1}}
 @media (prefers-reduced-motion: reduce){.sheet-arrow{animation:none}}
 
-/* --- hero wave transition (provided asset, alpha-masked to page color) --- */
-.hero-wave{position:absolute;left:-3%;right:-3%;bottom:-1px;height:clamp(120px,11vw,180px);z-index:4;pointer-events:none;user-select:none;overflow:hidden;will-change:transform}
-.hw-asset{position:absolute;inset:0;background:#0a0c0b;-webkit-mask-image:url('assets/hero-wave-blend.png');mask-image:url('assets/hero-wave-blend.png');-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;animation:heroWaveDrift 16s ease-in-out infinite alternate;will-change:transform}
-@keyframes heroWaveDrift{0%{transform:translate3d(-0.6%,0,0) scaleX(1.01)}100%{transform:translate3d(0.6%,2px,0) scaleX(1.01)}}
-.hw-blend{position:absolute;left:0;right:0;bottom:92%;height:120px;background:linear-gradient(180deg,transparent 0%,rgba(10,12,11,.06) 35%,rgba(10,12,11,.18) 70%,rgba(10,12,11,.4) 100%)}
-@media (max-width:1024px){.hero-wave{height:110px}.hw-blend{height:90px}}
-@media (max-width:640px){.hero-wave{left:-6%;right:-6%;height:76px}.hw-blend{height:60px}}
-@media (prefers-reduced-motion: reduce){.hw-asset{animation:none}}
+
 </style>
 </head>
 <body>
@@ -204,13 +199,13 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 <section id="hero" class="relative min-h-screen flex flex-col px-5 text-center overflow-hidden">
   <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_45%_at_center_top,_#26BC4B12_0%,_transparent_60%)] pointer-events-none"></div>
   <div class="absolute inset-0 opacity-[0.015] pointer-events-none" style="background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,#26BC4B 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,#26BC4B 40px)"></div>
-  <div class="absolute inset-x-0 bottom-0 pointer-events-none" style="height:82vh;background:radial-gradient(46% 58% at 70% 102%,rgba(66,220,104,.68),transparent 68%),radial-gradient(55% 62% at 26% 108%,rgba(10,170,70,.55),transparent 72%),radial-gradient(95% 90% at 50% 128%,rgba(38,188,75,.42),transparent 80%);filter:blur(52px)"></div>
+  <div class="absolute left-1/2 -translate-x-1/2 pointer-events-none" style="bottom:-32vh;width:140vw;height:70vh;background:radial-gradient(ellipse 50% 50% at center,rgba(38,188,75,.16) 0%,rgba(38,188,75,.05) 45%,transparent 70%);filter:blur(30px)"></div>
   <div class="flex flex-col items-center max-w-4xl mx-auto relative z-10 pt-32 sm:pt-36 pb-12">
     <div class="hero-in inline-flex items-center gap-2 mb-6 text-sm text-td border border-bord rounded-full px-4 py-1.5 bg-el1/50" style="--hd:0s"><span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse"></span> Built for founders, operators &amp; modern wealth builders</div>
     <h1 class="hero-in text-5xl sm:text-7xl font-bold leading-[1.08] tracking-tight mb-6" style="--hd:.08s">Wealth intelligence<br /><span class="hdim">made for how you build</span></h1>
     <p class="hero-in text-lg sm:text-xl text-td max-w-2xl mx-auto mb-6 leading-relaxed" style="--hd:.16s">Bank accounts, company equity, real estate, crypto — even the watch on your wrist. One dashboard. One score. One plan.</p>
     <div class="hero-in flex items-center justify-center mt-2 mb-2" style="--hd:.24s">
-      <a href="#pricing" class="cta-rings"><span class="hring hr1"></span><span class="hring hr2"></span><span class="hring hr3"></span><span class="cta-main"><span class="cta-dot" aria-hidden="true"></span><span class="cta-label">Start for free</span><span class="cta-arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+      <a href="#pricing" class="cta-rings"><span class="hring hr1"></span><span class="hring hr2"></span><span class="hring hr3"></span><span class="cta-main">Start for free<span class="cta-arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
       <button type="button" onclick="playVideo()" class="cta-play" aria-label="Watch the tour"><span class="hring hr1"></span><span class="hring hr2"></span><span class="hring hr3"></span><svg width="15" height="15" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#0a0c0b"/></svg></button>
     </div>
     <p class="hero-in text-xs text-tm mt-4" style="--hd:.32s">1-month free trial · No credit card required</p>
@@ -252,10 +247,7 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
     </div>
     <p class="text-xs text-tm mt-6 text-center">Synced via <span class="text-tp font-medium">Plaid</span> — plus everything Plaid can&#39;t see: real estate, collectibles, private equity.</p>
   </div>
-  <div class="hero-wave" aria-hidden="true">
-    <div class="hw-blend"></div>
-    <div class="hw-asset"></div>
-  </div>
+
 </section>
 
 <!-- VIDEO MODAL -->
@@ -629,7 +621,7 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
         <div id="idle-result" class="text-4xl sm:text-5xl font-bold" style="color:#26BC4B">$10,800</div>
         <div class="text-[10px] text-tm mt-2.5">Assuming a 6% gap between low-yield accounts and deployed capital. Illustrative, not advice.</div>
       </div>
-      <a href="#pricing" class="block text-center text-sm font-semibold text-white px-5 py-3 rounded-full mt-4 transition hover:brightness-110" style="background:linear-gradient(90deg,#019426,#008622);border:1.2px solid #005D17">Put it to work →</a>
+      <a href="#pricing" class="inkbtn w-full mt-4"><span class="ink-dot" aria-hidden="true"></span><span class="ink-label">Put it to work</span><span class="ink-arr">→</span></a>
     </div>
   </div>
 </section>
@@ -984,30 +976,18 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 </script>
 
 
-<script>
-(function(){
-  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function waveInit(){
-    if(!window.gsap || !window.ScrollTrigger) return setTimeout(waveInit,400);
-    if(rm) return;
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to('.hero-wave',{y:8,ease:'none',scrollTrigger:{trigger:'#hero',start:'center top',end:'bottom top',scrub:1}});
-  }
-  waveInit();
-})();
-</script>
 
 <script>
 (function(){
   if(!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-  var b=document.querySelector('.cta-rings'); if(!b) return;
-  var m=b.querySelector('.cta-main');
-  b.addEventListener('pointerenter',function(e){
-    var r=m.getBoundingClientRect();
-    var x=Math.max(0,Math.min(e.clientX-r.left,r.width));
-    var y=Math.max(0,Math.min(e.clientY-r.top,r.height));
-    m.style.setProperty('--cta-x',x+'px');
-    m.style.setProperty('--cta-y',y+'px');
+  document.querySelectorAll('.inkbtn').forEach(function(b){
+    b.addEventListener('pointerenter',function(e){
+      var r=b.getBoundingClientRect();
+      var x=Math.max(0,Math.min(e.clientX-r.left,r.width));
+      var y=Math.max(0,Math.min(e.clientY-r.top,r.height));
+      b.style.setProperty('--cta-x',x+'px');
+      b.style.setProperty('--cta-y',y+'px');
+    });
   });
 })();
 </script>
