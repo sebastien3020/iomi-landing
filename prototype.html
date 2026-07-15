@@ -213,6 +213,11 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 .cta-play .hring.hr2{inset:-20px;border-color:rgba(255,255,255,.08)}
 .cta-play .hring.hr3{inset:-30px;border-color:rgba(255,255,255,.04)}
 .cta-play:hover{transform:scale(1.07)}
+
+.sheet-arrow{animation:sheetArrow 2.2s ease-in-out infinite}
+@media (max-width:767px){.sheet-arrow svg{transform:rotate(90deg)}}
+@keyframes sheetArrow{0%,100%{transform:translateX(0);opacity:.7}50%{transform:translateX(8px);opacity:1}}
+@media (prefers-reduced-motion: reduce){.sheet-arrow{animation:none}}
 </style>
 </head>
 <body>
@@ -680,6 +685,30 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
       <div class="flex items-start gap-4"><span class="pfi" style="margin-top:2px">✓</span><div><div class="text-[15px] font-semibold mb-1">IOMI can never touch your money</div><div class="text-xs text-td leading-relaxed">Read-only via Plaid — it never even sees your bank password.</div></div></div>
       <div class="flex items-start gap-4"><span class="pfi" style="margin-top:2px">✓</span><div><div class="text-[15px] font-semibold mb-1">Nothing moves without you</div><div class="text-xs text-td leading-relaxed">No payments, no transfers, no changes to your accounts. Ever.</div></div></div>
       <div class="flex items-start gap-4"><span class="pfi" style="margin-top:2px">✓</span><div><div class="text-[15px] font-semibold mb-1">Encrypted end to end</div><div class="text-xs text-td leading-relaxed">Even the AI never sees your account numbers.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPREADSHEET -> IOMI -->
+<section class="py-24 px-5 border-t border-bord fade">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl sm:text-5xl font-bold text-center leading-tight mb-14">Stop managing your wealth in a spreadsheet.<br class="hidden sm:block"> Start building it.</h2>
+    <div class="grid md:grid-cols-[1fr_auto_1fr] grid-cols-1 gap-8 items-center max-w-5xl mx-auto">
+      <div class="rounded-[14px] p-5" style="background:#0f1010;border:1px solid rgba(255,255,255,.08)">
+        <table class="w-full text-xs"><thead><tr class="text-tm"><th class="text-left font-normal pb-2 pr-4">Account</th><th class="text-left font-normal pb-2 pr-4">Value</th><th class="text-left font-normal pb-2">Type</th></tr></thead>
+        <tbody><tr class="border-t" style="border-color:rgba(255,255,255,.06)"><td class="py-2.5 pr-4 text-td">Checking</td><td class="py-2.5 pr-4 text-tp">$12,400</td><td class="py-2.5 text-tm">Cash</td></tr><tr class="border-t" style="border-color:rgba(255,255,255,.06)"><td class="py-2.5 pr-4 text-td">Savings</td><td class="py-2.5 pr-4 text-tp">$45,000</td><td class="py-2.5 text-tm">Cash</td></tr><tr class="border-t" style="border-color:rgba(255,255,255,.06)"><td class="py-2.5 pr-4 text-td">401(k)</td><td class="py-2.5 pr-4 text-tp">$128,000</td><td class="py-2.5 text-tm">Retirement</td></tr><tr class="border-t" style="border-color:rgba(255,255,255,.06)"><td class="py-2.5 pr-4 text-td">Brokerage</td><td class="py-2.5 pr-4 text-tp">$62,000</td><td class="py-2.5 text-tm">Stocks</td></tr><tr class="border-t" style="border-color:rgba(255,255,255,.06)"><td class="py-2.5 pr-4 text-td">Rental Prop.</td><td class="py-2.5 pr-4 text-tp">$340,000</td><td class="py-2.5 text-tm">Real Estate</td></tr><tr class="border-t" style="border-color:rgba(255,255,255,.06)"><td class="py-2.5 pr-4 text-td">Crypto</td><td class="py-2.5 pr-4 text-tp">$18,000</td><td class="py-2.5 text-tm">Digital</td></tr><tr class="border-t" style="border-color:rgba(255,255,255,.10)"><td class="py-2.5 pr-4 text-td">Total</td><td class="py-2.5 pr-4 font-bold text-tp">$605,400</td><td></td></tr></tbody></table>
+      </div>
+      <div class="sheet-arrow mx-auto" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M4 12h15M13 6l6 6-6 6" stroke="#26BC4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="rounded-[16px] p-6" style="background:#111212;border:1px solid rgba(38,188,75,.25);box-shadow:0 0 50px rgba(38,188,75,.08)">
+        <div class="text-xs text-td flex items-center gap-2 mb-1"><span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse"></span>Net Worth · live</div>
+        <div class="cnt text-4xl sm:text-5xl font-bold mb-5">$605,400</div>
+        <div class="grid grid-cols-2 gap-x-8 gap-y-4 pt-4" style="border-top:1px solid rgba(255,255,255,.08)">
+          <div><div class="text-[10px] text-tm mb-0.5">CES Score</div><div class="text-sm font-semibold" style="color:#26BC4B"><span class="cnt">68</span> / 100</div></div>
+          <div><div class="text-[10px] text-tm mb-0.5">Allocation</div><div class="text-sm font-semibold">3 assets</div></div>
+          <div><div class="text-[10px] text-tm mb-0.5">Top Rec</div><div class="text-sm font-semibold">Deploy idle cash</div></div>
+          <div><div class="text-[10px] text-tm mb-0.5">Next Goal</div><div class="text-sm font-semibold">Emergency fund</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
