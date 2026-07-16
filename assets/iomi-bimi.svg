@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
-  <text x="0" y="38" font-family="'Archivo', sans-serif" font-size="36" font-weight="700" fill="#26BC4B">IOMI</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150">
+  <rect width="150" height="150" fill="#111212" rx="20"/>
+  <text x="75" y="88" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" fill="#26BC4B" text-anchor="middle">IO</text>
+  <text x="75" y="124" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" fill="#26BC4B" text-anchor="middle">MI</text>
 </svg>
