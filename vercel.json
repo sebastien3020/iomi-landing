@@ -1,7 +1,9 @@
 {
   "redirects": [
     { "source": "/discord", "destination": "/?utm_source=discord&utm_medium=social", "permanent": false },
+    { "source": "/linkedin", "destination": "/?utm_source=linkedin&utm_medium=social", "permanent": false },
     { "source": "/li", "destination": "/?utm_source=linkedin&utm_medium=social", "permanent": false },
+    { "source": "/lia", "destination": "/?utm_source=lia&utm_medium=social", "permanent": false },
     { "source": "/twitter", "destination": "/?utm_source=twitter&utm_medium=social", "permanent": false },
     { "source": "/x", "destination": "/?utm_source=twitter&utm_medium=social", "permanent": false },
     { "source": "/fb", "destination": "/?utm_source=facebook&utm_medium=social", "permanent": false },
