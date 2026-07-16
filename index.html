@@ -245,15 +245,44 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
   .cta-play{margin-left:12px;width:50px;height:50px}
 }
 </style>
-</head>
-<body>
+<!-- Customer.io → tu colles le snippet de fly.customer.io (Settings → Tracking) -->
+<!-- CIOSNIPPET -->
 
+<!-- Hotjar -->
+<script>
+  !function(t){if(window.hj)return;window.hj=function(){window.hj.q=window.hj.q||[];window.hj.q.push(arguments)};var e=t.createElement("script"),s=t.getElementsByTagName("script")[0];e.async=1;e.src="https://static.hj.cloud/hj-1.8.1.js";s.parentNode.insertBefore(e,s)}(document);
+  hj("trigger", "pageview");
+</script>
+
+<!-- UTM First-Touch : capture ?utm_* et les passe aux liens vers l'app -->
+<script>
+(function(){
+  var p = new URLSearchParams(location.search);
+  var utms = {};
+  ["utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(function(k){
+    var v = p.get(k);
+    if(v) utms[k] = v;
+  });
+  // Si pas d'UTM, marquer comme direct
+  if(!utms.utm_source) return;
+  // Sur tous les liens vers app.iomifinance.com
+  document.querySelectorAll('a[href*="app.iomifinance.com"]').forEach(function(a){
+    var u = new URL(a.href);
+    Object.keys(utms).forEach(function(k){ u.searchParams.set(k, utms[k]); });
+    a.href = u.toString();
+  });
+})();
+</script>
+
+</head>
+
+<body>
 <!-- NAV -->
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 nav-tr" style="backdrop-filter:blur(0px)">
   <div class="max-w-7xl mx-auto px-5 flex items-center justify-between h-16">
     <a href="#hero" class="flex items-center"><img src="assets/iomi-logo.png" alt="IOMI" class="h-10 w-auto"></a>
     <div class="hidden md:flex items-center gap-7 text-sm text-td"><a href="#ai" class="nl hover:text-tp transition">AI</a><a href="#benefits" class="nl hover:text-tp transition">Features</a><a href="#pricing" class="nl hover:text-tp transition">Pricing</a><a href="#faq" class="nl hover:text-tp transition">FAQ</a></div>
-    <a href="https://app.iomifinance.com" class="nav-signin text-sm text-td hover:text-tp transition mr-4">Sign in</a><a href="https://app.iomifinance.com" class="dotcta dotcta-green text-[15px]" style="padding:11px 24px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><button id="mnav-btn" class="md:hidden flex flex-col justify-center gap-1.5 w-10 h-10 ml-3" aria-label="Menu" aria-expanded="false" onclick="var m=document.getElementById('mnav');m.classList.toggle('hidden');this.setAttribute('aria-expanded',m.classList.contains('hidden')?'false':'true')"><span class="block w-6 h-0.5 rounded mx-auto" style="background:#F9F9F9"></span><span class="block w-6 h-0.5 rounded mx-auto" style="background:#F9F9F9"></span><span class="block w-6 h-0.5 rounded mx-auto" style="background:#F9F9F9"></span></button><div id="mnav" class="hidden md:hidden absolute top-full left-0 right-0 px-5 py-4" style="background:rgba(10,12,11,.98);border-bottom:1px solid rgba(255,255,255,.1)"><div class="flex flex-col gap-4 text-sm text-td"><a href="#process" onclick="document.getElementById('mnav').classList.add('hidden')" class="hover:text-tp">How it works</a><a href="#ai" onclick="document.getElementById('mnav').classList.add('hidden')" class="hover:text-tp">AI</a><a href="#pricing" onclick="document.getElementById('mnav').classList.add('hidden')" class="hover:text-tp">Pricing</a><a href="#faq" onclick="document.getElementById('mnav').classList.add('hidden')" class="hover:text-tp">FAQ</a><a href="https://app.iomifinance.com" class="mt-1 text-center font-semibold rounded-full py-3 px-6" style="background:#26BC4B;color:#041308">Get started</a><a href="https://app.iomifinance.com" class="text-center text-td hover:text-tp py-1">Sign in</a></div></div>
+    <div class="flex items-center"><a href="https://app.iomifinance.com" class="nav-signin text-[15px] font-medium hover:opacity-80 transition" style="color:#F9F9F9;margin-right:22px">Sign in</a><a href="https://app.iomifinance.com" class="dotcta dotcta-green text-[15px]" style="padding:11px 24px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><button id="mnav-btn" class="md:hidden flex flex-col justify-center gap-1.5 w-10 h-10 ml-3" aria-label="Menu" aria-expanded="false" onclick="var m=document.getElementById('mnav');m.classList.toggle('hidden');this.setAttribute('aria-expanded',m.classList.contains('hidden')?'false':'true')"><span class="block w-6 h-0.5 rounded mx-auto" style="background:#F9F9F9"></span><span class="block w-6 h-0.5 rounded mx-auto" style="background:#F9F9F9"></span><span class="block w-6 h-0.5 rounded mx-auto" style="background:#F9F9F9"></span></button></div><div id="mnav" class="hidden md:hidden absolute top-full left-0 right-0 px-5 py-4" style="background:rgba(10,12,11,.98);border-bottom:1px solid rgba(255,255,255,.1)"><div class="flex flex-col gap-4 text-sm text-td"><a href="#process" onclick="document.getElementById('mnav').classList.add('hidden')" class="hover:text-tp">How it works</a><a href="#ai" onclick="document.getElementById('mnav').classList.add('hidden')" class="hover:text-tp">AI</a><a href="#pricing" onclick="document.getElementById('mnav').classList.add('hidden')" class="hover:text-tp">Pricing</a><a href="#faq" onclick="document.getElementById('mnav').classList.add('hidden')" class="hover:text-tp">FAQ</a><a href="https://app.iomifinance.com" class="mt-1 text-center font-semibold rounded-full py-3 px-6" style="background:#26BC4B;color:#041308">Get started</a><a href="https://app.iomifinance.com" class="text-center text-td hover:text-tp py-1">Sign in</a></div></div>
   </div>
 </nav>
 
