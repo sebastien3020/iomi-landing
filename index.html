@@ -258,7 +258,7 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 <!-- Contentsquare (Hotjar v2) -->
 <script src="https://t.contentsquare.net/uxa/e3ed4d1b01412.js" defer></script>
 
-<!-- UTM First-Touch : capture ?utm_* et les passe aux liens vers l'app -->
+<!-- UTM First-Touch : capture ?utm_* stocke dans cookie + liens vers l'app -->
 <script>
 (function(){
   var p = new URLSearchParams(location.search);
@@ -267,8 +267,20 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
     var v = p.get(k);
     if(v) utms[k] = v;
   });
-  // Si pas d'UTM, marquer comme direct
-  if(!utms.utm_source) return;
+  // Lire depuis le cookie si pas d'UTM dans l'URL (navigation entre pages)
+  var cookie = document.cookie.match(/__iomi_utm=([^;]+)/);
+  if(!utms.utm_source && cookie) {
+    try {
+      utms = JSON.parse(decodeURIComponent(cookie[1]));
+    } catch(e) {}
+  }
+  // Si toujours pas d'UTM, marquer comme direct
+  if(!utms.utm_source) {
+    utms.utm_source = "direct";
+    utms.utm_medium = "none";
+  }
+  // Sauvegarder en cookie pour 30 jours
+  document.cookie = "__iomi_utm=" + encodeURIComponent(JSON.stringify(utms)) + "; max-age=2592000; path=/; SameSite=Lax";
   // Sur tous les liens vers app.iomifinance.com
   document.querySelectorAll('a[href*="app.iomifinance.com"]').forEach(function(a){
     var u = new URL(a.href);
