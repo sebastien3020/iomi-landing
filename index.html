@@ -250,12 +250,13 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
   #process .space-y-6 > div:nth-child(2){top:78px}
   #process .space-y-6 > div:nth-child(3){top:86px}
   #process .space-y-6 > div:nth-child(4){top:94px}
-  /* asset rows: full titles */
+  /* asset rows: full titles, wrap to 2 lines instead of truncating */
   .pt-row[style]{padding-left:8px!important}
   .pt-th{width:24px;height:24px}
-  .pt-name{font-size:11px}
-  .pt-val{font-size:11px}
-  .pt-pill{font-size:9px;padding:2px 6px}
+  .pt-name{font-size:11px;white-space:normal;line-height:1.35}
+  .pt-val{font-size:11px;flex:none}
+  .pt-pill{font-size:9px;padding:2px 6px;flex:none}
+  .pt-sub.open{max-height:160px}
   #hero h1{font-size:2.5rem}
   .cta-rings{margin:20px 4px}
   .hring{display:none}
