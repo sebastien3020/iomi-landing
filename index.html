@@ -14,7 +14,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="output.css?v=20260721" />
+<link rel="stylesheet" href="output.css?v=20260721b" />
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;scroll-padding-top:80px}
@@ -50,6 +50,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .conn-bubble{position:absolute;width:64px;height:64px;border-radius:999px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.4);animation:float 6s ease-in-out infinite}
   .nav-tr{background:transparent;border-bottom-color:transparent}
   .nav-sd{background:rgba(10,12,11,.85);border-bottom-color:rgba(255,255,255,0.10)}
+  #sticky-cta{transform:translateY(110%);transition:transform .35s cubic-bezier(.22,1,.36,1)}
+  #sticky-cta.on{transform:translateY(0)}
+  body.mnav-open{overflow:hidden}
+  body.mnav-open #sticky-cta{transform:translateY(110%)!important}
   .conn-bubble:nth-child(3){animation-delay:.8s}.conn-bubble:nth-child(4){animation-delay:1.6s}.conn-bubble:nth-child(5){animation-delay:.4s}.conn-bubble:nth-child(6){animation-delay:1.2s}.conn-bubble:nth-child(7){animation-delay:2s}.conn-bubble:nth-child(8){animation-delay:.6s}.conn-bubble:nth-child(9){animation-delay:1.4s}
   .conn-bubble img{width:34px;height:34px;object-fit:contain;border-radius:8px}
   .mock{background:#111212;border:1px solid rgba(255,255,255,0.10);border-radius:14px;overflow:hidden}
@@ -146,6 +150,10 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 .hplay:hover{transform:translateY(-.07em) scale(1.07);box-shadow:0 0 40px rgba(38,188,75,.55),inset 0 0 22px rgba(38,188,75,.2)}
 .hplay svg{width:.32em;height:.32em}
 .nav-signin{display:inline-block}
+[data-lroll] .lr{display:inline-block;overflow:hidden;vertical-align:top;height:1.3em;line-height:1.3em}
+[data-lroll] .lr i{display:block;font-style:normal;transition:transform .3s cubic-bezier(.22,1,.36,1)}
+[data-lroll]:hover .lr i,[data-lroll]:active .lr i{transform:translateY(-100%)}
+@media(prefers-reduced-motion:reduce){[data-lroll] .lr i{transition:none}}
 .cta-rings{position:relative;display:inline-flex;border-radius:999px;margin:34px 22px}
 .hring{position:absolute;border-radius:999px;pointer-events:none;border:1px solid rgba(255,255,255,.13)}
 .hring.hr1{inset:-11px}
@@ -317,21 +325,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="flex items-center">
       <a href="https://app.iomifinance.com/login" class="nav-signin hidden md:inline text-[15px] font-medium hover:opacity-80 transition" style="color:#F9F9F9;margin-right:22px">Sign in</a>
       <a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green hidden md:inline-flex text-[15px]" style="padding:11px 24px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
-      <button id="mnav-btn" class="md:hidden flex flex-col justify-center gap-1 w-8 h-8 ml-3 z-50 relative" aria-label="Menu" aria-expanded="false" onclick="var o=document.getElementById('mnav-overlay');o.classList.toggle('hidden');this.setAttribute('aria-expanded',!o.classList.contains('hidden'))"><span class="block w-5 rounded-full mx-auto duration-200" style="background:#F9F9F9;height:1.5px"></span><span class="block w-5 rounded-full mx-auto duration-200" style="background:#F9F9F9;height:1.5px"></span><span class="block w-5 rounded-full mx-auto duration-200" style="background:#F9F9F9;height:1.5px"></span></button>
+      <button id="mnav-btn" class="md:hidden flex flex-col justify-center gap-1 w-8 h-8 ml-3 z-50 relative" aria-label="Menu" aria-expanded="false" onclick="toggleMnav()"><span class="block w-5 rounded-full mx-auto duration-200" style="background:#F9F9F9;height:1.5px"></span><span class="block w-5 rounded-full mx-auto duration-200" style="background:#F9F9F9;height:1.5px"></span><span class="block w-5 rounded-full mx-auto duration-200" style="background:#F9F9F9;height:1.5px"></span></button>
     </div>
   </div>
 </nav>
 <div id="mnav-overlay" class="hidden fixed inset-0 md:hidden" style="z-index:40;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(10,12,11,.88)">
   <div class="flex flex-col items-center justify-center h-full px-8">
-    <button onclick="document.getElementById('mnav-overlay').classList.add('hidden')" class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center text-3xl text-td hover:text-tp">&times;</button>
+    <button onclick="closeMnav()" class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center text-3xl text-td hover:text-tp">&times;</button>
     <div class="flex flex-col gap-8 text-xl text-center">
-      <a href="#ai" class="text-td hover:text-tp transition" onclick="document.getElementById('mnav-overlay').classList.add('hidden')">AI</a>
-      <a href="#benefits" class="text-td hover:text-tp transition" onclick="document.getElementById('mnav-overlay').classList.add('hidden')">Features</a>
-      <a href="#pricing" class="text-td hover:text-tp transition" onclick="document.getElementById('mnav-overlay').classList.add('hidden')">Pricing</a>
-      <a href="#faq" class="text-td hover:text-tp transition" onclick="document.getElementById('mnav-overlay').classList.add('hidden')">FAQ</a>
+      <a href="#ai" class="text-td hover:text-tp transition" onclick="closeMnav()">AI</a>
+      <a href="#benefits" class="text-td hover:text-tp transition" onclick="closeMnav()">Features</a>
+      <a href="#pricing" class="text-td hover:text-tp transition" onclick="closeMnav()">Pricing</a>
+      <a href="#faq" class="text-td hover:text-tp transition" onclick="closeMnav()">FAQ</a>
     </div>
     <div class="mt-12 flex flex-col gap-4 w-64">
-      <a href="https://app.iomifinance.com/login" class="block w-full py-3.5 rounded-xl text-center font-medium text-[15px]" style="border:1px solid rgba(255,255,255,.2);color:#F9F9F9">Sign in</a>
+      <a href="https://app.iomifinance.com/login" data-lroll class="block w-full py-3.5 text-center font-medium text-[15px]" style="color:#F9F9F9">Sign in</a>
       <a href="https://app.iomifinance.com/create-account" class="block w-full py-3.5 rounded-xl text-center font-medium text-[15px]" style="background:#26BC4B;color:#FFFFFF">Get started</a>
     </div>
   </div>
@@ -671,22 +679,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div></section>
 
 <!-- FOOTER -->
-<footer class="relative pt-12 pb-24 md:pb-8 px-5">
+<footer class="relative pt-12 pb-24 md:pb-10 px-5">
   <div class="relative max-w-7xl mx-auto">
-    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
-      <div class="md:max-w-xs">
-        <div class="flex items-center gap-3 mb-3"><img src="assets/iomi-logo.png" alt="IOMI" class="h-9 w-auto"></div>
-        <p class="text-sm text-td leading-relaxed">The AI Wealth OS — see, understand and optimize your full financial picture.</p>
-      </div>
-      <div class="flex gap-10 md:gap-14">
-        <div><h4 class="text-sm font-semibold mb-3">Product</h4><ul class="flex flex-col gap-2 text-sm text-td"><li><a href="#ai" class="hover:text-tp transition">AI</a></li><li><a href="#benefits" class="hover:text-tp transition">Features</a></li><li><a href="#pricing" class="hover:text-tp transition">Pricing</a></li><li><a href="#faq" class="hover:text-tp transition">FAQ</a></li></ul></div>
-        <div><h4 class="text-sm font-semibold mb-3">Legal</h4><ul class="flex flex-col gap-2 text-sm text-td"><li><a href="#" class="hover:text-tp transition">Terms</a></li><li><a href="#" class="hover:text-tp transition">Privacy</a></li><li><a href="#" class="hover:text-tp transition">Disclosures</a></li></ul></div>
-      </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between" style="gap:28px">
+      <img src="assets/iomi-logo.png" alt="IOMI" class="h-8 w-auto" style="align-self:flex-start">
+      <nav class="text-sm text-td" style="display:flex;flex-wrap:wrap;align-items:center;column-gap:28px;row-gap:12px">
+        <a href="#ai" class="hover:text-tp transition">AI</a>
+        <a href="#benefits" class="hover:text-tp transition">Features</a>
+        <a href="#pricing" class="hover:text-tp transition">Pricing</a>
+        <a href="#faq" class="hover:text-tp transition">FAQ</a>
+        <a href="#" class="hover:text-tp transition">Terms</a>
+        <a href="#" class="hover:text-tp transition">Privacy</a>
+        <a href="#" class="hover:text-tp transition">Disclosures</a>
+      </nav>
     </div>
-    <div class="flex items-center gap-5 mt-8 mb-8"><a href="#" aria-label="X" class="text-td hover:text-tp transition"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.3 22h-6.3l-4.9-6.4L6.5 22H3.4l7.3-8.3L1 2h6.5l4.4 5.9L18.9 2zm-1.1 18h1.7L7.6 3.9H5.8L17.8 20z"/></svg></a><a href="https://www.linkedin.com/company/iomi-ai/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-td hover:text-tp transition"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24V8.31zM8.34 8.31h4.33v2h.06c.6-1.14 2.07-2.34 4.27-2.34 4.57 0 5.41 3 5.41 6.91V23h-4.51v-7.1c0-1.7-.03-3.88-2.37-3.88-2.37 0-2.73 1.85-2.73 3.76V23H8.34V8.31z"/></svg></a><a href="https://youtube.com/@iomiapp" target="_blank" rel="noopener" aria-label="YouTube" class="text-td hover:text-tp transition"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg></a><a href="#" aria-label="Instagram" class="text-td hover:text-tp transition"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1.1" fill="currentColor" stroke="none"/></svg></a></div>
-  <div class="relative max-w-7xl mx-auto mt-10 pt-5 pb-1" style="border-top:1px solid rgba(255,255,255,.10)">
-    <p class="text-sm text-td text-center mb-1">© 2026 Iomi Technology Inc.<span class="hidden md:inline"> — </span><br class="md:hidden">The AI Wealth OS for founders &amp; operators.</p>
-    <p class="text-[11px] text-tm text-center mx-auto md:whitespace-nowrap" style="line-height:1.4">IOMI provides educational tools and analytics. It does not provide personalized investment, legal, tax or financial advice. Projections and scores are illustrative, not guarantees.</p>
+    <div class="flex items-center justify-between" style="margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.10)">
+      <span class="text-tm" style="font-size:13px">© 2026 Iomi Technology Inc.</span>
+      <div class="flex items-center gap-5"><a href="#" aria-label="X" class="text-td hover:text-tp transition"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.3 22h-6.3l-4.9-6.4L6.5 22H3.4l7.3-8.3L1 2h6.5l4.4 5.9L18.9 2zm-1.1 18h1.7L7.6 3.9H5.8L17.8 20z"/></svg></a><a href="https://www.linkedin.com/company/iomi-ai/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-td hover:text-tp transition"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24V8.31zM8.34 8.31h4.33v2h.06c.6-1.14 2.07-2.34 4.27-2.34 4.57 0 5.41 3 5.41 6.91V23h-4.51v-7.1c0-1.7-.03-3.88-2.37-3.88-2.37 0-2.73 1.85-2.73 3.76V23H8.34V8.31z"/></svg></a><a href="https://youtube.com/@iomiapp" target="_blank" rel="noopener" aria-label="YouTube" class="text-td hover:text-tp transition"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg></a><a href="#" aria-label="Instagram" class="text-td hover:text-tp transition"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1.1" fill="currentColor" stroke="none"/></svg></a></div>
+    </div>
+    <p class="text-[11px] text-tm md:whitespace-nowrap" style="line-height:1.4;margin-top:16px">IOMI provides educational tools and analytics. It does not provide personalized investment, legal, tax or financial advice. Projections and scores are illustrative, not guarantees.</p>
   </div>
 </footer>
 
@@ -786,7 +797,12 @@ function animCounter(el){const t=+el.dataset.target,suf=el.dataset.suffix||'';le
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll?.('.counter').forEach(c=>{if(!c.dataset.done){c.dataset.done=1;animCounter(c)}})}}),{threshold:.12});
   document.querySelectorAll('.fade').forEach(el=>io.observe(el));
   const nav=document.getElementById('navbar'),hero=document.getElementById('hero');
-  function onScroll(){if(window.scrollY>60){nav.classList.remove('nav-tr');nav.classList.add('nav-sd');nav.style.backdropFilter='blur(12px)'}else{nav.classList.remove('nav-sd');nav.classList.add('nav-tr');nav.style.backdropFilter='blur(0px)'}}
+  window.toggleMnav=function(){var o=document.getElementById('mnav-overlay');var open=!o.classList.toggle('hidden');document.body.classList.toggle('mnav-open',open);document.getElementById('mnav-btn').setAttribute('aria-expanded',open)};
+  window.closeMnav=function(){document.getElementById('mnav-overlay').classList.add('hidden');document.body.classList.remove('mnav-open')};
+  document.querySelectorAll('[data-lroll]').forEach(function(el){var t=el.textContent.trim();el.textContent='';t.split('').forEach(function(ch,idx){var sp=document.createElement('span');sp.className='lr';var g=ch===' '?'&nbsp;':ch;sp.innerHTML='<i style="transition-delay:'+(idx*22)+'ms">'+g+'</i><i aria-hidden="true" style="transition-delay:'+(idx*22)+'ms">'+g+'</i>';el.appendChild(sp)})});
+  var stickyCta=document.getElementById('sticky-cta');
+  function onScroll(){if(window.scrollY>60){nav.classList.remove('nav-tr');nav.classList.add('nav-sd');nav.style.backdropFilter='blur(12px)'}else{nav.classList.remove('nav-sd');nav.classList.add('nav-tr');nav.style.backdropFilter='blur(0px)'}
+  if(stickyCta)stickyCta.classList.toggle('on',window.scrollY>hero.offsetHeight-80);}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
   // Idle cash calculator
@@ -939,7 +955,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 
 
 <!-- Mobile sticky CTA -->
-<div class="md:hidden fixed bottom-0 left-0 right-0 px-4 py-3" style="z-index:40;background:rgba(10,12,11,.95);border-top:1px solid rgba(255,255,255,.08)">
+<div id="sticky-cta" class="md:hidden fixed bottom-0 left-0 right-0 px-4 py-3" style="z-index:40;background:rgba(10,12,11,.95);border-top:1px solid rgba(255,255,255,.08)">
   <a href="https://app.iomifinance.com/create-account" class="block w-full py-3.5 rounded-xl text-center font-semibold text-[15px]" style="background:#26BC4B;color:#FFFFFF">Start Free Trial</a>
 </div>
 </body>
