@@ -804,9 +804,8 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
   window.toggleMnav=function(){var o=document.getElementById('mnav-overlay');var open=!o.classList.toggle('hidden');document.body.classList.toggle('mnav-open',open);document.getElementById('mnav-btn').setAttribute('aria-expanded',open)};
   window.closeMnav=function(){document.getElementById('mnav-overlay').classList.add('hidden');document.body.classList.remove('mnav-open')};
   document.querySelectorAll('[data-lroll]').forEach(function(el){var t=el.textContent.trim();el.textContent='';t.split('').forEach(function(ch,idx){var sp=document.createElement('span');sp.className='lr';var g=ch===' '?'&nbsp;':ch;sp.innerHTML='<i style="transition-delay:'+(idx*22)+'ms">'+g+'</i><i aria-hidden="true" style="transition-delay:'+(idx*22)+'ms">'+g+'</i>';el.appendChild(sp)})});
-  var stickyCta=document.getElementById('sticky-cta');
-  function onScroll(){if(window.scrollY>60){nav.classList.remove('nav-tr');nav.classList.add('nav-sd');nav.style.backdropFilter='blur(12px)'}else{nav.classList.remove('nav-sd');nav.classList.add('nav-tr');nav.style.backdropFilter='blur(0px)'}
-  if(stickyCta)stickyCta.classList.toggle('on',window.scrollY>80);}
+    function onScroll(){if(window.scrollY>60){nav.classList.remove('nav-tr');nav.classList.add('nav-sd');nav.style.backdropFilter='blur(12px)'}else{nav.classList.remove('nav-sd');nav.classList.add('nav-tr');nav.style.backdropFilter='blur(0px)'}
+  var _sc=document.getElementById('sticky-cta');if(_sc)_sc.classList.toggle('on',window.scrollY>80);}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
   // Idle cash calculator
