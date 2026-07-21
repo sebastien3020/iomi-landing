@@ -14,7 +14,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="output.css">
+<link rel="stylesheet" href="output.css?v=20260721" />
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;scroll-padding-top:80px}
@@ -321,7 +321,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </nav>
-<div id="mnav-overlay" class="hidden fixed inset-0 z-40 md:hidden" style="backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(10,12,11,.88)">
+<div id="mnav-overlay" class="hidden fixed inset-0 md:hidden" style="z-index:40;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(10,12,11,.88)">
   <div class="flex flex-col items-center justify-center h-full px-8">
     <button onclick="document.getElementById('mnav-overlay').classList.add('hidden')" class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center text-3xl text-td hover:text-tp">&times;</button>
     <div class="flex flex-col gap-8 text-xl text-center">
@@ -786,7 +786,7 @@ function animCounter(el){const t=+el.dataset.target,suf=el.dataset.suffix||'';le
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll?.('.counter').forEach(c=>{if(!c.dataset.done){c.dataset.done=1;animCounter(c)}})}}),{threshold:.12});
   document.querySelectorAll('.fade').forEach(el=>io.observe(el));
   const nav=document.getElementById('navbar'),hero=document.getElementById('hero');
-  function onScroll(){if(window.scrollY>hero.offsetHeight-120){nav.classList.remove('nav-tr');nav.classList.add('nav-sd');nav.style.backdropFilter='blur(12px)'}else{nav.classList.remove('nav-sd');nav.classList.add('nav-tr');nav.style.backdropFilter='blur(0px)'}}
+  function onScroll(){if(window.scrollY>60){nav.classList.remove('nav-tr');nav.classList.add('nav-sd');nav.style.backdropFilter='blur(12px)'}else{nav.classList.remove('nav-sd');nav.classList.add('nav-tr');nav.style.backdropFilter='blur(0px)'}}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
   // Idle cash calculator
@@ -939,7 +939,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 
 
 <!-- Mobile sticky CTA -->
-<div class="md:hidden fixed bottom-0 left-0 right-0 z-40 px-4 py-3" style="background:rgba(10,12,11,.95);border-top:1px solid rgba(255,255,255,.08)">
+<div class="md:hidden fixed bottom-0 left-0 right-0 px-4 py-3" style="z-index:40;background:rgba(10,12,11,.95);border-top:1px solid rgba(255,255,255,.08)">
   <a href="https://app.iomifinance.com/create-account" class="block w-full py-3.5 rounded-xl text-center font-semibold text-[15px]" style="background:#26BC4B;color:#FFFFFF">Start Free Trial</a>
 </div>
 </body>
