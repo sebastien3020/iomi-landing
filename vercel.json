@@ -1,5 +1,9 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
+    { "source": "/legal/terms.html", "destination": "/legal/terms-of-service", "permanent": true },
+    { "source": "/legal/privacy.html", "destination": "/legal/privacy-policy", "permanent": true },
     { "source": "/discord", "destination": "/?utm_source=discord&utm_medium=social", "permanent": false },
     { "source": "/linkedin", "destination": "/?utm_source=linkedin&utm_medium=social", "permanent": false },
     { "source": "/li", "destination": "/?utm_source=linkedin&utm_medium=social", "permanent": false },
