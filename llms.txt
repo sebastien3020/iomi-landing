@@ -1,0 +1,20 @@
+# IOMI — AI Wealth OS for Entrepreneurs
+> IOMI is a wealth acceleration platform that brings your entire net worth — bank accounts, investments, real estate, businesses, crypto, and collectibles — into one live dashboard with AI-powered recommendations and the Capital Efficiency Score (CES).
+
+## Docs
+- Landing page: https://www.iomifinance.com
+- Terms of Service: https://www.iomifinance.com/legal/terms-of-service
+- Privacy Policy: https://www.iomifinance.com/legal/privacy-policy
+
+## About
+IOMI combines full-spectrum wealth tracking (including businesses and real assets) with an intelligence layer that tells you how efficiently your capital is working. Built for founders, operators, and self-directed investors with financial complexity across multiple accounts, entities, and asset classes.
+
+Key features:
+- Real-time net worth dashboard across personal + business entities
+- AI Assistant for portfolio questions, idle cash detection, and recommendations
+- Capital Efficiency Score (CES) — single metric for capital allocation quality
+- Read-only via Plaid — 12,000+ supported institutions
+- Asset tracking for real estate, collectibles, watches, cars, wine, crypto
+- Multi-entity support (up to 3 entities on Business plan)
+- Daily AI Briefing with personalized insights
+- Goal tracking with milestone monitoring
