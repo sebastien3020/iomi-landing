@@ -1,0 +1,85 @@
+# IOMI — Wealth intelligence made for how you build
+
+> Markdown mirror of https://www.iomifinance.com for AI readers and crawlers. Same content as the landing page, no styling. Last updated: 2026-07-28.
+
+IOMI is the wealth intelligence platform for founders, operators, and investors. One live dashboard for your entire net worth — bank accounts, investments, real estate, crypto, business equity, and collectibles — with an AI layer that explains it in plain English.
+
+- **App:** https://app.iomifinance.com/create-account (1-month free trial, no credit card required)
+- **About:** https://www.iomifinance.com/about
+
+## The problem
+
+Your wealth doesn't live in one place. Banks show one slice, brokerages another, and everything else — real estate, business equity, collectibles — lives in a spreadsheet you update on Sundays. Every financial decision starts with an hour of gathering numbers instead of a minute of thinking.
+
+## How IOMI works (4 steps)
+
+1. **Connect everything** — Your personal wealth and your business entities, connected in read-only mode. 12,000+ institutions via Plaid, in about 30 seconds. Business and personal never mixed: each entity keeps its own space, one connected picture.
+2. **Add what banks can't see** — Real estate, watches, cars, wine, collectibles — valued and tracked like any other asset. From Rolex to real estate, add any asset in seconds.
+3. **Act on AI insights** — IOMI AI ranks the next best moves by impact (AI Suggestions, each showing its Capital Efficiency Score points and dollar effect) — and you simulate them before committing a dollar.
+4. **Grow with confidence** — Goals that track themselves, milestones checked daily against your real numbers, one daily brief every morning, and Next Dollar Allocation: every new dollar gets a ranked destination before you move it.
+
+## An AI Assistant that never sleeps
+
+Ask about your wealth in plain English: "How much of my cash is sitting idle?" · "Am I on pace for my $1M goal?" · "Where should my next $10,000 go?" · "What changed in my portfolio this week?" · "How can I improve my Capital Efficiency Score?" The AI Assistant answers from your real, connected numbers — and delivers a Daily Briefing with personalized insights every morning.
+
+## Key features
+
+- Real-time net worth dashboard across personal + business entities
+- All asset classes: Cash & Accounts, Investments, Crypto & Digital Assets, Real Estate, Physical Assets (Luxury & Collections, Vehicles, Wine & Spirits), Company Equity, Private Equity
+- Capital Efficiency Score (CES) — a single metric for how hard your money is working
+- AI Suggestions ranked by impact, with simulation before you commit
+- Goals & milestones on autopilot; Next Dollar Allocation
+- Daily AI Briefing; liquidity profile; emergency fund tracking; cash flow & forecast; portfolio benchmarking
+- Multi-entity support (up to 3 business entities on the Business plan)
+- Read-only by design via Plaid — IOMI never sees your credentials and can never move your money
+
+## IOMI vs banks vs spreadsheets
+
+| Capability | Banks | Sheets | IOMI |
+|---|---|---|---|
+| Net worth in real time | ✗ | ✗ | ✓ |
+| All asset classes | ✗ | Manual | ✓ |
+| Business + personal, separated | ✗ | ✗ | ✓ |
+| AI Suggestions | ✗ | ✗ | ✓ |
+| Goals that track themselves | ✗ | Manual | ✓ |
+| Capital Efficiency Score | ✗ | ✗ | ✓ |
+| Time it takes you | Hours | A weekend | 30 sec |
+
+## Pricing
+
+- **Personal — $29/month.** Link unlimited personal accounts, all personal asset classes & liabilities, real-time net worth dashboard, liquidity profile, emergency fund tracker, cash flow & forecast, goals & milestones, portfolio benchmarking, Capital Efficiency Score, Next Dollar Allocation, AI insights (standard usage). 1 month free, cancel anytime.
+- **Business — $39/month founding-member rate (locked while you stay subscribed; later $79/month).** Everything in Personal, plus: unlimited business accounts, Business tab with assets & liabilities per entity (up to 3), per-entity attribution + consolidated view, higher AI limits with priority AI usage, priority support, early access to new & beta features. 1 month free, cancel anytime.
+
+1-month free trial · No credit card required · No percentage of assets, no commissions, no hidden monetization of your data.
+
+## FAQ
+
+**What can I connect?** Nearly everything you own or owe: bank and brokerage accounts (via secure, read-only connections), credit cards and loans, real estate, private business interests, crypto, precious metals, and alternative assets — from trading cards to a Porsche. Anything that can't be connected automatically can be added and tracked manually.
+
+**What is the Capital Efficiency Score?** IOMI's signature metric — a single score that tells you how hard your money is working. Two people can have the same net worth while one compounds and the other stagnates. The score looks at how your capital is allocated, what it earns, and what it costs you, then highlights where wealth is sitting idle.
+
+**How is my data protected?** Credentials are encrypted and never stored in plaintext. Account connections run through bank-grade aggregation with read-only access — IOMI can see balances and transactions, but can never move money. All data is encrypted in transit and at rest. Your data is yours: we don't sell it, ever.
+
+**Can IOMI move or access my money?** No. Connections are strictly read-only. IOMI cannot initiate transfers, trades, or payments — structurally, not just as a policy.
+
+**How is IOMI different from other tools?** Free dashboards exist to funnel you toward paid advisory — the tracking is the bait. Tracker tools show you what you have but stop there. Spreadsheets are honest work, but static, manual, and always out of date. IOMI combines full-spectrum tracking (including businesses and real assets) with an efficiency layer that tells you what to do with what you see — and no advisory upsell behind it.
+
+**Can I track my business and personal wealth together?** Yes — your LLC, trust, or holding company sits alongside your personal accounts (up to 3 entities on the Business plan), with clean separation and combined totals.
+
+**Do I need to be a finance expert?** No. IOMI does the sophisticated work — consolidation, scoring, trend analysis — and presents it in plain language.
+
+**What does IOMI cost?** Personal: $29/mo. Business: $39/mo founding-member rate (locked while subscribed), later $79/mo. Transparent subscription pricing. 1-month free trial, no credit card required.
+
+**What happens if I cancel?** You can delete your data and walk away anytime. No lock-in, no retention games.
+
+## Important disclaimer
+
+IOMI is not a bank, broker, or financial advisor. It does not custody assets, execute trades, or provide personalized investment advice. All outputs are educational and informational. See the Terms of Service.
+
+## Company & links
+
+- IOMI Technologies Inc — 1 Sansome Street, San Francisco, CA 94104, United States — contact@iomifinance.com
+- About: https://www.iomifinance.com/about (mirror: https://www.iomifinance.com/about.md)
+- Terms of Service: https://www.iomifinance.com/legal/terms-of-service
+- Privacy Policy: https://www.iomifinance.com/legal/privacy-policy
+- LinkedIn: https://www.linkedin.com/company/iomi-ai/ · YouTube: https://youtube.com/@iomiapp

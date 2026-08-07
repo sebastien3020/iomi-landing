@@ -1,20 +1,32 @@
-# IOMI — AI Wealth OS for Entrepreneurs
-> IOMI is a wealth acceleration platform that brings your entire net worth — bank accounts, investments, real estate, businesses, crypto, and collectibles — into one live dashboard with AI-powered recommendations and the Capital Efficiency Score (CES).
+# IOMI — Wealth intelligence for founders, operators, and investors
 
-## Docs
+> IOMI is the wealth intelligence platform that brings your entire net worth — bank accounts, investments, real estate, businesses, crypto, and collectibles — into one live dashboard with AI suggestions ranked by impact and the Capital Efficiency Score (CES). Read-only by design via Plaid; IOMI can never move your money.
+
+## Markdown mirrors (best for AI readers)
+- Landing page (full content): https://www.iomifinance.com/index.md
+- About: https://www.iomifinance.com/about.md
+
+## Pages
 - Landing page: https://www.iomifinance.com
+- About Us: https://www.iomifinance.com/about
 - Terms of Service: https://www.iomifinance.com/legal/terms-of-service
 - Privacy Policy: https://www.iomifinance.com/legal/privacy-policy
+- Sitemap: https://www.iomifinance.com/sitemap.xml
 
 ## About
 IOMI combines full-spectrum wealth tracking (including businesses and real assets) with an intelligence layer that tells you how efficiently your capital is working. Built for founders, operators, and self-directed investors with financial complexity across multiple accounts, entities, and asset classes.
 
 Key features:
-- Real-time net worth dashboard across personal + business entities
-- AI Assistant for portfolio questions, idle cash detection, and recommendations
-- Capital Efficiency Score (CES) — single metric for capital allocation quality
-- Read-only via Plaid — 12,000+ supported institutions
-- Asset tracking for real estate, collectibles, watches, cars, wine, crypto
-- Multi-entity support (up to 3 entities on Business plan)
-- Daily AI Briefing with personalized insights
-- Goal tracking with milestone monitoring
+- Real-time net worth dashboard across personal + business entities (business and personal never mixed)
+- AI Assistant for portfolio questions in plain English, idle cash detection, and AI Suggestions ranked by impact
+- Capital Efficiency Score (CES) — a single metric for capital allocation quality
+- Read-only via Plaid — 12,000+ supported institutions, credentials never stored
+- Asset tracking for real estate, collectibles, watches, cars, wine, crypto — anything banks can't see
+- Multi-entity support (up to 3 business entities on the Business plan)
+- Daily AI Briefing with personalized insights; goals & milestones on autopilot; Next Dollar Allocation
+
+Pricing: Personal $29/mo · Business $39/mo founding-member rate (locked while subscribed; later $79/mo) · 1-month free trial, no credit card required.
+
+Company: IOMI Technologies Inc — 1 Sansome Street, San Francisco, CA 94104, United States — contact@iomifinance.com
+
+Important: IOMI is not a bank, broker, or financial advisor. It does not custody assets, execute trades, or provide personalized investment advice. All outputs are educational.
