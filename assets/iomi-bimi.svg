@@ -1,5 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150">
-  <rect width="150" height="150" fill="#111212" rx="20"/>
-  <text x="75" y="88" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" fill="#26BC4B" text-anchor="middle">IO</text>
-  <text x="75" y="124" font-family="Archivo, Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" fill="#26BC4B" text-anchor="middle">MI</text>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 400 400" width="400" height="400">
+  <title>IOMI</title>
+  <rect width="400" height="400" fill="#0C100E"/>
+  <!-- soft green rim echoing the app chip's glow (avatar renders circle-cropped) -->
+  <circle cx="200" cy="200" r="186" fill="none" stroke="#1E4A33" stroke-width="7"/>
+  <circle cx="200" cy="200" r="179" fill="none" stroke="#153426" stroke-width="5"/>
+  <!-- mountain glyph traced from the app icon (frontend/public/icon.png) -->
+  <g transform="translate(-69.6,-147.7) scale(1.797)">
+    <g transform="translate(0,272) scale(0.1,-0.1)" fill="#FFFFFF">
+      <path d="M1619 948 c-211 -232 -207 -228 -238 -228 -51 0 -61 10 -112 112 -88 176 -108 170 -279 -88 -141 -212 -136 -202 -116 -229 13 -18 33 -15 532 85 286 56 522 106 525 109 9 8 -106 309 -127 332 -41 45 -74 28 -185 -93z"/>
+      <path d="M2030 722 c-92 -18 -86 -13 -66 -66 20 -51 56 -73 97 -57 33 12 89 76 89 101 0 16 -30 43 -42 39 -2 -1 -37 -8 -78 -17z"/>
+    </g>
+  </g>
 </svg>
