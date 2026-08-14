@@ -48,7 +48,7 @@ Ask about your wealth in plain English: "How much of my cash is sitting idle?" �
 ## Pricing
 
 - **Personal — $29/month.** Link unlimited personal accounts, all personal asset classes & liabilities, real-time net worth dashboard, liquidity profile, emergency fund tracker, cash flow & forecast, goals & milestones, portfolio benchmarking, Capital Efficiency Score, Next Dollar Allocation, AI insights (standard usage). 1 month free, cancel anytime.
-- **Business — $39/month founding-member rate (locked while you stay subscribed; later $79/month).** Everything in Personal, plus: unlimited business accounts, Business tab with assets & liabilities per entity (up to 3), per-entity attribution + consolidated view, higher AI limits with priority AI usage, priority support, early access to new & beta features. 1 month free, cancel anytime.
+- **Business — $39/month founding-member rate (locked while you stay subscribed; later $79/month).** Everything in Personal, plus: unlimited business accounts, connect QuickBooks so business balances sync from your books, Business tab with assets & liabilities per entity (up to 3), per-entity attribution + consolidated view, higher AI limits with priority AI usage, priority support, early access to new & beta features. 1 month free, cancel anytime.
 
 1-month free trial · No credit card required · No percentage of assets, no commissions, no hidden monetization of your data.
 
