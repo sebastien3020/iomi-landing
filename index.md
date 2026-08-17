@@ -1,11 +1,19 @@
 # IOMI — Wealth intelligence made for how you build
 
-> Markdown mirror of https://www.iomifinance.com for AI readers and crawlers. Same content as the landing page, no styling. Last updated: 2026-07-28.
+> Markdown mirror of https://www.iomifinance.com for AI readers and crawlers. Same content as the landing page, no styling. Last updated: 2026-08-17.
 
 IOMI is the wealth intelligence platform for founders, operators, and investors. One live dashboard for your entire net worth — bank accounts, investments, real estate, crypto, business equity, and collectibles — with an AI layer that explains it in plain English.
 
 - **App:** https://app.iomifinance.com/create-account (1-month free trial, no credit card required)
 - **About:** https://www.iomifinance.com/about
+
+## See it in action (product demo videos)
+
+Three short screen recordings of the real product — real numbers, no mockups:
+
+1. **Your net worth, live** — adding a home (with automatic valuation and mortgage equity) and a watch; everything you own becomes one live number.
+2. **Personal + Business** — personal wealth and company entities side by side, never mixed, one combined picture.
+3. **Ask IOMI AI** — asking questions about your money and getting answers grounded in your real numbers.
 
 ## The problem
 

@@ -77,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="output.css?v=20260721c" />
+<link rel="stylesheet" href="output.css?v=20260817a" />
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;scroll-padding-top:80px}
@@ -121,6 +121,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .conn-bubble:nth-child(3){animation-delay:.8s}.conn-bubble:nth-child(4){animation-delay:1.6s}.conn-bubble:nth-child(5){animation-delay:.4s}.conn-bubble:nth-child(6){animation-delay:1.2s}.conn-bubble:nth-child(7){animation-delay:2s}.conn-bubble:nth-child(8){animation-delay:.6s}.conn-bubble:nth-child(9){animation-delay:1.4s}
   .conn-bubble img{width:34px;height:34px;object-fit:contain;border-radius:8px}
   .mock{background:#111212;border:1px solid rgba(255,255,255,0.10);border-radius:14px;overflow:hidden}
+  /* see it in action tabs */
+  .demo-tab{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:9999px;font-size:14px;font-weight:500;color:#9DA29F;background:rgba(17,18,18,.5);border:1px solid rgba(255,255,255,0.10);transition:color .2s,border-color .2s,background .2s;cursor:pointer}
+  .demo-tab:hover{color:#FEFFFE}
+  .demo-tab.active{color:#FEFFFE;background:#111212;border-color:rgba(38,188,75,.55)}
+  .demo-num{font-size:11px;font-weight:700;letter-spacing:.08em;color:#26BC4B}
   /* carousel */
   .carousel{scroll-snap-type:x mandatory;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .carousel::-webkit-scrollbar{display:none}
@@ -498,6 +503,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
+<!-- SECTION: SEE IT IN ACTION -->
+<section id="see-it-in-action" class="relative py-20 sm:py-24 px-5 fade">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-10">
+      <div class="text-xs font-bold tracking-widest mb-3" style="color:#26BC4B">SEE IT IN ACTION</div>
+      <h2 class="text-3xl sm:text-4xl font-bold leading-tight">Real product. Real numbers. No mockups.</h2>
+      <p class="text-td max-w-xl mx-auto mt-3 leading-relaxed">One minute each — watch IOMI do the work.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6" role="tablist" aria-label="Product demos">
+      <button type="button" role="tab" id="demo-tab-0" aria-selected="true" aria-controls="demo-panel" class="demo-tab active" onclick="switchDemo(0)"><span class="demo-num">01</span>Your net worth, live</button>
+      <button type="button" role="tab" id="demo-tab-1" aria-selected="false" aria-controls="demo-panel" class="demo-tab" onclick="switchDemo(1)"><span class="demo-num">02</span>Personal + Business</button>
+      <button type="button" role="tab" id="demo-tab-2" aria-selected="false" aria-controls="demo-panel" class="demo-tab" onclick="switchDemo(2)"><span class="demo-num">03</span>Ask IOMI AI</button>
+    </div>
+    <div id="demo-panel" role="tabpanel" class="mock relative p-1.5 sm:p-2">
+      <video id="demo-video" class="w-full aspect-video rounded-[10px] bg-black" autoplay muted loop playsinline preload="metadata" poster="assets/demo-net-worth-poster.jpg" src="assets/demo-net-worth.mp4"></video>
+    </div>
+    <p id="demo-caption" class="text-sm text-td text-center mt-5 max-w-xl mx-auto leading-relaxed">Add a home, a mortgage, a watch — everything you own becomes one live number.</p>
+  </div>
+</section>
+
 <!-- MANIFESTO (zerion style) -->
 <section id="problem" class="relative py-24 sm:py-32 px-5 fade">
   <div class="max-w-4xl mx-auto text-center">
@@ -873,6 +898,22 @@ function rowsHTML(list){return list.map(r=>{const pc=r[5]?'#26BC4B':'#FF6464',pb
   return `<div class="grid grid-cols-[1.5fr_1fr_1fr] gap-2 items-center px-3 py-2.5 rounded-[10px] mb-1.5" style="background:#161717"><div class="flex items-center gap-2 min-w-0"><span class="w-2 h-2 rounded-full shrink-0" style="background:${r[6]}"></span><span class="text-xs text-tp truncate">${r[0]}</span></div><div class="text-right"><div class="text-xs text-tp">${r[1]}</div><span class="text-[10px] px-1.5 py-px rounded-xl text-td" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15)">${r[2]}</span></div><div class="text-right"><div class="text-[11px]" style="color:${pc}">${r[3]}</div><span class="text-[10px] px-1.5 py-px rounded-xl" style="color:${pc};background:${pb}">${r[4]}</span></div></div>`}).join('');}
 function toggleBilling(){const t=document.getElementById('billing-toggle');const on=t.dataset.on==='1';t.dataset.on=on?'0':'1';document.getElementById('billing-knob').style.transform=on?'translateX(0)':'translateX(24px)';document.getElementById('lbl-monthly').className=on?'text-tp font-medium':'text-td';document.getElementById('lbl-annual').className=on?'text-td':'text-tp font-medium';document.querySelectorAll('[data-monthly]').forEach(el=>{el.textContent=on?el.dataset.monthly:el.dataset.annual})}
 function playVideo(){const m=document.getElementById('video-modal'),v=document.getElementById('video-el');m.classList.remove('hidden');m.classList.add('flex');v.currentTime=0;v.play().catch(()=>{})}
+const DEMOS=[
+  {src:'assets/demo-net-worth.mp4',poster:'assets/demo-net-worth-poster.jpg',cap:'Add a home, a mortgage, a watch — everything you own becomes one live number.'},
+  {src:'assets/demo-personal-business.mp4',poster:'assets/demo-personal-business-poster.jpg',cap:'Your personal wealth and your companies, side by side — never mixed, always one picture.'},
+  {src:'assets/demo-ask-iomi.mp4',poster:'assets/demo-ask-iomi-poster.jpg',cap:'Ask anything about your money — answers grounded in your real numbers.'}
+];
+function switchDemo(i){
+  const v=document.getElementById('demo-video'),c=document.getElementById('demo-caption'),d=DEMOS[i];
+  if(!v||!d||v.getAttribute('src')===d.src)return;
+  document.querySelectorAll('.demo-tab').forEach((b,j)=>{b.classList.toggle('active',j===i);b.setAttribute('aria-selected',j===i?'true':'false')});
+  v.poster=d.poster;v.src=d.src;c.textContent=d.cap;v.play().catch(()=>{});
+}
+(function(){
+  const v=document.getElementById('demo-video');
+  if(!v||!('IntersectionObserver' in window))return;
+  new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?v.play().catch(()=>{}):v.pause()}),{threshold:.25}).observe(v);
+})();
 function closeVideo(){const m=document.getElementById('video-modal'),v=document.getElementById('video-el');v.pause();m.classList.add('hidden');m.classList.remove('flex')}
 const FAQS=[['What is IOMI?','IOMI is a wealth acceleration platform built for people whose finances outgrew budgeting apps. It brings your entire net worth — bank accounts, investments, real estate, businesses, crypto, and even collectibles like watches and cars — into one live picture, then shows you how efficiently that capital is actually working for you. Think of it as the command center for your wealth, not another expense tracker.'],
 ['Who is IOMI for?','IOMI is built for high-net-worth individuals, founders, and investors with complexity: multiple accounts, a business or two, real assets, and no single place to see it all. If your net worth lives across a brokerage app, a property spreadsheet, a bookkeeper\'s reports, and your memory — IOMI is for you. If you\'re just tracking a paycheck and a credit card, a simple budgeting app will serve you fine.'],
