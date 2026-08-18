@@ -1,6 +1,6 @@
 # IOMI — Wealth intelligence made for how you build
 
-> Markdown mirror of https://www.iomifinance.com for AI readers and crawlers. Same content as the landing page, no styling. Last updated: 2026-08-17.
+> Markdown mirror of https://www.iomifinance.com for AI readers and crawlers. Same content as the landing page, no styling. Last updated: 2026-08-18.
 
 IOMI is the wealth intelligence platform for founders, operators, and investors. One live dashboard for your entire net worth — bank accounts, investments, real estate, crypto, business equity, and collectibles — with an AI layer that explains it in plain English.
 
@@ -27,6 +27,21 @@ Your wealth doesn't live in one place. Banks show one slice, brokerages another,
 2. **Add what banks can't see** — Real estate, watches, cars, wine, collectibles — valued and tracked like any other asset. From Rolex to real estate, add any asset in seconds.
 3. **Act on AI insights** — IOMI AI ranks the next best moves by impact (AI Suggestions, each showing its Capital Efficiency Score points and dollar effect) — and you simulate them before committing a dollar.
 4. **Grow with confidence** — Goals that track themselves, milestones checked daily against your real numbers, one daily brief every morning, and Next Dollar Allocation: every new dollar gets a ranked destination before you move it.
+
+## Why IOMI — not just another AI
+
+ChatGPT answers from memory — yours. IOMI answers from your accounts.
+
+| | A general AI — ChatGPT, Claude, Copilot, Gemini | IOMI |
+|---|---|---|
+| Data completeness | Sees only what you paste — a statement, a screenshot, a number you happen to remember. | Holds your whole balance sheet: bank accounts, real estate with live valuations, private equity, collectibles, vehicles, every liability, cost basis and history. |
+| Freshness | A conversation goes stale the moment you close it. | Syncs continuously — the AI answers from today's numbers. |
+| No hallucinated math | Will happily invent a figure to keep the sentence moving. | Net worth, the Capital Efficiency Score and the forecast are computed by a deterministic engine. The AI phrases the numbers, never invents them. |
+| Proactive, not reactive | Only answers when asked. | Briefs you daily, tracks goals against real balances, flags what changed. |
+| Privacy | Pasting statements into a chatbot is not the same thing. | Read-only, bank-grade connections through Plaid — 12,000+ institutions. IOMI never sees your credentials and can never move your money. |
+| And the chat is included | An assistant without your balance sheet. | It's not IOMI or an AI assistant. It's an AI assistant that finally has your real balance sheet. |
+
+Full comparison, including IOMI vs Monarch, Kubera and Copilot Money: https://www.iomifinance.com/why-iomi
 
 ## An AI Assistant that never sleeps
 

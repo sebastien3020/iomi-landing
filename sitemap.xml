@@ -13,6 +13,30 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.iomifinance.com/why-iomi</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.iomifinance.com/compare/monarch</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iomifinance.com/compare/kubera</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iomifinance.com/compare/copilot</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.iomifinance.com/legal/terms-of-service</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>

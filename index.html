@@ -361,6 +361,34 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
     .glowbiz,.glowbiz:hover{translate:0 0}
     html{scroll-behavior:auto}
   }
+  /* Why IOMI — comparison grid (IOMI vs a general AI) */
+  .wi-tbl{border-top:1px solid rgba(255,255,255,.10)}
+  .wi-head{display:none}
+  .wi-row{display:grid;border-bottom:1px solid rgba(255,255,255,.07);padding:16px 0;transition:background .25s}
+  .wi-key{font-size:13px;font-weight:600;color:#F9F9F9;margin-bottom:10px}
+  .wi-cell{font-size:13px;line-height:1.65;color:#9BA29D;padding-bottom:12px}
+  .wi-row .wi-cell:last-child{padding-bottom:0}
+  .wi-cell::before{content:attr(data-label);display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7F7D83;margin-bottom:4px}
+  .wi-iomi{color:#F9F9F9}
+  .wi-iomi::before{color:#42DC68}
+  .wi-more{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:500;color:#42DC68;text-decoration:none;transition:gap .25s}
+  .wi-more:hover{gap:11px}
+  @media (min-width:768px){
+    .wi-head{display:grid;grid-template-columns:20% 40% 40%}
+    .wi-head span{font-size:12px;font-weight:600;color:#9BA29D;padding:0 18px 14px}
+    .wi-head span:first-child{padding-left:0}
+    .wi-head .wi-iomi-h{color:#42DC68;background:rgba(38,188,75,.07);border-left:1px solid rgba(38,188,75,.22);border-right:1px solid rgba(38,188,75,.22);border-top:1px solid rgba(38,188,75,.22);border-radius:12px 12px 0 0;padding-top:12px}
+    .wi-tbl{border-top:none}
+    .wi-row{grid-template-columns:20% 40% 40%;align-items:stretch;padding:0}
+    .wi-row:hover{background:rgba(255,255,255,.02)}
+    .wi-key{margin-bottom:0;padding:18px 18px 18px 0}
+    .wi-cell{padding:18px}
+    .wi-row .wi-cell:last-child{padding-bottom:18px}
+    .wi-cell::before{display:none}
+    .wi-iomi{background:rgba(38,188,75,.07);border-left:1px solid rgba(38,188,75,.22);border-right:1px solid rgba(38,188,75,.22)}
+    .wi-row:last-child .wi-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radius:0 0 12px 12px}
+  }
+  @media (prefers-reduced-motion:reduce){.wi-more{transition:none}.wi-more:hover{gap:7px}}
 </style>
 <!-- Customer.io → tu colles le snippet de fly.customer.io (Settings → Tracking) -->
 <!-- CIOSNIPPET -->
@@ -411,7 +439,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 nav-tr" style="backdrop-filter:blur(0px)">
   <div class="max-w-7xl mx-auto px-5 flex items-center justify-between h-16">
     <a href="#hero" class="flex items-center"><img src="assets/iomi-logo.png" alt="IOMI" class="h-10 w-auto"></a>
-    <div class="hidden md:flex items-center gap-7 text-sm text-td"><a href="#ai" class="nl hover:text-tp transition">AI</a><a href="#benefits" class="nl hover:text-tp transition">Features</a><a href="#pricing" class="nl hover:text-tp transition">Pricing</a><a href="#faq" class="nl hover:text-tp transition">FAQ</a></div>
+    <div class="hidden md:flex items-center gap-7 text-sm text-td"><a href="/why-iomi" class="nl hover:text-tp transition">Why IOMI</a><a href="#ai" class="nl hover:text-tp transition">AI</a><a href="#benefits" class="nl hover:text-tp transition">Features</a><a href="#pricing" class="nl hover:text-tp transition">Pricing</a><a href="#faq" class="nl hover:text-tp transition">FAQ</a></div>
     <div class="flex items-center">
       <a href="https://app.iomifinance.com/login" class="nav-signin hidden md:inline text-[15px] font-medium hover:opacity-80 transition" style="color:#F9F9F9;margin-right:22px">Sign in</a>
       <a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green hidden md:inline-flex text-[15px]" style="padding:11px 24px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
@@ -426,6 +454,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button onclick="closeMnav()" aria-label="Close menu" class="w-10 h-10 flex items-center justify-center text-2xl text-td hover:text-tp" style="margin-right:-8px">&times;</button>
     </div>
     <div class="flex flex-col text-lg" style="gap:14px">
+      <a href="/why-iomi" class="text-td hover:text-tp transition" onclick="closeMnav()">Why IOMI</a>
       <a href="#ai" class="text-td hover:text-tp transition" onclick="closeMnav()">AI</a>
       <a href="#benefits" class="text-td hover:text-tp transition" onclick="closeMnav()">Features</a>
       <a href="#pricing" class="text-td hover:text-tp transition" onclick="closeMnav()">Pricing</a>
@@ -561,6 +590,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="text-3xl font-bold leading-tight mt-4 mb-2 fade">From chaos to clarity — in four steps.</h2>
       <p class="text-sm text-td mb-10 fade">A guided flow that keeps your entire wealth clear and organized from day one.</p>
       <div class="space-y-6"><div class="fade rounded-[18px] p-5" style="background:#111212;border:1px solid rgba(255,255,255,0.10)"><div class="text-[11px] tracking-widest font-semibold mb-3" style="color:#26BC4B">STEP 01</div><h3 class="text-xl font-bold mb-2">Connect everything</h3><p class="text-xs text-td leading-relaxed mb-4">Your personal wealth and your business entities, connected in read-only mode — plus everything banks can't see, from real estate to watches.</p><div class="pclone-slot" data-step="0"></div><div class="flex gap-3 items-start py-3 border-t border-bord"><span class="pfi">✓</span><div><div class="text-sm font-semibold">One-click connections</div><div class="text-xs text-td mt-0.5 leading-relaxed">12,000+ institutions via Plaid — personal and business alike, in about 30 seconds.</div></div></div><div class="flex gap-3 items-start py-3 border-t border-bord"><span class="pfi">✓</span><div><div class="text-sm font-semibold">Business &amp; personal, never mixed</div><div class="text-xs text-td mt-0.5 leading-relaxed">Each entity keeps its own space — one connected picture.</div></div></div></div><div class="fade rounded-[18px] p-5" style="background:#111212;border:1px solid rgba(255,255,255,0.10)"><div class="text-[11px] tracking-widest font-semibold mb-3" style="color:#26BC4B">STEP 02</div><h3 class="text-xl font-bold mb-2">Add what banks can't see</h3><p class="text-xs text-td leading-relaxed mb-4">Real estate, watches, cars, wine, collectibles — valued and tracked like any other asset.</p><div class="pclone-slot" data-step="1"></div><div class="flex gap-3 items-start py-3 border-t border-bord"><span class="pfi">✓</span><div><div class="text-sm font-semibold">From Rolex to Real Estate</div><div class="text-xs text-td mt-0.5 leading-relaxed">Add any asset in seconds — it becomes part of your picture.</div></div></div><div class="flex gap-3 items-start py-3 border-t border-bord"><span class="pfi">✓</span><div><div class="text-sm font-semibold">Your whole picture, live</div><div class="text-xs text-td mt-0.5 leading-relaxed">Accounts and assets, personal and business — one net worth.</div></div></div></div><div class="fade rounded-[18px] p-5" style="background:#111212;border:1px solid rgba(255,255,255,0.10)"><div class="text-[11px] tracking-widest font-semibold mb-3" style="color:#26BC4B">STEP 03</div><h3 class="text-xl font-bold mb-2">Act on AI insights</h3><p class="text-xs text-td leading-relaxed mb-4">IOMI AI ranks the next best moves by impact — and you simulate them before committing a dollar.</p><div class="pclone-slot" data-step="2"></div><div class="flex gap-3 items-start py-3 border-t border-bord"><span class="pfi">✓</span><div><div class="text-sm font-semibold">Ranked by impact</div><div class="text-xs text-td mt-0.5 leading-relaxed">Every recommendation shows its CES points and dollar effect.</div></div></div><div class="flex gap-3 items-start py-3 border-t border-bord"><span class="pfi">✓</span><div><div class="text-sm font-semibold">Simulate before you commit</div><div class="text-xs text-td mt-0.5 leading-relaxed">Test any move risk-free before it touches real money.</div></div></div></div><div class="fade rounded-[18px] p-5" style="background:#111212;border:1px solid rgba(255,255,255,0.10)"><div class="text-[11px] tracking-widest font-semibold mb-3" style="color:#26BC4B">STEP 04</div><h3 class="text-xl font-bold mb-2">Grow with confidence</h3><p class="text-xs text-td leading-relaxed mb-4">Set goals that track themselves, and watch your score climb as your wealth compounds.</p><div class="pclone-slot" data-step="3"></div><div class="flex gap-3 items-start py-3 border-t border-bord"><span class="pfi">✓</span><div><div class="text-sm font-semibold">Goals on autopilot</div><div class="text-xs text-td mt-0.5 leading-relaxed">Milestones checked daily against your real numbers.</div></div></div><div class="flex gap-3 items-start py-3 border-t border-bord"><span class="pfi">✓</span><div><div class="text-sm font-semibold">One daily brief</div><div class="text-xs text-td mt-0.5 leading-relaxed">Clarity delivered every morning — instead of five apps.</div></div></div><div class="flex gap-3 items-start py-3 border-t border-bord"><span class="pfi">✓</span><div><div class="text-sm font-semibold">Next Dollar Allocation</div><div class="text-xs text-td mt-0.5 leading-relaxed">Every new dollar gets a ranked destination before you move it.</div></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IOMI (vs a general AI) -->
+<section id="why-iomi" class="py-20 px-5 border-t border-bord fade">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-3 leading-tight">Why IOMI — not just another AI.</h2>
+      <p class="text-td text-sm max-w-md mx-auto">ChatGPT answers from memory — yours. IOMI answers from your accounts.</p>
+    </div>
+    <div class="wi-head" aria-hidden="true"><span></span><span>A general AI — ChatGPT, Claude, Copilot, Gemini</span><span class="wi-iomi-h">IOMI</span></div>
+    <div class="wi-tbl">
+      <div class="wi-row">
+        <div class="wi-key">Data completeness</div>
+        <div class="wi-cell" data-label="A general AI">Sees only what you paste — a statement, a screenshot, a number you happen to remember.</div>
+        <div class="wi-cell wi-iomi" data-label="IOMI">Holds your whole balance sheet: bank accounts, real estate with live valuations, private equity, collectibles, vehicles, every liability, cost basis and history.</div>
+      </div>
+      <div class="wi-row">
+        <div class="wi-key">Freshness</div>
+        <div class="wi-cell" data-label="A general AI">A conversation goes stale the moment you close it.</div>
+        <div class="wi-cell wi-iomi" data-label="IOMI">Syncs continuously — the AI answers from today's numbers.</div>
+      </div>
+      <div class="wi-row">
+        <div class="wi-key">No hallucinated math</div>
+        <div class="wi-cell" data-label="A general AI">Will happily invent a figure to keep the sentence moving.</div>
+        <div class="wi-cell wi-iomi" data-label="IOMI">Net worth, Capital Efficiency Score and forecast are computed by a deterministic engine. The AI phrases the numbers, never invents them.</div>
+      </div>
+      <div class="wi-row">
+        <div class="wi-key">Proactive, not reactive</div>
+        <div class="wi-cell" data-label="A general AI">Only answers when asked.</div>
+        <div class="wi-cell wi-iomi" data-label="IOMI">Briefs you daily, tracks goals against real balances, flags what changed.</div>
+      </div>
+      <div class="wi-row">
+        <div class="wi-key">Privacy</div>
+        <div class="wi-cell" data-label="A general AI">Pasting statements into a chatbot is not the same thing.</div>
+        <div class="wi-cell wi-iomi" data-label="IOMI">Read-only, bank-grade connections through Plaid — 12,000+ institutions. IOMI never sees your credentials and can never move your money.</div>
+      </div>
+      <div class="wi-row">
+        <div class="wi-key">And the chat is included</div>
+        <div class="wi-cell" data-label="A general AI">An assistant without your balance sheet.</div>
+        <div class="wi-cell wi-iomi" data-label="IOMI">It's not IOMI or an AI assistant. It's an AI assistant that finally has your real balance sheet.</div>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:36px">
+      <a href="/why-iomi" class="wi-more">See the full comparison<svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </section>
@@ -799,6 +874,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="flex flex-col md:flex-row md:items-center md:justify-between" style="gap:28px">
       <img src="assets/iomi-logo.png" alt="IOMI" class="h-8 w-auto" style="align-self:flex-start">
       <nav class="text-sm text-td" style="display:flex;flex-wrap:wrap;align-items:center;column-gap:28px;row-gap:12px">
+        <a href="/why-iomi" class="hover:text-tp transition">Why IOMI</a>
         <a href="#ai" class="hover:text-tp transition">AI</a>
         <a href="#benefits" class="hover:text-tp transition">Features</a>
         <a href="#pricing" class="hover:text-tp transition">Pricing</a>
@@ -809,6 +885,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="#" class="hover:text-tp transition">Disclosures</a>
       </nav>
     </div>
+    <nav aria-label="Comparison" class="text-sm text-td" style="display:flex;flex-wrap:wrap;align-items:center;column-gap:28px;row-gap:12px;margin-top:24px">
+      <span class="text-tm" style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Comparison</span>
+      <a href="/compare/monarch" class="hover:text-tp transition">IOMI vs Monarch</a>
+      <a href="/compare/kubera" class="hover:text-tp transition">IOMI vs Kubera</a>
+      <a href="/compare/copilot" class="hover:text-tp transition">IOMI vs Copilot Money</a>
+    </nav>
     <div class="flex items-center justify-between" style="margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.10)">
       <span class="text-tm" style="font-size:13px">© 2026 Iomi Technology Inc.</span>
       <div class="flex items-center gap-5"><a href="https://www.linkedin.com/company/iomi-ai/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-td hover:text-tp transition"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24V8.31zM8.34 8.31h4.33v2h.06c.6-1.14 2.07-2.34 4.27-2.34 4.57 0 5.41 3 5.41 6.91V23h-4.51v-7.1c0-1.7-.03-3.88-2.37-3.88-2.37 0-2.73 1.85-2.73 3.76V23H8.34V8.31z"/></svg></a><a href="https://youtube.com/@iomiapp" target="_blank" rel="noopener" aria-label="YouTube" class="text-td hover:text-tp transition"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg></a></div>
