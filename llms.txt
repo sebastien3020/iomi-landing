@@ -13,6 +13,7 @@
 ## Pages
 - Landing page: https://www.iomifinance.com
 - About Us: https://www.iomifinance.com/about
+- Blog (article index): https://www.iomifinance.com/blog
 - Why IOMI: https://www.iomifinance.com/why-iomi
 - IOMI vs Monarch Money: https://www.iomifinance.com/compare/monarch
 - IOMI vs Kubera: https://www.iomifinance.com/compare/kubera
@@ -34,7 +35,7 @@ Key features:
 - Daily AI Briefing with personalized insights; goals & milestones on autopilot; Next Dollar Allocation
 
 ## How IOMI compares
-- **vs a general AI (ChatGPT, Claude, Microsoft Copilot, Gemini):** a general AI sees only what you paste and goes stale when the conversation closes; IOMI holds the whole balance sheet, syncs continuously, and computes net worth, CES and forecast with a deterministic engine — the AI phrases the numbers, never invents them. IOMI also includes the chat: it is an AI assistant that has your real balance sheet.
+- **vs a general AI (ChatGPT with connected accounts, Claude, Copilot, Gemini):** ChatGPT's personal finance experience syncs bank and brokerage accounts through Plaid — and stops at what Plaid can see: no real estate, no company or private equity, no collectibles, no business entities. IOMI holds the whole balance sheet (financial + real assets + up to 3 business entities), and computes net worth, CES and forecast with a deterministic engine — the AI phrases the numbers, never invents them. IOMI also includes the chat: an AI assistant that has your real balance sheet.
 - **vs wealth trackers:** Monarch Money ($99.99/yr Core, $199.99/yr Plus) does business tracking on Plus only and has no "what to do next" score. Kubera ($250/yr Essentials, $2,500/yr Black) is passive tracking, web-first, no intelligence layer. Copilot Money ($13/mo or $95/yr) is Apple-only, single-user, no business entities. IOMI unifies personal + business entities natively from $39/mo and adds the intelligence layer (CES, Next Dollar Allocation, Goals, Simulator). Competitor facts as published by each vendor, August 2026.
 
 Pricing: Personal $29/mo · Business $39/mo founding-member rate (locked while subscribed; later $79/mo) · 1-month free trial, no credit card required.

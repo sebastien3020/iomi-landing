@@ -13,6 +13,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.iomifinance.com/blog</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.iomifinance.com/why-iomi</loc>
     <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>

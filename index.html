@@ -234,6 +234,12 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 .cta-rings:hover .cta-arr{transform:rotate(45deg)}
 /* --- dot-shift CTA (reference "Get started") --- */
 .dotcta{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:600;cursor:pointer;transition:filter .3s}
+.ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+.ft-h{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#7F7D83;margin-bottom:14px}
+.ft-col a{display:block;font-size:14px;color:#9BA29D;margin-bottom:10px;transition:color .2s}
+.ft-col a:hover{color:#F9F9F9}
+.ft-tag{font-size:13px;color:#7F7D83;line-height:1.55;max-width:230px;margin-top:14px}
+@media(max-width:767px){.ft-grid{grid-template-columns:1fr 1fr;gap:28px}.ft-brand{grid-column:1 / -1}}
 @media(max-width:767px){.mcta-hide{display:none!important}}
 .dotcta:hover{filter:brightness(1.06)}
 .dc-in{position:relative;display:flex;align-items:center;gap:10px;overflow:hidden}
@@ -871,26 +877,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FOOTER -->
 <footer class="relative pt-12 pb-24 md:pb-10 px-5">
   <div class="relative max-w-7xl mx-auto">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between" style="gap:28px">
-      <img src="assets/iomi-logo.png" alt="IOMI" class="h-8 w-auto" style="align-self:flex-start">
-      <nav class="text-sm text-td" style="display:flex;flex-wrap:wrap;align-items:center;column-gap:28px;row-gap:12px">
-        <a href="/why-iomi" class="hover:text-tp transition">Why IOMI</a>
-        <a href="#ai" class="hover:text-tp transition">AI</a>
-        <a href="#benefits" class="hover:text-tp transition">Features</a>
-        <a href="#pricing" class="hover:text-tp transition">Pricing</a>
-        <a href="#faq" class="hover:text-tp transition">FAQ</a>
-        <a href="/about" class="hover:text-tp transition">About</a>
-        <a href="/legal/terms-of-service" class="hover:text-tp transition">Terms of Service</a>
-        <a href="/legal/privacy-policy" class="hover:text-tp transition">Privacy Policy</a>
-        <a href="#" class="hover:text-tp transition">Disclosures</a>
-      </nav>
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <img src="assets/iomi-logo.png" alt="IOMI" class="h-8 w-auto">
+        <p class="ft-tag">Your entire net worth — personal and business — in one live dashboard.</p>
+      </div>
+      <div class="ft-col">
+        <div class="ft-h">Product</div>
+        <a href="#ai">AI</a>
+        <a href="#benefits">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="ft-col">
+        <div class="ft-h">Compare</div>
+        <a href="/why-iomi">Why IOMI</a>
+        <a href="/compare/monarch">IOMI vs Monarch</a>
+        <a href="/compare/kubera">IOMI vs Kubera</a>
+        <a href="/compare/copilot">IOMI vs Copilot Money</a>
+      </div>
+      <div class="ft-col">
+        <div class="ft-h">Company</div>
+        <a href="/about">About</a>
+        <a href="/legal/terms-of-service">Terms of Service</a>
+        <a href="/legal/privacy-policy">Privacy Policy</a>
+        <a href="#">Disclosures</a>
+      </div>
     </div>
-    <nav aria-label="Comparison" class="text-sm text-td" style="display:flex;flex-wrap:wrap;align-items:center;column-gap:28px;row-gap:12px;margin-top:24px">
-      <span class="text-tm" style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Comparison</span>
-      <a href="/compare/monarch" class="hover:text-tp transition">IOMI vs Monarch</a>
-      <a href="/compare/kubera" class="hover:text-tp transition">IOMI vs Kubera</a>
-      <a href="/compare/copilot" class="hover:text-tp transition">IOMI vs Copilot Money</a>
-    </nav>
     <div class="flex items-center justify-between" style="margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.10)">
       <span class="text-tm" style="font-size:13px">© 2026 Iomi Technology Inc.</span>
       <div class="flex items-center gap-5"><a href="https://www.linkedin.com/company/iomi-ai/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-td hover:text-tp transition"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24V8.31zM8.34 8.31h4.33v2h.06c.6-1.14 2.07-2.34 4.27-2.34 4.57 0 5.41 3 5.41 6.91V23h-4.51v-7.1c0-1.7-.03-3.88-2.37-3.88-2.37 0-2.73 1.85-2.73 3.76V23H8.34V8.31z"/></svg></a><a href="https://youtube.com/@iomiapp" target="_blank" rel="noopener" aria-label="YouTube" class="text-td hover:text-tp transition"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg></a></div>
