@@ -515,6 +515,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button type="button" role="tab" id="demo-tab-0" aria-selected="true" aria-controls="demo-panel" class="demo-tab active" onclick="switchDemo(0)"><span class="demo-num">01</span>Your net worth, live</button>
       <button type="button" role="tab" id="demo-tab-1" aria-selected="false" aria-controls="demo-panel" class="demo-tab" onclick="switchDemo(1)"><span class="demo-num">02</span>Personal + Business</button>
       <button type="button" role="tab" id="demo-tab-2" aria-selected="false" aria-controls="demo-panel" class="demo-tab" onclick="switchDemo(2)"><span class="demo-num">03</span>Ask IOMI AI</button>
+      <button type="button" role="tab" id="demo-tab-3" aria-selected="false" aria-controls="demo-panel" class="demo-tab" onclick="switchDemo(3)"><span class="demo-num">04</span>Plan your path</button>
     </div>
     <div id="demo-panel" role="tabpanel" class="mock relative p-1.5 sm:p-2">
       <video id="demo-video" class="w-full aspect-video rounded-[10px] bg-black" autoplay muted loop playsinline preload="metadata" poster="assets/demo-net-worth-poster.jpg" src="assets/demo-net-worth.mp4"></video>
@@ -901,7 +902,8 @@ function playVideo(){const m=document.getElementById('video-modal'),v=document.g
 const DEMOS=[
   {src:'assets/demo-net-worth.mp4',poster:'assets/demo-net-worth-poster.jpg',cap:'Add a home, a mortgage, a watch — everything you own becomes one live number.'},
   {src:'assets/demo-personal-business.mp4',poster:'assets/demo-personal-business-poster.jpg',cap:'Your personal wealth and your companies, side by side — never mixed, always one picture.'},
-  {src:'assets/demo-ask-iomi.mp4',poster:'assets/demo-ask-iomi-poster.jpg',cap:'Ask anything about your money — answers grounded in your real numbers.'}
+  {src:'assets/demo-ask-iomi.mp4',poster:'assets/demo-ask-iomi-poster.jpg',cap:'Ask anything about your money — answers grounded in your real numbers.'},
+  {src:'assets/demo-plan-your-path.mp4',poster:'assets/demo-plan-your-path-poster.jpg',cap:'Set a goal — IOMI builds the plan and tracks it against your real numbers.'}
 ];
 function switchDemo(i){
   const v=document.getElementById('demo-video'),c=document.getElementById('demo-caption'),d=DEMOS[i];

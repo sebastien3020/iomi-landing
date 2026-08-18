@@ -14,6 +14,7 @@ Three short screen recordings of the real product — real numbers, no mockups:
 1. **Your net worth, live** — adding a home (with automatic valuation and mortgage equity) and a watch; everything you own becomes one live number.
 2. **Personal + Business** — personal wealth and company entities side by side, never mixed, one combined picture.
 3. **Ask IOMI AI** — asking questions about your money and getting answers grounded in your real numbers.
+4. **Plan your path** — creating a net-worth goal, adjusting the target live, and letting IOMI build the plan (milestones, pace, projection).
 
 ## The problem
 
