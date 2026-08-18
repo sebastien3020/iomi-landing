@@ -18,7 +18,7 @@ It is also, by design, passive. Kubera shows you the picture and stops there: th
 | AI on your live data | Chat grounded in your live balance sheet | — |
 | Asset coverage | Bank accounts, investments, crypto, real estate with live valuations, private equity, collectibles, vehicles, liabilities | Crypto, alternatives, private equity, LP positions, multi-currency |
 | Estate & proof of wealth | — | "Dead Man's Switch" estate planning, "Proof of Wealth" |
-| Platforms | Web + mobile | Web-first (PWA), no native apps |
+| Platforms | Web app — responsive on mobile | Web-first (PWA) |
 | Free trial | 1 month free | 14 days |
 
 Kubera pricing and features as published by the vendor, August 2026.

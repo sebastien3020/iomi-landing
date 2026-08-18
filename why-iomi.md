@@ -25,9 +25,9 @@ The trackers are real products and some of them are good at what they do. The di
 
 | | Price | Business + personal | Intelligence layer | AI on your live data | Platforms |
 |---|---|---|---|---|---|
-| **IOMI** | $29/mo Personal · $39/mo Business — annual billing brings Personal to about $24/mo | Native and unified, up to 3 business entities | Capital Efficiency Score, Next Dollar Allocation, Goals, Simulator | Chat grounded in your live balance sheet | Web + mobile |
+| **IOMI** | $29/mo Personal · $39/mo Business — annual billing brings Personal to about $24/mo | Native and unified, up to 3 business entities | Capital Efficiency Score, Next Dollar Allocation, Goals, Simulator | Chat grounded in your live balance sheet | Web app — responsive on mobile |
 | Monarch Money (https://www.iomifinance.com/compare/monarch) | $99.99/yr Core ($14.99/mo) · $199.99/yr Plus | Business tracking on the Plus plan only ($199.99/yr) | None — no "what to do next" score | AI assistant | iOS, Android, web |
-| Kubera (https://www.iomifinance.com/compare/kubera) | $250/yr Essentials · $2,500/yr Black | At the $2,500/yr Black tier | Passive tracking — no intelligence or score layer | — | Web-first (PWA), no native apps |
+| Kubera (https://www.iomifinance.com/compare/kubera) | $250/yr Essentials · $2,500/yr Black | At the $2,500/yr Black tier | Passive tracking — no intelligence or score layer | — | Web-first (PWA) |
 | Copilot Money (https://www.iomifinance.com/compare/copilot) | $13/mo or $95/yr | Not supported — single user, no household, no business entities | None — a spending tracker, not a wealth OS | AI auto-categorization (~93%) | Apple only (iOS, Mac) |
 
 Competitor pricing and features as published by each vendor, August 2026.

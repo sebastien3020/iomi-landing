@@ -19,7 +19,7 @@ The gap opens when your finances stop being a budget. A holding company, an LLC,
 | Asset coverage | Bank accounts, investments, crypto, real estate with live valuations, private equity, collectibles, vehicles, liabilities | Budgeting, net worth, investment tracking |
 | Budgeting & couples | — | Budgeting and household sharing for couples |
 | Institutions | 12,000+ institutions via Plaid, read-only | 13,000+ institutions |
-| Platforms | Web + mobile | iOS, Android, web |
+| Platforms | Web app — responsive on mobile | iOS, Android, web |
 | Free trial | 1 month free | 7 days |
 
 Monarch Money pricing and features as published by the vendor, August 2026.

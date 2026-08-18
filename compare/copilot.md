@@ -18,7 +18,7 @@ It is single-user and Apple-only by design: no household, no business entities, 
 | AI on your live data | Chat grounded in your live balance sheet | AI auto-categorization (~93%) |
 | Asset coverage | Bank accounts, investments, crypto, real estate with live valuations, private equity, collectibles, vehicles, liabilities | Net worth, budgeting, investment tracking |
 | Institutions | 12,000+ institutions via Plaid, read-only | 10,000+ US institutions |
-| Platforms | Web + mobile | Apple only (iOS, Mac) |
+| Platforms | Web app — responsive on mobile | Apple only (iOS, Mac) |
 | Free trial | 1 month free | 1 month |
 
 Copilot Money pricing and features as published by the vendor, August 2026.
