@@ -13,7 +13,6 @@
 ## Pages
 - Landing page: https://www.iomifinance.com
 - About Us: https://www.iomifinance.com/about
-- Blog (article index): https://www.iomifinance.com/blog
 - Why IOMI: https://www.iomifinance.com/why-iomi
 - IOMI vs Monarch Money: https://www.iomifinance.com/compare/monarch
 - IOMI vs Kubera: https://www.iomifinance.com/compare/kubera
