@@ -1,8 +1,8 @@
 # IOMI — Wealth intelligence made for how you build
 
-> Markdown mirror of https://www.iomifinance.com for AI readers and crawlers. Same content as the landing page, no styling. Last updated: 2026-08-18.
+> Markdown mirror of https://www.iomifinance.com for AI readers and crawlers. Same content as the landing page, no styling. Last updated: 2026-08-22.
 
-IOMI is the wealth intelligence platform for founders, operators, and investors. One live dashboard for your entire net worth — bank accounts, investments, real estate, crypto, business equity, and collectibles — with an AI layer that explains it in plain English.
+IOMI is the wealth intelligence platform for founders, operators, and investors. One live dashboard for your entire net worth — bank accounts, investments, real estate, crypto, business equity, and collectibles — with an AI layer that explains it in plain English. **IOMI tells you what to do next — not just what you have.** Web app — works on your phone, nothing to install.
 
 - **App:** https://app.iomifinance.com/create-account (1-month free trial, no credit card required)
 - **About:** https://www.iomifinance.com/about
@@ -18,6 +18,8 @@ Three short screen recordings of the real product — real numbers, no mockups:
 5. **Your CES score** — the Capital Efficiency Score: one number for how hard your money works, its factor breakdown, and the next points to gain.
 
 ## The problem
+
+Three pains, in our users' words: **the Sunday spreadsheet** (five tabs, stale balances, an hour of gathering numbers before a minute of thinking); **add a business entity, and trackers break** (personal apps mix your LLC with your checking account, or leave the company out); **nobody tells you what to do next** (trackers show what you have; none point at the idle cash, drag or concentration to fix first).
 
 Your wealth doesn't live in one place. Banks show one slice, brokerages another, and everything else — real estate, business equity, collectibles — lives in a spreadsheet you update on Sundays. Every financial decision starts with an hour of gathering numbers instead of a minute of thinking.
 
@@ -43,9 +45,21 @@ ChatGPT can now connect your bank accounts. It still can't see most of what you 
 
 Full comparison, including IOMI vs Monarch, Kubera and Copilot Money: https://www.iomifinance.com/why-iomi
 
+## How much is your idle cash costing you? (calculator)
+
+Most founders keep six figures in accounts earning close to nothing. Example: $180,000 idle ≈ $10,800 a year lost, assuming a 6% gap between low-yield accounts and deployed capital. Illustrative, not advice. Calculator: https://www.iomifinance.com/#calc
+
 ## An AI Assistant that never sleeps
 
-Ask about your wealth in plain English: "How much of my cash is sitting idle?" · "Am I on pace for my $1M goal?" · "Where should my next $10,000 go?" · "What changed in my portfolio this week?" · "How can I improve my Capital Efficiency Score?" The AI Assistant answers from your real, connected numbers — and delivers a Daily Briefing with personalized insights every morning.
+Ask about your wealth in plain English: "How much of my cash is sitting idle?" · "Am I on pace for my $1M goal?" · "Where should my next $10,000 go?" · "What changed in my portfolio this week?" · "How can I improve my Capital Efficiency Score?" The AI Assistant answers from your real, connected numbers — and delivers a Daily Briefing with personalized insights every morning. The engine computes, IOMI AI explains — nothing is invented.
+
+## What is a Capital Efficiency Score?
+
+The CES is a 0–100 health check on how well your capital is deployed — not a credit score. IOMI computes it from your real holdings, personal and business, on five factors: **Liquidity** (can you cover the next months and still move fast?), **Idle capital** (cash earning close to nothing while it could work), **Drag** (debt and fees quietly eating your returns), **Risk balance** (the right amount of risk for your goals, not more), **Concentration** (how much rides on one company, one coin, one asset). Higher is better. Each factor is scored out of 100, so the score says which factor to fix first, and the Next Dollar Allocation tells you where the next dollar should go. The math is deterministic.
+
+### Simulator — see the move before you make it
+
+Model a reallocation or a planned cash-flow event on your own numbers; the engine recomputes your score, cash flow and projection, IOMI AI explains the difference. Illustrative example: put $180,000 of idle cash to work at a 6% higher yield → CES 74 → 82, idle-capital factor 62 → 91, +$10,800 a year. In the app the numbers are yours.
 
 ## Key features
 
@@ -77,6 +91,8 @@ Ask about your wealth in plain English: "How much of my cash is sitting idle?" �
 
 1-month free trial · No credit card required · No percentage of assets, no commissions, no hidden monetization of your data.
 
+Personal value anchor: $29/mo vs $14.99/mo for Monarch Core — the difference pays for itself with one idle-cash find, and no tracker at any price includes the CES, Simulator and Next Dollar Allocation. $180k idle ≈ $10,800 a year at a 6% yield gap; IOMI Personal is $348 a year. **30-day money-back guarantee** on your first paid month — email us and we refund you, no questions asked. Secure payments by Stripe · Read-only data access via Plaid · Cancel anytime. Standalone pricing page: https://www.iomifinance.com/pricing (mirror: https://www.iomifinance.com/pricing.md)
+
 ## FAQ
 
 **What can I connect?** Nearly everything you own or owe: bank and brokerage accounts (via secure, read-only connections), credit cards and loans, real estate, private business interests, crypto, precious metals, and alternative assets — from trading cards to a Porsche. Anything that can't be connected automatically can be added and tracked manually.
@@ -95,7 +111,15 @@ Ask about your wealth in plain English: "How much of my cash is sitting idle?" �
 
 **What does IOMI cost?** Personal: $29/mo. Business: $39/mo founding-member rate (locked while subscribed), later $79/mo. Transparent subscription pricing. 1-month free trial, no credit card required.
 
-**What happens if I cancel?** You can delete your data and walk away anytime. No lock-in, no retention games.
+**Does IOMI work on my phone?** Yes. IOMI is a web app — it works on any device with a browser, no app install required, and your dashboard syncs across desktop, tablet and phone.
+
+**Is IOMI a Monarch, Kubera or Copilot alternative?** If you track personal and business wealth and want more than a tracker, yes. Monarch is the budgeting-first pick, Kubera the pure tracker, Copilot the Apple-only one. IOMI adds the intelligence layer — CES, Simulator, Next Dollar Allocation — on top of tracking, with business entities included at $39/mo. Comparisons: /compare/monarch, /compare/kubera, /compare/copilot, /compare/nova.
+
+**Can IOMI track RSUs and company equity?** Yes. Company equity and equity compensation are tracked as holdings in your net worth — separate from your cash, valued on your inputs, and counted in your concentration factor.
+
+**Does IOMI sync with QuickBooks?** Yes — on the Business plan, balances sync from your QuickBooks books so each entity's balance sheet stays current. The IOMI MCP connector (for tools like Claude or ChatGPT) is separate and coming soon.
+
+**What happens if I cancel?** You can delete your data and walk away anytime. No lock-in, no retention games. 30-day money-back guarantee on your first paid month.
 
 ## Important disclaimer
 

@@ -9,6 +9,8 @@
 - IOMI vs Monarch Money: https://www.iomifinance.com/compare/monarch.md
 - IOMI vs Kubera: https://www.iomifinance.com/compare/kubera.md
 - IOMI vs Copilot Money: https://www.iomifinance.com/compare/copilot.md
+- IOMI vs Nova Net Worth: https://www.iomifinance.com/compare/nova.md
+- Pricing: https://www.iomifinance.com/pricing.md
 
 ## Pages
 - Landing page: https://www.iomifinance.com
@@ -17,6 +19,9 @@
 - IOMI vs Monarch Money: https://www.iomifinance.com/compare/monarch
 - IOMI vs Kubera: https://www.iomifinance.com/compare/kubera
 - IOMI vs Copilot Money: https://www.iomifinance.com/compare/copilot
+- IOMI vs Nova Net Worth: https://www.iomifinance.com/compare/nova
+- Pricing: https://www.iomifinance.com/pricing
+- Blog: https://blog.iomifinance.com
 - Terms of Service: https://www.iomifinance.com/legal/terms-of-service
 - Privacy Policy: https://www.iomifinance.com/legal/privacy-policy
 - Sitemap: https://www.iomifinance.com/sitemap.xml
@@ -27,7 +32,8 @@ IOMI combines full-spectrum wealth tracking (including businesses and real asset
 Key features:
 - Real-time net worth dashboard across personal + business entities (business and personal never mixed)
 - AI Assistant for portfolio questions in plain English, idle cash detection, and AI Suggestions ranked by impact
-- Capital Efficiency Score (CES) — a single metric for capital allocation quality
+- Capital Efficiency Score (CES) — a 0–100 health check on how well capital is deployed, computed deterministically from real holdings on five factors: liquidity, idle capital, drag, risk balance, concentration; each factor scored out of 100 so you know which to fix first
+- Simulator — model a reallocation or planned cash-flow event on your own numbers before you commit; the engine recomputes score, cash flow and projection
 - Read-only via Plaid — 12,000+ supported institutions, credentials never stored
 - Asset tracking for real estate, collectibles, watches, cars, wine, crypto — anything banks can't see
 - Multi-entity support (up to 3 business entities on the Business plan)

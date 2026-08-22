@@ -12,6 +12,7 @@
     { "source": "/x", "destination": "/?utm_source=twitter&utm_medium=social", "permanent": false },
     { "source": "/fb", "destination": "/?utm_source=facebook&utm_medium=social", "permanent": false },
     { "source": "/reddit", "destination": "/?utm_source=reddit&utm_medium=social", "permanent": false },
-    { "source": "/ads", "destination": "/?utm_source=google&utm_medium=cpc", "permanent": false }
+    { "source": "/ads", "destination": "/?utm_source=google&utm_medium=cpc", "permanent": false },
+    { "source": "/:l([a-wyz0-9])", "destination": "/?utm_source=heycatch&utm_campaign=:l", "permanent": false }
   ]
 }
