@@ -2,5 +2,17 @@
 User-agent: *
 Allow: /
 
+# AI search crawlers — allowed to read for search answers (training opt-out is signalled via Content-Signal at the edge)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
 # Sitemap
 Sitemap: https://www.iomifinance.com/sitemap.xml
