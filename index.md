@@ -131,4 +131,4 @@ IOMI is not a bank, broker, or financial advisor. It does not custody assets, ex
 - About: https://www.iomifinance.com/about (mirror: https://www.iomifinance.com/about.md)
 - Terms of Service: https://www.iomifinance.com/legal/terms-of-service
 - Privacy Policy: https://www.iomifinance.com/legal/privacy-policy
-- LinkedIn: https://www.linkedin.com/company/iomi-ai/ · YouTube: https://youtube.com/@iomiapp
+- LinkedIn: https://www.linkedin.com/company/iomifinance · YouTube: https://youtube.com/@iomiapp
