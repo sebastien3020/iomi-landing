@@ -211,24 +211,24 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
 
 <section class="band" id="security">
 <h2>Security &amp; your data, precisely</h2>
-<p class="lead">No "bank-level security" marketing. These are the specifics, stated exactly as far as we have verified them.</p>
+<p class="lead">No "bank-level security" marketing. Here is what actually protects your data — in plain English.</p>
 <div class="spec-tiles">
-  <div class="spec"><div class="v">TLS 1.2+</div><div class="l">Everything in transit — app and API. TLS 1.1 and below refused.</div></div>
-  <div class="spec"><div class="v">AES-256</div><div class="l">Bank connection tokens encrypted at rest.</div></div>
-  <div class="spec"><div class="v">SOC 2 Type II</div><div class="l">Plaid, our account-aggregation layer, is independently certified.</div></div>
-  <div class="spec"><div class="v">Read-only</div><div class="l">No payments, no transfers, no trading. Structurally.</div></div>
+  <div class="spec"><div class="v">TLS 1.2+</div><div class="l">Everything between you and IOMI travels encrypted — the same class of protection your bank's website uses.</div></div>
+  <div class="spec"><div class="v">AES-256</div><div class="l">The keys that connect your bank accounts are stored scrambled — unreadable even if someone broke in.</div></div>
+  <div class="spec"><div class="v">SOC 2 Type II</div><div class="l">Plaid, the service that links your bank, is independently audited for security.</div></div>
+  <div class="spec"><div class="v">Read-only</div><div class="l">IOMI can see your accounts, never touch them. No payments, no transfers.</div></div>
 </div>
 <div class="tw">
   <table aria-label="What IOMI can and cannot do with your data">
     <thead><tr><th>The question</th><th style="width:120px">Answer</th><th>The precise reality</th></tr></thead>
     <tbody>
-      <tr><td>Can IOMI see my bank password?</td><td><span class="pill no">✗ Never</span></td><td>You authenticate directly with your bank inside Plaid. Your credentials never touch IOMI's servers — we receive only a revocable access token, encrypted at rest with AES-256.</td></tr>
+      <tr><td>Can IOMI see my bank password?</td><td><span class="pill no">✗ Never</span></td><td>You log in on your bank's own page, inside Plaid. Your password never reaches IOMI — we only receive a secure key, stored encrypted, that you can cancel at any time.</td></tr>
       <tr><td>Can IOMI move my money?</td><td><span class="pill no">✗ Never</span></td><td>Access is read-only. There is no payments capability, no trading capability, no transfer capability anywhere in the product.</td></tr>
       <tr><td>Does IOMI store my account numbers?</td><td><span class="pill no">✗ No</span></td><td>Full account numbers are never stored — only the last 4 digits, for display.</td></tr>
-      <tr><td>Does the AI see my credentials?</td><td><span class="pill no">✗ Never</span></td><td>The AI works from an aggregated financial snapshot only. Credentials, account numbers, and connection tokens are never part of what it sees.</td></tr>
+      <tr><td>Does the AI see my credentials?</td><td><span class="pill no">✗ Never</span></td><td>The AI only sees a summary of your finances — never your passwords, account numbers, or bank connections.</td></tr>
       <tr><td>Does IOMI sell my data?</td><td><span class="pill no">✗ Never</span></td><td>We don't sell your data — period. It's in the <a href="/legal/privacy-policy">Privacy Policy</a>, and there is no data revenue model to tempt us.</td></tr>
-      <tr><td>Is my data encrypted?</td><td><span class="pill yes">✓ Yes</span></td><td>TLS 1.2+ for everything in transit. Sensitive credentials — bank connection tokens — encrypted at rest with AES-256.</td></tr>
-      <tr><td>Can I disconnect an institution?</td><td><span class="pill yes">✓ Yes</span></td><td>Any time, from Settings. The access token Plaid issues is revocable.</td></tr>
+      <tr><td>Is my data encrypted?</td><td><span class="pill yes">✓ Yes</span></td><td>Everything travels encrypted (TLS 1.2+), and the keys that connect your bank accounts are stored encrypted (AES-256).</td></tr>
+      <tr><td>Can I disconnect an institution?</td><td><span class="pill yes">✓ Yes</span></td><td>Any time, from Settings — the connection key is cancelled and the bank link stops.</td></tr>
       <tr><td>What happens if I delete my account?</td><td><span class="pill yes">✓ Purged</span></td><td>Your data is permanently purged within 30 days. The grace period is deliberate — you can change your mind. After that, there is no undo.</td></tr>
     </tbody>
   </table>
@@ -243,7 +243,6 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
     <img src="/assets/founder.jpg" alt="Sebastien Gabucci">
     <div>
       <div class="nm">Sebastien Gabucci</div>
-      <div class="rl">Founder</div>
       <p>Entrepreneur running personal and business wealth across several entities — IOMI started as the dashboard he couldn't find.</p>
       <p style="margin-top:6px"><a href="https://www.linkedin.com/in/sebastien-gabucci-aa3696392/" target="_blank" rel="noopener">LinkedIn →</a></p>
     </div>
@@ -252,7 +251,6 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
     <div class="initials" aria-hidden="true">MV</div>
     <div>
       <div class="nm">Mitesh Vashee</div>
-      <div class="rl">Founding team</div>
       <p style="margin-top:6px"><a href="https://www.linkedin.com/in/miteshvashee/" target="_blank" rel="noopener">LinkedIn →</a></p>
     </div>
   </div>

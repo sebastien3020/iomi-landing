@@ -29,25 +29,25 @@ Our biggest trust asset is what we cannot do. There is no custody, no trading, n
 
 ## Security & your data, precisely
 
-No "bank-level security" marketing. These are the specifics, stated exactly as far as we have verified them (against our production stack, August 2026):
+No "bank-level security" marketing. Here is what actually protects your data — in plain English (verified against our production stack, August 2026):
 
 | The question | Answer | The precise reality |
 |---|---|---|
-| Can IOMI see my bank password? | Never | You authenticate directly with your bank inside Plaid. Credentials never touch IOMI's servers — we receive only a revocable access token, encrypted at rest with AES-256. |
+| Can IOMI see my bank password? | Never | You log in on your bank's own page, inside Plaid. Your password never reaches IOMI — we only receive a secure key, stored encrypted, that you can cancel at any time. |
 | Can IOMI move my money? | Never | Access is read-only. No payments, no trading, no transfer capability anywhere in the product. |
 | Does IOMI store my account numbers? | No | Full account numbers are never stored — only the last 4 digits, for display. |
-| Does the AI see my credentials? | Never | The AI works from an aggregated financial snapshot only — never credentials, account numbers, or connection tokens. |
+| Does the AI see my credentials? | Never | The AI only sees a summary of your finances — never your passwords, account numbers, or bank connections. |
 | Does IOMI sell my data? | Never | We don't sell your data — period. There is no data revenue model. |
-| Is my data encrypted? | Yes | TLS 1.2+ for everything in transit. Sensitive credentials — bank connection tokens — encrypted at rest with AES-256. |
-| Can I disconnect an institution? | Yes | Any time, from Settings. The access token Plaid issues is revocable. |
+| Is my data encrypted? | Yes | Everything travels encrypted (TLS 1.2+), and the keys that connect your bank accounts are stored encrypted (AES-256). |
+| Can I disconnect an institution? | Yes | Any time, from Settings — the connection key is cancelled and the bank link stops. |
 | What happens if I delete my account? | Purged | Permanently purged within 30 days. The grace period is deliberate; after that, there is no undo. |
 
 Plaid, our account-aggregation layer, is SOC 2 Type II certified (see plaid.com/security). Where a stronger claim is still being verified with our engineering partners, we state the narrower one — not the flattering one.
 
 ## Who builds IOMI
 
-- **Sebastien Gabucci — Founder.** Entrepreneur running personal and business wealth across several entities — IOMI started as the dashboard he couldn't find. LinkedIn: https://www.linkedin.com/in/sebastien-gabucci-aa3696392/
-- **Mitesh Vashee — Founding team.** LinkedIn: https://www.linkedin.com/in/miteshvashee/
+- **Sebastien Gabucci.** Entrepreneur running personal and business wealth across several entities — IOMI started as the dashboard he couldn't find. LinkedIn: https://www.linkedin.com/in/sebastien-gabucci-aa3696392/
+- **Mitesh Vashee.** LinkedIn: https://www.linkedin.com/in/miteshvashee/
 
 **Why I built this, in my own words:** I run personal and business wealth across several entities. Every month I rebuilt the picture by hand — bank, company books, brokerage, crypto, the things banks can't see — and at the end of it I still couldn't tell what to do next. IOMI is the dashboard I couldn't find: business and personal side by side, never mixed, with a score that tells me which dollar to move first. — Sebastien
 
