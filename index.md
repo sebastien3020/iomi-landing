@@ -74,7 +74,7 @@ Model a reallocation or a planned cash-flow event on your own numbers; the engin
 
 ## Most tools explain the past. IOMI tells you what to do next.
 
-| | Spreadsheets | Copilot | Monarch | Kubera | Wealthfront (robo-advisor) | IOMI |
+| | Spreadsheets | Copilot Money | Monarch | Kubera | Wealthfront (robo-advisor) | IOMI |
 |---|---|---|---|---|---|---|
 | Net worth in real time | ✗ | ✓ | ✓ | ✓ | Linked accounts | ✓ |
 | All asset classes — collectibles included | Manual | ✗ | ✗ | ✓ | ✗ | ✓ |

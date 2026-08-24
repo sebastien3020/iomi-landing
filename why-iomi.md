@@ -10,7 +10,7 @@ Better than the trackers. Better than the spreadsheet. More than an AI with your
 
 Trackers, robo-advisors, the spreadsheet — side by side. Competitor facts as published by each vendor, August 2026.
 
-| | Spreadsheets | Copilot | Monarch | Kubera | Wealthfront (robo-advisor) | IOMI |
+| | Spreadsheets | Copilot Money | Monarch | Kubera | Wealthfront (robo-advisor) | IOMI |
 |---|---|---|---|---|---|---|
 | Net worth in real time | ✗ | ✓ | ✓ | ✓ | Linked accounts | ✓ |
 | All asset classes — collectibles included | Manual | ✗ | ✗ | ✓ | ✗ | ✓ |
