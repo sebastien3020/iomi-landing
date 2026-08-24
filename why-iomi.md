@@ -41,3 +41,15 @@ Competitor pricing and features as published by each vendor, August 2026.
 1-month free trial · No credit card required · Read-only by design — IOMI can never move your money.
 
 Compare in detail: https://www.iomifinance.com/compare/monarch · https://www.iomifinance.com/compare/kubera · https://www.iomifinance.com/compare/copilot
+
+## The full comparison, side by side
+
+Same table as the home page (competitor facts as published by each vendor, August 2026): Spreadsheets, Copilot ($13/mo), Monarch ($14.99/mo), Kubera (from $250/yr), Wealthfront (0.25%/yr of assets — a robo-advisor, different category), IOMI ($29 · $39/mo). Only IOMI combines real-time net worth, all asset classes including collectibles, business + personal separated, the Capital Efficiency Score, a simulator, an AI that knows the whole balance sheet, and next-step guidance.
+
+## Compare in detail
+
+- IOMI vs Monarch Money — /compare/monarch
+- IOMI vs Kubera — /compare/kubera
+- IOMI vs Copilot Money — /compare/copilot
+- IOMI vs Nova Net Worth — /compare/nova
+- IOMI vs Wealthfront — /compare/wealthfront

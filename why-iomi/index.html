@@ -51,6 +51,22 @@ a{color:inherit;text-decoration:none}
 .verdict{background:linear-gradient(160deg,rgba(38,188,75,.10),#111212 65%);border:1px solid rgba(38,188,75,.5);border-radius:16px;padding:20px 24px;margin-bottom:36px;box-shadow:0 0 30px rgba(38,188,75,.07)}
 .verdict .vt{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#42DC68;margin-bottom:8px}
 .verdict p{color:#F9F9F9;font-size:14.5px;line-height:1.65;margin:0;max-width:none}
+/* ── Comparison table (mirror of the landing #compare table) ── */
+.cmpwrap{overflow-x:auto;margin:10px 0 8px}
+table.cmpt{width:100%;min-width:900px;border-collapse:separate;border-spacing:0;font-size:14px}
+.cmpt th{padding:0 8px 16px;text-align:center;font-size:12px;font-weight:600;color:var(--td)}
+.cmpt th:first-child{text-align:left;font-weight:400;color:var(--tm);width:24%;padding-left:0}
+.cmpt th .subl{display:block;font-size:9px;font-weight:400;color:var(--tm);margin-top:2px}
+.cmpt td{padding:16px 8px;text-align:center;color:var(--tm);border-top:1px solid var(--bord)}
+.cmpt td:first-child{text-align:left;color:var(--tp);padding-left:0;font-size:14px}
+.cmpt td.y{color:var(--td)}
+.cmpt td.t{color:var(--td);font-size:12px}
+.cmpt tr{transition:background .25s}
+.cmpt tbody tr:hover{background:rgba(255,255,255,.02)}
+.cmpt .ci{background:rgba(38,188,75,.07);border-left:1px solid rgba(38,188,75,.22);border-right:1px solid rgba(38,188,75,.22);color:#42DC68;font-weight:600}
+.cmpt thead .ci{border-top:1px solid rgba(38,188,75,.22);border-radius:12px 12px 0 0;padding:0 12px 16px}
+.cmpt tbody tr:last-child .ci{border-bottom:1px solid rgba(38,188,75,.22);border-radius:0 0 12px 12px}
+.cmpt .foot{font-size:11.5px;color:var(--tm);margin-top:14px;max-width:760px}
 /* ── Content ── */
 .container{max-width:1080px;margin:0 auto;padding:40px 24px 80px}
 .container h2{font-size:20px;font-weight:700;margin-top:44px;margin-bottom:14px;letter-spacing:-.01em}
@@ -126,7 +142,7 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
     <a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green" style="padding:9px 18px;font-size:13px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
   </div>
 </div></nav>
-<header class="phero"><div class="glow"></div><div class="kick">Compare</div><h1>Why IOMI</h1><p class="sub">Two objections worth answering before you connect anything: why not just ask a general AI, and why not one of the wealth trackers.</p><p class="meta">8 min read · Updated August 18, 2026</p><div style="display:flex;align-items:center;gap:16px;margin-top:26px;flex-wrap:wrap"><a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green" style="padding:11px 24px;font-size:13.5px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Start for free</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><span style="font-size:12px;color:#7F7D83">1-month free trial · No credit card required</span></div></header>
+<header class="phero"><div class="glow"></div><div class="kick">Compare</div><h1>Why IOMI</h1><p class="sub">Two objections worth answering before you connect anything: why not just ask a general AI, and why not one of the wealth trackers.</p><p class="meta">8 min read · Updated August 24, 2026</p><div style="display:flex;align-items:center;gap:16px;margin-top:26px;flex-wrap:wrap"><a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green" style="padding:11px 24px;font-size:13.5px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Start for free</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><span style="font-size:12px;color:#7F7D83">1-month free trial · No credit card required</span></div></header>
 <main class="container">
 <div class="verdict"><div class="vt">The short version</div><p>A general AI now sees your bank feed; IOMI sees your balance sheet. A tracker tells you what you have; IOMI tells you what to do next. One platform: every asset, every entity, one score — and an AI grounded in your real numbers.</p></div>
 
@@ -174,6 +190,22 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
 
 <div class="highlight">1-month free trial · No credit card required · Read-only by design — IOMI can never move your money.</div>
 
+<h2 style="margin-top:56px">The full comparison, side by side</h2>
+<p>The same table we publish on the home page — competitor facts as published by each vendor, August 2026.</p>
+<div class="cmpwrap"><table class="cmpt" aria-label="IOMI vs competitors">
+<thead><tr><th></th><th>Spreadsheets</th><th>Copilot</th><th>Monarch</th><th>Kubera</th><th>Wealthfront<span class="subl">robo-advisor</span></th><th class="ci"><img src="/assets/iomi-wordmark.png" alt="IOMI" style="height:14px;width:auto;margin:0 auto;display:block"></th></tr></thead>
+<tbody>
+<tr><td>Net worth in real time</td><td>✗</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="t">Linked accounts</td><td class="ci">✓</td></tr>
+<tr><td>All asset classes — collectibles included</td><td class="t">Manual</td><td>✗</td><td>✗</td><td class="y">✓</td><td>✗</td><td class="ci">✓</td></tr>
+<tr><td>Business + personal, separated</td><td>✗</td><td>✗</td><td class="t">Plus · $199.99/yr</td><td class="t">Black · $2,500/yr</td><td>✗</td><td class="ci">✓</td></tr>
+<tr><td>Capital Efficiency Score</td><td>✗</td><td>✗</td><td>✗</td><td>✗</td><td>✗</td><td class="ci">✓</td></tr>
+<tr><td>Simulator — test a move before you make it</td><td class="t">DIY</td><td>✗</td><td>✗</td><td>✗</td><td class="t">Path planner</td><td class="ci">✓</td></tr>
+<tr><td>AI that knows your whole balance sheet</td><td>✗</td><td>✗</td><td class="t">Assistant</td><td>✗</td><td>✗</td><td class="ci">✓</td></tr>
+<tr><td>Tells you what to do next</td><td>✗</td><td>✗</td><td>✗</td><td>✗</td><td>✗</td><td class="ci">✓</td></tr>
+<tr><td><strong>Price</strong></td><td class="t">Free — costs your Sundays</td><td class="t">$13/mo</td><td class="t">$14.99/mo</td><td class="t">from $250/yr</td><td class="t">0.25%/yr of assets</td><td class="ci">$29 · $39/mo</td></tr>
+</tbody></table></div>
+<p class="cmpt-foot" style="font-size:11.5px;color:var(--tm);margin-top:14px">Competitor facts as published by each vendor, August 2026. Wealthfront is a different category — it manages and custodies money; IOMI manages nothing.</p>
+
 <div class="cta-zone"><div class="glow"></div><h3>Ready to see your whole picture?</h3><div style="display:flex;justify-content:center"><a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green" style="padding:12px 26px;font-size:14px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Create your account</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a></div><p class="micro">1-month free trial · No credit card required</p></div>
 
 <h2 style="margin-top:56px">Compare in detail</h2>
@@ -181,6 +213,8 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
 <a class="bcard" href="/compare/monarch"><span class="chip">Comparison</span><h3>IOMI vs Monarch Money</h3><p>Monarch is a well-built budgeting app. The gap opens when your finances stop being a budget and become a balance sheet.</p><span class="read">Read the comparison →</span></a>
 <a class="bcard" href="/compare/kubera"><span class="chip">Comparison</span><h3>IOMI vs Kubera</h3><p>Kubera tracks nearly everything — and stops there. Tracking tells you what you have, never what to do next.</p><span class="read">Read the comparison →</span></a>
 <a class="bcard" href="/compare/copilot"><span class="chip">Comparison</span><h3>IOMI vs Copilot Money</h3><p>Copilot is a polished spending tracker for Apple users. A wealth OS answers a different question than a budgeting app.</p><span class="read">Read the comparison →</span></a>
+<a class="bcard" href="/compare/nova"><span class="chip">Comparison</span><h3>IOMI vs Nova Net Worth</h3><p>The closest tool by positioning — an agentic balance sheet. The gap is depth: score, simulator, and a plan, not just nudges.</p><span class="read">Read the comparison →</span></a>
+<a class="bcard" href="/compare/wealthfront"><span class="chip">Comparison</span><h3>IOMI vs Wealthfront</h3><p>A different category: Wealthfront manages and custodies your money. IOMI manages nothing — it tells you what to do next.</p><span class="read">Read the comparison →</span></a>
 </div>
 
 

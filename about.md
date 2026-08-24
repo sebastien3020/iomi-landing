@@ -32,3 +32,17 @@ IOMI is not a bank, a broker, or a financial advisor. We don't custody assets, e
 IOMI Technologies Inc
 1 Sansome Street, San Francisco, CA 94104, United States
 contact@iomifinance.com
+
+## Company
+
+IOMI Technologies Inc — a Delaware corporation. 1 Sansome Street, San Francisco, CA 94104, United States. EIN 38-4378123. contact@iomifinance.com
+
+## Verify us
+
+You should be sceptical of any product that touches your financial life — including this one. Check each item yourself:
+
+1. The company is real: IOMI Technologies Inc, Delaware corporation (EIN 38-4378123), verifiable on the Delaware Division of Corporations entity search.
+2. We never touch your money: read-only connection through Plaid (used by Venmo, Coinbase, American Express); credentials never touch IOMI's servers; revocable token; no custody, no trading, no transfers.
+3. We can't give you advice — by design: IOMI is educational, not a financial advisor, bank, or broker. Decisions stay yours.
+4. Your data is yours: encrypted in transit and at rest; never sold; deleted with your account.
+5. We are early, and we say so: early access, founder-built, no invented numbers anywhere on this site.
