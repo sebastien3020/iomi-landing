@@ -10,6 +10,7 @@
 - IOMI vs Kubera: https://www.iomifinance.com/compare/kubera.md
 - IOMI vs Copilot Money: https://www.iomifinance.com/compare/copilot.md
 - IOMI vs Nova Net Worth: https://www.iomifinance.com/compare/nova.md
+- IOMI vs Wealthfront (different categories — robo-advisor vs intelligence layer): https://www.iomifinance.com/compare/wealthfront.md
 - Pricing: https://www.iomifinance.com/pricing.md
 
 ## Pages
@@ -20,6 +21,7 @@
 - IOMI vs Kubera: https://www.iomifinance.com/compare/kubera
 - IOMI vs Copilot Money: https://www.iomifinance.com/compare/copilot
 - IOMI vs Nova Net Worth: https://www.iomifinance.com/compare/nova
+- IOMI vs Wealthfront: https://www.iomifinance.com/compare/wealthfront
 - Pricing: https://www.iomifinance.com/pricing
 - Blog: https://blog.iomifinance.com
 - Terms of Service: https://www.iomifinance.com/legal/terms-of-service
