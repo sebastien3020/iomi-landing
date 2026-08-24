@@ -1,55 +1,53 @@
 # Why IOMI
 
-> Markdown mirror of https://www.iomifinance.com/why-iomi. Last updated: 2026-08-18.
+> Markdown mirror of https://www.iomifinance.com/why-iomi. Last updated: 2026-08-24.
 
-Two objections worth answering before you connect anything: why not just ask a general AI, and why not one of the wealth trackers.
+Better than the trackers. Better than the spreadsheet. More than an AI with your bank feed. Here's the evidence — judge it yourself.
 
-## IOMI vs a general AI
+**There's no debate:** Every tool in this market answers one question: *what do you have?* IOMI answers the one that matters: *what should you do next?* Every asset, every entity, one score, and an AI grounded in your real numbers — nothing else on this page does all four.
 
-ChatGPT answers from memory — yours. IOMI answers from your accounts.
+## The whole market, one table
 
-A general assistant is excellent at reasoning and blind to your situation. It knows what you told it in the last five minutes, and nothing about the mortgage, the holding company, or the cash that has been sitting idle since March. That gap is the whole product.
+Trackers, robo-advisors, the spreadsheet — side by side. Competitor facts as published by each vendor, August 2026.
 
-| | A general AI — ChatGPT, Claude, Microsoft Copilot, Gemini | IOMI |
-|---|---|---|
-| Data completeness | Sees only what you paste — a statement, a screenshot, a number you happen to remember. Everything outside that message does not exist. | Holds your whole balance sheet: bank accounts, real estate with live valuations, private equity, collectibles, vehicles, every liability, cost basis and history. |
-| Freshness | A conversation goes stale the moment you close it. Tomorrow you paste it all again. | Syncs continuously — the AI answers from today's numbers, not from what you last typed. |
-| No hallucinated math | Will happily invent a figure to keep the sentence moving, and it will look plausible. | Net worth, the Capital Efficiency Score and the forecast are computed by a deterministic engine. The AI phrases the numbers, it never invents them. |
-| Proactive, not reactive | Only answers when asked. It never notices anything on its own. | Briefs you daily, tracks goals against real balances, flags what changed since yesterday. |
-| Privacy | Pasting statements into a chatbot is not the same thing. | Read-only, bank-grade connections through Plaid — 12,000+ institutions. IOMI never sees your credentials and can never move your money. |
-| And the chat is included | An assistant without your balance sheet. | It is not IOMI or an AI assistant. It is an AI assistant that finally has your real balance sheet. |
+| | Spreadsheets | Copilot | Monarch | Kubera | Wealthfront (robo-advisor) | IOMI |
+|---|---|---|---|---|---|---|
+| Net worth in real time | ✗ | ✓ | ✓ | ✓ | Linked accounts | ✓ |
+| All asset classes — collectibles included | Manual | ✗ | ✗ | ✓ | ✗ | ✓ |
+| Business + personal, separated | ✗ | ✗ | Plus · $199.99/yr | Black · $2,500/yr | ✗ | ✓ |
+| Capital Efficiency Score | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ |
+| Simulator — test a move before you make it | DIY | ✗ | ✗ | ✗ | Path planner | ✓ |
+| AI that knows your whole balance sheet | ✗ | ✗ | Assistant | ✗ | ✗ | ✓ |
+| Tells you what to do next | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ |
+| Price | Free — costs your Sundays | $13/mo | $14.99/mo | from $250/yr | 0.25%/yr of assets | $29 · $39/mo |
 
-## IOMI vs wealth trackers
+Wealthfront is a different category — it manages and custodies money; IOMI manages nothing. And the spreadsheet? Honest work, always out of date: manual, error-prone, blind between updates. IOMI is what the spreadsheet wanted to be — live, complete, and opinionated about what comes next.
 
-The trackers are real products and some of them are good at what they do. The difference is where they stop: they tell you what you have. None of them tell you what to do with it.
-
-| | Price | Business + personal | Intelligence layer | AI on your live data | Platforms |
-|---|---|---|---|---|---|
-| **IOMI** | $29/mo Personal · $39/mo Business — annual billing brings Personal to about $24/mo | Native and unified, up to 3 business entities | Capital Efficiency Score, Next Dollar Allocation, Goals, Simulator | Chat grounded in your live balance sheet | Web app — responsive on mobile |
-| Monarch Money (https://www.iomifinance.com/compare/monarch) | $99.99/yr Core ($14.99/mo) · $199.99/yr Plus | Business tracking on the Plus plan only ($199.99/yr) | None — no "what to do next" score | AI assistant | iOS, Android, web |
-| Kubera (https://www.iomifinance.com/compare/kubera) | $250/yr Essentials · $2,500/yr Black | At the $2,500/yr Black tier | Passive tracking — no intelligence or score layer | — | Web-first (PWA) |
-| Copilot Money (https://www.iomifinance.com/compare/copilot) | $13/mo or $95/yr | Not supported — single user, no household, no business entities | None — a spending tracker, not a wealth OS | AI auto-categorization (~93%) | Apple only (iOS, Mac) |
-
-Competitor pricing and features as published by each vendor, August 2026.
-
-## The three differences that matter
+The three differences that matter:
 
 - **Business + personal, unified.** Monarch does it on the surface, on the $199.99/yr plan. Kubera does it at $2,500/yr. Copilot Money does not do it at all. IOMI does it natively, from $39/mo.
-- **Intelligence, not tracking.** The Capital Efficiency Score, Next Dollar Allocation and the forecast. The other three track net worth; none of them tell you what to do with it.
+- **Intelligence, not tracking.** The Capital Efficiency Score, Next Dollar Allocation and the forecast. The others track net worth; none of them tell you what to do with it.
 - **AI grounded in live data.** The IOMI chat answers from your real balance sheet — not from what you remembered to paste.
 
-1-month free trial · No credit card required · Read-only by design — IOMI can never move your money.
+## Why not just an AI?
 
-Compare in detail: https://www.iomifinance.com/compare/monarch · https://www.iomifinance.com/compare/kubera · https://www.iomifinance.com/compare/copilot
+Fair question — it's the strongest alternative. ChatGPT can now connect your bank accounts. It still can't see most of what you own. OpenAI's personal finance experience syncs banks and brokerages through Plaid — a real step. But founder wealth doesn't live in checking accounts: it lives in company equity, real estate, private positions, and the assets no bank feed returns. And advice generated by a general model is not the same thing as numbers computed by an engine. That gap is the whole product.
 
-## The full comparison, side by side
+| | A general AI (ChatGPT with connected accounts, Claude, Copilot, Gemini) | IOMI |
+|---|---|---|
+| Data completeness | Connects bank and brokerage accounts through Plaid — and stops at what Plaid can see. No real estate, no company or private equity, no collectibles, no vehicles. | Holds your whole balance sheet: financial accounts plus real estate with live valuations, company equity, private positions, collectibles, vehicles, every liability. |
+| Business + personal | One personal pile. No concept of an LLC or holding company, no per-entity view. | Up to 3 business entities alongside your personal wealth — separated, attributed, and consolidated. |
+| No hallucinated math | Insights are generated by the model on top of your synced data — fluent, plausible, and unverified. | Net worth, the Capital Efficiency Score and the forecast are computed by a deterministic engine. The AI phrases the numbers, it never invents them. |
+| Proactive, not reactive | A dashboard, memory for your goals, and answers when you ask. | Briefs you daily, tracks goals against real balances, flags what changed since yesterday. |
+| Privacy | Your transactions sync into a general-purpose AI provider's systems; synced data is deleted within 30 days after you disconnect. | A single-purpose wealth platform. Read-only via Plaid — 12,000+ institutions, credentials never seen, data never sold, never used to train general models. IOMI can never move your money. |
+| And the chat is included | A general assistant with your bank feed. | It is not IOMI or an AI assistant. It is an AI assistant that finally has your real balance sheet. |
 
-Same table as the home page (competitor facts as published by each vendor, August 2026): Spreadsheets, Copilot ($13/mo), Monarch ($14.99/mo), Kubera (from $250/yr), Wealthfront (0.25%/yr of assets — a robo-advisor, different category), IOMI ($29 · $39/mo). Only IOMI combines real-time net worth, all asset classes including collectibles, business + personal separated, the Capital Efficiency Score, a simulator, an AI that knows the whole balance sheet, and next-step guidance.
+One-on-one versions: [IOMI vs ChatGPT](https://www.iomifinance.com/compare/chatgpt.md) · [IOMI vs Claude](https://www.iomifinance.com/compare/claude.md) · [IOMI vs Microsoft Copilot](https://www.iomifinance.com/compare/microsoft-copilot.md)
 
 ## Compare in detail
 
-- IOMI vs Monarch Money — /compare/monarch
-- IOMI vs Kubera — /compare/kubera
-- IOMI vs Copilot Money — /compare/copilot
-- IOMI vs Nova Net Worth — /compare/nova
-- IOMI vs Wealthfront — /compare/wealthfront
+Trackers: [IOMI vs Monarch Money](https://www.iomifinance.com/compare/monarch.md) · [IOMI vs Kubera](https://www.iomifinance.com/compare/kubera.md) · [IOMI vs Copilot Money](https://www.iomifinance.com/compare/copilot.md) · [IOMI vs Nova Net Worth](https://www.iomifinance.com/compare/nova.md) · [IOMI vs Wealthfront](https://www.iomifinance.com/compare/wealthfront.md)
+
+AI assistants: [IOMI vs ChatGPT](https://www.iomifinance.com/compare/chatgpt.md) · [IOMI vs Claude](https://www.iomifinance.com/compare/claude.md) · [IOMI vs Microsoft Copilot](https://www.iomifinance.com/compare/microsoft-copilot.md)
+
+1-month free trial · No credit card required · Read-only by design — IOMI can never move your money.

@@ -11,6 +11,9 @@
 - IOMI vs Copilot Money: https://www.iomifinance.com/compare/copilot.md
 - IOMI vs Nova Net Worth: https://www.iomifinance.com/compare/nova.md
 - IOMI vs Wealthfront (different categories — robo-advisor vs intelligence layer): https://www.iomifinance.com/compare/wealthfront.md
+- IOMI vs ChatGPT (AI assistant with connected accounts): https://www.iomifinance.com/compare/chatgpt.md
+- IOMI vs Claude (general AI assistant): https://www.iomifinance.com/compare/claude.md
+- IOMI vs Microsoft Copilot (AI in the spreadsheet): https://www.iomifinance.com/compare/microsoft-copilot.md
 - Pricing: https://www.iomifinance.com/pricing.md
 
 ## Pages
@@ -22,6 +25,9 @@
 - IOMI vs Copilot Money: https://www.iomifinance.com/compare/copilot
 - IOMI vs Nova Net Worth: https://www.iomifinance.com/compare/nova
 - IOMI vs Wealthfront: https://www.iomifinance.com/compare/wealthfront
+- IOMI vs ChatGPT: https://www.iomifinance.com/compare/chatgpt
+- IOMI vs Claude: https://www.iomifinance.com/compare/claude
+- IOMI vs Microsoft Copilot: https://www.iomifinance.com/compare/microsoft-copilot
 - Pricing: https://www.iomifinance.com/pricing
 - Early-user survey: https://www.iomifinance.com/survey
 - Blog: https://blog.iomifinance.com
