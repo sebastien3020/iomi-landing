@@ -55,6 +55,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.iomifinance.com/survey</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://www.iomifinance.com/legal/terms-of-service</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
