@@ -72,7 +72,7 @@ Model a reallocation or a planned cash-flow event on your own numbers; the engin
 - Multi-entity support (up to 3 business entities on the Business plan)
 - Read-only by design via Plaid — IOMI never sees your credentials and can never move your money
 
-## How IOMI compares — spreadsheets, trackers, IOMI
+## Most tools explain the past. IOMI tells you what to do next.
 
 | | Spreadsheets | Copilot | Monarch | Kubera | IOMI |
 |---|---|---|---|---|---|
