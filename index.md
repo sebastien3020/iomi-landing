@@ -74,18 +74,18 @@ Model a reallocation or a planned cash-flow event on your own numbers; the engin
 
 ## Most tools explain the past. IOMI tells you what to do next.
 
-| | Spreadsheets | Copilot | Monarch | Kubera | IOMI |
-|---|---|---|---|---|---|
-| Net worth in real time | ✗ | ✓ | ✓ | ✓ | ✓ |
-| All asset classes — collectibles included | Manual | ✗ | ✗ | ✓ | ✓ |
-| Business + personal, separated | ✗ | ✗ | Plus · $199.99/yr | Black · $2,500/yr | ✓ |
-| Capital Efficiency Score | ✗ | ✗ | ✗ | ✗ | ✓ |
-| Simulator — test a move before you make it | DIY | ✗ | ✗ | ✗ | ✓ |
-| AI that knows your whole balance sheet | ✗ | ✗ | Assistant | ✗ | ✓ |
-| Tells you what to do next | ✗ | ✗ | ✗ | ✗ | ✓ |
-| Price | Free — costs your Sundays | $13/mo | $14.99/mo | from $250/yr | $29/mo · $39/mo Business |
+| | Spreadsheets | Copilot | Monarch | Kubera | Wealthfront (robo-advisor) | IOMI |
+|---|---|---|---|---|---|---|
+| Net worth in real time | ✗ | ✓ | ✓ | ✓ | Linked accounts | ✓ |
+| All asset classes — collectibles included | Manual | ✗ | ✗ | ✓ | ✗ | ✓ |
+| Business + personal, separated | ✗ | ✗ | Plus · $199.99/yr | Black · $2,500/yr | ✗ | ✓ |
+| Capital Efficiency Score | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ |
+| Simulator — test a move before you make it | DIY | ✗ | ✗ | ✗ | Path planner | ✓ |
+| AI that knows your whole balance sheet | ✗ | ✗ | Assistant | ✗ | ✗ | ✓ |
+| Tells you what to do next | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ |
+| Price | Free — costs your Sundays | $13/mo | $14.99/mo | from $250/yr | 0.25%/yr of assets | $29/mo · $39/mo Business |
 
-Competitor facts as published by each vendor, August 2026. Full comparisons: /compare/monarch · /compare/kubera · /compare/copilot · /compare/nova · /compare/wealthfront
+Competitor facts as published by each vendor, August 2026. Wealthfront is a different category — it manages and custodies money; IOMI manages nothing. Full comparisons: /compare/monarch · /compare/kubera · /compare/copilot · /compare/nova · /compare/wealthfront
 
 ## Pricing
 
