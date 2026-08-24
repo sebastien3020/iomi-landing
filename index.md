@@ -1,6 +1,6 @@
 # IOMI — Wealth intelligence made for how you build
 
-> Markdown mirror of https://www.iomifinance.com for AI readers and crawlers. Same content as the landing page, no styling. Last updated: 2026-08-22.
+> Markdown mirror of https://www.iomifinance.com for AI readers and crawlers. Same content as the landing page, no styling. Last updated: 2026-08-23.
 
 IOMI is the wealth intelligence platform for founders, operators, and investors. One live dashboard for your entire net worth — bank accounts, investments, real estate, crypto, business equity, and collectibles — with an AI layer that explains it in plain English. **IOMI tells you what to do next — not just what you have.** Web app — works on your phone, nothing to install.
 
@@ -72,17 +72,20 @@ Model a reallocation or a planned cash-flow event on your own numbers; the engin
 - Multi-entity support (up to 3 business entities on the Business plan)
 - Read-only by design via Plaid — IOMI never sees your credentials and can never move your money
 
-## IOMI vs banks vs spreadsheets
+## How IOMI compares — spreadsheets, trackers, IOMI
 
-| Capability | Banks | Sheets | IOMI |
-|---|---|---|---|
-| Net worth in real time | ✗ | ✗ | ✓ |
-| All asset classes | ✗ | Manual | ✓ |
-| Business + personal, separated | ✗ | ✗ | ✓ |
-| AI Suggestions | ✗ | ✗ | ✓ |
-| Goals that track themselves | ✗ | Manual | ✓ |
-| Capital Efficiency Score | ✗ | ✗ | ✓ |
-| Time it takes you | Hours | A weekend | 30 sec |
+| | Spreadsheets | Copilot | Monarch | Kubera | IOMI |
+|---|---|---|---|---|---|
+| Net worth in real time | ✗ | ✓ | ✓ | ✓ | ✓ |
+| All asset classes — collectibles included | Manual | ✗ | ✗ | ✓ | ✓ |
+| Business + personal, separated | ✗ | ✗ | Plus · $199.99/yr | Black · $2,500/yr | ✓ |
+| Capital Efficiency Score | ✗ | ✗ | ✗ | ✗ | ✓ |
+| Simulator — test a move before you make it | DIY | ✗ | ✗ | ✗ | ✓ |
+| AI that knows your whole balance sheet | ✗ | ✗ | Assistant | ✗ | ✓ |
+| Tells you what to do next | ✗ | ✗ | ✗ | ✗ | ✓ |
+| Price | Free — costs your Sundays | $13/mo | $14.99/mo | from $250/yr | $29/mo · $39/mo Business |
+
+Competitor facts as published by each vendor, August 2026. Full comparisons: /compare/monarch · /compare/kubera · /compare/copilot · /compare/nova · /compare/wealthfront
 
 ## Pricing
 
