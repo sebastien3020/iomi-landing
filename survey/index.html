@@ -57,9 +57,11 @@ the script at the bottom).
 html,body{height:100%}
 body{background:var(--bg);color:var(--tp);font-family:'Archivo',-apple-system,'Segoe UI',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-/* ── Progress line (Typeform-style, fixed at the very top) ── */
-.progress{position:fixed;top:0;left:0;right:0;z-index:60;height:3px;background:rgba(255,255,255,.07)}
-.progress b{display:block;height:100%;width:0;background:linear-gradient(90deg,#019426,#26BC4B);transition:width .45s ease}
+/* ── Progress tracker (segmented, one tick per question — matches the app's
+   signup/wizard steps) ── */
+.progress{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;gap:5px;padding:10px 14px 0}
+.progress i{flex:1;height:3px;border-radius:99px;background:rgba(255,255,255,.10);transition:background .35s ease}
+.progress i.done{background:linear-gradient(90deg,#019426,#26BC4B)}
 /* ── Full-viewport stage (every screen centers vertically) ── */
 .stage{min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:48px 24px}
 .inner{width:100%;max-width:680px}
@@ -164,7 +166,7 @@ textarea{min-height:96px;resize:vertical;line-height:1.55}
 </style>
 </head>
 <body>
-<div class="progress" aria-hidden="true"><b id="pbar"></b></div>
+<div class="progress" id="pbar" aria-hidden="true"></div>
 <a class="marklink" id="marklink" href="https://iomifinance.com" aria-label="iomifinance.com"><img src="/assets/iomi-logo.png" alt="IOMI"></a>
 <div class="corner" id="corner" aria-hidden="true">
   <button type="button" id="cprev" aria-label="Previous question"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg></button>
@@ -353,6 +355,16 @@ textarea{min-height:96px;resize:vertical;line-height:1.55}
   var current=-1; /* -1 = intro */
   var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* One tick per question (signup/wizard-style segmented tracker) */
+  var segs=steps.map(function(){
+    var s=document.createElement('i');
+    pbar.appendChild(s);
+    return s;
+  });
+  function paintSegs(n){
+    segs.forEach(function(s,j){s.classList.toggle('done',j<n)});
+  }
+
   /* Per-step OK controls (all but the last, which carries the submit button) */
   steps.forEach(function(sec,i){
     if(i===steps.length-1)return;
@@ -378,8 +390,8 @@ textarea{min-height:96px;resize:vertical;line-height:1.55}
     return !!form.querySelector('input[name="'+req+'"]:checked');
   }
   function progress(){
-    /* the line completes as questions are ANSWERED (validated), Typeform-style */
-    pbar.style.width=Math.round((current)/steps.length*100)+'%';
+    /* a tick completes for each question already answered */
+    paintSegs(current);
   }
   function show(i,dir){
     steps.forEach(function(s,j){
@@ -414,7 +426,7 @@ textarea{min-height:96px;resize:vertical;line-height:1.55}
       intro.style.display='flex';
       corner.classList.remove('on');
       marklink.classList.remove('on');
-      pbar.style.width='0';
+      paintSegs(0);
       current=-1;
       return;
     }
@@ -499,7 +511,7 @@ textarea{min-height:96px;resize:vertical;line-height:1.55}
       body:JSON.stringify(payload)
     }).then(function(res){
       if(!res.ok)throw new Error('HTTP '+res.status);
-      pbar.style.width='100%';
+      paintSegs(steps.length);
       document.getElementById('survey').style.display='none';
       corner.classList.remove('on');
       var t=document.getElementById('thanks');
