@@ -4,10 +4,12 @@
 <!--
 INTEGRATION: on submit this page sends ONE request to ENDPOINT (see the const in
 the script at the bottom).
-  Today:  POST https://automate.sbgabucci.com/webhook/iomi-survey   (n8n, live)
-  Next:   POST <app API>/surveys/landing-2026-08/responses          (SEB-86 —
-          survey_responses table + Resend notification, feedback-style; flip the
-          ENDPOINT const when that ships, payload is unchanged)
+  POST https://api.iomifinance.com/surveys/f3-email/responses
+          survey_responses in the APP's own database, alongside the in-app
+          feedback ("bug") button — public route, rate-limited, CORS for
+          www.iomifinance.com, Resend notification. The endpoint ships in the
+          survey PR; until then submissions queue in localStorage, retry on the
+          next visit, and offer a mailto, so none is lost.
   Content-Type: application/json  (plain browser fetch, no auth — CORS handled server-side)
   Body (flat JSON, keys match the database columns exactly):
   {
@@ -190,6 +192,7 @@ textarea{min-height:96px;resize:vertical;line-height:1.55}
       <button type="button" id="start" class="dotcta dotcta-green" style="padding:13px 28px;font-size:15px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Start</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></button>
       <span class="keyhint">press <b>Enter ↵</b></span>
     </div>
+    <p style="margin-top:22px;font-size:12px;line-height:1.6;opacity:.6;max-width:520px">Your answers are used to improve IOMI, and quoted only with the permission you give at the end. We never sell your data — see our <a style="text-decoration:underline" href="/legal/privacy-policy">Privacy Policy</a>.</p>
   </div>
 </section>
 
@@ -318,6 +321,7 @@ textarea{min-height:96px;resize:vertical;line-height:1.55}
       <div class="submit-zone" style="margin-top:26px">
         <button type="submit" id="sb" class="dotcta dotcta-green" style="padding:13px 28px;font-size:15px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Send my answers</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></button>
         <div id="err" class="err" role="alert">Something went wrong — please try again.</div>
+        <p style="margin-top:16px;font-size:12px;line-height:1.6;opacity:.65;max-width:560px">We use your answers to improve IOMI and, only if you allow it above, to quote you. Your email identifies your response and lets us follow up — we do not add you to a marketing list from this form, and we never sell your data. See our <a style="text-decoration:underline" href="/legal/privacy-policy">Privacy Policy</a>. Email <a style="text-decoration:underline" href="mailto:contact@iomifinance.com">contact@iomifinance.com</a> to have your response deleted.</p>
         <p class="submit-note">Your answers go straight to the founder. No mailing list, no spam.</p>
       </div>
     </div>
@@ -337,8 +341,12 @@ textarea{min-height:96px;resize:vertical;line-height:1.55}
 
 <script>
 (function(){
-  /* SEB-86: flip to the app API endpoint once /surveys/:slug/responses ships. */
-  var ENDPOINT='https://automate.sbgabucci.com/webhook/iomi-survey';
+  /* SEB-91: the survey writes to the APP's own database, same as the in-app
+     feedback ("bug") button (POST /feedback) — never to a personal domain.
+     The endpoint below ships in the survey PR; until then every submission is
+     queued locally, retried on the next visit, and offered as a mailto, so no
+     response is lost in the meantime. */
+  var ENDPOINT='https://api.iomifinance.com/surveys/f3-email/responses';
 
   var form=document.getElementById('f');
   var btn=document.getElementById('sb');
@@ -480,6 +488,41 @@ textarea{min-height:96px;resize:vertical;line-height:1.55}
     var el=form.querySelector('input[name="'+name+'"]:checked');
     return el?el.value:null;
   }
+  var QKEY='iomi-survey-queue';
+  function queue(p){
+    try{
+      var q=JSON.parse(localStorage.getItem(QKEY)||'[]');
+      q.push({at:new Date().toISOString(),payload:p});
+      localStorage.setItem(QKEY,JSON.stringify(q.slice(-5)));
+    }catch(e){}
+  }
+  function flush(){
+    var q;
+    try{q=JSON.parse(localStorage.getItem(QKEY)||'[]')}catch(e){return}
+    if(!q.length)return;
+    var left=[],done=0;
+    q.forEach(function(item){
+      fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(item.payload)})
+        .then(function(r){if(!r.ok)throw 0})
+        .catch(function(){left.push(item)})
+        .then(function(){
+          if(++done===q.length){
+            try{localStorage.setItem(QKEY,JSON.stringify(left))}catch(e){}
+          }
+        });
+    });
+  }
+  function mailtoEscape(p){
+    var body=Object.keys(p).map(function(k){return k+': '+(p[k]==null?'':p[k])}).join('\n');
+    var a=document.createElement('p');
+    a.style.cssText='margin-top:18px;font-size:13px;opacity:.75';
+    a.innerHTML='Trouble reaching our server. Your answers are saved on this device and will be sent automatically next time you open this page — '+
+      '<a style="text-decoration:underline" href="mailto:contact@iomifinance.com?subject='+
+      encodeURIComponent('IOMI survey response')+'&body='+encodeURIComponent(body)+'">or email them now</a>.';
+    return a;
+  }
+  flush();
+
   form.addEventListener('submit',function(e){
     e.preventDefault();
     err.classList.remove('show');
@@ -518,9 +561,17 @@ textarea{min-height:96px;resize:vertical;line-height:1.55}
       t.classList.add('show');
       window.scrollTo(0,0);
     }).catch(function(){
-      err.classList.add('show');
-      btn.disabled=false;
-      label.textContent='Send my answers';
+      /* SEB-91: the endpoint has been down. Keep the answers instead of
+         dropping them — queued here, retried on the next visit, and the
+         thank-you screen offers a mailto so the respondent can send them now. */
+      queue(payload);
+      paintSegs(steps.length);
+      document.getElementById('survey').style.display='none';
+      corner.classList.remove('on');
+      var t=document.getElementById('thanks');
+      t.appendChild(mailtoEscape(payload));
+      t.classList.add('show');
+      window.scrollTo(0,0);
     });
   });
 

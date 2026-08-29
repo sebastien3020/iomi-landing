@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "iomifinance.com" }], "destination": "https://www.iomifinance.com/:path*", "permanent": true },
     { "source": "/legal/terms.html", "destination": "/legal/terms-of-service", "permanent": true },
     { "source": "/legal/privacy.html", "destination": "/legal/privacy-policy", "permanent": true },
     { "source": "/discord", "destination": "/?utm_source=discord&utm_medium=social", "permanent": false },

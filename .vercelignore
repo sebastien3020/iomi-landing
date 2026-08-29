@@ -1,0 +1,7 @@
+# SEB-91 — these were publicly fetchable on a live financial domain and carry
+# stale pricing/legal claims. Kept in the repo for history, never deployed.
+*-backup*.html
+prototype-v1-backup.html
+figma-refs/
+previous-versions/
+wireframe-v2.md

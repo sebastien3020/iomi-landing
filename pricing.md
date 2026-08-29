@@ -17,6 +17,7 @@ $180k sitting idle costs about $10,800 a year at a 6% yield gap (illustrative, n
 
 - 1-month free trial, no credit card required.
 - 30-day money-back guarantee — if IOMI doesn't earn its place in your first paid month, email contact@iomifinance.com and we refund you. No questions asked.
+- After the free month, your plan renews automatically at the price shown above and bills each month (or each year on annual) until you cancel. Cancel anytime from Settings — you keep access to the end of the period you paid for.
 - Secure payments by Stripe · Read-only data access via Plaid · Cancel anytime — delete your data and walk away, no retention games.
 
 ## Pricing FAQ

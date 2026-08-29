@@ -55,7 +55,6 @@ Plaid, our account-aggregation layer, is SOC 2 Type II certified (see plaid.com/
 
 - **Legal entity:** IOMI Technologies Inc — a Delaware corporation
 - **Address:** 1 Sansome Street, San Francisco, CA 94104, United States
-- **EIN:** 38-4378123
 - **Registry:** Delaware Division of Corporations entity search — https://icis.corp.delaware.gov/eCorp/EntitySearch/NameSearch.aspx
 - **Contact:** contact@iomifinance.com — the founder reads it
 
@@ -63,7 +62,7 @@ Plaid, our account-aggregation layer, is SOC 2 Type II certified (see plaid.com/
 
 Five claims, each one checkable without trusting us.
 
-1. **The company is real.** IOMI Technologies Inc is a Delaware corporation (EIN 38-4378123), operating from San Francisco. Check the Delaware state registry. The founder is a real, findable person on LinkedIn.
+1. **The company is real.** IOMI Technologies Inc is a Delaware corporation, operating from San Francisco. Check the Delaware state registry. The founder is a real, findable person on LinkedIn.
 2. **We never touch your money.** IOMI connects through Plaid — the SOC 2 Type II-certified aggregation platform used by Venmo, Coinbase, and American Express — with read-only access. Your bank credentials never touch IOMI's servers; Plaid issues a revocable access token you can remove from Settings. No custody, no trading, no transfers.
 3. **We can't give you advice — by design.** IOMI is an educational platform, not a financial advisor, bank, or broker. That's not a gap we're hiding; it's the deal: we show you your own numbers with total clarity, and the decisions stay yours.
 4. **Your data is yours.** TLS 1.2+ in transit; bank connection tokens encrypted at rest with AES-256; full account numbers never stored; the AI never sees credentials — only an aggregated snapshot. We don't sell your data — period. Delete your account and it's permanently purged within 30 days, no undo.
