@@ -390,6 +390,15 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 .ft-h{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#7F7D83;margin-bottom:14px}
 .ft-col a{display:block;font-size:14px;color:#9BA29D;margin-bottom:10px;transition:color .2s}
 .ft-col a:hover{color:#F9F9F9}
+/* The Compare column carries 9 links where Product and Company carry 4, so the
+   footer grid ran visibly uneven. Show the first 3 and fold the rest behind a
+   native <details> — no JS, keyboard-operable, and the links stay in the DOM for
+   crawlers. 3 + the summary line = 4 lines, matching the other columns exactly. */
+.ft-more summary{display:block;font-size:14px;color:#7F7D83;margin-bottom:10px;cursor:pointer;list-style:none;transition:color .2s}
+.ft-more summary::-webkit-details-marker{display:none}
+.ft-more summary::after{content:"";display:inline-block;width:5px;height:5px;margin-left:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.ft-more[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+.ft-more summary:hover{color:#F9F9F9}
 .ft-tag{font-size:13px;color:#7F7D83;line-height:1.55;max-width:230px;margin-top:14px}
 @media(max-width:767px){.ft-grid{grid-template-columns:1fr 1fr;gap:28px}.ft-brand{grid-column:1 / -1}}
 @media(max-width:767px){.mcta-hide{display:none!important}}
@@ -1073,9 +1082,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/why-iomi">Why IOMI</a>
         <a href="/compare/monarch">IOMI vs Monarch</a>
         <a href="/compare/kubera">IOMI vs Kubera</a>
-        <a href="/compare/copilot">IOMI vs Copilot Money</a>
-        <a href="/compare/nova">IOMI vs Nova Net Worth</a>
-        <a href="/compare/wealthfront">IOMI vs Wealthfront</a><a href="/compare/chatgpt">IOMI vs ChatGPT</a><a href="/compare/claude">IOMI vs Claude</a><a href="/compare/microsoft-copilot">IOMI vs Microsoft Copilot</a>
+        <details class="ft-more"><summary>See more</summary>
+          <a href="/compare/copilot">IOMI vs Copilot Money</a>
+          <a href="/compare/nova">IOMI vs Nova Net Worth</a>
+          <a href="/compare/wealthfront">IOMI vs Wealthfront</a>
+          <a href="/compare/chatgpt">IOMI vs ChatGPT</a>
+          <a href="/compare/claude">IOMI vs Claude</a>
+          <a href="/compare/microsoft-copilot">IOMI vs Microsoft Copilot</a>
+        </details>
       </div>
       <div class="ft-col">
         <div class="ft-h">Company</div>

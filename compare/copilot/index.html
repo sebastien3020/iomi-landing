@@ -93,6 +93,15 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
 .ft-h{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tm);margin-bottom:14px}
 .ft-col a{display:block;font-size:14px;color:var(--td);margin-bottom:10px;transition:color .2s}
 .ft-col a:hover{color:var(--tp)}
+/* The Compare column carries more links than Product or Company, so the footer
+   grid ran visibly uneven. Show the first 3 and fold the rest behind a native
+   <details> — no JS, keyboard-operable, and every link stays in the DOM for
+   crawlers. 3 + the summary line = 4 lines, matching the other columns. */
+.ft-more summary{display:block;font-size:14px;color:var(--tm);margin-bottom:10px;cursor:pointer;list-style:none;transition:color .2s}
+.ft-more summary::-webkit-details-marker{display:none}
+.ft-more summary::after{content:"";display:inline-block;width:5px;height:5px;margin-left:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.ft-more[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+.ft-more summary:hover{color:var(--tp)}
 .ft-tag{font-size:13px;color:var(--tm);line-height:1.55;max-width:230px;margin-top:14px}
 .ft-bot{display:flex;align-items:center;justify-content:space-between;margin-top:36px;padding-top:20px;border-top:1px solid var(--bord);font-size:13px;color:var(--tm)}
 .ft-soc{display:flex;align-items:center;gap:18px;color:var(--td)}
@@ -180,7 +189,18 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
     <div class="ft-col"><div class="ft-h">Product</div>
       <a href="/#process">Features</a><a href="/#ai">AI</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a></div>
     <div class="ft-col"><div class="ft-h">Compare</div>
-      <a href="/why-iomi">Why IOMI</a><a href="/compare/monarch">IOMI vs Monarch</a><a href="/compare/kubera">IOMI vs Kubera</a><a href="/compare/copilot">IOMI vs Copilot Money</a><a href="/compare/nova">IOMI vs Nova Net Worth</a><a href="/compare/wealthfront">IOMI vs Wealthfront</a><a href="/compare/chatgpt">IOMI vs ChatGPT</a><a href="/compare/claude">IOMI vs Claude</a><a href="/compare/microsoft-copilot">IOMI vs Microsoft Copilot</a></div>
+        <a href="/why-iomi">Why IOMI</a>
+        <a href="/compare/monarch">IOMI vs Monarch</a>
+        <a href="/compare/kubera">IOMI vs Kubera</a>
+        <details class="ft-more"><summary>See more</summary>
+          <a href="/compare/copilot">IOMI vs Copilot Money</a>
+          <a href="/compare/nova">IOMI vs Nova Net Worth</a>
+          <a href="/compare/wealthfront">IOMI vs Wealthfront</a>
+          <a href="/compare/chatgpt">IOMI vs ChatGPT</a>
+          <a href="/compare/claude">IOMI vs Claude</a>
+          <a href="/compare/microsoft-copilot">IOMI vs Microsoft Copilot</a>
+        </details>
+      </div>
     <div class="ft-col"><div class="ft-h">Company</div>
       <a href="/about">About</a><a href="https://blog.iomifinance.com" rel="noopener">Blog</a><a href="/legal/terms-of-service">Terms of Service</a><a href="/legal/privacy-policy">Privacy Policy</a></div>
   </div>
