@@ -19,7 +19,7 @@ Wealthfront and IOMI are different categories, not direct competitors. Wealthfro
 ## Pricing
 
 - Wealthfront: 0.25% annual advisory fee on investment accounts; high-yield cash account.
-- IOMI: flat subscription — Personal $29/month, Business $39/month founding rate ($79 regular), 1-month free trial, no credit card, 30-day money-back on the first paid month. Never a percentage of assets.
+- IOMI: flat subscription — Personal $29/month, Business $59/month founding rate ($99 regular), 1-month free trial, no credit card, 30-day money-back on the first paid month. Never a percentage of assets.
 
 ## Can you use both?
 

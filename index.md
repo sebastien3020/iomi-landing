@@ -83,14 +83,14 @@ Model a reallocation or a planned cash-flow event on your own numbers; the engin
 | Simulator — test a move before you make it | DIY | ✗ | ✗ | ✗ | Path planner | ✓ |
 | AI that knows your whole balance sheet | ✗ | ✗ | Assistant | ✗ | ✗ | ✓ |
 | Tells you what to do next | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ |
-| Price | Free — costs your Sundays | $13/mo | $14.99/mo | from $250/yr | 0.25%/yr of assets | $29/mo · $39/mo Business |
+| Price | Free — costs your Sundays | $13/mo | $14.99/mo | from $250/yr | 0.25%/yr of assets | $29/mo · $59/mo Business |
 
 Competitor facts as published by each vendor, August 2026. Wealthfront is a different category — it manages and custodies money; IOMI manages nothing. Full comparisons: /compare/monarch · /compare/kubera · /compare/copilot · /compare/nova · /compare/wealthfront
 
 ## Pricing
 
 - **Personal — $29/month.** Link unlimited personal accounts, all personal asset classes & liabilities, real-time net worth dashboard, liquidity profile, emergency fund tracker, cash flow & forecast, goals & milestones, portfolio benchmarking, Capital Efficiency Score, Next Dollar Allocation, chat with IOMI AI in plain English about your wealth, AI insights (standard usage). 1 month free, cancel anytime.
-- **Business — $39/month founding-member rate (locked while you stay subscribed; later $79/month).** Everything in Personal, plus: unlimited business accounts, connect QuickBooks so balances sync from your books, Business tab with assets & liabilities per entity (up to 3), per-entity attribution + consolidated view, higher AI limits with priority AI usage, priority support, early access to new & beta features. 1 month free, cancel anytime.
+- **Business — $59/month founding-member rate (locked while you stay subscribed; later $99/month).** Everything in Personal, plus: unlimited business accounts, connect QuickBooks so balances sync from your books, Business tab with assets & liabilities per entity (up to 3), per-entity attribution + consolidated view, higher AI limits with priority AI usage, priority support, early access to new & beta features. 1 month free, cancel anytime.
 
 1-month free trial · No credit card required · No percentage of assets, no commissions, no hidden monetization of your data.
 
@@ -112,11 +112,11 @@ Personal value anchor: $29/mo vs $14.99/mo for Monarch Core — the difference p
 
 **Do I need to be a finance expert?** No. IOMI does the sophisticated work — consolidation, scoring, trend analysis — and presents it in plain language.
 
-**What does IOMI cost?** Personal: $29/mo. Business: $39/mo founding-member rate (locked while subscribed), later $79/mo. Transparent subscription pricing. 1-month free trial, no credit card required.
+**What does IOMI cost?** Personal: $29/mo. Business: $59/mo founding-member rate (locked while subscribed), later $99/mo. Transparent subscription pricing. 1-month free trial, no credit card required.
 
 **Does IOMI work on my phone?** Yes. IOMI is a web app — it works on any device with a browser, no app install required, and your dashboard syncs across desktop, tablet and phone.
 
-**Is IOMI a Monarch, Kubera or Copilot alternative?** If you track personal and business wealth and want more than a tracker, yes. Monarch is the budgeting-first pick, Kubera the pure tracker, Copilot the Apple-only one. IOMI adds the intelligence layer — CES, Simulator, Next Dollar Allocation — on top of tracking, with business entities included at $39/mo. Comparisons: /compare/monarch, /compare/kubera, /compare/copilot, /compare/nova.
+**Is IOMI a Monarch, Kubera or Copilot alternative?** If you track personal and business wealth and want more than a tracker, yes. Monarch is the budgeting-first pick, Kubera the pure tracker, Copilot the Apple-only one. IOMI adds the intelligence layer — CES, Simulator, Next Dollar Allocation — on top of tracking, with business entities included at $59/mo. Comparisons: /compare/monarch, /compare/kubera, /compare/copilot, /compare/nova.
 
 **Can IOMI track RSUs and company equity?** Yes. Company equity and equity compensation are tracked as holdings in your net worth — separate from your cash, valued on your inputs, and counted in your concentration factor.
 
