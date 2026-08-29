@@ -10,7 +10,7 @@ Founders, business operators, high-income professionals, real estate and crypto 
 
 ## Product Purpose
 
-IOMI is an AI Wealth Operating System: one dashboard unifying personal + business assets (banks, brokerages, real estate, business equity, crypto, liabilities), with an intelligence layer (Capital Efficiency Score, recommendations, simulator, goals). This landing page's job: make a sophisticated buyer trust the product enough to start the free trial.
+IOMI is wealth intelligence for founders, operators and investors: one dashboard unifying personal + business assets (banks, brokerages, real estate, business equity, crypto, liabilities), with an intelligence layer (Capital Efficiency Score, recommendations, simulator, goals). This landing page's job: make a sophisticated buyer trust the product enough to start the free trial.
 
 ## Brand Personality
 
