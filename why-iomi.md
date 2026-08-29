@@ -19,13 +19,13 @@ Trackers, robo-advisors, the spreadsheet — side by side. Competitor facts as p
 | Simulator — test a move before you make it | DIY | ✗ | ✗ | ✗ | Path planner | ✓ |
 | AI that knows your whole balance sheet | ✗ | ✗ | Assistant | ✗ | ✗ | ✓ |
 | Tells you what to do next | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ |
-| Price | Free — costs your Sundays | $13/mo | $14.99/mo | from $250/yr | 0.25%/yr of assets | $29 · $59/mo |
+| Price | Free — costs your Sundays | $13/mo | $14.99/mo | from $250/yr | 0.25%/yr of assets | $29 · $39/mo |
 
 Wealthfront is a different category — it manages and custodies money; IOMI manages nothing. And the spreadsheet? Honest work, always out of date: manual, error-prone, blind between updates. IOMI is what the spreadsheet wanted to be — live, complete, and opinionated about what comes next.
 
 The three differences that matter:
 
-- **Business + personal, unified.** Monarch does it on the surface, on the $199.99/yr plan. Kubera does it at $2,500/yr. Copilot Money does not do it at all. IOMI does it natively, from $59/mo.
+- **Business + personal, unified.** Monarch does it on the surface, on the $199.99/yr plan. Kubera does it at $2,500/yr. Copilot Money does not do it at all. IOMI does it natively, from $39/mo.
 - **Intelligence, not tracking.** The Capital Efficiency Score, Next Dollar Allocation and the forecast. The others track net worth; none of them tell you what to do with it.
 - **AI grounded in live data.** The IOMI chat answers from your real balance sheet — not from what you remembered to paste.
 

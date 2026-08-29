@@ -12,7 +12,7 @@ It is also, by design, passive. Kubera shows you the picture and stops there: th
 
 | | IOMI | Kubera |
 |---|---|---|
-| Price | $29/mo Personal · $59/mo Business — annual billing brings Personal to about $23/mo | $250/yr Essentials · $2,500/yr Black |
+| Price | $29/mo Personal · $39/mo Business — annual billing brings Personal to about $24/mo | $250/yr Essentials · $2,500/yr Black |
 | Business + personal entities | Native and unified, up to 3 business entities | At the $2,500/yr Black tier |
 | Intelligence layer | Capital Efficiency Score, Next Dollar Allocation, Goals, Simulator | Passive tracking — no intelligence or score layer |
 | AI on your live data | Chat grounded in your live balance sheet | — |
@@ -25,7 +25,7 @@ Kubera pricing and features as published by the vendor, August 2026.
 
 ## Why IOMI
 
-- **Business + personal, unified.** Kubera can hold the whole picture, but the tier that does it costs $2,500/yr. IOMI unifies personal wealth and up to 3 business entities natively, from $59/mo.
+- **Business + personal, unified.** Kubera can hold the whole picture, but the tier that does it costs $2,500/yr. IOMI unifies personal wealth and up to 3 business entities natively, from $39/mo.
 - **Intelligence, not tracking.** This is the real split. Kubera is a mirror: precise, complete, silent. IOMI adds the Capital Efficiency Score, Next Dollar Allocation and a simulator, so the picture comes with a next move.
 - **AI grounded in live data.** Kubera has no assistant. IOMI answers questions about your money in plain English, from your real numbers, on web and mobile.
 

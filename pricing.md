@@ -1,4 +1,4 @@
-# IOMI Pricing — Personal $29/mo · Business $59/mo
+# IOMI Pricing — Personal $29/mo · Business $39/mo
 
 > Markdown mirror of https://www.iomifinance.com/pricing. Last updated: 2026-08-22.
 
@@ -6,12 +6,12 @@ Transparent pricing. No percentage of your assets, no commissions, no hidden mon
 
 ## Plans
 
-- **Personal — $29/month** (about $23/mo billed annually). Everything a net worth tracker does, plus the intelligence layer — Capital Efficiency Score, Simulator, Goals and IOMI AI (100 messages/day) — for your personal wealth. Unlimited personal accounts, all asset classes and liabilities, cash flow & forecast, benchmarking. $29/mo vs $14.99/mo for Monarch Core — the difference pays for itself with one idle-cash find, and IOMI Personal includes the CES, Simulator and Next Dollar Allocation that no tracker at any price offers.
-- **Business — $59/month founding rate** (regular $99; locked while you stay subscribed; about $49/mo annually). Everything in Personal, plus unlimited business accounts, a Business tab per entity (up to 3), QuickBooks balance sync, per-entity attribution with a consolidated view, higher AI limits (200 messages/day, priority), priority support and early access.
+- **Personal — $29/month** (about $24/mo billed annually). Everything a net worth tracker does, plus the intelligence layer — Capital Efficiency Score, Simulator, Goals and IOMI AI (100 messages/day) — for your personal wealth. Unlimited personal accounts, all asset classes and liabilities, cash flow & forecast, benchmarking. $29/mo vs $14.99/mo for Monarch Core — the difference pays for itself with one idle-cash find, and IOMI Personal includes the CES, Simulator and Next Dollar Allocation that no tracker at any price offers.
+- **Business — $39/month founding rate** (regular $79; locked while you stay subscribed; about $33/mo annually). Everything in Personal, plus unlimited business accounts, a Business tab per entity (up to 3), QuickBooks balance sync, per-entity attribution with a consolidated view, higher AI limits (200 messages/day, priority), priority support and early access.
 
 ## Value anchor
 
-$180k sitting idle costs about $10,800 a year at a 6% yield gap (illustrative, not advice). IOMI Personal is $348 a year on monthly billing. Run your own number with the idle-cash calculator on the homepage: https://www.iomifinance.com/#calc
+$180k sitting idle costs about $10,800 a year at a 6% yield gap (illustrative, not advice). IOMI Personal is $348 a year. Run your own number with the idle-cash calculator on the homepage: https://www.iomifinance.com/#calc
 
 ## Guarantees
 
@@ -23,7 +23,7 @@ $180k sitting idle costs about $10,800 a year at a 6% yield gap (illustrative, n
 ## Pricing FAQ
 
 **Is there a free plan?** No — a 1-month free trial of the full product, no credit card. Flat subscription, never a percentage of assets.
-**What does "founding rate" mean?** The Business plan is $59/mo for early subscribers instead of $99/mo, and the price stays locked for as long as you remain subscribed.
+**What does "founding rate" mean?** The Business plan is $39/mo for early subscribers instead of $79/mo, and the price stays locked for as long as you remain subscribed.
 **Can I switch plans?** Yes, at any time. Upgrading to Business adds business entities and higher AI limits on top of everything in Personal.
 
 ## Disclaimer
