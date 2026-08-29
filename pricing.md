@@ -6,7 +6,7 @@ Transparent pricing. No percentage of your assets, no commissions, no hidden mon
 
 ## Plans
 
-- **Personal — $29/month** (about $24/mo billed annually). Everything a net worth tracker does, plus the intelligence layer — Capital Efficiency Score, Simulator, Goals and IOMI AI (100 messages/day) — for your personal wealth. Unlimited personal accounts, all asset classes and liabilities, cash flow & forecast, benchmarking. $29/mo vs $14.99/mo for Monarch Core — the difference pays for itself with one idle-cash find, and IOMI Personal includes the CES, Simulator and Next Dollar Allocation that no tracker at any price offers.
+- **Personal — $29/month** (about $23/mo billed annually). Everything a net worth tracker does, plus the intelligence layer — Capital Efficiency Score, Simulator, Goals and IOMI AI (100 messages/day) — for your personal wealth. Unlimited personal accounts, all asset classes and liabilities, cash flow & forecast, benchmarking. $29/mo vs $14.99/mo for Monarch Core — the difference pays for itself with one idle-cash find, and IOMI Personal includes the CES, Simulator and Next Dollar Allocation that no tracker at any price offers.
 - **Business — $59/month founding rate** (regular $99; locked while you stay subscribed; about $49/mo annually). Everything in Personal, plus unlimited business accounts, a Business tab per entity (up to 3), QuickBooks balance sync, per-entity attribution with a consolidated view, higher AI limits (200 messages/day, priority), priority support and early access.
 
 ## Value anchor

@@ -12,7 +12,7 @@ It is single-user and Apple-only by design: no household, no business entities, 
 
 | | IOMI | Copilot Money |
 |---|---|---|
-| Price | $29/mo Personal · $59/mo Business — annual billing brings Personal to about $24/mo | $13/mo or $95/yr |
+| Price | $29/mo Personal · $59/mo Business — annual billing brings Personal to about $23/mo | $13/mo or $95/yr |
 | Business + personal entities | Native and unified, up to 3 business entities | Not supported — single user, no household, no business entities |
 | Intelligence layer | Capital Efficiency Score, Next Dollar Allocation, Goals, Simulator | None — a spending tracker, not a wealth OS |
 | AI on your live data | Chat grounded in your live balance sheet | AI auto-categorization (~93%) |

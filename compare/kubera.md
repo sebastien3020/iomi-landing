@@ -12,7 +12,7 @@ It is also, by design, passive. Kubera shows you the picture and stops there: th
 
 | | IOMI | Kubera |
 |---|---|---|
-| Price | $29/mo Personal · $59/mo Business — annual billing brings Personal to about $24/mo | $250/yr Essentials · $2,500/yr Black |
+| Price | $29/mo Personal · $59/mo Business — annual billing brings Personal to about $23/mo | $250/yr Essentials · $2,500/yr Black |
 | Business + personal entities | Native and unified, up to 3 business entities | At the $2,500/yr Black tier |
 | Intelligence layer | Capital Efficiency Score, Next Dollar Allocation, Goals, Simulator | Passive tracking — no intelligence or score layer |
 | AI on your live data | Chat grounded in your live balance sheet | — |
