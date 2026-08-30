@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wealth Simulator for Founders — Project Personal and Business Net Worth | IOMI</title>
+<meta name="description" content="Free wealth simulator built for founders and operators: model personal wealth and business equity together, compound them over time, and see the result in today's dollars. No signup." />
+<link rel="canonical" href="https://www.iomifinance.com/tools/wealth-simulator" />
+<meta property="og:title" content="Wealth Simulator for Founders — Project Personal and Business Net Worth | IOMI" />
+<meta property="og:description" content="Free wealth simulator built for founders and operators: model personal wealth and business equity together, compound them over time, and see the result in today's dollars. No signup." />
+<meta property="og:url" content="https://www.iomifinance.com/tools/wealth-simulator" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.iomifinance.com/assets/og-card.png" />
+<meta property="og:site_name" content="IOMI" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Wealth Simulator for Founders — Project Personal and Business Net Worth | IOMI" />
+<meta name="twitter:description" content="Free wealth simulator built for founders and operators: model personal wealth and business equity together, compound them over time, and see the result in today's dollars. No signup." />
+<meta name="twitter:image" content="https://www.iomifinance.com/assets/og-card.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c0b;--card:#111212;--row:#161717;--inset:#1E1F1F;--tp:#F9F9F9;--td:#9BA29D;--tm:#7F7D83;--bord:rgba(255,255,255,.10);--bord2:rgba(254,255,254,.2);--brand:#26BC4B;--brand2:#42DC68;--eo:cubic-bezier(.22,1,.36,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tp);font-family:'Archivo',-apple-system,'Segoe UI',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+/* ── Nav (glass, landing-style) ── */
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:rgba(10,12,11,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--bord)}
+.nav .in{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1080px;margin:0 auto}
+.nav img{height:28px;width:auto;display:block}
+.nav .links{display:flex;align-items:center;gap:24px;font-size:13.5px;color:var(--td)}
+.nav .links a:hover{color:var(--tp)}
+/* ── dotcta (canonical) ── */
+.dotcta{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:600;cursor:pointer;transition:filter .3s}
+.dc-in{position:relative;display:flex;align-items:center;gap:10px;overflow:hidden}
+.dc-dot{position:absolute;left:0;top:50%;display:inline-flex;transform:translate(-130%,-50%);transition:transform .4s ease-in-out}
+.dc-label{display:inline-block;white-space:nowrap;transition:transform .4s ease-in-out}
+.dc-arr{display:inline-flex;transition:transform .4s ease-in-out}
+.dotcta:hover .dc-dot,.dotcta:focus-visible .dc-dot{transform:translate(0,-50%)}
+.dotcta:hover .dc-label,.dotcta:focus-visible .dc-label{transform:translateX(25px)}
+.dotcta:hover .dc-arr,.dotcta:focus-visible .dc-arr{transform:translateX(130%)}
+.dotcta-green{background:linear-gradient(90deg,#019426,#008622);border:1.2px solid #005D17;color:#fff}
+.dotcta-green .dc-dot{color:#F9F9F9}
+/* ── Hero ── */
+.phero{position:relative;max-width:1080px;margin:0 auto;padding:72px 24px 40px;border-bottom:1px solid var(--bord)}
+.phero .kick{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);margin-bottom:14px}
+.phero h1{font-size:clamp(30px,4.5vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.12;max-width:760px}
+.phero .sub{font-size:15px;color:var(--td);line-height:1.6;max-width:640px;margin-top:14px}
+.phero .meta{font-size:12px;color:var(--tm);margin-top:18px}
+.phero .glow{position:absolute;inset-x:0;top:-30%;height:120%;pointer-events:none;background:radial-gradient(40% 50% at 22% 30%,rgba(38,188,75,.10),transparent 70%);filter:blur(50px);z-index:-1}
+.verdict{background:linear-gradient(160deg,rgba(38,188,75,.10),#111212 65%);border:1px solid rgba(38,188,75,.5);border-radius:16px;padding:20px 24px;margin-bottom:36px;box-shadow:0 0 30px rgba(38,188,75,.07)}
+.verdict .vt{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#42DC68;margin-bottom:8px}
+.verdict p{color:#F9F9F9;font-size:14.5px;line-height:1.65;margin:0;max-width:none}
+/* ── Content ── */
+.container{max-width:1080px;margin:0 auto;padding:40px 24px 80px}
+.container h2{font-size:20px;font-weight:700;margin-top:44px;margin-bottom:14px;letter-spacing:-.01em}
+.container h2:first-child{margin-top:0}
+.container p{margin-bottom:12px;color:var(--td);font-size:14.5px;line-height:1.7;max-width:760px}
+.container p a,.xlinks a{color:var(--brand2)}
+.container p a:hover,.xlinks a:hover{text-decoration:underline}
+.container em{color:var(--tp);font-style:italic}
+strong{color:var(--tp)}
+/* ── Comparison tables → cards ── */
+.tw{overflow-x:auto;margin:20px 0 8px;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--bord);border-radius:16px;padding:8px 20px 14px}
+table{width:100%;min-width:640px;border-collapse:separate;border-spacing:0}
+th{text-align:left;padding:16px 14px 12px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--tm);vertical-align:bottom}
+th:first-child{padding-left:0}
+td{padding:14px;border-top:1px solid rgba(255,255,255,.07);color:var(--td);font-size:13px;line-height:1.6;vertical-align:top}
+td:first-child{padding-left:0;color:var(--tp);font-weight:600}
+td a{color:var(--brand2)}
+.iomi{background:rgba(38,188,75,.07);color:var(--tp)}
+th.iomi{color:var(--brand2);border-radius:10px 10px 0 0}
+tr:last-child .iomi{border-radius:0 0 10px 10px}
+tr.rowiomi td{background:rgba(38,188,75,.07);color:var(--tp)}
+tr.rowiomi td:first-child{color:var(--brand2)}
+.note{color:var(--tm);font-size:12px;margin-top:10px}
+/* ── Why cards ── */
+.why-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;list-style:none;margin:18px 0 8px;max-width:none}
+.why-cards li{background:var(--card);border:1px solid var(--bord);border-radius:14px;padding:18px;font-size:13px;color:var(--td);line-height:1.6}
+.why-cards li strong{display:block;color:var(--tp);font-size:14px;margin-bottom:6px}
+.why-cards li::before{content:'\2713';display:inline-flex;width:22px;height:22px;border-radius:50%;background:rgba(38,188,75,.12);color:var(--brand);align-items:center;justify-content:center;font-size:11px;margin-bottom:10px}
+/* ── CTA zone ── */
+.cta-zone{position:relative;text-align:center;margin-top:56px;padding:44px 20px 8px;border-top:1px solid var(--bord)}
+.cta-zone .glow{position:absolute;inset-x:0;bottom:-60px;height:200px;pointer-events:none;background:radial-gradient(50% 60% at 50% 60%,rgba(38,188,75,.13),transparent 70%);filter:blur(45px)}
+.cta-zone h3{font-size:26px;font-weight:700;margin-bottom:18px;letter-spacing:-.01em}
+.cta-zone .micro{font-size:12px;color:var(--tm);margin-top:14px}
+.highlight{padding:13px 16px;border-radius:10px;background:rgba(38,188,75,.08);border:1px solid rgba(38,188,75,.2);margin:20px 0;font-size:13px;color:var(--td);max-width:760px}
+.xlinks{margin-top:48px;padding-top:20px;border-top:1px solid var(--bord);font-size:13px;color:var(--tm);text-align:center}
+/* ── Footer (3 columns, same as landing) ── */
+footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
+.ft-wrap{max-width:1080px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+.ft-h{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tm);margin-bottom:14px}
+.ft-col a{display:block;font-size:14px;color:var(--td);margin-bottom:10px;transition:color .2s}
+.ft-col a:hover{color:var(--tp)}
+/* The Compare column carries more links than Product or Company, so the footer
+   grid ran visibly uneven. Show the first 3 and fold the rest behind a native
+   <details> — no JS, keyboard-operable, and every link stays in the DOM for
+   crawlers. 3 + the summary line = 4 lines, matching the other columns. */
+.ft-more summary{display:block;font-size:14px;color:var(--tm);margin-bottom:10px;cursor:pointer;list-style:none;transition:color .2s}
+.ft-more summary::-webkit-details-marker{display:none}
+.ft-more summary::after{content:"";display:inline-block;width:5px;height:5px;margin-left:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.ft-more[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+.ft-more summary:hover{color:var(--tp)}
+.ft-tag{font-size:13px;color:var(--tm);line-height:1.55;max-width:230px;margin-top:14px}
+.ft-bot{display:flex;align-items:center;justify-content:space-between;margin-top:36px;padding-top:20px;border-top:1px solid var(--bord);font-size:13px;color:var(--tm)}
+.ft-soc{display:flex;align-items:center;gap:18px;color:var(--td)}
+.ft-soc a:hover{color:var(--tp)}
+.ft-disc{font-size:11px;color:var(--tm);line-height:1.4;margin-top:16px}
+/* ── Blog cards ── */
+.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.bcard{display:block;background:var(--card);border:1px solid var(--bord);border-radius:16px;padding:24px;transition:border-color .2s}
+.bcard:hover{border-color:var(--bord2)}
+.bcard .chip{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);background:rgba(38,188,75,.12);padding:4px 11px;border-radius:999px;margin-bottom:14px}
+.bcard h3{font-size:19px;font-weight:700;letter-spacing:-.01em;line-height:1.3;margin-bottom:8px}
+.bcard p{font-size:13px;color:var(--td);line-height:1.6;margin-bottom:14px}
+.bcard .bmeta{font-size:12px;color:var(--tm)}
+.bcard .read{color:var(--brand2);font-size:13px;font-weight:600;margin-top:10px;display:inline-block}
+::selection{background:rgba(38,188,75,.3)}
+:focus-visible{outline:2px solid rgba(66,220,104,.65);outline-offset:2px}
+@media(max-width:820px){.blog-grid{grid-template-columns:1fr!important}.ft-grid{grid-template-columns:1fr 1fr;gap:28px}.ft-brand{grid-column:1 / -1}.why-cards{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr}.nav .links{gap:16px}.nav .links .navhide{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<style>
+/* Tools dropdown — native <details>, so it works with no JS and is
+   keyboard-operable for free. Same choice as the footer's "See more". */
+.navdrop{position:relative}
+.navdrop summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;color:var(--td);transition:color .2s}
+.navdrop summary::-webkit-details-marker{display:none}
+.navdrop summary::after{content:"";width:5px;height:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.navdrop[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+.navdrop summary:hover,.navdrop[open] summary{color:var(--tp)}
+.navmenu{position:absolute;top:calc(100% + 12px);left:-14px;z-index:60;min-width:264px;background:var(--card);border:1px solid var(--bord2);border-radius:12px;padding:6px;box-shadow:0 14px 40px rgba(0,0,0,.55)}
+.navmenu a{display:block;padding:9px 12px;border-radius:8px;font-size:13.5px;color:var(--td);transition:background .15s,color .15s}
+.navmenu a:hover{background:var(--row);color:var(--tp)}
+@media(max-width:520px){.navmenu{left:auto;right:-60px;min-width:236px}}
+</style>
+<style>
+/* ── Wealth simulator ── */
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.sim{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:16px;align-items:start}
+.panel{background:var(--card);border:1px solid var(--bord);border-radius:18px;padding:22px}
+.res{position:sticky;top:78px}
+.pgroup{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--bord)}
+.pgroup:last-of-type{border-bottom:0;margin-bottom:8px;padding-bottom:0}
+.ph{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:16px}
+.fld{display:block;margin-bottom:18px}
+.fld:last-child{margin-bottom:0}
+.lbl{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--td);margin-bottom:8px}
+/* currency input */
+.cur{position:relative;display:block}
+.cur i{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-style:normal;font-size:15px;color:var(--tm);pointer-events:none}
+.cur input{width:100%;background:var(--row);border:1px solid var(--bord);border-radius:10px;padding:11px 14px 11px 30px;color:var(--tp);font:600 17px/1.2 'Archivo',sans-serif;-moz-appearance:textfield}
+.cur input::-webkit-outer-spin-button,.cur input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.cur input:focus{outline:none;border-color:rgba(38,188,75,.55)}
+/* sliders — always paired with a number, per the brief */
+.srow{display:flex;align-items:center;gap:12px}
+.srow input[type=range]{flex:1;min-width:0}
+.snum{width:74px;background:var(--row);border:1px solid var(--bord);border-radius:8px;padding:7px 9px;color:var(--tp);font:600 14px 'Archivo',sans-serif;text-align:right;-moz-appearance:textfield}
+.snum::-webkit-outer-spin-button,.snum::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.snum:focus{outline:none;border-color:rgba(38,188,75,.55)}
+.pc{font-style:normal;font-size:13px;color:var(--tm);margin-left:-4px}
+.sval{min-width:52px;text-align:right;font:600 14px 'Archivo',sans-serif;color:var(--tp)}
+input[type=range]{-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;background:var(--inset);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--brand);border:2px solid #0a0c0b;cursor:pointer;transition:transform .15s var(--eo)}
+input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.15)}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--brand);border:2px solid #0a0c0b;cursor:pointer}
+.slegend{display:flex;justify-content:space-between;font-size:12px;color:var(--tm);margin-top:9px}
+.slegend b{color:var(--td);font-weight:600}
+.slegend span{display:flex;align-items:center;gap:6px}
+.fhelp{font-size:11.5px;color:var(--tm);line-height:1.5;margin-top:9px}
+.d{width:8px;height:8px;border-radius:2px;display:inline-block;flex:none}
+.d1{background:var(--brand)}.d2{background:#42DC68;opacity:.45}.d3{background:#4B5563}
+/* tooltip button */
+.hint{width:15px;height:15px;flex:none;border-radius:50%;border:1px solid var(--bord2);background:transparent;color:var(--tm);font:600 10px 'Archivo',sans-serif;cursor:help;position:relative}
+.hint:hover,.hint:focus-visible{color:var(--tp);border-color:var(--td)}
+.hint:hover::after,.hint:focus-visible::after{content:attr(data-tip);position:absolute;left:0;top:22px;z-index:20;width:250px;background:var(--inset);border:1px solid var(--bord2);border-radius:10px;padding:10px 12px;font:400 12px/1.5 'Archivo',sans-serif;color:var(--td);text-align:left;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+/* advanced accordion */
+.adv summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.adv summary::-webkit-details-marker{display:none}
+.adv summary::after{content:"";width:6px;height:6px;flex:none;border-right:1.5px solid var(--tm);border-bottom:1.5px solid var(--tm);transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.adv[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+.adv[open] summary{margin-bottom:16px}
+.advm{font-size:10px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--tm);opacity:.8}
+.reset{background:none;border:0;color:var(--tm);font:400 12px 'Archivo',sans-serif;cursor:pointer;padding:0;margin-top:18px;text-decoration:underline;text-underline-offset:3px}
+.reset:hover{color:var(--td)}
+/* results */
+.rhead{text-align:center;padding-bottom:20px;border-bottom:1px solid var(--bord)}
+.rlab{font-size:12px;color:var(--tm)}
+.rlab b{color:var(--td);font-weight:600}
+.rbig{font-size:clamp(34px,5.5vw,52px);font-weight:700;letter-spacing:-.03em;line-height:1.1;margin:6px 0 8px;font-variant-numeric:tabular-nums}
+.rsub{font-size:13.5px;color:var(--td)}
+.rsub b{color:var(--tp);font-weight:600}
+.rinc{display:inline-block;margin-top:12px;font-size:13px;color:var(--td);background:rgba(38,188,75,.08);border:1px solid rgba(38,188,75,.2);border-radius:999px;padding:7px 15px}
+.rinc b{color:var(--brand2);font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;margin:18px 0 6px;font-size:12px;color:var(--tm)}
+.legend span{display:flex;align-items:center;gap:7px}
+.legend b{color:var(--tp);font-weight:600;font-variant-numeric:tabular-nums}
+/* chart */
+.chartwrap{position:relative;margin:10px 0 0;padding:0 0 22px 52px}
+#chart{display:block;width:100%;height:230px;overflow:visible}
+.area{stroke:none}
+.a1{fill:rgba(38,188,75,.55)}
+.a2{fill:rgba(66,220,104,.22)}
+.a3{fill:rgba(75,85,99,.5)}
+.cline{fill:none;stroke:#42DC68;stroke-width:2;vector-effect:non-scaling-stroke}
+.gl{stroke:rgba(255,255,255,.07);stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:3 4}
+.cursor{stroke:rgba(255,255,255,.35);stroke-width:1;vector-effect:non-scaling-stroke}
+.yaxis{position:absolute;left:0;top:0;height:230px;width:48px;font-size:10.5px;color:var(--tm);font-variant-numeric:tabular-nums}
+.yaxis span{position:absolute;right:0;transform:translateY(-50%);white-space:nowrap}
+.xaxis{position:absolute;left:52px;right:0;bottom:0;height:20px;font-size:11px;color:var(--tm)}
+.xaxis span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.tip{position:absolute;pointer-events:none;opacity:0;transition:opacity .12s;background:var(--inset);border:1px solid var(--bord2);border-radius:10px;padding:9px 12px;font-size:12px;color:var(--td);white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.5);z-index:10}
+.tip b{display:block;color:var(--tp);font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.tip.on{opacity:1}
+/* screen-reader / no-JS data table */
+.srtable{width:100%;min-width:0;margin-top:22px;font-size:12.5px;border-collapse:collapse}
+.srtable th{padding:8px 10px 8px 0;font-size:10.5px}
+.srtable td{padding:8px 10px 8px 0;font-variant-numeric:tabular-nums;border-top:1px solid rgba(255,255,255,.06)}
+.srtable td:first-child{font-weight:400;color:var(--tm)}
+/* share */
+.shareRow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:22px;padding-top:18px;border-top:1px solid var(--bord)}
+.dotcta-ghost{background:var(--row);border:1px solid var(--bord2);color:var(--tp);padding:10px 20px;font-size:13px}
+.dotcta-ghost:hover{background:var(--inset)}
+.shareMsg{font-size:12px;color:var(--brand2)}
+.disc{font-size:11.5px;color:var(--tm);line-height:1.6;margin-top:18px;padding-top:16px;border-top:1px solid var(--bord)}
+.disc strong{color:var(--td)}
+@media(max-width:900px){
+  .sim{grid-template-columns:1fr}
+  .res{position:static;order:-1}
+  #chart{height:190px}
+  .yaxis{height:190px}
+}
+@media(prefers-reduced-motion:reduce){.tip{transition:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebApplication","name":"IOMI Wealth Simulator","url":"https://www.iomifinance.com/tools/wealth-simulator","applicationCategory":"FinanceApplication","operatingSystem":"Any modern browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free wealth simulator built for founders and operators: model personal wealth and business equity together, compound them over time, and see the result in today's dollars. No signup.","publisher":{"@type":"Organization","name":"IOMI Technologies Inc","url":"https://www.iomifinance.com"}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is a 4% withdrawal rate safe?","acceptedAnswer":{"@type":"Answer","text":"It is a widely cited rule of thumb from research on historical US portfolios over 30-year windows. It is not a guarantee, it assumes a particular asset mix, and it says nothing about your tax situation or your spending. Treat it as a reference point, not a plan."}},
+{"@type":"Question","name":"Should business equity be included in a net worth projection?","acceptedAnswer":{"@type":"Answer","text":"If you own it, it is part of your balance sheet. The honest caveats are that its value is an estimate until someone buys it, and that it is illiquid, which is why it belongs on the slower-moving side of the split rather than with market assets."}},
+{"@type":"Question","name":"Why is tax applied to growth every year?","acceptedAnswer":{"@type":"Answer","text":"Because it is the simplest assumption that is not wrong in your favour. In reality tax is deferred until you sell, which helps you, and rates differ by account and holding period. Modelling it as an annual drag makes the projection slightly conservative rather than slightly optimistic."}},
+{"@type":"Question","name":"Does the simulator send my numbers anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. The whole calculation runs in your browser. The only thing that leaves the page is the link you copy, and only if you choose to copy it."}}
+]}]}
+</script>
+</head>
+<body>
+<nav class="nav"><div class="in">
+  <a href="/"><img src="/assets/iomi-logo.png" alt="IOMI"></a>
+  <div class="links">
+    <details class="navdrop">
+      <summary>Tools</summary>
+      <div class="navmenu">
+        <a href="/tools/wealth-simulator">Wealth Simulator</a>
+        <a href="/tools/capital-efficiency-score">Capital Efficiency Score Simulator</a>
+      </div>
+    </details>
+    <a href="/#why-iomi" class="navhide">Why IOMI</a>
+    <a href="/#pricing" class="navhide">Pricing</a>
+    <a href="https://app.iomifinance.com/create-account?utm_source=tools&amp;utm_medium=wealth-simulator" class="dotcta dotcta-green" style="padding:9px 18px;font-size:13px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Start for free</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+  </div>
+</div></nav>
+<header class="phero"><div class="glow"></div>
+  <div class="kick">Free tool</div>
+  <h1>Wealth simulator for founders and operators</h1>
+  <p class="sub">Most projection tools assume everything you own sits in a brokerage account. Yours doesn't. Model your personal wealth and your business equity together, and see what the two compound into.</p>
+  <p class="meta">Illustrative model · No signup · Nothing leaves your browser</p>
+</header>
+
+<div class="container">
+
+<div class="sim" id="sim">
+  <!-- ── Inputs ── -->
+  <form class="panel" id="form" autocomplete="off">
+    <div class="pgroup">
+      <div class="ph">What you own today</div>
+
+      <label class="fld">
+        <span class="lbl">Personal wealth
+          <button type="button" class="hint" data-tip="Everything held in your own name: brokerage, cash, retirement, your home's equity, crypto, the watch on your wrist.">?</button>
+        </span>
+        <span class="cur"><i>$</i><input type="number" id="personal" min="0" step="1000" value="250000"></span>
+      </label>
+
+      <label class="fld">
+        <span class="lbl">Business equity
+          <button type="button" class="hint" data-tip="Your share of what your company is worth today — not its revenue. Retained cash in the entity counts too. Leave at 0 if this doesn't apply.">?</button>
+        </span>
+        <span class="cur"><i>$</i><input type="number" id="business" min="0" step="1000" value="150000"></span>
+      </label>
+
+      <div class="fld">
+        <span class="lbl">How it splits between market assets and everything else</span>
+        <div class="srow">
+          <input type="range" id="split" min="0" max="100" step="1" value="45">
+          <output class="sval" id="splitOut">45%</output>
+        </div>
+        <div class="slegend"><span><i class="d d1"></i>Market assets <b id="splitA">45%</b></span><span>Everything else <b id="splitB">55%</b><i class="d d2"></i></span></div>
+        <p class="fhelp">Market assets are public equities, funds and bonds. Everything else is real estate equity, private holdings, business equity and physical assets — slower to move, and usually the part other tools can't see.</p>
+      </div>
+    </div>
+
+    <div class="pgroup">
+      <div class="ph">What you add each year</div>
+
+      <label class="fld">
+        <span class="lbl">Annual contribution</span>
+        <span class="cur"><i>$</i><input type="number" id="contrib" min="0" step="500" value="36000"></span>
+      </label>
+
+      <div class="fld">
+        <span class="lbl">How new money is allocated</span>
+        <div class="srow">
+          <input type="range" id="csplit" min="0" max="100" step="1" value="70">
+          <output class="sval" id="csplitOut">70%</output>
+        </div>
+        <div class="slegend"><span><i class="d d1"></i>Market assets <b id="csplitA">70%</b></span><span>Everything else <b id="csplitB">30%</b><i class="d d2"></i></span></div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Years to compound</span>
+        <div class="srow">
+          <input type="range" id="years" min="1" max="40" step="1" value="20">
+          <input type="number" class="snum" id="yearsNum" min="1" max="40" step="1" value="20">
+        </div>
+      </div>
+    </div>
+
+    <details class="pgroup adv">
+      <summary class="ph">Assumptions <span class="advm">defaults are deliberately conservative</span></summary>
+
+      <div class="fld">
+        <span class="lbl">Market assets — annual return</span>
+        <div class="srow"><input type="range" id="ym" min="0" max="15" step="0.1" value="7"><input type="number" class="snum" id="ymNum" min="0" max="15" step="0.1" value="7"><i class="pc">%</i></div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Everything else — annual return</span>
+        <div class="srow"><input type="range" id="yo" min="0" max="15" step="0.1" value="5"><input type="number" class="snum" id="yoNum" min="0" max="15" step="0.1" value="5"><i class="pc">%</i></div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Tax drag on returns
+          <button type="button" class="hint" data-tip="Applied as a flat annual haircut on growth. The US long-term capital gains rate is 15% for most filers, 20% at the top bracket, plus the 3.8% net investment income tax where it applies.">?</button>
+        </span>
+        <div class="srow"><input type="range" id="tax" min="0" max="45" step="0.1" value="18.8"><input type="number" class="snum" id="taxNum" min="0" max="45" step="0.1" value="18.8"><i class="pc">%</i></div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Inflation</span>
+        <div class="srow"><input type="range" id="infl" min="0" max="10" step="0.1" value="2.5"><input type="number" class="snum" id="inflNum" min="0" max="10" step="0.1" value="2.5"><i class="pc">%</i></div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Withdrawal rate
+          <button type="button" class="hint" data-tip="The share of the portfolio you draw down each year once you stop adding to it. 4% is the figure most often cited; it is a rule of thumb, not a law.">?</button>
+        </span>
+        <div class="srow"><input type="range" id="wr" min="1" max="10" step="0.1" value="4"><input type="number" class="snum" id="wrNum" min="1" max="10" step="0.1" value="4"><i class="pc">%</i></div>
+      </div>
+    </details>
+
+    <button type="button" class="reset" id="reset">Reset to defaults</button>
+  </form>
+
+  <!-- ── Results ── -->
+  <div class="panel res" id="res">
+    <div class="rhead">
+      <span class="rlab">Projected net worth in <b id="ryears">20</b> years</span>
+      <div class="rbig" id="total">$0</div>
+      <div class="rsub">that is <b id="real">$0</b> in today's dollars, after <span id="inflEcho">2.5</span>% inflation</div>
+      <div class="rinc">roughly <b id="income">$0</b> a month at a <span id="wrEcho">4</span>% withdrawal rate, in today's dollars</div>
+    </div>
+
+    <div class="legend">
+      <span><i class="d d3"></i>What you own now <b id="legStart">$0</b></span>
+      <span><i class="d d1"></i>What you add <b id="legContrib">$0</b></span>
+      <span><i class="d d2"></i>What it earns <b id="legGrowth">$0</b></span>
+    </div>
+
+    <div class="chartwrap">
+      <svg id="chart" viewBox="0 0 700 300" preserveAspectRatio="none" role="img" aria-labelledby="chartTitle">
+        <title id="chartTitle">Projected net worth over time, split into what you own now, what you add, and what it earns</title>
+        <g id="grid"></g>
+        <path id="aStart" class="area a3"></path>
+        <path id="aContrib" class="area a1"></path>
+        <path id="aGrowth" class="area a2"></path>
+        <path id="line" class="cline"></path>
+        <line id="cursor" class="cursor" y1="0" y2="300" style="display:none"></line>
+      </svg>
+      <div class="yaxis" id="yaxis" aria-hidden="true"></div>
+      <div class="xaxis" id="xaxis" aria-hidden="true"></div>
+      <div class="tip" id="tip" role="status" aria-live="polite"></div>
+    </div>
+
+    <table class="srtable">
+      <caption class="visually-hidden">Projected net worth by year</caption>
+      <thead><tr><th scope="col">Year</th><th scope="col">Net worth</th><th scope="col">In today's dollars</th></tr></thead>
+      <tbody id="srbody"></tbody>
+    </table>
+
+    <div class="shareRow">
+      <button type="button" class="dotcta dotcta-ghost" id="share"><span class="dc-in"><span class="dc-label">Copy a link to this scenario</span></span></button>
+      <span class="shareMsg" id="shareMsg" role="status" aria-live="polite"></span>
+    </div>
+
+    <p class="disc"><strong>This is an illustration, not advice.</strong> It compounds the numbers you typed at the rates you chose. Real returns are not smooth, tax depends on your situation, and no projection is a forecast. IOMI Technologies Inc. is not a registered investment adviser and this page is educational only.</p>
+  </div>
+</div>
+
+<div class="verdict" style="margin-top:40px">
+  <div class="vt">The part a simulator can't do for you</div>
+  <p>Every number above starts with one you had to guess: what you actually own today. For a founder that is the hardest figure in the whole model — the operating account, the holding company, the property, the vested equity, the things with no ticker. IOMI keeps that number current from your connected accounts and the assets you enter by hand, personal and business in one place, so the starting point stops being a guess.</p>
+</div>
+
+<h2>What this simulator does, and what it deliberately doesn't</h2>
+<p>It takes what you own today, splits it into market assets and everything else, compounds each at the rate you set, adds your yearly contributions, and applies a flat tax drag to the growth. It then shows the result twice: in future dollars, and in today's dollars once inflation has been taken out. The second number is the one that means something, and it is the one most projection tools bury.</p>
+<p>It does not model sequence-of-returns risk, market crashes, changing contributions, a liquidity event, salary growth, or the tax treatment of any specific account. It does not know whether your business equity is worth what you think it is. Those are the things that decide the actual outcome, and no slider can stand in for them.</p>
+
+<h2>Why founders need a different projection</h2>
+<p>The standard retirement calculator assumes a salary, a 401(k), and a portfolio that is entirely liquid and entirely visible. That describes almost none of the people this tool is built for.</p>
+<ul class="why-cards">
+  <li><strong>Your wealth is not in one place</strong>Personal accounts, an operating company, a holding structure, property, sometimes a second entity. The total only exists once someone adds it up.</li>
+  <li><strong>Much of it has no price feed</strong>Business equity, private holdings, real estate, physical assets. A brokerage app shows you the visible half and calls it your net worth.</li>
+  <li><strong>Your contributions are lumpy</strong>A good quarter, a distribution, a slow year. A flat annual figure is a simplification, and it is worth knowing that it is one.</li>
+</ul>
+
+<h2>The three numbers to actually look at</h2>
+<p><strong>What it earns.</strong> Over a long horizon this usually overtakes both what you started with and what you added. If it doesn't in your scenario, the horizon is short or the return assumption is doing the work.</p>
+<p><strong>Today's dollars.</strong> A seven-figure number thirty years out is not a seven-figure number. Inflation at 2.5% halves purchasing power in about 28 years. The real figure is the honest one.</p>
+<p><strong>Monthly income.</strong> Net worth is a stock; what you can spend is a flow. The withdrawal rate turns one into the other, and it is the number that tells you whether the plan works.</p>
+
+<div class="highlight">A note on the defaults. 7% for market assets is roughly the long-run real-ish figure people quote for broad equity, before tax. 5% for everything else is deliberately unexciting. 18.8% tax is the US long-term capital gains rate plus the net investment income tax. None of these are predictions — change them and watch how much the answer moves. That sensitivity is the most useful thing this page can show you.</div>
+
+<h2>Questions people ask</h2>
+<p><strong>Is a 4% withdrawal rate safe?</strong> It is a widely cited rule of thumb from research on historical US portfolios over 30-year windows. It is not a guarantee, it assumes a particular asset mix, and it says nothing about your tax situation or your spending. Treat it as a reference point, not a plan.</p>
+<p><strong>Should business equity really be in here?</strong> If you own it, it is part of your balance sheet. The honest caveats are that its value is an estimate until someone buys it, and that it is illiquid — which is exactly why it sits on the "everything else" side of the split rather than the market side.</p>
+<p><strong>Why is the tax applied to growth every year?</strong> Because it is the simplest assumption that is not wrong in your favour. In reality tax is deferred until you sell, which helps you, and rates differ by account and holding period. Modelling it as an annual drag makes the projection slightly conservative rather than slightly optimistic.</p>
+<p><strong>Does anything I type get sent anywhere?</strong> No. The whole calculation runs in your browser. The only thing that leaves the page is the link you copy, and only if you choose to copy it.</p>
+
+<div class="cta-zone"><div class="glow"></div>
+  <h3>Start from a real number, not an estimate.</h3>
+  <div style="display:flex;justify-content:center">
+    <a href="https://app.iomifinance.com/create-account?utm_source=tools&amp;utm_medium=wealth-simulator" class="dotcta dotcta-green" style="padding:13px 28px;font-size:15px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Start for free</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+  </div>
+  <p class="micro">1-month free trial · No credit card required</p>
+</div>
+
+<div class="xlinks">More tools: <a href="/tools/capital-efficiency-score">Capital Efficiency Score calculator</a> · <a href="/pricing">Pricing</a> · <a href="/why-iomi">Why IOMI</a></div>
+
+</div>
+
+<footer><div class="ft-wrap">
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <img src="/assets/iomi-logo.png" alt="IOMI" style="height:32px;width:auto">
+      <p class="ft-tag">Your entire net worth — personal and business — in one live dashboard.</p>
+    </div>
+    <div class="ft-col"><div class="ft-h">Product</div>
+      <a href="/#process">Features</a><a href="/#ai">AI</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a></div>
+    <div class="ft-col"><div class="ft-h">Compare</div>
+        <a href="/why-iomi">Why IOMI</a>
+        <a href="/compare/monarch">IOMI vs Monarch</a>
+        <a href="/compare/kubera">IOMI vs Kubera</a>
+        <details class="ft-more"><summary>See more</summary>
+          <a href="/compare/copilot">IOMI vs Copilot Money</a>
+          <a href="/compare/nova">IOMI vs Nova Net Worth</a>
+          <a href="/compare/wealthfront">IOMI vs Wealthfront</a>
+          <a href="/compare/chatgpt">IOMI vs ChatGPT</a>
+          <a href="/compare/claude">IOMI vs Claude</a>
+          <a href="/compare/microsoft-copilot">IOMI vs Microsoft Copilot</a>
+        </details>
+      </div>
+    <div class="ft-col"><div class="ft-h">Company</div>
+      <a href="/about">About</a><a href="https://blog.iomifinance.com" rel="noopener">Blog</a><a href="/legal/terms-of-service">Terms of Service</a><a href="/legal/privacy-policy">Privacy Policy</a></div>
+  </div>
+  <div class="ft-bot"><span>© 2026 Iomi Technology Inc.</span>
+    <div class="ft-soc">
+      <a href="https://www.linkedin.com/company/iomifinance" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24V8.31zM8.34 8.31h4.33v2h.06c.6-1.14 2.07-2.34 4.27-2.34 4.57 0 5.41 3 5.41 6.91V23h-4.51v-7.1c0-1.7-.03-3.88-2.37-3.88-2.37 0-2.73 1.85-2.73 3.76V23H8.34V8.31z"/></svg></a>
+      <a href="https://www.youtube.com/@iomifinance" target="_blank" rel="noopener" aria-label="YouTube"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg></a><a href="https://www.instagram.com/iomiapp/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+    </div>
+  </div>
+  <p class="ft-disc">IOMI provides educational tools and analytics. It does not provide personalized investment, legal, tax or financial advice. Projections and scores are illustrative, not guarantees.</p>
+</div></footer>
+<script>
+(function () {
+  'use strict';
+
+  /* Every field: id, url key, default. A parameter equal to its default is
+     omitted from the URL, so the canonical link stays clean and the bare page
+     is the canonical scenario. */
+  var F = [
+    { id: 'personal', key: 'personal', def: 250000, min: 0,  max: 1e12 },
+    { id: 'business', key: 'business', def: 150000, min: 0,  max: 1e12 },
+    { id: 'split',    key: 'split',    def: 45,     min: 0,  max: 100 },
+    { id: 'contrib',  key: 'contrib',  def: 36000,  min: 0,  max: 1e12 },
+    { id: 'csplit',   key: 'csplit',   def: 70,     min: 0,  max: 100 },
+    { id: 'years',    key: 'years',    def: 20,     min: 1,  max: 40 },
+    { id: 'ym',       key: 'ym',       def: 7,      min: 0,  max: 15 },
+    { id: 'yo',       key: 'yo',       def: 5,      min: 0,  max: 15 },
+    { id: 'tax',      key: 'tax',      def: 18.8,   min: 0,  max: 45 },
+    { id: 'infl',     key: 'infl',     def: 2.5,    min: 0,  max: 10 },
+    { id: 'wr',       key: 'wr',       def: 4,      min: 1,  max: 10 }
+  ];
+  /* Sliders that carry a paired number input — kept in sync both ways. */
+  var PAIRS = [['years','yearsNum'],['ym','ymNum'],['yo','yoNum'],['tax','taxNum'],['infl','inflNum'],['wr','wrNum']];
+
+  var $ = function (id) { return document.getElementById(id); };
+  var state = {};
+
+  /* A hostile or malformed URL must never crash the page or produce NaN. */
+  function clampNum(raw, f) {
+    var n = parseFloat(raw);
+    if (!isFinite(n)) return f.def;
+    return Math.min(f.max, Math.max(f.min, n));
+  }
+
+  function readURL() {
+    var q = new URLSearchParams(location.search);
+    F.forEach(function (f) {
+      state[f.key] = q.has(f.key) ? clampNum(q.get(f.key), f) : f.def;
+    });
+  }
+
+  function writeURL() {
+    var q = new URLSearchParams();
+    F.forEach(function (f) { if (state[f.key] !== f.def) q.set(f.key, String(state[f.key])); });
+    var s = q.toString();
+    history.replaceState(null, '', s ? location.pathname + '?' + s : location.pathname);
+  }
+
+  function paintInputs() {
+    F.forEach(function (f) { var el = $(f.id); if (el) el.value = state[f.key]; });
+    PAIRS.forEach(function (p) { var n = $(p[1]); if (n) n.value = state[p[0]]; });
+  }
+
+  var fmt0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  function money(n) { return fmt0.format(Math.round(n)); }
+  function compact(n) {
+    var a = Math.abs(n);
+    if (a >= 1e9) return '$' + (n / 1e9).toFixed(a >= 1e10 ? 0 : 1) + 'B';
+    if (a >= 1e6) return '$' + (n / 1e6).toFixed(a >= 1e7 ? 0 : 1) + 'M';
+    if (a >= 1e3) return '$' + Math.round(n / 1e3) + 'K';
+    return '$' + Math.round(n);
+  }
+
+  /**
+   * The model, in full.
+   *
+   * Two sleeves — market assets and everything else — each compounded at its
+   * own rate, with tax applied as a flat annual haircut on GROWTH only. That is
+   * deliberately the conservative simplification: in reality tax is deferred
+   * until you sell, which works in the holder's favour, so modelling it yearly
+   * understates rather than overstates the result.
+   *
+   * Contributions land at the END of each year (an ordinary annuity), so the
+   * first year's contribution earns nothing. The optimistic alternative would
+   * be to credit a full year of growth to money that has not been added yet.
+   */
+  function project(s) {
+    var yrs = Math.round(s.years);
+    var netM = (s.ym / 100) * (1 - s.tax / 100);
+    var netO = (s.yo / 100) * (1 - s.tax / 100);
+    var start = s.personal + s.business;
+    var m = start * (s.split / 100);
+    var o = start - m;
+    var series = [{ y: 0, total: start, start: start, contrib: 0, growth: 0 }];
+
+    for (var t = 1; t <= yrs; t++) {
+      m = m * (1 + netM) + s.contrib * (s.csplit / 100);
+      o = o * (1 + netO) + s.contrib * (1 - s.csplit / 100);
+      var total = m + o;
+      var contributed = s.contrib * t;
+      series.push({
+        y: t,
+        total: total,
+        start: start,
+        contrib: contributed,
+        /* Growth is the residual, so the three bands always sum to the total
+           and the chart can never disagree with the headline number. */
+        growth: Math.max(0, total - start - contributed)
+      });
+    }
+    var last = series[series.length - 1];
+    var realFactor = Math.pow(1 + s.infl / 100, yrs);
+    return {
+      series: series,
+      total: last.total,
+      real: last.total / realFactor,
+      start: start,
+      contributed: last.contrib,
+      growth: last.growth,
+      monthlyReal: (last.total / realFactor) * (s.wr / 100) / 12
+    };
+  }
+
+  /* ── Chart ── */
+  var W = 700, H = 300;
+  function path(series, lo, hi, max) {
+    if (!series.length || max <= 0) return '';
+    var n = series.length - 1;
+    var x = function (i) { return n === 0 ? 0 : (i / n) * W; };
+    var y = function (v) { return H - (v / max) * H; };
+    var up = '', down = '';
+    series.forEach(function (p, i) {
+      up += (i ? 'L' : 'M') + x(i).toFixed(1) + ',' + y(hi(p)).toFixed(1);
+    });
+    for (var i = series.length - 1; i >= 0; i--) {
+      down += 'L' + x(i).toFixed(1) + ',' + y(lo(series[i])).toFixed(1);
+    }
+    return up + down + 'Z';
+  }
+
+  function niceMax(v) {
+    if (v <= 0) return 1;
+    var mag = Math.pow(10, Math.floor(Math.log10(v)));
+    var step = [1, 2, 2.5, 5, 10].find(function (s) { return v / (s * mag) <= 1; }) || 10;
+    return step * mag;
+  }
+
+  var lastSeries = [], lastMax = 1;
+
+  function drawChart(r) {
+    var s = r.series;
+    var max = niceMax(r.total * 1.05);
+    lastSeries = s; lastMax = max;
+
+    $('aStart').setAttribute('d',   path(s, function () { return 0; },                       function (p) { return p.start; }, max));
+    $('aContrib').setAttribute('d', path(s, function (p) { return p.start; },                function (p) { return p.start + p.contrib; }, max));
+    $('aGrowth').setAttribute('d',  path(s, function (p) { return p.start + p.contrib; },    function (p) { return p.total; }, max));
+
+    var n = s.length - 1, line = '';
+    s.forEach(function (p, i) {
+      line += (i ? 'L' : 'M') + (n === 0 ? 0 : (i / n) * W).toFixed(1) + ',' + (H - (p.total / max) * H).toFixed(1);
+    });
+    $('line').setAttribute('d', line);
+
+    var grid = '', ya = '';
+    for (var k = 0; k <= 4; k++) {
+      var v = (max / 4) * k, yy = H - (v / max) * H;
+      grid += '<line class="gl" x1="0" y1="' + yy.toFixed(1) + '" x2="' + W + '" y2="' + yy.toFixed(1) + '"></line>';
+      ya += '<span style="top:' + ((1 - v / max) * 100).toFixed(2) + '%">' + (k ? compact(v) : '$0') + '</span>';
+    }
+    $('grid').innerHTML = grid;
+    $('yaxis').innerHTML = ya;
+
+    var yrs = n, marks = [0, Math.round(yrs / 3), Math.round((2 * yrs) / 3), yrs].filter(function (v, i, a) { return a.indexOf(v) === i; });
+    $('xaxis').innerHTML = marks.map(function (t) {
+      return '<span style="left:' + (yrs === 0 ? 0 : (t / yrs) * 100).toFixed(2) + '%">' + (t === 0 ? 'Today' : 'Yr ' + t) + '</span>';
+    }).join('');
+  }
+
+  function fillTable(r) {
+    var s = r.series, yrs = s.length - 1;
+    var rows = [0, Math.round(yrs / 4), Math.round(yrs / 2), Math.round((3 * yrs) / 4), yrs]
+      .filter(function (v, i, a) { return a.indexOf(v) === i; });
+    $('srbody').innerHTML = rows.map(function (t) {
+      var p = s[t], real = p.total / Math.pow(1 + state.infl / 100, t);
+      return '<tr><td>' + (t === 0 ? 'Today' : 'Year ' + t) + '</td><td>' + money(p.total) + '</td><td>' + money(real) + '</td></tr>';
+    }).join('');
+  }
+
+  function render() {
+    var r = project(state);
+    $('total').textContent = money(r.total);
+    $('real').textContent = money(r.real);
+    $('income').textContent = money(r.monthlyReal);
+    $('ryears').textContent = Math.round(state.years);
+    $('inflEcho').textContent = state.infl;
+    $('wrEcho').textContent = state.wr;
+    $('legStart').textContent = money(r.start);
+    $('legContrib').textContent = money(r.contributed);
+    $('legGrowth').textContent = money(r.growth);
+    $('splitOut').textContent = state.split + '%';
+    $('splitA').textContent = state.split + '%';
+    $('splitB').textContent = (100 - state.split) + '%';
+    $('csplitOut').textContent = state.csplit + '%';
+    $('csplitA').textContent = state.csplit + '%';
+    $('csplitB').textContent = (100 - state.csplit) + '%';
+    drawChart(r);
+    fillTable(r);
+  }
+
+  /* ── Wiring ── */
+  var urlTimer = null;
+  function onChange(key, raw) {
+    var f = F.find(function (x) { return x.key === key; });
+    state[key] = clampNum(raw, f);
+    PAIRS.forEach(function (p) {
+      if (p[0] === key) { var a = $(p[0]), b = $(p[1]); if (a) a.value = state[key]; if (b) b.value = state[key]; }
+    });
+    render();
+    clearTimeout(urlTimer);
+    urlTimer = setTimeout(writeURL, 300);
+  }
+
+  F.forEach(function (f) {
+    var el = $(f.id);
+    if (el) el.addEventListener('input', function () { onChange(f.key, el.value); });
+  });
+  PAIRS.forEach(function (p) {
+    var n = $(p[1]);
+    if (n) n.addEventListener('input', function () { onChange(p[0], n.value); });
+  });
+
+  $('reset').addEventListener('click', function () {
+    F.forEach(function (f) { state[f.key] = f.def; });
+    paintInputs(); render(); writeURL();
+  });
+
+  $('share').addEventListener('click', function () {
+    writeURL();
+    var url = location.href;
+    var done = function () {
+      var m = $('shareMsg');
+      m.textContent = 'Link copied — it reopens this exact scenario.';
+      setTimeout(function () { m.textContent = ''; }, 4000);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done, done);
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = url; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta); done();
+    }
+  });
+
+  /* Hover readout on the chart. */
+  var wrap = document.querySelector('.chartwrap'), svg = $('chart'), tip = $('tip'), cur = $('cursor');
+  function moveTip(clientX) {
+    var box = svg.getBoundingClientRect();
+    if (!lastSeries.length || box.width === 0) return;
+    var frac = Math.min(1, Math.max(0, (clientX - box.left) / box.width));
+    var i = Math.round(frac * (lastSeries.length - 1));
+    var p = lastSeries[i];
+    var real = p.total / Math.pow(1 + state.infl / 100, p.y);
+    cur.style.display = '';
+    cur.setAttribute('x1', ((i / Math.max(1, lastSeries.length - 1)) * W).toFixed(1));
+    cur.setAttribute('x2', ((i / Math.max(1, lastSeries.length - 1)) * W).toFixed(1));
+    tip.innerHTML = '<b>' + money(p.total) + '</b>' + (p.y === 0 ? 'Today' : 'Year ' + p.y) + ' · ' + money(real) + ' in today’s dollars';
+    tip.classList.add('on');
+    var wb = wrap.getBoundingClientRect();
+    var left = (box.left - wb.left) + frac * box.width;
+    tip.style.left = Math.min(wb.width - tip.offsetWidth - 4, Math.max(0, left - tip.offsetWidth / 2)) + 'px';
+    tip.style.top = '4px';
+  }
+  svg.addEventListener('pointermove', function (e) { moveTip(e.clientX); });
+  svg.addEventListener('pointerleave', function () { tip.classList.remove('on'); cur.style.display = 'none'; });
+
+  readURL();
+  paintInputs();
+  render();
+})();
+</script>
+
+</body>
+</html>

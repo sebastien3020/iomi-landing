@@ -84,4 +84,9 @@
     <loc>https://www.iomifinance.com/compare/microsoft-copilot</loc>
     <lastmod>2026-08-24</lastmod>
   </url>
+  <url>
+    <loc>https://www.iomifinance.com/tools/wealth-simulator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

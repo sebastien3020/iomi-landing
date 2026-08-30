@@ -30,6 +30,18 @@ a{color:inherit;text-decoration:none}
 .nav img{height:28px;width:auto;display:block}
 .nav .links{display:flex;align-items:center;gap:24px;font-size:13.5px;color:var(--td)}
 .nav .links a:hover{color:var(--tp)}
+/* Tools dropdown — native <details>, so it works with no JS and is
+   keyboard-operable for free. Same choice as the footer's "See more". */
+.navdrop{position:relative}
+.navdrop summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;color:var(--td);transition:color .2s}
+.navdrop summary::-webkit-details-marker{display:none}
+.navdrop summary::after{content:"";width:5px;height:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.navdrop[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+.navdrop summary:hover,.navdrop[open] summary{color:var(--tp)}
+.navmenu{position:absolute;top:calc(100% + 12px);left:-14px;z-index:60;min-width:264px;background:var(--card);border:1px solid var(--bord2);border-radius:12px;padding:6px;box-shadow:0 14px 40px rgba(0,0,0,.55)}
+.navmenu a{display:block;padding:9px 12px;border-radius:8px;font-size:13.5px;color:var(--td);transition:background .15s,color .15s}
+.navmenu a:hover{background:var(--row);color:var(--tp)}
+@media(max-width:520px){.navmenu{left:auto;right:-60px;min-width:236px}}
 /* ── dotcta (canonical) ── */
 .dotcta{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:600;cursor:pointer;transition:filter .3s}
 .dc-in{position:relative;display:flex;align-items:center;gap:10px;overflow:hidden}
@@ -130,6 +142,13 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
 <nav class="nav"><div class="in">
   <a href="/"><img src="/assets/iomi-logo.png" alt="IOMI"></a>
   <div class="links">
+    <details class="navdrop">
+      <summary>Tools</summary>
+      <div class="navmenu">
+        <a href="/tools/wealth-simulator">Wealth Simulator</a>
+        <a href="/tools/capital-efficiency-score">Capital Efficiency Score Simulator</a>
+      </div>
+    </details>
     <a href="/#why-iomi" class="navhide">Why IOMI</a>
     <a href="/#pricing" class="navhide">Pricing</a>
     <a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green" style="padding:9px 18px;font-size:13px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>

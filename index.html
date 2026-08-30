@@ -390,6 +390,17 @@ tr:last-child .cmp-iomi{border-bottom:1px solid rgba(38,188,75,.22);border-radiu
 .ft-h{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#7F7D83;margin-bottom:14px}
 .ft-col a{display:block;font-size:14px;color:#9BA29D;margin-bottom:10px;transition:color .2s}
 .ft-col a:hover{color:#F9F9F9}
+/* Tools dropdown — native <details>: no JS, keyboard-operable, same choice as
+   the footer's "See more". Hex rather than tokens: this page predates them. */
+.navdrop{position:relative}
+.navdrop summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;transition:color .2s}
+.navdrop summary::-webkit-details-marker{display:none}
+.navdrop summary::after{content:"";width:5px;height:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.navdrop[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+.navdrop summary:hover,.navdrop[open] summary{color:#F9F9F9}
+.navmenu{position:absolute;top:calc(100% + 14px);left:-14px;z-index:60;min-width:264px;background:#111212;border:1px solid rgba(254,255,254,.2);border-radius:12px;padding:6px;box-shadow:0 14px 40px rgba(0,0,0,.55)}
+.navmenu a{display:block;padding:9px 12px;border-radius:8px;font-size:13.5px;color:#9BA29D;transition:background .15s,color .15s}
+.navmenu a:hover{background:#161717;color:#F9F9F9}
 /* The Compare column carries 9 links where Product and Company carry 4, so the
    footer grid ran visibly uneven. Show the first 3 and fold the rest behind a
    native <details> — no JS, keyboard-operable, and the links stay in the DOM for
@@ -610,7 +621,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 nav-tr" style="backdrop-filter:blur(0px)">
   <div class="max-w-7xl mx-auto px-5 flex items-center justify-between h-16">
     <a href="#hero" class="flex items-center"><img src="assets/iomi-logo.png" alt="IOMI" class="h-10 w-auto"></a>
-    <div class="hidden md:flex items-center gap-7 text-sm text-td"><a href="#see-it-in-action" class="nl hover:text-tp transition">IOMI in action</a><a href="#process" class="nl hover:text-tp transition">Features</a><a href="#why-iomi" class="nl hover:text-tp transition">Why IOMI</a><a href="#ai" class="nl hover:text-tp transition">AI</a><a href="#pricing" class="nl hover:text-tp transition">Pricing</a><a href="#faq" class="nl hover:text-tp transition">FAQ</a></div>
+    <div class="hidden md:flex items-center gap-7 text-sm text-td"><a href="#see-it-in-action" class="nl hover:text-tp transition">IOMI in action</a><a href="#process" class="nl hover:text-tp transition">Features</a><a href="#why-iomi" class="nl hover:text-tp transition">Why IOMI</a><a href="#ai" class="nl hover:text-tp transition">AI</a><a href="#pricing" class="nl hover:text-tp transition">Pricing</a><a href="#faq" class="nl hover:text-tp transition">FAQ</a><details class="navdrop"><summary>Tools</summary><div class="navmenu"><a href="/tools/wealth-simulator">Wealth Simulator</a><a href="/tools/capital-efficiency-score">Capital Efficiency Score Simulator</a></div></details></div>
     <div class="flex items-center">
       <a href="https://app.iomifinance.com/login" class="nav-signin hidden md:inline text-[15px] font-medium hover:opacity-80 transition" style="color:#F9F9F9;margin-right:22px">Sign in</a>
       <a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green hidden md:inline-flex text-[15px]" style="padding:11px 24px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
