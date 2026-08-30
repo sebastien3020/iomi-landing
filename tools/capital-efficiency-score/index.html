@@ -136,7 +136,14 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
 <style>
 /* ── CES calculator ── */
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.sim{display:grid;grid-template-columns:minmax(0,1.95fr) minmax(0,1fr);gap:16px;align-items:start}
+.sim{display:grid;grid-template-columns:minmax(0,1.95fr) minmax(0,1fr);gap:18px;align-items:start}
+/* The interactive block breaks out of the 1080px prose column and centres on a
+   wider track — the panels were reading as a narrow strip in the middle of a
+   1440px screen. Done with position/left/margin rather than a transform: a
+   transform here would make .sim the containing block for any fixed descendant,
+   which is the bug that cost us the whole Customize modal. Prose keeps its
+   1080px measure, because line length is what makes it readable. */
+.sim{width:min(calc(100vw - 48px),1340px);position:relative;left:50%;margin-left:calc(min(calc(100vw - 48px),1340px) / -2)}
 .panel{background:var(--card);border:1px solid var(--bord);border-radius:18px;padding:22px}
 .res{position:sticky;top:78px}
 .pgroup{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--bord)}
@@ -235,7 +242,7 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .fdoc .fx{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--brand2);background:var(--row);border-radius:8px;padding:8px 11px;display:inline-block;margin-top:2px}
 .fdoc .wt{font-size:11px;color:var(--tm);margin-left:8px}
 @media(max-width:900px){
-  .sim{grid-template-columns:1fr}
+  .sim{grid-template-columns:1fr;width:auto;position:static;left:auto;margin-left:0}
   .res{position:static;order:-1}
 }
 @media(prefers-reduced-motion:reduce){.fbar i,.donut span{transition:none}}
