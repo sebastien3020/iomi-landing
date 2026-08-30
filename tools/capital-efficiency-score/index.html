@@ -136,7 +136,15 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
 <style>
 /* ── CES calculator ── */
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.sim{display:grid;grid-template-columns:minmax(0,1.95fr) minmax(0,1fr);gap:18px;align-items:start}
+/* The fields column is sized to its controls (560px of content + the panel's
+   22px padding on each side), so the panel hugs what it holds instead of
+   carrying dead space on its right. The score panel takes the remainder. */
+/* stretch, not start: which panel is taller flips with the accordion — closed,
+   the score side is ~150px longer; open, the fields side is ~600px longer. A
+   fixed trim would only ever fix one of the two states. Stretch makes both
+   panels the height of the taller one whichever that is, and the slack inside
+   each is collected at the bottom rather than spread through the content. */
+.sim{display:grid;grid-template-columns:minmax(0,606px) minmax(0,1fr);gap:18px;align-items:stretch}
 /* The interactive block breaks out of the 1080px prose column and centres on a
    wider track — the panels were reading as a narrow strip in the middle of a
    1440px screen. Done with position/left/margin rather than a transform: a
@@ -145,18 +153,12 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
    1080px measure, because line length is what makes it readable. */
 .sim{width:min(calc(100vw - 48px),1340px);position:relative;left:50%;margin-left:calc(min(calc(100vw - 48px),1340px) / -2)}
 .panel{background:var(--card);border:1px solid var(--bord);border-radius:18px;padding:22px}
-.res{position:sticky;top:78px}
+#form{display:flex;flex-direction:column}
+.res{display:flex;flex-direction:column}
 .pgroup{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--bord)}
 .pgroup:last-of-type{border-bottom:0;margin-bottom:8px;padding-bottom:0}
 .ph{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:16px}
 .fld{display:block;margin-bottom:16px}
-/* The left column is ~874px once the block breaks out, and a control stretched
-   across all of it reads badly — an age slider a thousand pixels long is not a
-   better age slider. Cap the controls at a comfortable measure and let the
-   panel stay wide; the labels are capped to the same width so everything keeps
-   a single left-to-right rhythm. */
-.fld > .srow,.fld > .cur,.fld > .seg,.fld > .lbl,.fld > .fhelp,.amts,.prefs,.donut,.pgroup > .fhelp{max-width:560px}
-.ph,.adv summary{max-width:560px}
 .fld:last-child{margin-bottom:0}
 .lbl{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--td);margin-bottom:8px}
 .lv{font-size:11.5px;color:var(--tm)}
@@ -203,7 +205,7 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .adv[open] summary::after{transform:translateY(1px) rotate(-135deg)}
 .adv[open] summary{margin-bottom:16px}
 .advm{font-size:10.5px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--tm)}
-.reset{background:none;border:0;color:var(--tm);font:400 12px 'Archivo',sans-serif;cursor:pointer;padding:0;margin-top:18px;text-decoration:underline;text-underline-offset:3px}
+.reset{background:none;border:0;color:var(--tm);font:400 12px 'Archivo',sans-serif;cursor:pointer;padding:0;margin-top:auto;padding-top:18px;align-self:flex-start;text-decoration:underline;text-underline-offset:3px}
 .reset:hover{color:var(--td)}
 /* gauge — geometry and gradient lifted from the app's CesGauge */
 .gaugewrap{position:relative;text-align:center;padding-bottom:20px;border-bottom:1px solid var(--bord)}
@@ -233,7 +235,7 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .fmath{margin-top:8px;background:var(--row);border-radius:8px;padding:10px 12px;font-size:11.5px;color:var(--td);line-height:1.7;font-variant-numeric:tabular-nums}
 .fmath code{color:var(--brand2);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px}
 /* share + cta */
-.shareRow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid var(--bord)}
+.shareRow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:18px;border-top:1px solid var(--bord)}
 .dotcta-ghost{background:var(--row);border:1px solid var(--bord2);color:var(--tp);padding:10px 20px;font-size:13px}
 .dotcta-ghost:hover{background:var(--inset)}
 .shareMsg{font-size:12px;color:var(--brand2)}
@@ -250,7 +252,7 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .fdoc .wt{font-size:11px;color:var(--tm);margin-left:8px}
 @media(max-width:900px){
   .sim{grid-template-columns:1fr;width:auto;position:static;left:auto;margin-left:0}
-  .res{position:static;order:-1}
+  .res{order:-1}
 }
 @media(prefers-reduced-motion:reduce){.fbar i,.donut span{transition:none}}
 </style>
