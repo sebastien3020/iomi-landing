@@ -136,7 +136,7 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
 <style>
 /* ── CES calculator ── */
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.sim{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:16px;align-items:start}
+.sim{display:grid;grid-template-columns:minmax(0,1.95fr) minmax(0,1fr);gap:16px;align-items:start}
 .panel{background:var(--card);border:1px solid var(--bord);border-radius:18px;padding:22px}
 .res{position:sticky;top:78px}
 .pgroup{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--bord)}
@@ -193,9 +193,9 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .reset:hover{color:var(--td)}
 /* gauge — geometry and gradient lifted from the app's CesGauge */
 .gaugewrap{position:relative;text-align:center;padding-bottom:20px;border-bottom:1px solid var(--bord)}
-#gauge{display:block;margin:0 auto}
-.gnum{position:absolute;top:56px;left:0;right:0;font-size:40px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;pointer-events:none}
-.glabel{font-size:15px;font-weight:600;margin-top:-14px}
+#gauge{display:block;margin:0 auto;width:100%;max-width:212px;height:auto}
+.gnum{position:absolute;top:78px;left:0;right:0;font-size:38px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;pointer-events:none}
+.glabel{font-size:14px;font-weight:600;margin-top:-30px}
 .gsum{font-size:12.5px;color:var(--td);line-height:1.6;margin-top:10px;max-width:380px;margin-inline:auto}
 /* primary driver */
 .driver{background:linear-gradient(160deg,rgba(38,188,75,.10),#111212 65%);border:1px solid rgba(38,188,75,.35);border-radius:14px;padding:14px 16px;margin:18px 0}
@@ -245,7 +245,7 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 {"@type":"WebApplication","name":"IOMI Capital Efficiency Score Calculator","url":"https://www.iomifinance.com/tools/capital-efficiency-score","applicationCategory":"FinanceApplication","operatingSystem":"Any modern browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free Capital Efficiency Score calculator for founders, operators and business owners. Runs IOMI's own scoring engine on numbers you type in — no signup, nothing leaves your browser.","publisher":{"@type":"Organization","name":"IOMI Technologies Inc","url":"https://www.iomifinance.com"}},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"What is a good capital efficiency score?","acceptedAnswer":{"@type":"Answer","text":"Anything from 75 up is Optimized in IOMI's bands, 50 to 74 is Moderate, and below 50 is Needs Attention. Most portfolios that have never been deliberately structured land in the 50s and 60s, usually because of idle cash or a single dominant position."}},
-{"@type":"Question","name":"How is capital efficiency calculated?","acceptedAnswer":{"@type":"Answer","text":"Five inefficiencies are measured as gaps between your portfolio and the target your profile implies: idle capital, risk balance, liquidity, drag, and concentration. They are weighted 0.30, 0.25, 0.20, 0.15 and 0.10, summed into a total inefficiency Z, and converted to a score with 100 x e^(-0.8 x Z)."}},
+{"@type":"Question","name":"How is capital efficiency calculated?","acceptedAnswer":{"@type":"Answer","text":"Five inefficiencies are measured as gaps between your portfolio and the target your profile implies: idle capital, risk balance, liquidity, drag, and concentration. Idle capital weighs the most, then risk balance, liquidity, drag and concentration. The larger the gaps, the lower the score."}},
 {"@type":"Question","name":"Why does my business cash hurt my score?","acceptedAnswer":{"@type":"Answer","text":"Usually it does not. Cash held against a real emergency fund target and known upcoming expenses is exactly what the model wants, and cash beyond that target is not penalised by the liquidity factor. What it does affect is idle capital and risk balance: a large cash position pulls portfolio risk below the target your profile implies, and that gap is what costs points."}},
 {"@type":"Question","name":"Does the calculator send my portfolio anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. The whole calculation runs in your browser. The only thing that leaves the page is the link you copy, and only if you choose to copy it."}}
 ]}]}
@@ -255,6 +255,12 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 <nav class="nav"><div class="in">
   <a href="/"><img src="/assets/iomi-logo.png" alt="IOMI"></a>
   <div class="links">
+    <a href="/#see-it-in-action" class="navhide">IOMI in action</a>
+    <a href="/#process" class="navhide">Features</a>
+    <a href="/#why-iomi" class="navhide">Why IOMI</a>
+    <a href="/#ai" class="navhide">AI</a>
+    <a href="/#pricing" class="navhide">Pricing</a>
+    <a href="/#faq" class="navhide">FAQ</a>
     <details class="navdrop">
       <summary>Tools</summary>
       <div class="navmenu">
@@ -262,8 +268,6 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
         <a href="/tools/capital-efficiency-score">Capital Efficiency Score Simulator</a>
       </div>
     </details>
-    <a href="/#why-iomi" class="navhide">Why IOMI</a>
-    <a href="/#pricing" class="navhide">Pricing</a>
     <a href="https://app.iomifinance.com/create-account?utm_source=tools&amp;utm_medium=ces-calculator" class="dotcta dotcta-green" style="padding:9px 18px;font-size:13px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Start for free</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
   </div>
 </div></nav>
@@ -394,18 +398,20 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
   <!-- ── Result ── -->
   <div class="panel res" id="res">
     <div class="gaugewrap">
-      <svg id="gauge" viewBox="0 0 100 100" width="150" height="150" role="img" aria-labelledby="gaugeTitle">
+      <svg id="gauge" viewBox="0 0 301 301" role="img" aria-labelledby="gaugeTitle">
         <title id="gaugeTitle">Capital Efficiency Score gauge</title>
         <defs>
-          <linearGradient id="cesGrad" gradientUnits="userSpaceOnUse" x1="100" y1="50" x2="0" y2="50">
+          <linearGradient id="cesGrad" gradientUnits="userSpaceOnUse" x1="301" y1="150.5" x2="0" y2="150.5">
             <stop offset="0%" stop-color="#ED2020"></stop>
             <stop offset="20%" stop-color="#ECB72C"></stop>
             <stop offset="100%" stop-color="#26BC4B"></stop>
           </linearGradient>
         </defs>
-        <path id="gBg" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8" stroke-linecap="round"></path>
-        <path id="gArc" fill="none" stroke="url(#cesGrad)" stroke-width="8" stroke-linecap="butt"></path>
-        <circle id="gCap" r="4" fill="#26BC4B" style="display:none"></circle>
+        <path id="gBg" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="22.575" stroke-linecap="round"></path>
+        <path id="gArc" fill="none" stroke="url(#cesGrad)" stroke-width="22.575" stroke-linecap="butt"></path>
+        <circle id="gCap" r="11.2875" fill="#26BC4B" style="display:none"></circle>
+        <path id="gTick" fill="#26BC4B" style="display:none"
+          d="M4.32266 0.365355C5.11786 -0.19497 6.2009 -0.101833 6.88876 0.586028C7.57662 1.27389 7.66976 2.35693 7.10944 3.15213L4.8625 6.34093C3.90607 7.69827 1.95717 7.86587 0.783046 6.69174C-0.391077 5.51762 -0.223482 3.56873 1.13386 2.6123L4.32266 0.365355Z"></path>
       </svg>
       <div class="gnum" id="score" aria-live="polite">0</div>
       <div class="glabel" id="scoreLabel">—</div>
@@ -439,7 +445,7 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 <p>The score is built by measuring five inefficiencies, weighting them, and collapsing them into one number. A perfectly aligned portfolio has zero inefficiency and scores 100. Every gap between where you are and where your profile points costs you points.</p>
 
 <h2>The five factors</h2>
-<p>These are the same five the app shows, in the same order, computed the same way.</p>
+<p>These are the same five the app shows, in the same order.</p>
 
 <div class="fdocs" id="fdocs"></div>
 
@@ -465,12 +471,12 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 
 <h2>What this calculator does not do</h2>
 <p>The app scores <em>holding by holding</em>. This page scores <em>asset-class buckets</em>. For expected return, volatility and expense drag those are mathematically the same thing whenever no per-holding override exists, because each holding falls back to its class default. Two places are genuinely different, and both are handled by asking you directly instead of guessing: concentration, and how liquid your cash actually is inside its account wrapper.</p>
-<p>It also does not model covariance between asset classes. Portfolio risk is computed as the square root of the sum of squared weighted volatilities, which assumes classes move independently. They do not. This is a deliberate MVP simplification, it is the same one the production engine makes, and it means the risk figure is a structural indicator rather than a forecast of how the portfolio will actually move.</p>
+<p>It also does not model covariance between asset classes. Portfolio risk is computed as if each asset class moved independently of the others. They do not. This is a deliberate MVP simplification, it is the same one the production engine makes, and it means the risk figure is a structural indicator rather than a forecast of how the portfolio will actually move.</p>
 <p>It produces no recommendations. It will not tell you what to buy, what to sell, or what to do next. That is the paid product, and it is a different kind of claim.</p>
 
 <h2>Questions people ask</h2>
 <p><strong>What is a good capital efficiency score?</strong> Anything from 75 up is "Optimized" in IOMI's bands. Most portfolios that have never been deliberately structured land somewhere in the 50s and 60s, usually because of idle cash or a single dominant position.</p>
-<p><strong>How is capital efficiency calculated?</strong> Five inefficiencies — idle capital, risk balance, liquidity, drag, concentration — each measured as a gap between your portfolio and the target your profile implies. They are weighted 0.30 / 0.25 / 0.20 / 0.15 / 0.10, summed, and converted to a score with 100 × e<sup>−0.8 × Z</sup>. Every one of those numbers is shown on this page.</p>
+<p><strong>How is capital efficiency calculated?</strong> Five inefficiencies — idle capital, risk balance, liquidity, drag, concentration — each measured as a gap between your portfolio and the target your profile implies. Idle capital weighs the most, then risk balance, liquidity, drag and concentration. The bigger the gaps, the lower the score.</p>
 <p><strong>Why does my business cash hurt my score?</strong> It usually doesn't — cash held against a real emergency-fund target and known upcoming expenses is exactly what the model wants. Cash beyond that target isn't penalised by the liquidity factor either. What it does affect is idle capital and risk balance: a large cash position pulls your portfolio's risk below the target your profile implies, and that gap is what costs points.</p>
 <p><strong>Does anything I type get sent anywhere?</strong> No. The whole calculation runs in your browser. The only thing that leaves the page is the link you copy, and only if you choose to copy it.</p>
 
@@ -812,15 +818,22 @@ if (typeof module !== 'undefined' && module.exports) module.exports = CES;
       '<b id="prefv_' + p.k + '">3</b></div>';
   }).join('');
 
-  /* ── Gauge, geometry copied from the app's CesGauge ── */
-  var START = 135, SWEEP = 270, CX = 50, CY = 50, SW = 8, R = (100 - SW) / 2;
-  function polar(a) { var r = a * Math.PI / 180; return { x: CX + R * Math.cos(r), y: CY + R * Math.sin(r) }; }
+  /* Gauge — the app's LARGE variant, constant for constant (CesGauge.tsx):
+     301px canvas, inner/outer radius ratio 0.85, 270 degrees from 135, a round
+     background track, a butt-capped gradient arc, a green disc restoring the
+     round start, and the Figma end-of-arc tick rotated along the tangent. */
+  var START = 135, SWEEP = 270, SIZE = 301, CX = SIZE / 2, CY = SIZE / 2;
+  var OUTER_R = SIZE / 2, INNER_R = OUTER_R * 0.85;
+  var SW = OUTER_R - INNER_R;              /* 22.575 */
+  var R = (OUTER_R + INNER_R) / 2;         /* 139.2125 */
+  var TICK_SCALE = (SW * 0.57) / 8;
+  function polar(a, radius) { var r = a * Math.PI / 180; return { x: CX + radius * Math.cos(r), y: CY + radius * Math.sin(r) }; }
   function arc(from, to) {
-    var s = polar(from), e = polar(to), large = (to - from) > 180 ? 1 : 0;
-    return 'M ' + s.x + ' ' + s.y + ' A ' + R + ' ' + R + ' 0 ' + large + ' 1 ' + e.x + ' ' + e.y;
+    var a = polar(from, R), b = polar(to, R), large = (to - from) > 180 ? 1 : 0;
+    return 'M ' + a.x + ' ' + a.y + ' A ' + R + ' ' + R + ' 0 ' + large + ' 1 ' + b.x + ' ' + b.y;
   }
-  $('gBg').setAttribute('d', arc(START, START + SWEEP));
-  var bgStart = polar(START);
+  var bgStart = polar(START, R), bgEnd = polar(START + SWEEP, R);
+  $('gBg').setAttribute('d', 'M ' + bgStart.x + ' ' + bgStart.y + ' A ' + R + ' ' + R + ' 0 1 1 ' + bgEnd.x + ' ' + bgEnd.y);
   $('gCap').setAttribute('cx', bgStart.x); $('gCap').setAttribute('cy', bgStart.y);
 
   function bandColor(s) { return s >= 75 ? '#26BC4B' : s >= 50 ? '#ECB72C' : '#ED2020'; }
@@ -848,20 +861,29 @@ if (typeof module !== 'undefined' && module.exports) module.exports = CES;
   }
   function drawGauge(s) {
     var shown = Math.max(0, Math.min(100, s));
-    $('gArc').setAttribute('d', shown > 0 ? arc(START, START + SWEEP * shown / 100) : '');
+    var angle = START + SWEEP * shown / 100;
+    $('gArc').setAttribute('d', shown > 0 ? arc(START, angle) : '');
     $('gCap').style.display = shown > 0 ? '' : 'none';
+    var tick = $('gTick');
+    if (shown > 0) {
+      var tip = polar(angle, R - SW / 2);
+      tick.setAttribute('transform', 'translate(' + tip.x + ' ' + tip.y + ') rotate(' + (angle + 45) + ') scale(' + TICK_SCALE + ') translate(-4 -4)');
+      tick.style.display = '';
+    } else tick.style.display = 'none';
     $('score').textContent = Math.round(shown);
     $('score').style.color = bandColor(shown);
   }
 
   /* Plain-English diagnosis per factor, from the engine's own audit values. */
+  /* Reads back the user's own numbers against their own target. No formula,
+     no coefficient — just the two figures the gap is measured between. */
   function mathFor(k, r) {
     var pct = function (x) { return (x * 100).toFixed(1) + '%'; };
-    if (k === 'liq') return 'Target cash <code>' + pct(r.Lstar) + '</code> · accessible cash <code>' + pct(r.W.cash * state.cashaccess / 100) + '</code> → shortfall <code>' + pct(r.Z.liq) + '</code>';
-    if (k === 'tax') return 'Taxable exposure and fees → <code>Z = ' + r.Z.tax.toFixed(4) + '</code>, from an expense ratio of <code>' + state.er + '%</code>';
-    if (k === 'risk') return 'Your portfolio risk <code>' + pct(r.sigmaP) + '</code> vs the risk your target mix implies <code>' + pct(r.sigmaTargetAlloc) + '</code>';
-    if (k === 'alloc') return 'Core mix drift <code>' + pct(r.zCoreAlloc) + '</code> · satellite excess <code>' + pct(r.zSatExcess) + '</code>';
-    return 'Largest position <code>' + state.c1 + '%</code> vs target <code>' + pct(r.c1Star) + '</code> · top 3 <code>' + state.c3 + '%</code> vs <code>' + pct(r.c3Star) + '</code>';
+    if (k === 'liq') return 'Cash you should be able to reach: <b>' + pct(r.Lstar) + '</b> of the portfolio. Cash you actually can: <b>' + pct(r.W.cash * state.cashaccess / 100) + '</b>.';
+    if (k === 'tax') return 'Taxable share of the portfolio: <b>' + pct(1 - state.taxdef / 100 - state.taxfree / 100) + '</b>. Average fund cost: <b>' + state.er + '%</b> a year.';
+    if (k === 'risk') return 'Risk you are carrying: <b>' + pct(r.sigmaP) + '</b>. Risk your profile points to: <b>' + pct(r.sigmaTargetAlloc) + '</b>.';
+    if (k === 'alloc') return 'Drift of your core mix from its target: <b>' + pct(r.zCoreAlloc) + '</b>. Satellite exposure above its review level: <b>' + pct(r.zSatExcess) + '</b>.';
+    return 'Largest position: <b>' + state.c1 + '%</b> against a threshold of <b>' + pct(r.c1Star) + '</b>. Top three: <b>' + state.c3 + '%</b> against <b>' + pct(r.c3Star) + '</b>.';
   }
 
   function driverSentence(r) {
@@ -925,7 +947,7 @@ if (typeof module !== 'undefined' && module.exports) module.exports = CES;
         '<span class="fscore" style="color:' + bandColor(s) + '">' + Math.round(s) + '<span style="color:var(--tm);font-weight:400">/100</span></span></div>' +
         '<div class="fbar"><i style="width:' + s.toFixed(1) + '%;background:' + bandColor(s) + '"></i></div>' +
         '<div class="fdesc">' + f.description + '</div>' +
-        '<details class="fmore"><summary>How this is calculated</summary><div class="fmath">' + mathFor(k, r) + '</div></details></div>';
+        '<details class="fmore"><summary>What this is measuring</summary><div class="fmath">' + mathFor(k, r) + '</div></details></div>';
     }).join('');
   }
 
@@ -1005,24 +1027,25 @@ if (typeof module !== 'undefined' && module.exports) module.exports = CES;
 
   /* The five factor explainers in the prose, generated from the engine so the
      labels, descriptions and weights can never drift from what it computes. */
-  var WEIGHTS = { alloc: '0.30', risk: '0.25', liq: '0.20', tax: '0.15', conc: '0.10' };
-  var FORMULAS = {
-    liq:   'Z_liq = max(0, W_CASH* − W_CASH_accessible)',
-    tax:   'Z_tax = 0.1 × T_exposure + 20 × E',
-    risk:  'Z_risk = |σ_p − σ_target_alloc| / 0.25',
-    alloc: 'Z_alloc = 0.7 × Z_core_drift + 0.3 × Z_satellite_excess',
-    conc:  'Z_conc = max(0, C1 − C1*) + max(0, C3 − C3*)'
+  /* Weight expressed as a share of the score, not as a coefficient — the page
+     explains what each factor IS, and never shows a formula. */
+  var WEIGHT_TEXT = {
+    alloc: 'counts for 30% of the score',
+    risk:  'counts for 25%',
+    liq:   'counts for 20%',
+    tax:   'counts for 15%',
+    conc:  'counts for 10%'
   };
   var PROSE = {
-    liq: 'Your emergency fund target plus any large expenses you know are coming define a cash sleeve. This factor measures how far your accessible cash falls short of it. Cash beyond the target is not penalised here — excess cash shows up in idle capital and risk balance instead.',
-    tax: 'Two costs that compound quietly: the share of your portfolio exposed to tax, and the weighted expense ratio of your funds. The fee coefficient is 20, which is deliberately unforgiving — a 0.5% expense ratio is worth ten points of raw inefficiency before weighting.',
-    risk: 'Your portfolio’s volatility against the volatility implied by the target mix your profile produces. Note it compares against the target allocation’s implied risk, not the persona risk figure directly, so the risk score stays consistent with the allocation the model actually built.',
-    alloc: 'The distance between your core mix and its target, plus any satellite exposure above its review band. Named "Idle Capital" in the app; it measures allocation drift, which in practice is usually capital parked somewhere it is not working.',
-    conc: 'Your largest single position and your top three combined, each against a threshold that widens with your risk tolerance and time horizon. For founders this factor is often the one that speaks, because the company is the position.'
+    liq: 'Whether you can actually reach cash when you need it. Your emergency fund target plus any large expense you know is coming define how much accessible cash you should be holding; this factor measures how far short of that you are. Holding more than the target costs you nothing here — surplus cash shows up elsewhere, in idle capital and risk balance.',
+    tax: 'The money that leaks out before you ever see it. Two sources: how much of your portfolio sits in a taxable wrapper rather than a sheltered one, and what your funds charge you every year in fees. Neither shows up on a statement as a loss, which is exactly why they get ignored.',
+    risk: 'Whether the risk you are actually carrying matches the risk your own answers imply. Your age, horizon, income stability and stated tolerance produce a target; your holdings produce a reality. This factor is the distance between the two — and it is symmetric: being far too safe costs you as much as being too exposed.',
+    alloc: 'How far your mix has drifted from where your profile points, plus any satellite class sitting above the level worth a second look. In practice this is usually capital parked somewhere convenient rather than somewhere deliberate. The app calls it Idle Capital.',
+    conc: 'How much of your wealth depends on one thing going right. Measured on your largest single position and your top three combined, against a threshold that widens as your risk tolerance and time horizon grow. For founders this is often the factor that speaks loudest, because the company is the position.'
   };
   $('fdocs').innerHTML = CES.ORDER.map(function (k) {
-    return '<div class="fdoc"><h3>' + CES.LABELS[k] + '<span class="wt">weight ' + WEIGHTS[k] + '</span></h3>' +
-      '<p>' + PROSE[k] + '</p><span class="fx">' + FORMULAS[k] + '</span></div>';
+    return '<div class="fdoc"><h3>' + CES.LABELS[k] + '<span class="wt">' + WEIGHT_TEXT[k] + '</span></h3>' +
+      '<p>' + PROSE[k] + '</p></div>';
   }).join('');
 
   readURL();
