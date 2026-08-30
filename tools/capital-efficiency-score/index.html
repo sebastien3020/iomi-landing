@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Efficiency Score Calculator — Free Portfolio Efficiency Check | IOMI</title>
+<meta name="description" content="Free Capital Efficiency Score calculator for founders, operators and business owners. Runs IOMI's own scoring engine on numbers you type in — no signup, nothing leaves your browser." />
+<link rel="canonical" href="https://www.iomifinance.com/tools/capital-efficiency-score" />
+<meta property="og:title" content="Capital Efficiency Score Calculator — Free Portfolio Efficiency Check | IOMI" />
+<meta property="og:description" content="Free Capital Efficiency Score calculator for founders, operators and business owners. Runs IOMI's own scoring engine on numbers you type in — no signup, nothing leaves your browser." />
+<meta property="og:url" content="https://www.iomifinance.com/tools/capital-efficiency-score" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.iomifinance.com/assets/og-card.png" />
+<meta property="og:site_name" content="IOMI" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Capital Efficiency Score Calculator — Free Portfolio Efficiency Check | IOMI" />
+<meta name="twitter:description" content="Free Capital Efficiency Score calculator for founders, operators and business owners. Runs IOMI's own scoring engine on numbers you type in — no signup, nothing leaves your browser." />
+<meta name="twitter:image" content="https://www.iomifinance.com/assets/og-card.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c0b;--card:#111212;--row:#161717;--inset:#1E1F1F;--tp:#F9F9F9;--td:#9BA29D;--tm:#7F7D83;--bord:rgba(255,255,255,.10);--bord2:rgba(254,255,254,.2);--brand:#26BC4B;--brand2:#42DC68;--eo:cubic-bezier(.22,1,.36,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tp);font-family:'Archivo',-apple-system,'Segoe UI',sans-serif;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+/* ── Nav (glass, landing-style) ── */
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:rgba(10,12,11,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--bord)}
+.nav .in{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1080px;margin:0 auto}
+.nav img{height:28px;width:auto;display:block}
+.nav .links{display:flex;align-items:center;gap:24px;font-size:13.5px;color:var(--td)}
+.nav .links a:hover{color:var(--tp)}
+/* Tools dropdown — native <details>, so it works with no JS and is
+   keyboard-operable for free. Same choice as the footer's "See more". */
+.navdrop{position:relative}
+.navdrop summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;color:var(--td);transition:color .2s}
+.navdrop summary::-webkit-details-marker{display:none}
+.navdrop summary::after{content:"";width:5px;height:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.navdrop[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+.navdrop summary:hover,.navdrop[open] summary{color:var(--tp)}
+.navmenu{position:absolute;top:calc(100% + 12px);left:-14px;z-index:60;min-width:264px;background:var(--card);border:1px solid var(--bord2);border-radius:12px;padding:6px;box-shadow:0 14px 40px rgba(0,0,0,.55)}
+.navmenu a{display:block;padding:9px 12px;border-radius:8px;font-size:13.5px;color:var(--td);transition:background .15s,color .15s}
+.navmenu a:hover{background:var(--row);color:var(--tp)}
+@media(max-width:520px){.navmenu{left:auto;right:-60px;min-width:236px}}
+/* ── dotcta (canonical) ── */
+.dotcta{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:600;cursor:pointer;transition:filter .3s}
+.dc-in{position:relative;display:flex;align-items:center;gap:10px;overflow:hidden}
+.dc-dot{position:absolute;left:0;top:50%;display:inline-flex;transform:translate(-130%,-50%);transition:transform .4s ease-in-out}
+.dc-label{display:inline-block;white-space:nowrap;transition:transform .4s ease-in-out}
+.dc-arr{display:inline-flex;transition:transform .4s ease-in-out}
+.dotcta:hover .dc-dot,.dotcta:focus-visible .dc-dot{transform:translate(0,-50%)}
+.dotcta:hover .dc-label,.dotcta:focus-visible .dc-label{transform:translateX(25px)}
+.dotcta:hover .dc-arr,.dotcta:focus-visible .dc-arr{transform:translateX(130%)}
+.dotcta-green{background:linear-gradient(90deg,#019426,#008622);border:1.2px solid #005D17;color:#fff}
+.dotcta-green .dc-dot{color:#F9F9F9}
+/* ── Hero ── */
+.phero{position:relative;max-width:1080px;margin:0 auto;padding:72px 24px 40px;border-bottom:1px solid var(--bord)}
+.phero .kick{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);margin-bottom:14px}
+.phero h1{font-size:clamp(30px,4.5vw,44px);font-weight:700;letter-spacing:-.02em;line-height:1.12;max-width:760px}
+.phero .sub{font-size:15px;color:var(--td);line-height:1.6;max-width:640px;margin-top:14px}
+.phero .meta{font-size:12px;color:var(--tm);margin-top:18px}
+.phero .glow{position:absolute;inset-x:0;top:-30%;height:120%;pointer-events:none;background:radial-gradient(40% 50% at 22% 30%,rgba(38,188,75,.10),transparent 70%);filter:blur(50px);z-index:-1}
+.verdict{background:linear-gradient(160deg,rgba(38,188,75,.10),#111212 65%);border:1px solid rgba(38,188,75,.5);border-radius:16px;padding:20px 24px;margin-bottom:36px;box-shadow:0 0 30px rgba(38,188,75,.07)}
+.verdict .vt{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#42DC68;margin-bottom:8px}
+.verdict p{color:#F9F9F9;font-size:14.5px;line-height:1.65;margin:0;max-width:none}
+/* ── Content ── */
+.container{max-width:1080px;margin:0 auto;padding:40px 24px 80px}
+.container h2{font-size:20px;font-weight:700;margin-top:44px;margin-bottom:14px;letter-spacing:-.01em}
+.container h2:first-child{margin-top:0}
+.container p{margin-bottom:12px;color:var(--td);font-size:14.5px;line-height:1.7;max-width:760px}
+.container p a,.xlinks a{color:var(--brand2)}
+.container p a:hover,.xlinks a:hover{text-decoration:underline}
+.container em{color:var(--tp);font-style:italic}
+strong{color:var(--tp)}
+/* ── Comparison tables → cards ── */
+.tw{overflow-x:auto;margin:20px 0 8px;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--bord);border-radius:16px;padding:8px 20px 14px}
+table{width:100%;min-width:640px;border-collapse:separate;border-spacing:0}
+th{text-align:left;padding:16px 14px 12px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--tm);vertical-align:bottom}
+th:first-child{padding-left:0}
+td{padding:14px;border-top:1px solid rgba(255,255,255,.07);color:var(--td);font-size:13px;line-height:1.6;vertical-align:top}
+td:first-child{padding-left:0;color:var(--tp);font-weight:600}
+td a{color:var(--brand2)}
+.iomi{background:rgba(38,188,75,.07);color:var(--tp)}
+th.iomi{color:var(--brand2);border-radius:10px 10px 0 0}
+tr:last-child .iomi{border-radius:0 0 10px 10px}
+tr.rowiomi td{background:rgba(38,188,75,.07);color:var(--tp)}
+tr.rowiomi td:first-child{color:var(--brand2)}
+.note{color:var(--tm);font-size:12px;margin-top:10px}
+/* ── Why cards ── */
+.why-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;list-style:none;margin:18px 0 8px;max-width:none}
+.why-cards li{background:var(--card);border:1px solid var(--bord);border-radius:14px;padding:18px;font-size:13px;color:var(--td);line-height:1.6}
+.why-cards li strong{display:block;color:var(--tp);font-size:14px;margin-bottom:6px}
+.why-cards li::before{content:'\2713';display:inline-flex;width:22px;height:22px;border-radius:50%;background:rgba(38,188,75,.12);color:var(--brand);align-items:center;justify-content:center;font-size:11px;margin-bottom:10px}
+/* ── CTA zone ── */
+.cta-zone{position:relative;text-align:center;margin-top:56px;padding:44px 20px 8px;border-top:1px solid var(--bord)}
+.cta-zone .glow{position:absolute;inset-x:0;bottom:-60px;height:200px;pointer-events:none;background:radial-gradient(50% 60% at 50% 60%,rgba(38,188,75,.13),transparent 70%);filter:blur(45px)}
+.cta-zone h3{font-size:26px;font-weight:700;margin-bottom:18px;letter-spacing:-.01em}
+.cta-zone .micro{font-size:12px;color:var(--tm);margin-top:14px}
+.highlight{padding:13px 16px;border-radius:10px;background:rgba(38,188,75,.08);border:1px solid rgba(38,188,75,.2);margin:20px 0;font-size:13px;color:var(--td);max-width:760px}
+.xlinks{margin-top:48px;padding-top:20px;border-top:1px solid var(--bord);font-size:13px;color:var(--tm);text-align:center}
+/* ── Footer (3 columns, same as landing) ── */
+footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
+.ft-wrap{max-width:1080px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+.ft-h{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tm);margin-bottom:14px}
+.ft-col a{display:block;font-size:14px;color:var(--td);margin-bottom:10px;transition:color .2s}
+.ft-col a:hover{color:var(--tp)}
+/* The Compare column carries more links than Product or Company, so the footer
+   grid ran visibly uneven. Show the first 3 and fold the rest behind a native
+   <details> — no JS, keyboard-operable, and every link stays in the DOM for
+   crawlers. 3 + the summary line = 4 lines, matching the other columns. */
+.ft-more summary{display:block;font-size:14px;color:var(--tm);margin-bottom:10px;cursor:pointer;list-style:none;transition:color .2s}
+.ft-more summary::-webkit-details-marker{display:none}
+.ft-more summary::after{content:"";display:inline-block;width:5px;height:5px;margin-left:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.ft-more[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+.ft-more summary:hover{color:var(--tp)}
+.ft-tag{font-size:13px;color:var(--tm);line-height:1.55;max-width:230px;margin-top:14px}
+.ft-bot{display:flex;align-items:center;justify-content:space-between;margin-top:36px;padding-top:20px;border-top:1px solid var(--bord);font-size:13px;color:var(--tm)}
+.ft-soc{display:flex;align-items:center;gap:18px;color:var(--td)}
+.ft-soc a:hover{color:var(--tp)}
+.ft-disc{font-size:11px;color:var(--tm);line-height:1.4;margin-top:16px}
+/* ── Blog cards ── */
+.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.bcard{display:block;background:var(--card);border:1px solid var(--bord);border-radius:16px;padding:24px;transition:border-color .2s}
+.bcard:hover{border-color:var(--bord2)}
+.bcard .chip{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);background:rgba(38,188,75,.12);padding:4px 11px;border-radius:999px;margin-bottom:14px}
+.bcard h3{font-size:19px;font-weight:700;letter-spacing:-.01em;line-height:1.3;margin-bottom:8px}
+.bcard p{font-size:13px;color:var(--td);line-height:1.6;margin-bottom:14px}
+.bcard .bmeta{font-size:12px;color:var(--tm)}
+.bcard .read{color:var(--brand2);font-size:13px;font-weight:600;margin-top:10px;display:inline-block}
+::selection{background:rgba(38,188,75,.3)}
+:focus-visible{outline:2px solid rgba(66,220,104,.65);outline-offset:2px}
+@media(max-width:820px){.blog-grid{grid-template-columns:1fr!important}.ft-grid{grid-template-columns:1fr 1fr;gap:28px}.ft-brand{grid-column:1 / -1}.why-cards{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr}.nav .links{gap:16px}.nav .links .navhide{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<style>
+/* ── CES calculator ── */
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.sim{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:16px;align-items:start}
+.panel{background:var(--card);border:1px solid var(--bord);border-radius:18px;padding:22px}
+.res{position:sticky;top:78px}
+.pgroup{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--bord)}
+.pgroup:last-of-type{border-bottom:0;margin-bottom:8px;padding-bottom:0}
+.ph{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);margin-bottom:16px}
+.fld{display:block;margin-bottom:16px}
+.fld:last-child{margin-bottom:0}
+.lbl{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--td);margin-bottom:8px}
+.lv{font-size:11.5px;color:var(--tm)}
+.cur{position:relative;display:block}
+.cur i{position:absolute;left:13px;top:50%;transform:translateY(-50%);font-style:normal;font-size:14px;color:var(--tm);pointer-events:none}
+.cur input{width:100%;background:var(--row);border:1px solid var(--bord);border-radius:10px;padding:10px 12px 10px 27px;color:var(--tp);font:600 15px/1.2 'Archivo',sans-serif;-moz-appearance:textfield}
+.cur input::-webkit-outer-spin-button,.cur input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.cur input:focus{outline:none;border-color:rgba(38,188,75,.55)}
+.srow{display:flex;align-items:center;gap:11px}
+.srow input[type=range]{flex:1;min-width:0}
+.snum{width:66px;background:var(--row);border:1px solid var(--bord);border-radius:8px;padding:6px 8px;color:var(--tp);font:600 13.5px 'Archivo',sans-serif;text-align:right;-moz-appearance:textfield}
+.snum::-webkit-outer-spin-button,.snum::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.snum:focus{outline:none;border-color:rgba(38,188,75,.55)}
+.pc{font-style:normal;font-size:12px;color:var(--tm);margin-left:-5px;min-width:22px}
+input[type=range]{-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;background:var(--inset);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--brand);border:2px solid #0a0c0b;cursor:pointer;transition:transform .15s var(--eo)}
+input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.15)}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--brand);border:2px solid #0a0c0b;cursor:pointer}
+.fhelp{font-size:11.5px;color:var(--tm);line-height:1.5;margin-top:9px}
+.fhelp strong{color:var(--td)}
+.hint{width:15px;height:15px;flex:none;border-radius:50%;border:1px solid var(--bord2);background:transparent;color:var(--tm);font:600 10px 'Archivo',sans-serif;cursor:help;position:relative}
+.hint:hover,.hint:focus-visible{color:var(--tp);border-color:var(--td)}
+.hint:hover::after,.hint:focus-visible::after{content:attr(data-tip);position:absolute;left:0;top:22px;z-index:20;width:258px;background:var(--inset);border:1px solid var(--bord2);border-radius:10px;padding:10px 12px;font:400 12px/1.5 'Archivo',sans-serif;color:var(--td);text-align:left;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+/* segmented control */
+.seg{display:flex;gap:4px;background:var(--row);border:1px solid var(--bord);border-radius:10px;padding:4px}
+.seg button{flex:1;background:none;border:0;border-radius:7px;padding:8px 6px;color:var(--td);font:500 13px 'Archivo',sans-serif;cursor:pointer;transition:background .15s,color .15s}
+.seg button:hover{color:var(--tp)}
+.seg button.on{background:var(--inset);color:var(--tp);font-weight:600}
+/* portfolio amounts */
+.amts{display:flex;flex-direction:column;gap:8px}
+.amt{display:grid;grid-template-columns:11px 1fr 122px;align-items:center;gap:9px}
+.amt .sw{width:9px;height:9px;border-radius:2px}
+.amt .an{font-size:13px;color:var(--td)}
+.amt .cur input{padding:8px 10px 8px 24px;font-size:14px}
+.amt .cur i{left:10px;font-size:13px}
+.donut{display:flex;height:8px;border-radius:4px;overflow:hidden;margin-top:14px;background:var(--inset)}
+.donut span{height:100%;transition:width .25s var(--eo)}
+.prefs{display:flex;flex-direction:column;gap:10px}
+.prefrow{display:grid;grid-template-columns:96px 1fr 26px;align-items:center;gap:10px;font-size:12.5px;color:var(--td)}
+.prefrow b{font-weight:600;color:var(--tp);text-align:right}
+.adv summary{cursor:pointer;list-style:none}
+.adv summary::-webkit-details-marker{display:none}
+.adv summary::after{content:"";width:6px;height:6px;flex:none;border-right:1.5px solid var(--tm);border-bottom:1.5px solid var(--tm);transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.adv[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+.adv[open] summary{margin-bottom:16px}
+.advm{font-size:10.5px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--tm)}
+.reset{background:none;border:0;color:var(--tm);font:400 12px 'Archivo',sans-serif;cursor:pointer;padding:0;margin-top:18px;text-decoration:underline;text-underline-offset:3px}
+.reset:hover{color:var(--td)}
+/* gauge — geometry and gradient lifted from the app's CesGauge */
+.gaugewrap{position:relative;text-align:center;padding-bottom:20px;border-bottom:1px solid var(--bord)}
+#gauge{display:block;margin:0 auto}
+.gnum{position:absolute;top:56px;left:0;right:0;font-size:40px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;pointer-events:none}
+.glabel{font-size:15px;font-weight:600;margin-top:-14px}
+.gsum{font-size:12.5px;color:var(--td);line-height:1.6;margin-top:10px;max-width:380px;margin-inline:auto}
+/* primary driver */
+.driver{background:linear-gradient(160deg,rgba(38,188,75,.10),#111212 65%);border:1px solid rgba(38,188,75,.35);border-radius:14px;padding:14px 16px;margin:18px 0}
+.dvt{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#42DC68}
+.driver p{font-size:13.5px;color:var(--tp);line-height:1.6;margin:6px 0 0}
+.driver p b{color:#42DC68}
+/* factor rows */
+.factors{display:flex;flex-direction:column;gap:2px}
+.frow{border-top:1px solid rgba(255,255,255,.06);padding:12px 0}
+.frow:first-child{border-top:0}
+.fhead{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.fname{font-size:13.5px;font-weight:600;color:var(--tp)}
+.fscore{font-size:13.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.fbar{height:5px;border-radius:3px;background:var(--inset);margin:8px 0 7px;overflow:hidden}
+.fbar i{display:block;height:100%;border-radius:3px;transition:width .3s var(--eo)}
+.fdesc{font-size:12px;color:var(--tm);line-height:1.5}
+.fmore{margin-top:8px}
+.fmore summary{cursor:pointer;list-style:none;font-size:11.5px;color:var(--tm);text-decoration:underline;text-underline-offset:3px}
+.fmore summary::-webkit-details-marker{display:none}
+.fmore summary:hover{color:var(--td)}
+.fmath{margin-top:8px;background:var(--row);border-radius:8px;padding:10px 12px;font-size:11.5px;color:var(--td);line-height:1.7;font-variant-numeric:tabular-nums}
+.fmath code{color:var(--brand2);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px}
+/* share + cta */
+.shareRow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid var(--bord)}
+.dotcta-ghost{background:var(--row);border:1px solid var(--bord2);color:var(--tp);padding:10px 20px;font-size:13px}
+.dotcta-ghost:hover{background:var(--inset)}
+.shareMsg{font-size:12px;color:var(--brand2)}
+.softcta{margin-top:18px;padding-top:18px;border-top:1px solid var(--bord);display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.softcta p{font-size:13px;color:var(--td);line-height:1.6;margin:0}
+.disc{font-size:11.5px;color:var(--tm);line-height:1.6;margin-top:18px;padding-top:16px;border-top:1px solid var(--bord)}
+.disc strong{color:var(--td)}
+/* prose factor docs */
+.fdocs{display:flex;flex-direction:column;gap:10px;margin:18px 0 8px}
+.fdoc{background:var(--card);border:1px solid var(--bord);border-radius:14px;padding:18px}
+.fdoc h3{font-size:15px;font-weight:700;margin-bottom:6px}
+.fdoc p{font-size:13px;color:var(--td);line-height:1.65;margin-bottom:8px;max-width:none}
+.fdoc .fx{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--brand2);background:var(--row);border-radius:8px;padding:8px 11px;display:inline-block;margin-top:2px}
+.fdoc .wt{font-size:11px;color:var(--tm);margin-left:8px}
+@media(max-width:900px){
+  .sim{grid-template-columns:1fr}
+  .res{position:static;order:-1}
+}
+@media(prefers-reduced-motion:reduce){.fbar i,.donut span{transition:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebApplication","name":"IOMI Capital Efficiency Score Calculator","url":"https://www.iomifinance.com/tools/capital-efficiency-score","applicationCategory":"FinanceApplication","operatingSystem":"Any modern browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free Capital Efficiency Score calculator for founders, operators and business owners. Runs IOMI's own scoring engine on numbers you type in — no signup, nothing leaves your browser.","publisher":{"@type":"Organization","name":"IOMI Technologies Inc","url":"https://www.iomifinance.com"}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a good capital efficiency score?","acceptedAnswer":{"@type":"Answer","text":"Anything from 75 up is Optimized in IOMI's bands, 50 to 74 is Moderate, and below 50 is Needs Attention. Most portfolios that have never been deliberately structured land in the 50s and 60s, usually because of idle cash or a single dominant position."}},
+{"@type":"Question","name":"How is capital efficiency calculated?","acceptedAnswer":{"@type":"Answer","text":"Five inefficiencies are measured as gaps between your portfolio and the target your profile implies: idle capital, risk balance, liquidity, drag, and concentration. They are weighted 0.30, 0.25, 0.20, 0.15 and 0.10, summed into a total inefficiency Z, and converted to a score with 100 x e^(-0.8 x Z)."}},
+{"@type":"Question","name":"Why does my business cash hurt my score?","acceptedAnswer":{"@type":"Answer","text":"Usually it does not. Cash held against a real emergency fund target and known upcoming expenses is exactly what the model wants, and cash beyond that target is not penalised by the liquidity factor. What it does affect is idle capital and risk balance: a large cash position pulls portfolio risk below the target your profile implies, and that gap is what costs points."}},
+{"@type":"Question","name":"Does the calculator send my portfolio anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. The whole calculation runs in your browser. The only thing that leaves the page is the link you copy, and only if you choose to copy it."}}
+]}]}
+</script>
+</head>
+<body>
+<nav class="nav"><div class="in">
+  <a href="/"><img src="/assets/iomi-logo.png" alt="IOMI"></a>
+  <div class="links">
+    <details class="navdrop">
+      <summary>Tools</summary>
+      <div class="navmenu">
+        <a href="/tools/wealth-simulator">Wealth Simulator</a>
+        <a href="/tools/capital-efficiency-score">Capital Efficiency Score Simulator</a>
+      </div>
+    </details>
+    <a href="/#why-iomi" class="navhide">Why IOMI</a>
+    <a href="/#pricing" class="navhide">Pricing</a>
+    <a href="https://app.iomifinance.com/create-account?utm_source=tools&amp;utm_medium=ces-calculator" class="dotcta dotcta-green" style="padding:9px 18px;font-size:13px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Start for free</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+  </div>
+</div></nav>
+<header class="phero"><div class="glow"></div>
+  <div class="kick">Free tool</div>
+  <h1>Capital Efficiency Score calculator</h1>
+  <p class="sub">Net worth tells you how much you have. Your Capital Efficiency Score tells you whether that capital is actually working — across liquidity, drag, risk balance, idle capital and concentration. This runs the same engine IOMI runs, on numbers you type in.</p>
+  <p class="meta">Same scoring engine as the app · No signup · Nothing leaves your browser</p>
+</header>
+
+<div class="container">
+
+<div class="sim" id="sim">
+  <!-- ── Inputs ── -->
+  <form class="panel" id="form" autocomplete="off">
+    <div class="pgroup">
+      <div class="ph">About you</div>
+
+      <div class="fld">
+        <span class="lbl">Your age</span>
+        <div class="srow"><input type="range" id="age" min="18" max="100" step="1" value="38"><input type="number" class="snum" id="ageNum" min="18" max="100" step="1" value="38"></div>
+      </div>
+
+      <label class="fld">
+        <span class="lbl">Annual income</span>
+        <span class="cur"><i>$</i><input type="number" id="inc" min="0" step="5000" value="150000"></span>
+      </label>
+
+      <div class="fld">
+        <span class="lbl">How predictable is your income?
+          <button type="button" class="hint" data-tip="Low means commission, freelance, or founder-variable. High means salaried with a stable base. Most founders sit at Low or Medium, and the model treats that as a reason to hold more cash, not as a failing.">?</button>
+        </span>
+        <div class="seg" id="stab" role="radiogroup" aria-label="Income stability">
+          <button type="button" data-v="low">Low</button>
+          <button type="button" data-v="medium" class="on">Medium</button>
+          <button type="button" data-v="high">High</button>
+        </div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Risk tolerance <span class="lv" id="rtLab">Balanced</span></span>
+        <div class="srow"><input type="range" id="rt" min="1" max="5" step="1" value="3"><input type="number" class="snum" id="rtNum" min="1" max="5" step="1" value="3"></div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Largest loss you could tolerate</span>
+        <div class="srow"><input type="range" id="dd" min="5" max="60" step="1" value="25"><input type="number" class="snum" id="ddNum" min="5" max="60" step="1" value="25"><i class="pc">%</i></div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Investment time horizon</span>
+        <div class="srow"><input type="range" id="th" min="1" max="40" step="1" value="20"><input type="number" class="snum" id="thNum" min="1" max="40" step="1" value="20"><i class="pc">yrs</i></div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Primary objective</span>
+        <div class="seg" id="goal" role="radiogroup" aria-label="Primary objective">
+          <button type="button" data-v="growth" class="on">Growth</button>
+          <button type="button" data-v="income">Income</button>
+          <button type="button" data-v="preservation">Preservation</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pgroup">
+      <div class="ph">Your portfolio <span class="advm" id="ptot">$755,000</span></div>
+      <div class="amts" id="amts"></div>
+      <p class="fhelp">Real estate: enter your <strong>net equity</strong> — the property's value minus the debt against it — not its market value. Getting this wrong is the single most common input error.</p>
+      <div class="donut" id="donut"></div>
+    </div>
+
+    <details class="pgroup adv">
+      <summary class="ph">Refine your score <span class="advm">optional — everything below is defaulted</span></summary>
+
+      <label class="fld">
+        <span class="lbl">Emergency fund target</span>
+        <span class="cur"><i>$</i><input type="number" id="eft" min="0" step="5000" value="50000"></span>
+      </label>
+
+      <label class="fld">
+        <span class="lbl">Known large expenses in the next 24 months</span>
+        <span class="cur"><i>$</i><input type="number" id="ule" min="0" step="5000" value="20000"></span>
+      </label>
+
+      <div class="fld">
+        <span class="lbl">Share of your cash that's immediately accessible</span>
+        <div class="srow"><input type="range" id="cashaccess" min="0" max="100" step="1" value="100"><input type="number" class="snum" id="cashaccessNum" min="0" max="100" step="1" value="100"><i class="pc">%</i></div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Share in tax-deferred accounts <span class="lv">401(k), traditional IRA</span></span>
+        <div class="srow"><input type="range" id="taxdef" min="0" max="100" step="1" value="0"><input type="number" class="snum" id="taxdefNum" min="0" max="100" step="1" value="0"><i class="pc">%</i></div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Share in tax-free accounts <span class="lv">Roth, HSA</span></span>
+        <div class="srow"><input type="range" id="taxfree" min="0" max="100" step="1" value="0"><input type="number" class="snum" id="taxfreeNum" min="0" max="100" step="1" value="0"><i class="pc">%</i></div>
+        <p class="fhelp" id="wrapWarn" hidden>Tax-deferred and tax-free can't add up to more than 100% — trimmed to fit.</p>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Average expense ratio across your funds</span>
+        <div class="srow"><input type="range" id="er" min="0" max="2" step="0.01" value="0.35"><input type="number" class="snum" id="erNum" min="0" max="2" step="0.01" value="0.35"><i class="pc">%</i></div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Your largest single position</span>
+        <div class="srow"><input type="range" id="c1" min="0" max="100" step="1" value="16"><input type="number" class="snum" id="c1Num" min="0" max="100" step="1" value="16"><i class="pc">%</i></div>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Your top 3 positions combined</span>
+        <div class="srow"><input type="range" id="c3" min="0" max="100" step="1" value="25"><input type="number" class="snum" id="c3Num" min="0" max="100" step="1" value="25"><i class="pc">%</i></div>
+        <p class="fhelp" id="concWarn" hidden>Your top 3 can't be smaller than your largest single position — raised to match.</p>
+      </div>
+
+      <div class="fld">
+        <span class="lbl">Appetite for each satellite class
+          <button type="button" class="hint" data-tip="These do not create a target allocation. They only widen or narrow the band above which an exposure is flagged for review. 3 is neutral.">?</button>
+        </span>
+        <div class="prefs" id="prefs"></div>
+      </div>
+    </details>
+
+    <button type="button" class="reset" id="reset">Reset to defaults</button>
+  </form>
+
+  <!-- ── Result ── -->
+  <div class="panel res" id="res">
+    <div class="gaugewrap">
+      <svg id="gauge" viewBox="0 0 100 100" width="150" height="150" role="img" aria-labelledby="gaugeTitle">
+        <title id="gaugeTitle">Capital Efficiency Score gauge</title>
+        <defs>
+          <linearGradient id="cesGrad" gradientUnits="userSpaceOnUse" x1="100" y1="50" x2="0" y2="50">
+            <stop offset="0%" stop-color="#ED2020"></stop>
+            <stop offset="20%" stop-color="#ECB72C"></stop>
+            <stop offset="100%" stop-color="#26BC4B"></stop>
+          </linearGradient>
+        </defs>
+        <path id="gBg" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8" stroke-linecap="round"></path>
+        <path id="gArc" fill="none" stroke="url(#cesGrad)" stroke-width="8" stroke-linecap="butt"></path>
+        <circle id="gCap" r="4" fill="#26BC4B" style="display:none"></circle>
+      </svg>
+      <div class="gnum" id="score" aria-live="polite">0</div>
+      <div class="glabel" id="scoreLabel">—</div>
+      <p class="gsum" id="scoreSummary"></p>
+    </div>
+
+    <div class="driver" id="driverBox">
+      <span class="dvt">Biggest drag</span>
+      <p id="driverText">—</p>
+    </div>
+
+    <div class="factors" id="factors"></div>
+
+    <div class="shareRow">
+      <button type="button" class="dotcta dotcta-ghost" id="share"><span class="dc-in"><span class="dc-label">Copy a link to this score</span></span></button>
+      <span class="shareMsg" id="shareMsg" role="status" aria-live="polite"></span>
+    </div>
+
+    <div class="softcta">
+      <p>This is a snapshot of what you typed. IOMI recalculates it automatically from your connected accounts — including your business entities, the property, and the assets with no ticker.</p>
+      <a href="https://app.iomifinance.com/create-account?utm_source=tools&amp;utm_medium=ces-calculator" class="dotcta dotcta-green" style="padding:11px 22px;font-size:13.5px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Start for free</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+    </div>
+
+    <p class="disc"><strong>Educational only.</strong> This calculator is not investment, tax, or financial advice, and it does not account for your full circumstances. It diagnoses; it does not recommend, and it will never name a security or tell you what to buy or sell. IOMI Technologies Inc. is not a registered investment adviser.</p>
+  </div>
+</div>
+
+<h2>What the Capital Efficiency Score measures</h2>
+<p>Net worth is a single number that answers one question: how much do you have. It says nothing about whether that capital is doing anything. Two people with identical net worth can be in completely different positions — one with everything in a savings account earning nothing, the other with a mix that matches their horizon and their appetite for risk.</p>
+<p>The Capital Efficiency Score is a 0–100 measure of the gap between the portfolio you have and the portfolio your own profile implies. It is not a performance score and not a prediction. It is a structural diagnosis, and it is deterministic: the same inputs always give the same score.</p>
+<p>The score is built by measuring five inefficiencies, weighting them, and collapsing them into one number. A perfectly aligned portfolio has zero inefficiency and scores 100. Every gap between where you are and where your profile points costs you points.</p>
+
+<h2>The five factors</h2>
+<p>These are the same five the app shows, in the same order, computed the same way.</p>
+
+<div class="fdocs" id="fdocs"></div>
+
+<h2>What a good score looks like</h2>
+<p>The app groups scores into three bands, and this page uses the same thresholds.</p>
+<div class="tw"><table>
+  <thead><tr><th>Score</th><th>Band</th><th>What it means</th></tr></thead>
+  <tbody>
+    <tr><td>75–100</td><td class="iomi">Optimized</td><td>Capital is efficiently deployed, with balanced structure and allocation. There is usually still one factor worth looking at.</td></tr>
+    <tr><td>50–74</td><td class="iomi">Moderate</td><td>Room for improvement in capital efficiency and allocation. Typically one or two factors carrying most of the drag.</td></tr>
+    <tr><td>0–49</td><td class="iomi">Needs Attention</td><td>Capital structure needs attention. Usually a large idle cash position, a heavy concentration, or no core exposure at all.</td></tr>
+  </tbody>
+</table></div>
+<p>A high score is not the goal in itself. A portfolio can score well and still be wrong for you, because the score measures alignment with the profile you entered — not whether that profile is the right one.</p>
+
+<h2>Why founders score differently</h2>
+<p>The model has three places where an entrepreneur's situation shows up, and they mostly work in your favour once the inputs are honest.</p>
+<ul class="why-cards">
+  <li><strong>Variable income raises your cash target</strong>Income stability feeds the risk target. Low or Medium reduces target risk, which raises the cash sleeve. A cash pile that looks lazy on a salaried profile can be correct on a founder's.</li>
+  <li><strong>Business equity is concentration</strong>If a large share of your wealth is one company, the concentration factor will say so. That is not a recommendation to sell — it is the model naming a real exposure that most tools never see.</li>
+  <li><strong>The invisible half changes everything</strong>Property, private holdings, physical assets. Leave them out and the score is computed on a fraction of your balance sheet, and the answer is meaningless.</li>
+</ul>
+
+<h2>What this calculator does not do</h2>
+<p>The app scores <em>holding by holding</em>. This page scores <em>asset-class buckets</em>. For expected return, volatility and expense drag those are mathematically the same thing whenever no per-holding override exists, because each holding falls back to its class default. Two places are genuinely different, and both are handled by asking you directly instead of guessing: concentration, and how liquid your cash actually is inside its account wrapper.</p>
+<p>It also does not model covariance between asset classes. Portfolio risk is computed as the square root of the sum of squared weighted volatilities, which assumes classes move independently. They do not. This is a deliberate MVP simplification, it is the same one the production engine makes, and it means the risk figure is a structural indicator rather than a forecast of how the portfolio will actually move.</p>
+<p>It produces no recommendations. It will not tell you what to buy, what to sell, or what to do next. That is the paid product, and it is a different kind of claim.</p>
+
+<h2>Questions people ask</h2>
+<p><strong>What is a good capital efficiency score?</strong> Anything from 75 up is "Optimized" in IOMI's bands. Most portfolios that have never been deliberately structured land somewhere in the 50s and 60s, usually because of idle cash or a single dominant position.</p>
+<p><strong>How is capital efficiency calculated?</strong> Five inefficiencies — idle capital, risk balance, liquidity, drag, concentration — each measured as a gap between your portfolio and the target your profile implies. They are weighted 0.30 / 0.25 / 0.20 / 0.15 / 0.10, summed, and converted to a score with 100 × e<sup>−0.8 × Z</sup>. Every one of those numbers is shown on this page.</p>
+<p><strong>Why does my business cash hurt my score?</strong> It usually doesn't — cash held against a real emergency-fund target and known upcoming expenses is exactly what the model wants. Cash beyond that target isn't penalised by the liquidity factor either. What it does affect is idle capital and risk balance: a large cash position pulls your portfolio's risk below the target your profile implies, and that gap is what costs points.</p>
+<p><strong>Does anything I type get sent anywhere?</strong> No. The whole calculation runs in your browser. The only thing that leaves the page is the link you copy, and only if you choose to copy it.</p>
+
+<div class="cta-zone"><div class="glow"></div>
+  <h3>Stop typing your balance sheet from memory.</h3>
+  <div style="display:flex;justify-content:center">
+    <a href="https://app.iomifinance.com/create-account?utm_source=tools&amp;utm_medium=ces-calculator&amp;utm_content=footer" class="dotcta dotcta-green" style="padding:13px 28px;font-size:15px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Start for free</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+  </div>
+  <p class="micro">1-month free trial · No credit card required</p>
+</div>
+
+<div class="xlinks">More tools: <a href="/tools/wealth-simulator">Wealth Simulator</a> · <a href="/pricing">Pricing</a> · <a href="/why-iomi">Why IOMI</a></div>
+
+</div>
+
+<footer><div class="ft-wrap">
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <img src="/assets/iomi-logo.png" alt="IOMI" style="height:32px;width:auto">
+      <p class="ft-tag">Your entire net worth — personal and business — in one live dashboard.</p>
+    </div>
+    <div class="ft-col"><div class="ft-h">Product</div>
+      <a href="/#process">Features</a><a href="/#ai">AI</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a></div>
+    <div class="ft-col"><div class="ft-h">Compare</div>
+        <a href="/why-iomi">Why IOMI</a>
+        <a href="/compare/monarch">IOMI vs Monarch</a>
+        <a href="/compare/kubera">IOMI vs Kubera</a>
+        <details class="ft-more"><summary>See more</summary>
+          <a href="/compare/copilot">IOMI vs Copilot Money</a>
+          <a href="/compare/nova">IOMI vs Nova Net Worth</a>
+          <a href="/compare/wealthfront">IOMI vs Wealthfront</a>
+          <a href="/compare/chatgpt">IOMI vs ChatGPT</a>
+          <a href="/compare/claude">IOMI vs Claude</a>
+          <a href="/compare/microsoft-copilot">IOMI vs Microsoft Copilot</a>
+        </details>
+      </div>
+    <div class="ft-col"><div class="ft-h">Company</div>
+      <a href="/about">About</a><a href="https://blog.iomifinance.com" rel="noopener">Blog</a><a href="/legal/terms-of-service">Terms of Service</a><a href="/legal/privacy-policy">Privacy Policy</a></div>
+  </div>
+  <div class="ft-bot"><span>© 2026 Iomi Technology Inc.</span>
+    <div class="ft-soc">
+      <a href="https://www.linkedin.com/company/iomifinance" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24V8.31zM8.34 8.31h4.33v2h.06c.6-1.14 2.07-2.34 4.27-2.34 4.57 0 5.41 3 5.41 6.91V23h-4.51v-7.1c0-1.7-.03-3.88-2.37-3.88-2.37 0-2.73 1.85-2.73 3.76V23H8.34V8.31z"/></svg></a>
+      <a href="https://www.youtube.com/@iomifinance" target="_blank" rel="noopener" aria-label="YouTube"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg></a><a href="https://www.instagram.com/iomiapp/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+    </div>
+  </div>
+  <p class="ft-disc">IOMI provides educational tools and analytics. It does not provide personalized investment, legal, tax or financial advice. Projections and scores are illustrative, not guarantees.</p>
+</div></footer>
+<script>
+/* IOMI — Capital Efficiency Score, client-side engine.
+ *
+ * A faithful port of the production engine (ces-v1.1.0-ref). Every constant
+ * below was read out of the server source, not re-derived:
+ *   server/src/ces/parameters/ces-v1-1-parameters.ts
+ *   server/src/ces/asset-classification/class-defaults.ts
+ *   server/src/ces/score-adapter/factor-relabel.ts   (display labels + order)
+ *   server/src/ces/ces.service.ts                    (band thresholds)
+ *
+ * The app scores holding by holding; this page scores asset-class buckets.
+ * That is mathematically identical for mu, sigma and E whenever no per-holding
+ * override exists, because the per-holding sigma collapses to the class default.
+ * The two places it is NOT identical — concentration, and account-wrapper
+ * liquidity — are taken as direct inputs instead (c1Pct, c3Pct, cashAccessPct,
+ * taxDeferredPct, taxFreePct). No other simplification is made.
+ *
+ * Deliberately free of DOM and framework references so it can be lifted
+ * elsewhere unchanged.
+ */
+var CES = (function () {
+  'use strict';
+
+  var CLASSES = [
+    { key: 'cash',   mu: 0.015, sigma: 0.01, liq: 1.00, core: true },
+    { key: 'bonds',  mu: 0.030, sigma: 0.06, liq: 0.80, core: true },
+    { key: 'us',     mu: 0.070, sigma: 0.16, liq: 0.80, core: true },
+    { key: 'intl',   mu: 0.065, sigma: 0.17, liq: 0.80, core: true },
+    { key: 're',     mu: 0.085, sigma: 0.12, liq: 0.20, core: false, sat: 're' },
+    { key: 'crypto', mu: 0.200, sigma: 0.60, liq: 0.70, core: false, sat: 'crypto' },
+    { key: 'pm',     mu: 0.100, sigma: 0.30, liq: 0.10, core: false, sat: 'pm' },
+    { key: 'alt',    mu: 0.050, sigma: 0.20, liq: 0.10, core: false, sat: 'alt' }
+  ];
+
+  var P = {
+    alpha: 0.8,
+    w: { alloc: 0.30, risk: 0.25, liq: 0.20, tax: 0.15, conc: 0.10 },
+    lambdaCore: 0.7, lambdaSat: 0.3,
+    betaTax: 0.1, betaFee: 20.0,
+    kRtBase: 0.06, kRtStep: 0.04, sigmaMin: 0.05, sigmaMax: 0.25,
+    kInc: 0.07, incRef: 100000,
+    kEqShift: 0.02, kEqScale: 0.20, kEqMin: 0.20, kEqMax: 0.95, kUsSplit: 0.7,
+    sat: {
+      re:     { base: 0.10, rt: 0.020, th: 0.0020, pref: 0.030 },
+      crypto: { base: 0.00, rt: 0.015, th: 0.0010, pref: 0.030 },
+      pm:     { base: 0.00, rt: 0.020, th: 0.0020, pref: 0.030 },
+      alt:    { base: 0.03, rt: 0.005, th: 0.0005, pref: 0.015 }
+    },
+    c1: { base: 0.06, rt: 0.015, th: 0.002, min: 0.05, max: 0.20 },
+    c3: { base: 0.18, rt: 0.030, th: 0.005, min: 0.20, max: 0.50 }
+  };
+
+  var M_STAB = { low: 0.9, medium: 1.0, high: 1.1 };
+  var M_GOAL = { growth: 1.1, income: 1.0, preservation: 0.9 };
+
+  /* Display layer, lifted verbatim from factor-relabel.ts so the public number
+     and the in-app number speak the same language.
+     NOTE the app's own documented tech-debt: `alloc` measures allocation DRIFT,
+     not idle capital. It is relabelled "Idle Capital" for display. Reproduced
+     here on purpose — diverging would be worse than inheriting the debt. */
+  var FACTOR_ORDER = ['liq', 'tax', 'risk', 'alloc', 'conc'];
+  var FACTOR_LABELS = {
+    liq: 'Liquidity',
+    tax: 'Drag (Debt & Fees)',
+    risk: 'Risk Balance',
+    alloc: 'Idle Capital',
+    conc: 'Concentration'
+  };
+  var FACTOR_DESCRIPTIONS = {
+    liq: 'How much of your portfolio is readily accessible as cash.',
+    tax: 'Estimated drag from taxes, debt, and account fees.',
+    risk: 'How closely your portfolio risk matches your target.',
+    alloc: 'Capital drifting from its target allocation instead of working for you.',
+    conc: 'Exposure concentrated in too few holdings.'
+  };
+
+  function clip(v, lo, hi) { return Math.min(hi, Math.max(lo, v)); }
+
+  /** ces.service.ts getLabel — the exact thresholds the app uses. */
+  function label(score) {
+    if (score < 50) return 'Needs Attention';
+    if (score < 75) return 'Moderate';
+    return 'Optimized';
+  }
+
+  function compute(i) {
+    var amounts = i.amounts;
+    var V = CLASSES.reduce(function (s, c) { return s + (amounts[c.key] || 0); }, 0);
+    if (!(V > 0)) return { valid: false, V: 0 };
+
+    /* A. Portfolio statistics */
+    var W = {};
+    CLASSES.forEach(function (c) { W[c.key] = (amounts[c.key] || 0) / V; });
+    var sigmaP = Math.sqrt(CLASSES.reduce(function (s, c) {
+      return s + Math.pow(W[c.key], 2) * Math.pow(c.sigma, 2);
+    }, 0));
+    var muP = CLASSES.reduce(function (s, c) { return s + W[c.key] * c.mu; }, 0);
+    var E = i.avgER;
+    var cashAccessible = W.cash * i.cashAccessPct;
+    var Texposure = (1 - i.taxDeferredPct - i.taxFreePct) * 1.0
+                  + i.taxDeferredPct * 0.5
+                  + i.taxFreePct * 0.0;
+
+    /* B. Persona multipliers */
+    var sigmaBase = P.kRtBase + P.kRtStep * (i.RT - 1);
+    var mTH   = clip(0.85 + 0.01 * i.TH, 0.90, 1.15);
+    var mAGE  = clip(1.20 - 0.005 * i.AGE, 0.85, 1.10);
+    var mINC  = i.INC > 0 ? 1 + P.kInc * Math.log(i.INC / P.incRef) : 1;
+    var mSTAB = M_STAB[i.STAB];
+    var mGOAL = M_GOAL[i.GOAL];
+    var mDD   = clip(0.80 + 0.01 * i.DD, 0.85, 1.15);
+    var sigmaStar = clip(sigmaBase * mTH * mAGE * mINC * mSTAB * mGOAL * mDD, P.sigmaMin, P.sigmaMax);
+
+    /* C. Targets */
+    var Lstar = clip((i.EFT + i.ULE) / V, 0, 1);
+    var wCashStar = Lstar;
+    var wEqStar = clip((sigmaStar - P.kEqShift) / P.kEqScale, P.kEqMin, P.kEqMax);
+    var usProv = P.kUsSplit * wEqStar;
+    var inProv = (1 - P.kUsSplit) * wEqStar;
+    var scale = (wCashStar + usProv + inProv > 1) ? (1 - wCashStar) / (usProv + inProv) : 1;
+    var target = {
+      cash:  wCashStar,
+      us:    usProv * scale,
+      intl:  inProv * scale
+    };
+    target.bonds = Math.max(0, 1 - (target.cash + target.us + target.intl));
+
+    var satUpper = {};
+    ['re', 'crypto', 'pm', 'alt'].forEach(function (k) {
+      var b = P.sat[k];
+      satUpper[k] = Math.max(0, b.base + b.rt * (i.RT - 1) + b.th * i.TH + b.pref * (i.PREF[k] - 3));
+    });
+
+    var c1Star = clip(P.c1.base + P.c1.rt * (i.RT - 1) + P.c1.th * i.TH, P.c1.min, P.c1.max);
+    var c3Star = clip(P.c3.base + P.c3.rt * (i.RT - 1) + P.c3.th * i.TH, P.c3.min, P.c3.max);
+
+    var sigmaTargetAlloc = Math.sqrt(CLASSES.filter(function (c) { return c.core; })
+      .reduce(function (s, c) { return s + Math.pow(target[c.key], 2) * Math.pow(c.sigma, 2); }, 0));
+
+    /* D. Inefficiencies */
+    var wCore = CLASSES.filter(function (c) { return c.core; })
+      .reduce(function (s, c) { return s + W[c.key]; }, 0);
+    var zCoreAlloc = 0.5 * CLASSES.filter(function (c) { return c.core; })
+      .reduce(function (s, c) {
+        var norm = wCore > 0 ? W[c.key] / wCore : 0;
+        return s + Math.abs(norm - target[c.key]);
+      }, 0);
+    var zSatExcess = CLASSES.filter(function (c) { return !c.core; })
+      .reduce(function (s, c) { return s + Math.max(0, W[c.key] - satUpper[c.sat]); }, 0);
+
+    var Z = {
+      alloc: P.lambdaCore * zCoreAlloc + P.lambdaSat * zSatExcess,
+      risk:  Math.abs(sigmaP - sigmaTargetAlloc) / P.sigmaMax,
+      liq:   Math.max(0, wCashStar - cashAccessible),
+      tax:   P.betaTax * Texposure + P.betaFee * E,
+      conc:  Math.max(0, i.c1Pct - c1Star) + Math.max(0, i.c3Pct - c3Star)
+    };
+
+    /* E. Scores */
+    var zTotal = FACTOR_ORDER.reduce(function (s, k) { return s + P.w[k] * Z[k]; }, 0);
+    var score = 100 * Math.exp(-P.alpha * zTotal);
+    var factors = {};
+    FACTOR_ORDER.forEach(function (k) {
+      factors[k] = {
+        key: k,
+        label: FACTOR_LABELS[k],
+        description: FACTOR_DESCRIPTIONS[k],
+        z: Z[k],
+        weighted: P.w[k] * Z[k],
+        score: 100 * Math.exp(-P.alpha * Z[k])
+      };
+    });
+
+    /* Primary driver: largest weighted Z. Ties break alloc → risk → liq → tax → conc. */
+    var TIE = ['alloc', 'risk', 'liq', 'tax', 'conc'];
+    var driver = TIE.reduce(function (best, k) {
+      return factors[k].weighted > factors[best].weighted ? k : best;
+    }, TIE[0]);
+
+    return {
+      valid: true, V: V, W: W, target: target, satUpper: satUpper,
+      sigmaP: sigmaP, muP: muP, sigmaStar: sigmaStar, sigmaTargetAlloc: sigmaTargetAlloc,
+      sigmaBase: sigmaBase, mTH: mTH, mAGE: mAGE, mINC: mINC, mSTAB: mSTAB, mGOAL: mGOAL, mDD: mDD,
+      Lstar: Lstar, wEqStarProv: wEqStar, scale: scale, wCore: wCore,
+      c1Star: c1Star, c3Star: c3Star,
+      zCoreAlloc: zCoreAlloc, zSatExcess: zSatExcess,
+      Z: Z, zTotal: zTotal, score: score, label: label(score),
+      factors: factors, order: FACTOR_ORDER, driver: driver,
+      driverLabel: FACTOR_LABELS[driver]
+    };
+  }
+
+  return { compute: compute, label: label, CLASSES: CLASSES, ORDER: FACTOR_ORDER, LABELS: FACTOR_LABELS };
+})();
+
+if (typeof module !== 'undefined' && module.exports) module.exports = CES;
+
+</script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+
+  /* Buckets, in the app's own class order. Colours are display only. */
+  var BUCKETS = [
+    { k: 'cash',   name: 'Cash',                  col: '#4B5563', def: 60000 },
+    { k: 'bonds',  name: 'Bonds',                 col: '#6B7280', def: 140000 },
+    { k: 'us',     name: 'US Equity',             col: '#26BC4B', def: 260000 },
+    { k: 'intl',   name: 'International Equity',  col: '#42DC68', def: 90000 },
+    { k: 're',     name: 'Real Estate',           col: '#3B82F6', def: 120000 },
+    { k: 'crypto', name: 'Crypto',                col: '#A855F7', def: 30000 },
+    { k: 'pm',     name: 'Private Markets',       col: '#ECB72C', def: 40000 },
+    { k: 'alt',    name: 'Alternatives',          col: '#F97316', def: 15000 }
+  ];
+  var PREFS = [
+    { k: 're', name: 'Real Estate' }, { k: 'crypto', name: 'Crypto' },
+    { k: 'pm', name: 'Private Markets' }, { k: 'alt', name: 'Alternatives' }
+  ];
+  var RT_LABELS = { 1: 'Very cautious', 2: 'Cautious', 3: 'Balanced', 4: 'Growth-leaning', 5: 'Aggressive' };
+
+  /* Numeric fields: id, url key, default, bounds. Percent fields are held in
+     the UI as 0-100 and divided at the engine boundary. */
+  var F = [
+    { id: 'age', key: 'age', def: 38, min: 18, max: 100 },
+    { id: 'inc', key: 'inc', def: 150000, min: 0, max: 1e12 },
+    { id: 'rt',  key: 'rt',  def: 3,  min: 1, max: 5 },
+    { id: 'dd',  key: 'dd',  def: 25, min: 5, max: 60 },
+    { id: 'th',  key: 'th',  def: 20, min: 1, max: 40 },
+    { id: 'eft', key: 'eft', def: 50000, min: 0, max: 1e12 },
+    { id: 'ule', key: 'ule', def: 20000, min: 0, max: 1e12 },
+    { id: 'cashaccess', key: 'cashaccess', def: 100, min: 0, max: 100 },
+    { id: 'taxdef', key: 'taxdef', def: 0, min: 0, max: 100 },
+    { id: 'taxfree', key: 'taxfree', def: 0, min: 0, max: 100 },
+    { id: 'er', key: 'er', def: 0.35, min: 0, max: 2 },
+    { id: 'c1', key: 'c1', def: 16, min: 0, max: 100 },
+    { id: 'c3', key: 'c3', def: 25, min: 0, max: 100 }
+  ];
+  BUCKETS.forEach(function (b) { F.push({ id: 'amt_' + b.k, key: b.k, def: b.def, min: 0, max: 1e12, amount: true }); });
+  PREFS.forEach(function (p) { F.push({ id: 'pref_' + p.k, key: 'pref_' + p.k, def: 3, min: 1, max: 5, pref: true }); });
+
+  var PAIRS = ['age','rt','dd','th','cashaccess','taxdef','taxfree','er','c1','c3'];
+  var CHOICES = { stab: { def: 'medium', vals: ['low','medium','high'] },
+                  goal: { def: 'growth', vals: ['growth','income','preservation'] } };
+
+  var state = {};
+
+  function clampNum(raw, f) {
+    var n = parseFloat(raw);
+    if (!isFinite(n)) return f.def;
+    return Math.min(f.max, Math.max(f.min, n));
+  }
+
+  function readURL() {
+    var q = new URLSearchParams(location.search);
+    F.forEach(function (f) { state[f.key] = q.has(f.key) ? clampNum(q.get(f.key), f) : f.def; });
+    Object.keys(CHOICES).forEach(function (k) {
+      var v = (q.get(k) || '').toLowerCase();
+      state[k] = CHOICES[k].vals.indexOf(v) >= 0 ? v : CHOICES[k].def;
+    });
+    enforce();
+  }
+
+  function writeURL() {
+    var q = new URLSearchParams();
+    F.forEach(function (f) { if (state[f.key] !== f.def) q.set(f.key, String(state[f.key])); });
+    Object.keys(CHOICES).forEach(function (k) { if (state[k] !== CHOICES[k].def) q.set(k, state[k]); });
+    var s = q.toString();
+    history.replaceState(null, '', s ? location.pathname + '?' + s : location.pathname);
+  }
+
+  /* Clamp silently rather than blocking — never let the user reach a broken
+     state — but say what happened so the correction is not mysterious. */
+  function enforce() {
+    var warnWrap = false, warnConc = false;
+    if (state.taxdef + state.taxfree > 100) { state.taxfree = Math.max(0, 100 - state.taxdef); warnWrap = true; }
+    if (state.c3 < state.c1) { state.c3 = state.c1; warnConc = true; }
+    return { warnWrap: warnWrap, warnConc: warnConc };
+  }
+
+  var fmt0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  function money(n) { return fmt0.format(Math.round(n)); }
+
+  /* ── Build the repeated controls ── */
+  $('amts').innerHTML = BUCKETS.map(function (b) {
+    return '<div class="amt"><span class="sw" style="background:' + b.col + '"></span>' +
+      '<label class="an" for="amt_' + b.k + '">' + b.name + '</label>' +
+      '<span class="cur"><i>$</i><input type="number" id="amt_' + b.k + '" min="0" step="1000" value="' + b.def + '"></span></div>';
+  }).join('');
+  $('prefs').innerHTML = PREFS.map(function (p) {
+    return '<div class="prefrow"><span>' + p.name + '</span>' +
+      '<input type="range" id="pref_' + p.k + '" min="1" max="5" step="1" value="3" aria-label="' + p.name + ' appetite">' +
+      '<b id="prefv_' + p.k + '">3</b></div>';
+  }).join('');
+
+  /* ── Gauge, geometry copied from the app's CesGauge ── */
+  var START = 135, SWEEP = 270, CX = 50, CY = 50, SW = 8, R = (100 - SW) / 2;
+  function polar(a) { var r = a * Math.PI / 180; return { x: CX + R * Math.cos(r), y: CY + R * Math.sin(r) }; }
+  function arc(from, to) {
+    var s = polar(from), e = polar(to), large = (to - from) > 180 ? 1 : 0;
+    return 'M ' + s.x + ' ' + s.y + ' A ' + R + ' ' + R + ' 0 ' + large + ' 1 ' + e.x + ' ' + e.y;
+  }
+  $('gBg').setAttribute('d', arc(START, START + SWEEP));
+  var bgStart = polar(START);
+  $('gCap').setAttribute('cx', bgStart.x); $('gCap').setAttribute('cy', bgStart.y);
+
+  function bandColor(s) { return s >= 75 ? '#26BC4B' : s >= 50 ? '#ECB72C' : '#ED2020'; }
+  function summaryFor(s) {
+    return s >= 75 ? 'Your capital is efficiently deployed with balanced structure and allocation.'
+         : s >= 50 ? 'Room for improvement in capital efficiency and allocation.'
+                   : 'Capital structure needs attention for better efficiency.';
+  }
+
+  /* Count-up on first paint only; after that the number tracks the sliders
+     directly, because animating every keystroke reads as lag. */
+  var firstPaint = true, animId = null;
+  function paintScore(target) {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!firstPaint || reduce) { drawGauge(target); return; }
+    firstPaint = false;
+    var t0 = performance.now(), dur = 1200;
+    if (animId) cancelAnimationFrame(animId);
+    var step = function (now) {
+      var p = Math.min((now - t0) / dur, 1);
+      drawGauge(target * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) animId = requestAnimationFrame(step);
+    };
+    animId = requestAnimationFrame(step);
+  }
+  function drawGauge(s) {
+    var shown = Math.max(0, Math.min(100, s));
+    $('gArc').setAttribute('d', shown > 0 ? arc(START, START + SWEEP * shown / 100) : '');
+    $('gCap').style.display = shown > 0 ? '' : 'none';
+    $('score').textContent = Math.round(shown);
+    $('score').style.color = bandColor(shown);
+  }
+
+  /* Plain-English diagnosis per factor, from the engine's own audit values. */
+  function mathFor(k, r) {
+    var pct = function (x) { return (x * 100).toFixed(1) + '%'; };
+    if (k === 'liq') return 'Target cash <code>' + pct(r.Lstar) + '</code> · accessible cash <code>' + pct(r.W.cash * state.cashaccess / 100) + '</code> → shortfall <code>' + pct(r.Z.liq) + '</code>';
+    if (k === 'tax') return 'Taxable exposure and fees → <code>Z = ' + r.Z.tax.toFixed(4) + '</code>, from an expense ratio of <code>' + state.er + '%</code>';
+    if (k === 'risk') return 'Your portfolio risk <code>' + pct(r.sigmaP) + '</code> vs the risk your target mix implies <code>' + pct(r.sigmaTargetAlloc) + '</code>';
+    if (k === 'alloc') return 'Core mix drift <code>' + pct(r.zCoreAlloc) + '</code> · satellite excess <code>' + pct(r.zSatExcess) + '</code>';
+    return 'Largest position <code>' + state.c1 + '%</code> vs target <code>' + pct(r.c1Star) + '</code> · top 3 <code>' + state.c3 + '%</code> vs <code>' + pct(r.c3Star) + '</code>';
+  }
+
+  function driverSentence(r) {
+    var k = r.driver, dollars = Math.round(r.V * r.Z[k]);
+    var where = {
+      alloc: 'roughly ' + money(dollars) + ' sitting away from where your profile points',
+      risk:  'your portfolio risk is ' + (r.sigmaP > r.sigmaTargetAlloc ? 'above' : 'below') + ' what your target mix implies',
+      liq:   'about ' + money(dollars) + ' short of the accessible cash your emergency fund and known expenses call for',
+      tax:   'tax exposure and fund costs are the largest single deduction from your score',
+      conc:  'your largest positions sit above the concentration your horizon supports'
+    }[k];
+    return 'Your biggest drag is <b>' + r.driverLabel + '</b> — ' + where + '.';
+  }
+
+  function render() {
+    var w = enforce();
+    $('wrapWarn').hidden = !w.warnWrap;
+    $('concWarn').hidden = !w.warnConc;
+
+    var amounts = {};
+    BUCKETS.forEach(function (b) { amounts[b.k] = state[b.k]; });
+    var pref = {};
+    PREFS.forEach(function (p) { pref[p.k] = state['pref_' + p.k]; });
+
+    var r = CES.compute({
+      AGE: state.age, INC: state.inc, STAB: state.stab, RT: state.rt,
+      DD: state.dd, TH: state.th, GOAL: state.goal,
+      EFT: state.eft, ULE: state.ule, PREF: pref, amounts: amounts,
+      cashAccessPct: state.cashaccess / 100,
+      taxDeferredPct: state.taxdef / 100,
+      taxFreePct: state.taxfree / 100,
+      avgER: state.er / 100,
+      c1Pct: state.c1 / 100,
+      c3Pct: state.c3 / 100
+    });
+
+    var total = BUCKETS.reduce(function (s, b) { return s + state[b.k]; }, 0);
+    $('ptot').textContent = money(total);
+    $('donut').innerHTML = total > 0 ? BUCKETS.map(function (b) {
+      return '<span style="width:' + (state[b.k] / total * 100) + '%;background:' + b.col + '"></span>';
+    }).join('') : '';
+
+    if (!r.valid) {
+      drawGauge(0);
+      $('scoreLabel').textContent = '—';
+      $('scoreSummary').textContent = 'Add your assets to see your score.';
+      $('driverBox').hidden = true;
+      $('factors').innerHTML = '';
+      return;
+    }
+    $('driverBox').hidden = false;
+    paintScore(r.score);
+    $('scoreLabel').textContent = r.label;
+    $('scoreLabel').style.color = bandColor(r.score);
+    $('scoreSummary').textContent = summaryFor(r.score);
+    $('driverText').innerHTML = driverSentence(r);
+
+    $('factors').innerHTML = r.order.map(function (k) {
+      var f = r.factors[k], s = f.score;
+      return '<div class="frow"><div class="fhead"><span class="fname">' + f.label + '</span>' +
+        '<span class="fscore" style="color:' + bandColor(s) + '">' + Math.round(s) + '<span style="color:var(--tm);font-weight:400">/100</span></span></div>' +
+        '<div class="fbar"><i style="width:' + s.toFixed(1) + '%;background:' + bandColor(s) + '"></i></div>' +
+        '<div class="fdesc">' + f.description + '</div>' +
+        '<details class="fmore"><summary>How this is calculated</summary><div class="fmath">' + mathFor(k, r) + '</div></details></div>';
+    }).join('');
+  }
+
+  /* ── Wiring ── */
+  var urlTimer = null;
+  function commit() {
+    render();
+    clearTimeout(urlTimer);
+    urlTimer = setTimeout(writeURL, 300);
+  }
+  function syncPair(key) {
+    var a = $(key), b = $(key + 'Num');
+    if (a) a.value = state[key];
+    if (b) b.value = state[key];
+  }
+  function paintAll() {
+    F.forEach(function (f) { var el = $(f.id); if (el) el.value = state[f.key]; });
+    PAIRS.forEach(syncPair);
+    PREFS.forEach(function (p) { $('prefv_' + p.k).textContent = state['pref_' + p.k]; });
+    $('rtLab').textContent = RT_LABELS[state.rt];
+    Object.keys(CHOICES).forEach(function (g) {
+      Array.prototype.forEach.call($(g).children, function (btn) {
+        var on = btn.dataset.v === state[g];
+        btn.classList.toggle('on', on);
+        btn.setAttribute('aria-checked', on ? 'true' : 'false');
+        btn.setAttribute('role', 'radio');
+      });
+    });
+  }
+
+  F.forEach(function (f) {
+    var bind = function (el, isPair) {
+      if (!el) return;
+      el.addEventListener('input', function () {
+        state[f.key] = clampNum(el.value, f);
+        if (isPair) syncPair(f.key);
+        if (f.key === 'rt') $('rtLab').textContent = RT_LABELS[state.rt];
+        if (f.pref) $('prefv_' + f.key.slice(5)).textContent = state[f.key];
+        commit();
+      });
+    };
+    bind($(f.id), PAIRS.indexOf(f.key) >= 0);
+    if (PAIRS.indexOf(f.key) >= 0) bind($(f.key + 'Num'), true);
+  });
+
+  Object.keys(CHOICES).forEach(function (g) {
+    $(g).addEventListener('click', function (e) {
+      var btn = e.target.closest('button[data-v]');
+      if (!btn) return;
+      state[g] = btn.dataset.v;
+      paintAll(); commit();
+    });
+  });
+
+  $('reset').addEventListener('click', function () {
+    F.forEach(function (f) { state[f.key] = f.def; });
+    Object.keys(CHOICES).forEach(function (k) { state[k] = CHOICES[k].def; });
+    paintAll(); render(); writeURL();
+  });
+
+  $('share').addEventListener('click', function () {
+    writeURL();
+    var url = location.href;
+    var done = function () {
+      var m = $('shareMsg');
+      m.textContent = 'Link copied — it reopens this exact score.';
+      setTimeout(function () { m.textContent = ''; }, 4000);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, done);
+    else {
+      var ta = document.createElement('textarea');
+      ta.value = url; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta); done();
+    }
+  });
+
+  /* The five factor explainers in the prose, generated from the engine so the
+     labels, descriptions and weights can never drift from what it computes. */
+  var WEIGHTS = { alloc: '0.30', risk: '0.25', liq: '0.20', tax: '0.15', conc: '0.10' };
+  var FORMULAS = {
+    liq:   'Z_liq = max(0, W_CASH* − W_CASH_accessible)',
+    tax:   'Z_tax = 0.1 × T_exposure + 20 × E',
+    risk:  'Z_risk = |σ_p − σ_target_alloc| / 0.25',
+    alloc: 'Z_alloc = 0.7 × Z_core_drift + 0.3 × Z_satellite_excess',
+    conc:  'Z_conc = max(0, C1 − C1*) + max(0, C3 − C3*)'
+  };
+  var PROSE = {
+    liq: 'Your emergency fund target plus any large expenses you know are coming define a cash sleeve. This factor measures how far your accessible cash falls short of it. Cash beyond the target is not penalised here — excess cash shows up in idle capital and risk balance instead.',
+    tax: 'Two costs that compound quietly: the share of your portfolio exposed to tax, and the weighted expense ratio of your funds. The fee coefficient is 20, which is deliberately unforgiving — a 0.5% expense ratio is worth ten points of raw inefficiency before weighting.',
+    risk: 'Your portfolio’s volatility against the volatility implied by the target mix your profile produces. Note it compares against the target allocation’s implied risk, not the persona risk figure directly, so the risk score stays consistent with the allocation the model actually built.',
+    alloc: 'The distance between your core mix and its target, plus any satellite exposure above its review band. Named "Idle Capital" in the app; it measures allocation drift, which in practice is usually capital parked somewhere it is not working.',
+    conc: 'Your largest single position and your top three combined, each against a threshold that widens with your risk tolerance and time horizon. For founders this factor is often the one that speaks, because the company is the position.'
+  };
+  $('fdocs').innerHTML = CES.ORDER.map(function (k) {
+    return '<div class="fdoc"><h3>' + CES.LABELS[k] + '<span class="wt">weight ' + WEIGHTS[k] + '</span></h3>' +
+      '<p>' + PROSE[k] + '</p><span class="fx">' + FORMULAS[k] + '</span></div>';
+  }).join('');
+
+  readURL();
+  paintAll();
+  render();
+})();
+</script>
+
+</body>
+</html>
