@@ -141,13 +141,13 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
 /* stretch, not start: the two panels must end on the same line whichever is
    taller, and which one that is flips when the assumptions accordion opens. */
 .sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:18px;align-items:stretch}
-/* The interactive block breaks out of the 1080px prose column and centres on a
-   wider track — the panels were reading as a narrow strip in the middle of a
-   1440px screen. Done with position/left/margin rather than a transform: a
-   transform here would make .sim the containing block for any fixed descendant,
-   which is the bug that cost us the whole Customize modal. Prose keeps its
-   1080px measure, because line length is what makes it readable. */
-.sim{width:min(calc(100vw - 48px),1340px);position:relative;left:50%;margin-left:calc(min(calc(100vw - 48px),1340px) / -2)}
+/* One width for the whole page. The block used to break out to 1340px while the
+   header and the prose stayed at 1080, so the page widened then narrowed again
+   and no two left edges lined up. The page container itself is now 1340px, so
+   header, panels and prose all share the same edges. Body paragraphs keep their
+   own max-width for line length — that caps the text, not the layout, so the
+   left edge stays put. */
+.phero,.container{max-width:1340px}
 .panel{background:var(--card);border:1px solid var(--bord);border-radius:18px;padding:22px}
 #form{display:flex;flex-direction:column}
 .res{display:flex;flex-direction:column}
@@ -236,7 +236,7 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .disc{font-size:11.5px;color:var(--tm);line-height:1.6;margin-top:18px;padding-top:16px;border-top:1px solid var(--bord)}
 .disc strong{color:var(--td)}
 @media(max-width:900px){
-  .sim{grid-template-columns:1fr;width:auto;position:static;left:auto;margin-left:0}
+  .sim{grid-template-columns:1fr}
   .res{order:-1}
   #chart{height:190px}
   .yaxis{height:190px}
