@@ -1,0 +1,29 @@
+name: Publish scheduled blog posts
+# Rebuilds the blog daily so posts whose date has arrived go live
+# (build-blog.mjs only renders posts with date <= today). Vercel
+# redeploys on the push.
+on:
+  schedule:
+    - cron: "0 10 * * *" # 10:00 UTC daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: node scripts/build-blog.mjs
+      - name: Commit if new posts went live
+        run: |
+          git config user.name "iomi-blog-bot"
+          git config user.email "actions@github.com"
+          git add blog sitemap.xml
+          git diff --cached --quiet || git commit -m "blog: publish scheduled posts"
+          git push
