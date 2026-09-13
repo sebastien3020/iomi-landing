@@ -1,0 +1,43 @@
+<!-- Shared site navbar — reference copy.
+     Inlined by scripts/build-blog.mjs (NAV const) and pasted into tools pages.
+     Keep in sync with the landing navbar in index.html (its Tailwind twin).
+     Requires <link rel="stylesheet" href="/assets/nav.css"> in <head>. -->
+<nav class="gnav">
+  <div class="gnav-in">
+    <a href="/" class="gnav-logo"><img src="/assets/iomi-logo.png" alt="IOMI"></a>
+    <div class="gnav-links">
+      <a href="/#see-it-in-action" class="nl"><span class="nl-roll"><span class="nl-t">IOMI in action</span><span class="nl-t">IOMI in action</span></span></a>
+      <a href="/#process" class="nl"><span class="nl-roll"><span class="nl-t">Features</span><span class="nl-t">Features</span></span></a>
+      <a href="/#why-iomi" class="nl"><span class="nl-roll"><span class="nl-t">Why IOMI</span><span class="nl-t">Why IOMI</span></span></a>
+      <a href="/#ai" class="nl"><span class="nl-roll"><span class="nl-t">AI</span><span class="nl-t">AI</span></span></a>
+      <a href="/#pricing" class="nl"><span class="nl-roll"><span class="nl-t">Pricing</span><span class="nl-t">Pricing</span></span></a>
+      <a href="/#faq" class="nl"><span class="nl-roll"><span class="nl-t">FAQ</span><span class="nl-t">FAQ</span></span></a>
+    </div>
+    <div class="gnav-right">
+      <a href="https://app.iomifinance.com/login" class="gnav-signin">Sign in</a>
+      <a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green dotcta-cta"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+      <button class="gnav-burger" aria-label="Menu" aria-expanded="false" onclick="gnavOpen()"><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="gnav-overlay" id="gnav-overlay">
+  <div class="gnav-panel">
+    <div class="gnav-panel-top">
+      <img src="/assets/iomi-logo.png" alt="IOMI">
+      <button class="gnav-close" aria-label="Close menu" onclick="gnavClose()">&times;</button>
+    </div>
+    <div class="gnav-panel-links">
+      <a href="/#why-iomi" onclick="gnavClose()">Why IOMI</a>
+      <a href="/#ai" onclick="gnavClose()">AI</a>
+      <a href="/#benefits" onclick="gnavClose()">Features</a>
+      <a href="/#pricing" onclick="gnavClose()">Pricing</a>
+      <a href="/#faq" onclick="gnavClose()">FAQ</a>
+    </div>
+    <div class="gnav-panel-cta">
+      <a href="https://app.iomifinance.com/login" class="gnav-signin-m">Sign in</a>
+      <a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+    </div>
+  </div>
+</div>
+<script>function gnavOpen(){document.getElementById('gnav-overlay').classList.add('on');document.body.style.overflow='hidden'}function gnavClose(){document.getElementById('gnav-overlay').classList.remove('on');document.body.style.overflow=''}</script>
+<div class="gnav-spacer"></div>

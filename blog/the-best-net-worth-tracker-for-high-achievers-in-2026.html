@@ -152,26 +152,118 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
 @media(max-width:640px){.blog-grid{grid-template-columns:1fr}.pn{grid-template-columns:1fr}.pn a:last-child{text-align:left}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
+<style>
+/* Shared site navbar (.gnav) — the ONE header used by /blog and /tools pages.
+   Visual twin of the landing navbar (index.html keeps its own Tailwind copy;
+   change one, change both). Self-contained: no Tailwind, no _theme.css deps.
+   Markup reference: assets/nav.snippet.html (inlined by scripts/build-blog.mjs
+   and copied into tools pages). */
+
+.gnav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,12,11,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.10)}
+.gnav *{box-sizing:border-box}
+.gnav-in{max-width:1280px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.gnav-logo{display:flex;align-items:center}
+.gnav-logo img{height:40px;width:auto;display:block}
+.gnav-links{display:none;align-items:center;gap:28px;font-size:14px;color:#9BA29D}
+.gnav-links a{color:inherit;text-decoration:none;transition:color .2s}
+.gnav-links a:hover{color:#FEFFFE}
+.gnav-right{display:flex;align-items:center}
+.gnav-signin{display:none;font-size:15px;font-weight:500;color:#F9F9F9;text-decoration:none;margin-right:22px;transition:opacity .2s}
+.gnav-signin:hover{opacity:.8}
+.gnav-spacer{height:64px}
+@media(min-width:768px){.gnav-links{display:flex}.gnav-signin{display:inline}.gnav-burger{display:none}}
+
+/* Word-roll nav links (ported from the landing .nl) */
+.gnav .nl{position:relative;padding-bottom:2px;display:inline-flex;align-items:flex-start;gap:3px}
+.gnav .nl-roll{display:flex;flex-direction:column;overflow:hidden;height:1.45em;line-height:1.45em}
+.gnav .nl-t{display:block;transition:transform .38s cubic-bezier(.22,1,.36,1)}
+.gnav .nl:hover .nl-t{transform:translateY(-100%)}
+@media(prefers-reduced-motion:reduce){.gnav .nl-t{transition:none}.gnav .nl:hover .nl-t{transform:none}}
+
+/* Dot CTA (ported from the landing .dotcta) */
+.gnav .dotcta{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:600;cursor:pointer;transition:filter .3s;text-decoration:none;font-size:15px;padding:11px 24px}
+.gnav .dotcta:hover{filter:brightness(1.06)}
+.gnav .dc-in{position:relative;display:flex;align-items:center;gap:10px;overflow:hidden}
+.gnav .dc-dot{position:absolute;left:0;top:50%;display:inline-flex;transform:translate(-130%,-50%);transition:transform .4s ease-in-out}
+.gnav .dc-label{display:inline-block;white-space:nowrap;transition:transform .4s ease-in-out}
+.gnav .dc-arr{display:inline-flex;transition:transform .4s ease-in-out}
+.gnav .dotcta:hover .dc-dot,.gnav .dotcta:focus-visible .dc-dot{transform:translate(0,-50%)}
+.gnav .dotcta:hover .dc-label,.gnav .dotcta:focus-visible .dc-label{transform:translateX(25px)}
+.gnav .dotcta:hover .dc-arr,.gnav .dotcta:focus-visible .dc-arr{transform:translateX(130%)}
+.gnav .dotcta:focus-visible{outline:2px solid #42DC68;outline-offset:4px}
+.gnav .dotcta-green{background:linear-gradient(90deg,#019426,#008622);border:1.2px solid #005D17;color:#fff}
+.gnav .dotcta-green .dc-dot{color:#F9F9F9}
+@media(prefers-reduced-motion:reduce){.gnav .dc-dot,.gnav .dc-label,.gnav .dc-arr{transition:none!important}}
+.gnav .dotcta-cta{display:none}
+@media(min-width:768px){.gnav .dotcta-cta{display:inline-flex}}
+
+/* Mobile burger + overlay */
+.gnav-burger{display:flex;flex-direction:column;justify-content:center;gap:4px;width:32px;height:32px;margin-left:12px;background:none;border:0;cursor:pointer;padding:0}
+.gnav-burger span{display:block;width:20px;height:1.5px;border-radius:999px;margin:0 auto;background:#F9F9F9}
+.gnav-overlay{display:none;position:fixed;inset:0;z-index:60;background:rgba(10,12,11,.45);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.gnav-overlay.on{display:block}
+.gnav-panel{margin:10px;border-radius:20px;background:rgba(16,18,17,.97);border:1px solid rgba(255,255,255,.10);padding:18px 20px 24px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.gnav-panel-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.gnav-panel-top img{height:28px;width:auto}
+.gnav-close{width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:24px;color:#9BA29D;background:none;border:0;cursor:pointer;margin-right:-8px}
+.gnav-close:hover{color:#FEFFFE}
+.gnav-panel-links{display:flex;flex-direction:column;gap:14px;font-size:18px}
+.gnav-panel-links a{color:#9BA29D;text-decoration:none;transition:color .2s}
+.gnav-panel-links a:hover{color:#FEFFFE}
+.gnav-panel-cta{display:flex;flex-direction:column;gap:6px;margin-top:22px}
+.gnav-panel-cta .gnav-signin-m{display:block;padding:12px 0;text-align:center;font-weight:500;font-size:15px;color:#F9F9F9;text-decoration:none}
+.gnav-panel-cta .dotcta{display:flex;width:100%;padding:13px 24px}
+
+/* Desktop: hide the burger (kept last — the base .gnav-burger rule above would
+   otherwise win the tie against the earlier media block). */
+@media(min-width:768px){.gnav-burger{display:none}}
+</style>
 </head>
 <body>
-<nav class="nav"><div class="in">
-  <a href="/"><img src="/assets/iomi-logo.png" alt="IOMI"></a>
-  <div class="links">
-    <a href="/#process" class="navhide">Features</a>
-    <a href="/#why-iomi" class="navhide">Why IOMI</a>
-    <a href="/#ai" class="navhide">AI</a>
-    <a href="/#pricing" class="navhide">Pricing</a>
-    <a href="/blog">Blog</a>
-    <details class="navdrop">
-      <summary>Tools</summary>
-      <div class="navmenu">
-        <a href="/tools/wealth-simulator">Wealth Simulator</a>
-        <a href="/tools/capital-efficiency-score">Capital Efficiency Score Simulator</a>
-      </div>
-    </details>
-    <a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green" style="padding:9px 18px;font-size:13px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+<!-- Shared site navbar — reference copy.
+     Inlined by scripts/build-blog.mjs (NAV const) and pasted into tools pages.
+     Keep in sync with the landing navbar in index.html (its Tailwind twin).
+     Requires <link rel="stylesheet" href="/assets/nav.css"> in <head>. -->
+<nav class="gnav">
+  <div class="gnav-in">
+    <a href="/" class="gnav-logo"><img src="/assets/iomi-logo.png" alt="IOMI"></a>
+    <div class="gnav-links">
+      <a href="/#see-it-in-action" class="nl"><span class="nl-roll"><span class="nl-t">IOMI in action</span><span class="nl-t">IOMI in action</span></span></a>
+      <a href="/#process" class="nl"><span class="nl-roll"><span class="nl-t">Features</span><span class="nl-t">Features</span></span></a>
+      <a href="/#why-iomi" class="nl"><span class="nl-roll"><span class="nl-t">Why IOMI</span><span class="nl-t">Why IOMI</span></span></a>
+      <a href="/#ai" class="nl"><span class="nl-roll"><span class="nl-t">AI</span><span class="nl-t">AI</span></span></a>
+      <a href="/#pricing" class="nl"><span class="nl-roll"><span class="nl-t">Pricing</span><span class="nl-t">Pricing</span></span></a>
+      <a href="/#faq" class="nl"><span class="nl-roll"><span class="nl-t">FAQ</span><span class="nl-t">FAQ</span></span></a>
+    </div>
+    <div class="gnav-right">
+      <a href="https://app.iomifinance.com/login" class="gnav-signin">Sign in</a>
+      <a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green dotcta-cta"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+      <button class="gnav-burger" aria-label="Menu" aria-expanded="false" onclick="gnavOpen()"><span></span><span></span></button>
+    </div>
   </div>
-</div></nav>
+</nav>
+<div class="gnav-overlay" id="gnav-overlay">
+  <div class="gnav-panel">
+    <div class="gnav-panel-top">
+      <img src="/assets/iomi-logo.png" alt="IOMI">
+      <button class="gnav-close" aria-label="Close menu" onclick="gnavClose()">&times;</button>
+    </div>
+    <div class="gnav-panel-links">
+      <a href="/#why-iomi" onclick="gnavClose()">Why IOMI</a>
+      <a href="/#ai" onclick="gnavClose()">AI</a>
+      <a href="/#benefits" onclick="gnavClose()">Features</a>
+      <a href="/#pricing" onclick="gnavClose()">Pricing</a>
+      <a href="/#faq" onclick="gnavClose()">FAQ</a>
+    </div>
+    <div class="gnav-panel-cta">
+      <a href="https://app.iomifinance.com/login" class="gnav-signin-m">Sign in</a>
+      <a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
+    </div>
+  </div>
+</div>
+<script>function gnavOpen(){document.getElementById('gnav-overlay').classList.add('on');document.body.style.overflow='hidden'}function gnavClose(){document.getElementById('gnav-overlay').classList.remove('on');document.body.style.overflow=''}</script>
+<div class="gnav-spacer"></div>
+
 <main>
 <article class="article">
   <div class="glow" aria-hidden="true"></div>
@@ -271,7 +363,7 @@ footer{border-top:1px solid var(--bord);padding:48px 24px 40px}
       <p class="ft-tag">Your entire net worth — personal and business — in one live dashboard.</p>
     </div>
     <div class="ft-col"><div class="ft-h">Product</div>
-      <a href="/#process">Features</a><a href="/#ai">AI</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a></div>
+      <a href="/#process">Features</a><a href="/#ai">AI</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/tools/wealth-simulator">Wealth Simulator</a><a href="/tools/capital-efficiency-score">Capital Efficiency Score</a></div>
     <div class="ft-col"><div class="ft-h">Compare</div>
         <a href="/why-iomi">Why IOMI</a>
         <a href="/compare/monarch">IOMI vs Monarch</a>

@@ -51,24 +51,10 @@ const liveSlugs = new Set(posts.map(p => p.slug));
 console.log(`${posts.length} posts to render (today: ${TODAY})`);
 
 // ---------- shared shell ----------
-const NAV = `<nav class="nav"><div class="in">
-  <a href="/"><img src="/assets/iomi-logo.png" alt="IOMI"></a>
-  <div class="links">
-    <a href="/#process" class="navhide">Features</a>
-    <a href="/#why-iomi" class="navhide">Why IOMI</a>
-    <a href="/#ai" class="navhide">AI</a>
-    <a href="/#pricing" class="navhide">Pricing</a>
-    <a href="/blog">Blog</a>
-    <details class="navdrop">
-      <summary>Tools</summary>
-      <div class="navmenu">
-        <a href="/tools/wealth-simulator">Wealth Simulator</a>
-        <a href="/tools/capital-efficiency-score">Capital Efficiency Score Simulator</a>
-      </div>
-    </details>
-    <a href="https://app.iomifinance.com/create-account" class="dotcta dotcta-green" style="padding:9px 18px;font-size:13px"><span class="dc-in"><span class="dc-dot" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dc-label">Get started</span><span class="dc-arr"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a>
-  </div>
-</div></nav>`;
+// The navbar is the shared site header (assets/nav.snippet.html + nav.css) —
+// one source for blog and tools pages, visual twin of the landing navbar.
+const NAV = fs.readFileSync(path.join(ROOT, 'assets', 'nav.snippet.html'), 'utf8');
+const NAVCSS = fs.readFileSync(path.join(ROOT, 'assets', 'nav.css'), 'utf8');
 
 const FOOTER = `<footer><div class="ft-wrap">
   <div class="ft-grid">
@@ -77,7 +63,7 @@ const FOOTER = `<footer><div class="ft-wrap">
       <p class="ft-tag">Your entire net worth — personal and business — in one live dashboard.</p>
     </div>
     <div class="ft-col"><div class="ft-h">Product</div>
-      <a href="/#process">Features</a><a href="/#ai">AI</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a></div>
+      <a href="/#process">Features</a><a href="/#ai">AI</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/tools/wealth-simulator">Wealth Simulator</a><a href="/tools/capital-efficiency-score">Capital Efficiency Score</a></div>
     <div class="ft-col"><div class="ft-h">Compare</div>
         <a href="/why-iomi">Why IOMI</a>
         <a href="/compare/monarch">IOMI vs Monarch</a>
@@ -128,6 +114,8 @@ const head = ({ title, desc, canonical, og, jsonld }) => `<!DOCTYPE html>
 ${jsonld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('\n')}
 <style>
 ${THEME}</style>
+<style>
+${NAVCSS}</style>
 </head>
 <body>`;
 
