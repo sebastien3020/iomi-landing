@@ -2,7 +2,7 @@
 title: "The Best Net Worth Tracker for High-Achievers in 2026"
 slug: the-best-net-worth-tracker-for-high-achievers-in-2026
 date: 2026-09-13
-status: scheduled
+status: published
 source: iomi
 target_keyword: "best net worth tracker"
 description: "What separates the best net worth tracker from a pretty balance page in 2026: full asset coverage, entity separation, and intelligence that tells you what to do next."
@@ -77,7 +77,7 @@ An honest tour of the landscape, including what each does well.
 
 **Monarch.** Genuinely good at what it's built for: household budgeting, spending categorization, and shared finances with a partner. If your core need is expense tracking and cash-flow discipline, Monarch is the better pick — IOMI is not a budgeting app and doesn't try to be. Where Monarch runs out of road is the complex-balance-sheet problem: business entities, private equity, and capital-deployment intelligence aren't its game. The full comparison is at [IOMI vs. Monarch](https://iomifinance.com/compare/monarch).
 
-**Kubera.** A strong pure tracker with wide asset support, including crypto and DeFi-adjacent holdings, and a clean design. It answers "what do I own?" well. The difference is what happens after the total: Kubera stops at the number, while IOMI scores it, projects it, and lets you simulate changes to it. It also treats entity separation differently. See [IOMI vs. Kubera](https://iomifinance.com/compare/kubera) for the detailed breakdown.
+**Kubera.** A strong pure tracker with wide asset support, including crypto, and a clean design. It answers "what do I own?" well. The difference is what happens after the total: Kubera stops at the number, while IOMI scores it, projects it, and lets you simulate changes to it. It also treats entity separation differently. See [IOMI vs. Kubera](https://iomifinance.com/compare/kubera) for the detailed breakdown.
 
 **Copilot.** Excellent iOS-native personal finance experience with polished transaction intelligence — but personal-finance shaped, app-first, and not built for entity structures or private assets. A solid choice for that profile, and a different profile from the one this guide serves.
 
@@ -87,7 +87,7 @@ An honest tour of the landscape, including what each does well.
 
 Here is the shift that separates this year's bar from 2022's: the total is now the starting point, not the product.
 
-**Efficiency scoring.** Two people with identical net worth can be in wildly different financial shape — one fully deployed and balanced, the other with 40% idle in a low-yield account and 70% concentrated in a single position. IOMI's Capital Efficiency Score makes that difference visible as a 0–100 number scored on five factors: liquidity, idle capital, drag, risk balance, and concentration. It's a health check on deployment, not a credit score. It's a health check on deployment, not a credit score.
+**Efficiency scoring.** Two people with identical net worth can be in wildly different financial shape — one fully deployed and balanced, the other with 40% idle in a low-yield account and 70% concentrated in a single position. IOMI's Capital Efficiency Score makes that difference visible as a 0–100 number scored on five factors: liquidity, idle capital, drag, risk balance, and concentration. It's a health check on deployment, not a credit score.
 
 **Projection.** A year-by-year path forward computed from today's actual holdings — not a generic retirement calculator seeded with guesses.
 
@@ -103,7 +103,7 @@ A practical adoption path, whichever tool you choose:
 
 1. **Connect liquid accounts first.** Banks, brokerages, retirement, exchanges. With automated sync this is minutes of work and immediately covers the volatile part of your balance sheet.
 2. **Add real estate and liabilities.** Properties with live valuations, mortgages against them. Your first honest "net" number appears here.
-3. **Enter private equity deliberately.** Use your latest round's valuation or a defensible internal method, and record which. Update on funding events or annually — precision matters less than consistency. If you want a rigorous approach, follow the [founder's method for calculating net worth](/blog/how-to-calculate-your-net-worth-the-complete-founders-method).
+3. **Enter private equity deliberately.** Use your latest round's valuation or a defensible internal method, and record which. Update on funding events or annually — precision matters less than consistency. If you want a rigorous approach, follow the [founder's guide to working out your net worth](/blog/what-is-my-net-worth-the-founders-guide-to-total-wealth-intelligence).
 4. **Separate entities before you polish.** Get personal vs. business boundaries right early; retrofitting compartments later is the annoying way.
 5. **Then let the intelligence run.** With everything connected, the score, projection, and daily brief work from a complete picture — which is the only picture worth automating.
 

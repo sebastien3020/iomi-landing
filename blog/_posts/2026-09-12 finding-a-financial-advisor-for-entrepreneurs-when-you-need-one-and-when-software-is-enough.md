@@ -2,7 +2,7 @@
 title: "Finding a Financial Advisor for Entrepreneurs: When You Need One (and When Software Is Enough)"
 slug: finding-a-financial-advisor-for-entrepreneurs-when-you-need-one-and-when-software-is-enough
 date: 2026-09-12
-status: scheduled
+status: published
 source: iomi
 target_keyword: "financial advisor for entrepreneurs"
 description: "When does a founder actually need a financial advisor, and when is software enough? A practical framework for entrepreneurs deciding where to get advice."
