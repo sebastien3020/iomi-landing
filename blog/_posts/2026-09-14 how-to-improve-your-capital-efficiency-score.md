@@ -2,7 +2,7 @@
 title: "How to Improve Your Capital Efficiency Score"
 slug: how-to-improve-your-capital-efficiency-score
 date: 2026-09-14
-status: scheduled
+status: published
 source: iomi
 target_keyword: "improve capital efficiency"
 description: "A practical, factor-by-factor playbook to improve capital efficiency: fix liquidity, put idle cash to work, cut drag, and rebalance risk and concentration."
