@@ -129,7 +129,7 @@ When you bridge the gap, you see how a crypto drawdown affects liquidity or how 
 
 ## Transitioning to IOMI: The Sophisticated Spreadsheet Replacement
 
-Audit your current spreadsheet for the last time. Treat it as a final inventory of your financial ecosystem before you migrate: the broken formulas, the stale valuations, the assets that never made it into a row. Then connect your accounts read-only, add what banks can't see, and let the system build the picture. Choosing a professional alternative to spreadsheets for financial planning is a move from disorder to clarity — and it is a flat subscription, never a percentage of your assets: Personal at $29/month, Business at $39/month founding rate (see [pricing](https://iomifinance.com/pricing)).
+Audit your current spreadsheet for the last time. Treat it as a final inventory of your financial ecosystem before you migrate: the broken formulas, the stale valuations, the assets that never made it into a row. Then connect your accounts read-only, add what banks can't see, and let the system build the picture. Choosing a professional alternative to spreadsheets for financial planning is a move from disorder to clarity — and it is a flat subscription, never a percentage of your assets: Personal at $29/month, Business at $79/month (see [pricing](https://iomifinance.com/pricing)).
 
 ### Security and Privacy in the AI Era
 

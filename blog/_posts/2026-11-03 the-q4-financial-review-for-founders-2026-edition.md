@@ -126,7 +126,7 @@ The checklist for repeatability:
 * Manual assets — real estate, private equity, collectibles — documented with a valuation date and method, so next year you update rather than re-derive
 * This year's targets written down where next year's review will find them
 
-This is the practical argument for running your wealth on a platform rather than an annual spreadsheet: the review stops being an assembly project. IOMI's Daily Brief and continuous sync mean the Q4 review becomes what it should be — an hour of thinking about a picture that is already complete. You can [try IOMI free for a month](https://iomifinance.com) — no credit card required — connect everything now, and run this year's review on live numbers. The [pricing is flat](https://iomifinance.com/pricing) — $29/month Personal, $39/month Business — never a percentage of assets.
+This is the practical argument for running your wealth on a platform rather than an annual spreadsheet: the review stops being an assembly project. IOMI's Daily Brief and continuous sync mean the Q4 review becomes what it should be — an hour of thinking about a picture that is already complete. You can [try IOMI free for a month](https://iomifinance.com) — no credit card required — connect everything now, and run this year's review on live numbers. The [pricing is flat](https://iomifinance.com/pricing) — $29/month Personal, $79/month Business — never a percentage of assets.
 
 ## Frequently Asked Questions
 

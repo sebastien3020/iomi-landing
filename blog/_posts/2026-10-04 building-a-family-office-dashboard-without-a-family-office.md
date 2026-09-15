@@ -75,7 +75,7 @@ A family office does not stop at reporting; the report feeds analysis. This laye
 
 A traditional single-family office is generally reckoned viable only at the very top of the wealth scale — annual running costs land in the hundreds of thousands to millions. Multi-family offices and outsourced arrangements lower the bar but typically charge a percentage of assets, the classic model where the fee grows with your wealth regardless of the work.
 
-The software layer inverts this. IOMI's Business plan — entity compartments, full asset coverage, CES, simulation, IOMI AI at 200 messages a day with priority — runs $39/month at the founding rate (regular $79). Personal is $29. Flat, never a percentage of assets, no commissions, no product pushing; annual billing earns two months free. The 1-month free trial requires no credit card, which means the build-out costs nothing to attempt: connect the entities, connect the accounts, and see the consolidated picture that used to require staff. Pricing is at [iomifinance.com/pricing](https://iomifinance.com/pricing), and the philosophy behind the flat model at [Why IOMI](https://iomifinance.com/why-iomi).
+The software layer inverts this. IOMI's Business plan — entity compartments, full asset coverage, CES, simulation, IOMI AI at 200 messages a day with priority — runs $79/month. Personal is $29. Flat, never a percentage of assets, no commissions, no product pushing; annual billing earns two months free. The 1-month free trial requires no credit card, which means the build-out costs nothing to attempt: connect the entities, connect the accounts, and see the consolidated picture that used to require staff. Pricing is at [iomifinance.com/pricing](https://iomifinance.com/pricing), and the philosophy behind the flat model at [Why IOMI](https://iomifinance.com/why-iomi).
 
 The honest framing is not "software replaces the family office." It is: the reporting and oversight spine — the part that consumed most of the cost and that most founders entirely lack — is now a subscription. The judgment layer you assemble the way you always have: good professionals, hired for judgment, now working from a current picture instead of a stale one.
 
@@ -121,6 +121,6 @@ IOMI covers bank and wallet accounts, brokerage and trading, retirement, crypto 
 
 ### What does this cost compared to a real family office?
 
-Traditional family offices cost hundreds of thousands per year or charge a percentage of assets. IOMI is a flat subscription — $29/month Personal, $39/month Business at the founding rate — with a 1-month free trial and no credit card required. The fee does not grow with your wealth.
+Traditional family offices cost hundreds of thousands per year or charge a percentage of assets. IOMI is a flat subscription — $29/month Personal, $79/month Business — with a 1-month free trial and no credit card required. The fee does not grow with your wealth.
 
 IOMI is not a bank, broker or financial advisor. It does not custody assets, execute trades or provide personalized investment advice. All outputs are educational.

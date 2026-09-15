@@ -97,7 +97,7 @@ This difference sounds like convenience. It is actually accuracy. The dominant s
 
 ## What This Costs
 
-ChatGPT's paid tiers run about $20/month and are worth it for general use. IOMI's Personal plan is $29/month and Business is $39/month at the founding rate — a flat subscription, never a percentage of assets, with no commissions and no product pushing. The 1-month free trial requires no credit card, which makes the comparison easy to run yourself: connect your accounts, ask both tools the same five questions about your finances, and compare which answers you would actually act on. Pricing details are at [iomifinance.com/pricing](https://iomifinance.com/pricing).
+ChatGPT's paid tiers run about $20/month and are worth it for general use. IOMI's Personal plan is $29/month and Business is $79/month — a flat subscription, never a percentage of assets, with no commissions and no product pushing. The 1-month free trial requires no credit card, which makes the comparison easy to run yourself: connect your accounts, ask both tools the same five questions about your finances, and compare which answers you would actually act on. Pricing details are at [iomifinance.com/pricing](https://iomifinance.com/pricing).
 
 ## Frequently Asked Questions
 
@@ -123,7 +123,7 @@ The connection is read-only through Plaid: IOMI can see balances and transaction
 
 ### How many questions can I ask IOMI AI?
 
-The Personal plan includes 100 messages per day; the Business plan includes 200 per day with priority. Both are flat-rate subscriptions — $29 and $39 per month at the founding rate — with a 1-month free trial and no credit card required.
+The Personal plan includes 100 messages per day; the Business plan includes 200 per day with priority. Both are flat-rate subscriptions — $29 and $79 per month — with a 1-month free trial and no credit card required.
 
 ### Should I cancel ChatGPT if I use IOMI?
 

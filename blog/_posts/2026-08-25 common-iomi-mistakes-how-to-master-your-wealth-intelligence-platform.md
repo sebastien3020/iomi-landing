@@ -178,7 +178,7 @@ No, IOMI doesn't provide personalized investment advice. The platform functions 
 
 ### How much does IOMI cost after the free trial?
 
-After your free trial, the Personal plan is $29 per month. The Business plan is available at a founding rate of $39 per month. The Business tier provides additional leverage, including entity tracking for up to three separate companies and a higher AI message limit. Both plans offer a flat-fee structure with no asset-percentage charges. This ensures your costs remain predictable as your net worth compounds and your portfolio expands.
+After your free trial, the Personal plan is $29 per month. The Business plan is available at a of $79 per month. The Business tier provides additional leverage, including entity tracking for up to three separate companies and a higher AI message limit. Both plans offer a flat-fee structure with no asset-percentage charges. This ensures your costs remain predictable as your net worth compounds and your portfolio expands.
 
 ### Can I use IOMI to track physical assets like watches or art?
 

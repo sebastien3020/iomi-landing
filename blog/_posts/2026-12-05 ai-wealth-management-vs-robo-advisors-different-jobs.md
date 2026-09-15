@@ -73,7 +73,7 @@ Put the two categories side by side and the "versus" mostly dissolves into a div
 
 **Risk picture.** Robo-advisor: questionnaire-based allocation of the slice. IOMI: measured concentration, liquidity, and risk balance of the whole — the context that should inform how any slice is allocated.
 
-**Fees.** Robo-advisor: a percentage of managed assets, growing with the account. IOMI: a [flat subscription](https://iomifinance.com/pricing) — $29/month Personal, $39/month Business at the founding rate — never a percentage of assets, no commissions.
+**Fees.** Robo-advisor: a percentage of managed assets, growing with the account. IOMI: a [flat subscription](https://iomifinance.com/pricing) — $29/month Personal, $79/month Business — never a percentage of assets, no commissions.
 
 **Decision support.** Robo-advisor: automates decisions inside its mandate (rebalancing, reinvestment). IOMI: illuminates decisions outside anyone's mandate — distributions, deployments, scenarios — and leaves the deciding to you. The adjacent comparison with human advisors follows the same scope logic, mapped out in the [software vs advisor framework](/blog/wealth-management-software-vs-advisor-the-2026-founders-framework).
 
@@ -123,7 +123,7 @@ Because the portfolio's diversification is computed in a vacuum. If your net wor
 
 ### Which is cheaper, a robo-advisor or an AI wealth platform?
 
-They price different things, so comparison by rate misleads. Robo-advisors charge a percentage of managed assets — small, but scaling with the account forever. IOMI charges a flat $29/month (Personal) or $39/month (Business, founding rate), regardless of asset size. The coherent test: pay percentage fees only for genuine management, and pay flat fees for visibility and analysis — never a percentage of assets for reporting.
+They price different things, so comparison by rate misleads. Robo-advisors charge a percentage of managed assets — small, but scaling with the account forever. IOMI charges a flat $29/month (Personal) or $79/month (Business,), regardless of asset size. The coherent test: pay percentage fees only for genuine management, and pay flat fees for visibility and analysis — never a percentage of assets for reporting.
 
 ### Do I still need a human advisor with either of these?
 

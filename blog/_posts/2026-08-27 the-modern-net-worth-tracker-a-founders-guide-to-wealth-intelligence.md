@@ -118,7 +118,7 @@ Our business model is as transparent as our data. Unlike legacy platforms that o
 
 ### Personal vs. Business Plans
 
-We offer two distinct paths to total oversight based on your complexity. The Personal Plan is $29 per month. It provides full access to the IOMI dashboard, the Capital Efficiency Score (CES), and the IOMI AI assistant. It is designed for individuals who need to see their personal wealth with professional-grade clarity. For founders managing multiple streams of income, the Business Plan is the strategic choice. Currently offered at a founding rate of $39 per month, this plan includes unlimited business entities and seamless QuickBooks sync. This founding rate is a long-term play for early adopters, securing enterprise-level features at a fixed, accessible price point.
+We offer two distinct paths to total oversight based on your complexity. The Personal Plan is $29 per month. It provides full access to the IOMI dashboard, the Capital Efficiency Score (CES), and the IOMI AI assistant. It is designed for individuals who need to see their personal wealth with professional-grade clarity. For founders managing multiple streams of income, the Business Plan is the strategic choice. Currently offered at a of $79 per month, this plan includes unlimited business entities and seamless QuickBooks sync. This is a long-term play for early adopters, securing enterprise-level features at a fixed, accessible price point.
 
 ### Total Oversight in One Dashboard
 
@@ -164,7 +164,7 @@ The IOMI Simulator allows you to model deterministic reallocation scenarios befo
 
 ### How much does IOMI cost for a business owner?
 
-Business owners can access the full platform at a founding rate of $39 per month. This plan includes unlimited entities, QuickBooks sync, and priority access to IOMI AI. We also offer a Personal Plan for $29 per month. IOMI operates on a flat subscription model. We don't charge asset-percentage fees, take commissions, or sell your data. You can get started immediately with a 1-month free trial.
+Business owners can access the full platform at a of $79 per month. This plan includes unlimited entities, QuickBooks sync, and priority access to IOMI AI. We also offer a Personal Plan for $29 per month. IOMI operates on a flat subscription model. We don't charge asset-percentage fees, take commissions, or sell your data. You can get started immediately with a 1-month free trial.
 
 ![Sebastien](https://getautoseo.com/storage/author-thumbnails/site_82435_author_1787488732.jpeg)
 

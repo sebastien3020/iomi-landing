@@ -148,6 +148,6 @@ Connections in IOMI are read-only through Plaid: the platform can see balances a
 
 ### What does a dashboard like this cost?
 
-IOMI is a flat subscription — $29/month Personal, $39/month Business at the founding rate — never a percentage of assets, with no commissions and no product pushing. There is a 1-month free trial with no credit card required, so you can connect accounts and judge the views against your own situation before paying anything.
+IOMI is a flat subscription — $29/month Personal, $79/month Business — never a percentage of assets, with no commissions and no product pushing. There is a 1-month free trial with no credit card required, so you can connect accounts and judge the views against your own situation before paying anything.
 
 IOMI is not a bank, broker or financial advisor. It does not custody assets, execute trades or provide personalized investment advice. All outputs are educational.

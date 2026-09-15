@@ -67,7 +67,7 @@ IOMI starts from the same premise as Kubera — everything in one place — and 
 
 **IOMI AI.** The assistant answers questions from your actual holdings and never estimates when data is missing. Ask "where is my cash idle?" and the answer comes from your accounts, not from generic advice.
 
-**Pricing.** Personal is $29/month, Business $39/month at the founding rate (locked while subscribed; regular $79), with annual billing giving two months free and a 1-month free trial with no credit card required. Flat subscription — never a percentage of assets. Details at [iomifinance.com/pricing](https://iomifinance.com/pricing).
+**Pricing.** Personal is $29/month, Business $79/month (locked while subscribed; regular $79), with annual billing giving two months free and a 1-month free trial with no credit card required. Flat subscription — never a percentage of assets. Details at [iomifinance.com/pricing](https://iomifinance.com/pricing).
 
 **Where Kubera still wins:** if your priority is the broadest possible manual asset coverage with a minimalist single-page view, and you genuinely want tracking without an opinion layer, Kubera's simplicity is a feature, not a limitation.
 
@@ -133,7 +133,7 @@ If your primary need is budgeting and household cash-flow management, yes — Mo
 
 ### How much does a Kubera alternative cost?
 
-Pricing models vary by tool, so check each vendor's current pricing directly. IOMI is $29/month for Personal and $39/month for Business at the founding rate (regular $79), locked while subscribed, with two months free on annual billing. It is a flat subscription — never a percentage of assets, no commissions, no product pushing — and starts with a 1-month free trial, no credit card required.
+Pricing models vary by tool, so check each vendor's current pricing directly. IOMI is $29/month for Personal and $79/month for Business, locked while subscribed, with two months free on annual billing. It is a flat subscription — never a percentage of assets, no commissions, no product pushing — and starts with a 1-month free trial, no credit card required.
 
 ### Can I try IOMI before switching from Kubera?
 

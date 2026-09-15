@@ -79,7 +79,7 @@ The mechanics are the ones already described: buffer rule, scheduled distributio
 
 Owners who run this discipline for five or seven years reach a quietly transformed position: the agency is still the engine, but it is no longer the boat. A brutal client loss becomes a business problem instead of a family emergency. And every strategic option — selling, scaling, stepping back — gets evaluated from security instead of need.
 
-Seeing all of it in one place is the point of the tooling: both compartments live, the consolidated view honest, the score watching your concentration, the forecast showing distributions before they land. [IOMI's Business plan](https://iomifinance.com/pricing) is $39/month flat — never a percentage of assets — with a one-month free trial, no credit card required, at [iomifinance.com](https://iomifinance.com).
+Seeing all of it in one place is the point of the tooling: both compartments live, the consolidated view honest, the score watching your concentration, the forecast showing distributions before they land. [IOMI's Business plan](https://iomifinance.com/pricing) is $79/month flat — never a percentage of assets — with a one-month free trial, no credit card required, at [iomifinance.com](https://iomifinance.com).
 
 ## Frequently Asked Questions
 

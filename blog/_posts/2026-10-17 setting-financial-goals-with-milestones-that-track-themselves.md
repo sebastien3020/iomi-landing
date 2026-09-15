@@ -104,7 +104,7 @@ If your goals currently live in a document, migrating to automated financial goa
 5. **Look at the status-quo trajectory honestly.** Some goals will already be on pace — celebrate and ignore them. Some will show gaps — simulate one or two fixes and pick one. At least one will be revealed as fantasy — re-date it and feel the relief of an honest plan.
 6. **Then stop.** The system tracks from here. You show up to glance, review, and decide.
 
-Goals with milestones, status-quo trajectories, the Simulator, and Next Dollar Allocation are part of IOMI's Insights layer, included on both plans — [Personal at $29/month, Business at $39/month founding rate, with a 1-month free trial and no credit card required](https://iomifinance.com/pricing). Which is to say: the January note finally has somewhere real to live.
+Goals with milestones, status-quo trajectories, the Simulator, and Next Dollar Allocation are part of IOMI's Insights layer, included on both plans — [Personal at $29/month, Business at $79/month, with a 1-month free trial and no credit card required](https://iomifinance.com/pricing). Which is to say: the January note finally has somewhere real to live.
 
 ## Frequently Asked Questions
 

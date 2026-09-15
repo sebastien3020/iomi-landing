@@ -72,7 +72,7 @@ Solo does not mean unadvised. It means buying expertise per problem instead of p
 - **An attorney, occasionally.** When the structure changes: forming the LLC, signing the big contract, bringing on a partner.
 - **A financial advisor, optionally and knowingly.** For a genuine liquidity event or estate complexity, a fee-for-service planner can earn their fee. What rarely makes sense for a solopreneur is the classic percentage-of-assets relationship — paying an annual slice of your wealth for reporting you now generate yourself and advice you consume twice a year. The decision framework is in [wealth management software vs advisor](/blog/wealth-management-software-vs-advisor-the-2026-founders-framework).
 
-The economics of the software layer are deliberately boring: IOMI is a flat subscription — $29/mo Personal or $39/mo Business at the founding rate (regular $79), two months free on annual billing — never a percentage of assets, no commissions, no products pushed. A [1-month free trial with no credit card](https://iomifinance.com/pricing) means the evaluation costs you an afternoon. One honest caveat on tool choice: if what you actually want is line-item household budgeting — categorizing groceries, per-category spending limits — a budgeting app like Monarch is the better pick for that job. IOMI is the wealth layer: positions, entities, runway, trajectory.
+The economics of the software layer are deliberately boring: IOMI is a flat subscription — $29/mo Personal or $79/mo Business, two months free on annual billing — never a percentage of assets, no commissions, no products pushed. A [1-month free trial with no credit card](https://iomifinance.com/pricing) means the evaluation costs you an afternoon. One honest caveat on tool choice: if what you actually want is line-item household budgeting — categorizing groceries, per-category spending limits — a budgeting app like Monarch is the better pick for that job. IOMI is the wealth layer: positions, entities, runway, trajectory.
 
 ## The Playbook, End to End
 
@@ -108,7 +108,7 @@ Conservatively, and clearly labeled. A solo business can be carried as company e
 
 ### What does IOMI cost for a solopreneur?
 
-Personal is $29/mo and Business is $39/mo at the founding rate (regular $79), locked while subscribed, with two months free on annual billing. It is a flat subscription — never a percentage of assets, no commissions — and the Business plan covers up to 3 entities plus 200 IOMI AI messages a day. The trial is one month, no credit card required.
+Personal is $29/mo and Business is $79/mo, locked while subscribed, with two months free on annual billing. It is a flat subscription — never a percentage of assets, no commissions — and the Business plan covers up to 3 entities plus 200 IOMI AI messages a day. The trial is one month, no credit card required.
 
 ### Can IOMI do my bookkeeping and taxes?
 

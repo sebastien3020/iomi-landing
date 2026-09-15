@@ -83,7 +83,7 @@ Price is information about incentives, not just cost. Three models dominate:
 
 **Percentage of assets.** Standard for advisory services, occasionally attached to software. The math deserves attention: 1% of a $2M balance sheet is $20,000 every year, growing with your assets, largely for reporting and monitoring that flat-fee software now does continuously. Paying percentage fees specifically for *judgment* can be rational; paying them for *software functions* is a rounding error away from a mistake.
 
-**Flat subscription.** You pay for the tool; clarity is the product; incentives stay clean. No commissions, nothing cross-sold, no fee that scales with your success. IOMI's model: [Personal at $29/month, Business at $39/month](https://iomifinance.com/pricing) — founding rates, locked while subscribed (regular $79) — annual billing worth two months free, and a 1-month free trial with no credit card required.
+**Flat subscription.** You pay for the tool; clarity is the product; incentives stay clean. No commissions, nothing cross-sold, no fee that scales with your success. IOMI's model: [Personal at $29/month, Business at $79/month](https://iomifinance.com/pricing) —s, locked while subscribed (regular $79) — annual billing worth two months free, and a 1-month free trial with no credit card required.
 
 A last cost consideration that outweighs price: switching costs are real (private-asset data entry, valuation history, learned workflows), so the platform's *scope ceiling* matters. Buying a personal-scale tool while your entity structure grows means migrating in eighteen months. Buy for the balance sheet you're building, not just the one you have.
 
@@ -121,7 +121,7 @@ The architecture to insist on is read-only aggregation: IOMI connects through Pl
 
 ### How much should wealth management software cost?
 
-Flat-subscription tools for individuals generally run $10–$50 per month depending on scope. The comparison to weigh isn't tool-vs-tool pennies but model-vs-model: a flat $39/month is roughly $470 a year, while a 1% assets-under-management fee on a $2M balance sheet is $20,000 a year, growing with your wealth. Pay percentage fees for human judgment if you need it — not for reporting and monitoring that software does continuously.
+Flat-subscription tools for individuals generally run $10–$50 per month depending on scope. The comparison to weigh isn't tool-vs-tool pennies but model-vs-model: a flat $79/month is roughly $470 a year, while a 1% assets-under-management fee on a $2M balance sheet is $20,000 a year, growing with your wealth. Pay percentage fees for human judgment if you need it — not for reporting and monitoring that software does continuously.
 
 ### Should I use free wealth tracking tools?
 

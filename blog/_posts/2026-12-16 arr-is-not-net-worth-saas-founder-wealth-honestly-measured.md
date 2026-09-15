@@ -89,7 +89,7 @@ The total number is your strategist. It tracks whether the whole system — comp
 
 The habit pays off at decision time. Considering a secondary sale? The question "what would selling 10% of my stake do to my tiers?" becomes a scenario you can model — IOMI's Simulator computes reallocations and planned cash-flow events deterministically, so the before/after of a hypothetical liquidity event is arithmetic, not reverie. Weighing a salary raise against runway, or a personal investment against concentration? Same machinery, run on [your real consolidated picture](https://iomifinance.com/why-iomi) rather than the napkin.
 
-And when the exit conversation someday gets real, you arrive knowing exactly what is real already — with the professionals (CPA, attorney, possibly an advisor for the event itself) briefed from a complete picture instead of a guess. Until then, the [Business plan at $39/mo](https://iomifinance.com/pricing) — flat, never a percentage of assets, 1-month trial without a card — is the cost of never again confusing a multiple with money.
+And when the exit conversation someday gets real, you arrive knowing exactly what is real already — with the professionals (CPA, attorney, possibly an advisor for the event itself) briefed from a complete picture instead of a guess. Until then, the [Business plan at $79/mo](https://iomifinance.com/pricing) — flat, never a percentage of assets, 1-month trial without a card — is the cost of never again confusing a multiple with money.
 
 ## Frequently Asked Questions
 

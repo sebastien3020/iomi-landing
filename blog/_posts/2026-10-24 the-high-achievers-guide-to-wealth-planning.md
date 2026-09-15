@@ -112,7 +112,7 @@ Cadence guidance: the ambient layer is daily by construction; the deliberate hou
 
 Five layers, one dependency chain: visibility makes buffers sizeable; buffers make deployment unforced; deployment makes goals testable; automation makes review sustainable. Build in order. Most people can stand up layer one in an afternoon — connecting accounts is fast when the connections are read-only and the institution coverage is broad — and each further layer is a decision, not a project.
 
-On tooling: assemble it from parts if you enjoy that, but the parts must share one dataset, or you will spend your life reconciling them. The integrated version of this entire stack — compartmented visibility, efficiency scoring, projection, simulation, goals, daily brief, and a grounded assistant — is what [IOMI](https://iomifinance.com) is: flat pricing at $29/month Personal or $39/month Business (founding rate), never a percentage of assets, with a 1-month free trial and no credit card required. The broader strategic context for entrepreneurs sits in our [wealth management guide](/blog/wealth-management-for-entrepreneurs-2026-strategic-guide).
+On tooling: assemble it from parts if you enjoy that, but the parts must share one dataset, or you will spend your life reconciling them. The integrated version of this entire stack — compartmented visibility, efficiency scoring, projection, simulation, goals, daily brief, and a grounded assistant — is what [IOMI](https://iomifinance.com) is: flat pricing at $29/month Personal or $79/month Business, never a percentage of assets, with a 1-month free trial and no credit card required. The broader strategic context for entrepreneurs sits in our [wealth management guide](/blog/wealth-management-for-entrepreneurs-2026-strategic-guide).
 
 The plan is not the point. The point is that the next big decision — the exit conversation, the building, the sabbatical — arrives at a desk where the numbers are already true, the buffer already exists, and the trajectory is already known. That is what planning buys a high-achiever: not predictions, but readiness.
 
@@ -144,6 +144,6 @@ It implements the stack in one place: read-only connections via Plaid across 12,
 
 ### What does wealth planning software like this cost?
 
-IOMI is a flat subscription — $29/month for Personal, $39/month for Business at the founding rate (regular $79), with two months free on annual billing. Never a percentage of assets, no commissions, no products pushed. A 1-month free trial with no credit card required lets you build the visibility layer before deciding anything.
+IOMI is a flat subscription — $29/month for Personal, $79/month for Business, with two months free on annual billing. Never a percentage of assets, no commissions, no products pushed. A 1-month free trial with no credit card required lets you build the visibility layer before deciding anything.
 
 IOMI is not a bank, broker or financial advisor. It does not custody assets, execute trades or provide personalized investment advice. All outputs are educational.

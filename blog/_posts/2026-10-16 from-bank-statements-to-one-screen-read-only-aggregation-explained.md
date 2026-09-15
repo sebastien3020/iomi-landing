@@ -86,7 +86,7 @@ Setting this up is smaller than it sounds. Connecting an institution takes a min
 
 A sensible order: start with the accounts where money concentrates (primary bank, brokerage, retirement), add liabilities next so the net picture is honest, then crypto, then manual assets. Perfection on day one is not required — every connection added makes the picture truer, and the gap list stares at you until you close it.
 
-IOMI's Personal plan is $29/month and Business — with up to three entity compartments — is $39/month at the founding rate, both with [a 1-month free trial and no credit card required](https://iomifinance.com/pricing). One month is more than enough to feel the difference between reconstructing your finances and simply seeing them.
+IOMI's Personal plan is $29/month and Business — with up to three entity compartments — is $79/month, both with [a 1-month free trial and no credit card required](https://iomifinance.com/pricing). One month is more than enough to feel the difference between reconstructing your finances and simply seeing them.
 
 ## Frequently Asked Questions
 

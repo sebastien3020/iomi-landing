@@ -128,7 +128,7 @@ Transitioning from fragmented spreadsheets to a unified Wealth OS is a rapid pro
 
 Founders often struggle with the fragmentation trap of mixing personal and business wealth. IOMI solves this by offering tailored plans that acknowledge your unique entity structure. The Personal Plan is $29 per month. It includes the full suite of personal features, the CES, the Simulator, and a limit of 100 AI messages per day. If you choose annual billing, the price drops to $24 per month, effectively giving you two months free. It's a sharp, modern solution for those who value time above all else.
 
-The Business Plan is designed for high-growth entrepreneurs managing multiple entities. It features a $39 per month founding rate. This plan includes everything in the Personal tier plus support for up to three business entities and QuickBooks balance sync. You also receive a higher limit of 200 AI messages per day. Annual billing for the Business Plan is $33 per month. This tier ensures that your LLCs and holding companies are never left in the dark. It provides the elite experience necessary for managing a complex empire with quiet authority.
+The Business Plan is designed for high-growth entrepreneurs managing multiple entities. It features a $79 per month. This plan includes everything in the Personal tier plus support for up to three business entities and QuickBooks balance sync. You also receive a higher limit of 200 AI messages per day. Annual billing for the Business Plan is $33 per month. This tier ensures that your LLCs and holding companies are never left in the dark. It provides the elite experience necessary for managing a complex empire with quiet authority.
 
 ### Security and Data Privacy
 
@@ -144,7 +144,7 @@ Serial founders face unique risks that traditional banking apps simply ignore. B
 
 ### Final Verdict: Is IOMI Worth It?
 
-Is the investment worth it? Consider the cost of inaction. A monthly subscription of $29 or $39 is negligible compared to the potential gains of identifying $180,000 in idle capital sitting in a stagnant account. Think about the hours saved every month. The system automates net worth projections and asset valuations, freeing you from the cognitive load of manual tracking. It's a high-performance strategist that never sleeps. It's tireless, objective, and hyper-intelligent. This complete guide to IOMI concludes that the platform is more than a tool; it's a strategic advantage for the ambitious.
+Is the investment worth it? Consider the cost of inaction. A monthly subscription of $29 or $79 is negligible compared to the potential gains of identifying $180,000 in idle capital sitting in a stagnant account. Think about the hours saved every month. The system automates net worth projections and asset valuations, freeing you from the cognitive load of manual tracking. It's a high-performance strategist that never sleeps. It's tireless, objective, and hyper-intelligent. This complete guide to IOMI concludes that the platform is more than a tool; it's a strategic advantage for the ambitious.
 
 The 30-day trial offers a low-risk entry into this new standard of wealth intelligence. It allows you to test the Capital Efficiency Score and the AI assistant without immediate commitment. Experience the relief of total oversight. Stop guessing where you stand and start leading from a position of data-driven confidence. The logic is self-evident. The results are measurable. It's time to replace your outdated spreadsheets with a system built for the high-growth lifestyle.
 
@@ -152,7 +152,7 @@ The 30-day trial offers a low-risk entry into this new standard of wealth intell
 
 The transition from a cluttered spreadsheet to a sophisticated Wealth OS is the ultimate unlock for high-performance founders. You now understand how to eliminate the fragmentation trap. You know how the Capital Efficiency Score identifies drag. You see how AI-driven suggestions prioritize your next strategic move. This complete guide to IOMI has provided the roadmap to move from cognitive overload to total oversight. It's about precision. It's about speed. It's about compounding your advantage.
 
-With read-only connections to 12,000+ financial institutions, IOMI ensures your entire empire is visible in real-time. Whether you are managing personal holdings or utilizing the founding rate of $39/mo for Business users, the platform scales with your ambition. Stop guessing where you stand and start leading from a position of data-driven authority. [Start your 1-month free trial of IOMI today, no credit card required.](https://app.iomifinance.com/create-account) Your empire deserves a system that is as tireless and intelligent as you are.
+With read-only connections to 12,000+ financial institutions, IOMI ensures your entire empire is visible in real-time. Whether you are managing personal holdings or utilizing the of $79/mo for Business users, the platform scales with your ambition. Stop guessing where you stand and start leading from a position of data-driven authority. [Start your 1-month free trial of IOMI today, no credit card required.](https://app.iomifinance.com/create-account) Your empire deserves a system that is as tireless and intelligent as you are.
 
 ## Frequently Asked Questions
 

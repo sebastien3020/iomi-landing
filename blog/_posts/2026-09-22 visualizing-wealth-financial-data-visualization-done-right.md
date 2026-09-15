@@ -105,7 +105,7 @@ Does it stop at pictures? A chart layer without simulation, scoring, or a way to
 
 Does it respect the personal/business boundary? Founders need both compartmentalized views and a consolidated one, without the two bleeding together.
 
-And what does it cost as your wealth grows? Percentage-of-assets pricing means your dashboard bill scales with your success. IOMI charges a flat subscription — $29/mo Personal, $39/mo Business at founding rates, 1-month free trial, no credit card required — details on the [pricing page](https://iomifinance.com/pricing). For a tool whose job is watching your money, a flat fee is the right shape.
+And what does it cost as your wealth grows? Percentage-of-assets pricing means your dashboard bill scales with your success. IOMI charges a flat subscription — $29/mo Personal, $79/mo Business ats, 1-month free trial, no credit card required — details on the [pricing page](https://iomifinance.com/pricing). For a tool whose job is watching your money, a flat fee is the right shape.
 
 ## Frequently Asked Questions
 

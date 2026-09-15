@@ -85,7 +85,7 @@ Forward computation. A live picture is the floor; the ceiling is answering "what
 
 A query layer. Founders' questions arrive in stolen moments and in plain language — "how much cash across all entities?", "what is my crypto exposure?" The IOMI AI answers from real holdings, never estimating when data is missing: 100 messages/day on Personal, 200 with priority on Business.
 
-And aligned pricing. A percentage-of-assets fee means your tooling bill scales with your success while the work stays the same. IOMI is a flat subscription — $29/mo Personal, $39/mo Business at founding rates locked while subscribed, annual billing worth two months free, 1-month free trial with no credit card — never a percentage of assets, no commissions, no product pushing. Details at [iomifinance.com/pricing](https://iomifinance.com/pricing).
+And aligned pricing. A percentage-of-assets fee means your tooling bill scales with your success while the work stays the same. IOMI is a flat subscription — $29/mo Personal, $79/mo Business ats locked while subscribed, annual billing worth two months free, 1-month free trial with no credit card — never a percentage of assets, no commissions, no product pushing. Details at [iomifinance.com/pricing](https://iomifinance.com/pricing).
 
 ## Where Human Advisors Fit
 
@@ -139,7 +139,7 @@ The Capital Efficiency Score (CES) is IOMI's 0–100 health check of how well yo
 
 ### Is a flat subscription really better than percentage-of-assets pricing?
 
-For a visibility and intelligence layer, yes, and the reasoning is simple: the work of tracking your wealth does not scale with the wealth, so neither should the fee. A percentage fee on a growing balance sheet becomes a large recurring cost for the same service. IOMI charges $29/mo Personal or $39/mo Business (founding rates, locked while subscribed), never a percentage of assets, with no commissions and no products pushed.
+For a visibility and intelligence layer, yes, and the reasoning is simple: the work of tracking your wealth does not scale with the wealth, so neither should the fee. A percentage fee on a growing balance sheet becomes a large recurring cost for the same service. IOMI charges $29/mo Personal or $79/mo Business, never a percentage of assets, with no commissions and no products pushed.
 
 ### How do I start without committing?
 

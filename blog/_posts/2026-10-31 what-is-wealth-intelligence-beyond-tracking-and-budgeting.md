@@ -106,7 +106,7 @@ If you are comparing options, six questions separate genuine intelligence from r
 3. **Is the analysis decomposable?** A score or forecast you cannot break into factors is a black box. You should always be able to ask "why this number?"
 4. **Is simulation deterministic?** Can you change one assumption and see exactly what moves? Reproducibility is what makes a model trustworthy.
 5. **Does the AI refuse to guess?** Ask a question the system does not have data for. The right answer is "I don't have that data," not a fabrication.
-6. **How does it make money?** A flat subscription — IOMI is $29/month Personal, $39/month Business at the founding rate, per the [pricing page](https://iomifinance.com/pricing) — keeps incentives clean. A percentage of assets or product commissions means the tool has opinions about your money that serve someone else.
+6. **How does it make money?** A flat subscription — IOMI is $29/month Personal, $79/month Business, per the [pricing page](https://iomifinance.com/pricing) — keeps incentives clean. A percentage of assets or product commissions means the tool has opinions about your money that serve someone else.
 
 ## The Bottom Line
 
@@ -146,6 +146,6 @@ Speed and specificity. Instead of assembling the answer to "how much cash is idl
 
 ### What does wealth intelligence software cost?
 
-IOMI charges a flat subscription: $29/month for Personal, $39/month for Business (a founding rate, locked while subscribed), with annual billing giving two months free and a 1-month free trial with no credit card required. Flat pricing is a structural point, not just a price point — never a percentage of assets, no commissions, no products being pushed.
+IOMI charges a flat subscription: $29/month for Personal, $79/month for Business (a, locked while subscribed), with annual billing giving two months free and a 1-month free trial with no credit card required. Flat pricing is a structural point, not just a price point — never a percentage of assets, no commissions, no products being pushed.
 
 IOMI is not a bank, broker or financial advisor. It does not custody assets, execute trades or provide personalized investment advice. All outputs are educational.

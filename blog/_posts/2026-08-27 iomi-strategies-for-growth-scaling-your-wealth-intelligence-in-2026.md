@@ -82,7 +82,7 @@ The "Spreadsheet Era" was defined by manual entry, broken formulas, and lagging 
 
 ### Multi-Entity Support for Serial Founders
 
-Managing a single LLC is simple. Managing three LLCs, a holding company, and your personal portfolio is a logistical nightmare without the right OS. IOMI provides multi-entity support specifically for serial founders who need to compartmentalize their risk and assets. The Business plan allows you to track up to three business entities with full QuickBooks balance sync. This means your business snapshots are always current. You don't have to wait for a monthly bookkeeper report to know your standing. At the founding rate of $39/month, you get unlimited business account connections. This level of oversight is essential for implementing effective IOMI strategies for growth. It turns fragmented data into a cohesive strategic asset. You gain the relief of knowing every entity is accounted for in real time.
+Managing a single LLC is simple. Managing three LLCs, a holding company, and your personal portfolio is a logistical nightmare without the right OS. IOMI provides multi-entity support specifically for serial founders who need to compartmentalize their risk and assets. The Business plan allows you to track up to three business entities with full QuickBooks balance sync. This means your business snapshots are always current. You don't have to wait for a monthly bookkeeper report to know your standing. At the of $79/month, you get unlimited business account connections. This level of oversight is essential for implementing effective IOMI strategies for growth. It turns fragmented data into a cohesive strategic asset. You gain the relief of knowing every entity is accounted for in real time.
 
 ### The AI Assistant: Plain-English Wealth Intelligence
 
@@ -110,7 +110,7 @@ The journey from financial chaos to total wealth intelligence is a fundamental s
 
 ### Choosing Your Growth Plan
 
-Selecting the right plan depends on your operational complexity. We've designed our tiers to match the speed of your ambition. The Personal Plan at $29/month provides essential wealth tracking for individuals who need a clear, automated picture of their holdings. It's perfect for consolidating personal accounts and physical assets. For founders with more complex ecosystems, the Business Plan is the definitive choice. At a founding rate of $39/month, it supports multi-entity operators managing up to three business entities. This tier includes QuickBooks sync and priority access to IOMI AI. If you're focused on long-term strategic growth, annual billing offers two months free. It's a high-impact decision that secures your financial foundation for the year ahead.
+Selecting the right plan depends on your operational complexity. We've designed our tiers to match the speed of your ambition. The Personal Plan at $29/month provides essential wealth tracking for individuals who need a clear, automated picture of their holdings. It's perfect for consolidating personal accounts and physical assets. For founders with more complex ecosystems, the Business Plan is the definitive choice. At a of $79/month, it supports multi-entity operators managing up to three business entities. This tier includes QuickBooks sync and priority access to IOMI AI. If you're focused on long-term strategic growth, annual billing offers two months free. It's a high-impact decision that secures your financial foundation for the year ahead.
 
 ### The IOMI Security Promise
 
@@ -122,7 +122,7 @@ The era of spreadsheet chaos is over. You have the blueprint. You have the metri
 
 The era of managing high-growth assets through manual spreadsheets is over. You've seen how a unified Wealth OS eliminates cognitive load and identifies hidden value across your entire ecosystem. By leveraging the Capital Efficiency Score, you can pinpoint exactly where your capital is stalled and ready for deployment. Implementing **IOMI strategies for growth** allows you to move from reactive accounting to proactive, deterministic execution. Whether you're simulating your next reallocation or utilizing AI-driven suggestions to reclaim $180k+ in idle capital, the strategic advantage is undeniable.
 
-Security remains our baseline. With 100% read-only access via Plaid, your data is protected by bank-level encryption across 12,000+ institutions. You lead the strategy; the system handles the complexity. Founders can currently secure founding rates from $39/mo for multi-entity support. This is your blueprint for total financial oversight and predictable compounding. It's time to stop guessing and start scaling. [Scale your wealth intelligence with IOMI](https://app.iomifinance.com/create-account) and experience the relief of total visibility. Your legacy deserves a high-performance engine.
+Security remains our baseline. With 100% read-only access via Plaid, your data is protected by bank-level encryption across 12,000+ institutions. You lead the strategy; the system handles the complexity. Founders can currently secures from $79/mo for multi-entity support. This is your blueprint for total financial oversight and predictable compounding. It's time to stop guessing and start scaling. [Scale your wealth intelligence with IOMI](https://app.iomifinance.com/create-account) and experience the relief of total visibility. Your legacy deserves a high-performance engine.
 
 ## Frequently Asked Questions
 
@@ -138,9 +138,9 @@ The CES acts as a deterministic 0-100 health check that quantifies your strategi
 
 Yes, the platform provides automated valuations for diverse asset classes including private equity, real estate, and collectibles. While it connects to 12,000+ traditional institutions via Plaid, it also allows you to track physical and alternative assets in one place. This creates a unified dashboard for your entire ecosystem. You gain a live net worth projection that includes every entity you own, ensuring total financial oversight without the need for manual data entry.
 
-### Is the IOMI Business Plan worth the founding rate of $39 per month?
+### Is the IOMI Business Plan worth the of $79 per month?
 
-The Business Plan is specifically designed for high-growth operators managing multiple entities. At the founding rate of $39 per month, you receive multi-entity support for up to three LLCs or holding companies. This includes QuickBooks balance sync and priority AI assistance with 200 messages per day. It’s a strategic investment for founders who need to compartmentalize risk while maintaining a consolidated view of their holdings. The efficiency gains far outweigh the subscription cost.
+The Business Plan is specifically designed for high-growth operators managing multiple entities. At the of $79 per month, you receive multi-entity support for up to three LLCs or holding companies. This includes QuickBooks balance sync and priority AI assistance with 200 messages per day. It’s a strategic investment for founders who need to compartmentalize risk while maintaining a consolidated view of their holdings. The efficiency gains far outweigh the subscription cost.
 
 ### How does the IOMI Simulator differ from traditional financial planning?
 

@@ -100,7 +100,7 @@ Most failures in holding company asset tracking are habit failures, not tool fai
 
 **Counting entity value twice.** If you track an entity's underlying assets in its compartment, your personal ownership stake and those assets are the same value seen from two sides. Pick one representation per purpose and be consistent — consolidated views should never double-count.
 
-The mechanics are not complicated. What matters is choosing infrastructure that makes the correct behavior the lazy behavior: compartments that enforce separation, connections that keep themselves current, and one screen where the whole structure — entities and personal, never mixed — is simply visible. IOMI's Business plan covers up to three entity compartments plus the personal side for [$39/month at the founding rate, with a 1-month free trial and no credit card required](https://iomifinance.com/pricing).
+The mechanics are not complicated. What matters is choosing infrastructure that makes the correct behavior the lazy behavior: compartments that enforce separation, connections that keep themselves current, and one screen where the whole structure — entities and personal, never mixed — is simply visible. IOMI's Business plan covers up to three entity compartments plus the personal side for [$79/month, with a 1-month free trial and no credit card required](https://iomifinance.com/pricing).
 
 ## Frequently Asked Questions
 

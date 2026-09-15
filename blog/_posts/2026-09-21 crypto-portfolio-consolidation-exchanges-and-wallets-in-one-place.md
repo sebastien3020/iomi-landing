@@ -93,7 +93,7 @@ The whole exercise typically takes an evening. The alternative — a spreadsheet
 
 ## What Consolidation Costs — and What It Should Never Cost
 
-A consolidation layer should be cheap relative to what it watches, and its pricing should never scale with your assets. IOMI charges a flat subscription: $29/mo Personal, $39/mo Business at the founding rate (regular $79), with annual billing worth two months free. Never a percentage of assets, no commissions, no products pushed. There is a 1-month free trial with no credit card required, so you can connect your venues and see your real consolidated picture before paying anything. Full details are on the [pricing page](https://iomifinance.com/pricing).
+A consolidation layer should be cheap relative to what it watches, and its pricing should never scale with your assets. IOMI charges a flat subscription: $29/mo Personal, $79/mo Business, with annual billing worth two months free. Never a percentage of assets, no commissions, no products pushed. There is a 1-month free trial with no credit card required, so you can connect your venues and see your real consolidated picture before paying anything. Full details are on the [pricing page](https://iomifinance.com/pricing).
 
 The "should never cost" list matters as much. Consolidation should not cost you custody — your assets stay exactly where they are. It should not cost you credentials — read-only connections never expose them. And it should not cost you the rest of your balance sheet — a tool that sees only crypto answers only crypto questions, and founders need the whole board.
 

@@ -88,7 +88,7 @@ The practical guidance, compressed:
 - **Stress-testing** belongs in both worlds, but in deterministic modeling you do it transparently: vary the assumptions, rerun, compare visible paths.
 - **Any model, either kind, is only as good as its starting data.** A perfect engine on stale, hand-typed balances produces confident nonsense. Live connected data is the prerequisite, whatever the math on top — the argument of [the spreadsheet vs app comparison](/blog/net-worth-tracker-spreadsheet-vs-app-an-honest-comparison).
 
-And a boundary worth stating plainly: no projection of either kind is a promise. Deterministic paths are educational scenarios built from assumptions you control — tools for thinking, not guarantees of outcomes, and not personalized investment advice. IOMI's Simulator and Projection ship on both plans — Personal at $29/month, Business at $39/month at the founding rate, flat, never a percentage of assets, with a 1-month free trial and no credit card required.
+And a boundary worth stating plainly: no projection of either kind is a promise. Deterministic paths are educational scenarios built from assumptions you control — tools for thinking, not guarantees of outcomes, and not personalized investment advice. IOMI's Simulator and Projection ship on both plans — Personal at $29/month, Business at $79/month, flat, never a percentage of assets, with a 1-month free trial and no credit card required.
 
 ## Misconceptions Worth Retiring
 

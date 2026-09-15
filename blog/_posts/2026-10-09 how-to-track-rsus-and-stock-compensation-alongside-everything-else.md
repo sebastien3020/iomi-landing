@@ -80,7 +80,7 @@ And when a question does not fit a dashboard — "what share of my net worth ves
 
 Clarity about scope matters more with stock compensation than almost anywhere else, because the tax stakes are real. IOMI is not a tax engine. It does not track cost basis or tax lots, it does not compute what you owe when shares vest or when you sell, and it does not optimize sale timing for tax outcomes. Vesting has significant tax consequences that depend on your jurisdiction and situation — that work belongs with a CPA or tax professional, with better inputs because your full position is finally visible in one place.
 
-IOMI's job is the layer above: the complete, current picture of what you hold, what it is worth, how concentrated you are, and what the path forward looks like under scenarios you define. Flat pricing — [$29/mo Personal, $39/mo Business at the founding rate](https://iomifinance.com/pricing), never a percentage of assets — and a 1-month free trial with no credit card. If your equity is currently living in a spreadsheet tab you dread opening, [that is the problem this platform was built for](https://iomifinance.com/why-iomi).
+IOMI's job is the layer above: the complete, current picture of what you hold, what it is worth, how concentrated you are, and what the path forward looks like under scenarios you define. Flat pricing — [$29/mo Personal, $79/mo Business](https://iomifinance.com/pricing), never a percentage of assets — and a 1-month free trial with no credit card. If your equity is currently living in a spreadsheet tab you dread opening, [that is the problem this platform was built for](https://iomifinance.com/why-iomi).
 
 ## Frequently Asked Questions
 

@@ -118,7 +118,7 @@ Implementation is where strategy meets reality. You've seen the metrics and the 
 
 Security is non-negotiable for high-achievers. IOMI utilizes read-only connections to 12,000+ institutions, ensuring bank-level encryption with no money movement. You get total data peace of mind without the risk of unauthorized transactions. The design is equally deliberate. It is responsive, accessible on phone, tablet, or desktop without the friction of a traditional installation. This is a founder-first experience built for a high-growth lifestyle. It is always on, tireless, and objective.
 
-The transition from manual spreadsheets happens in three steps. First, connect your primary accounts. Second, categorize your business entities and private holdings. Third, let the system automate your valuations. You move from the hours of manual labor required for custom PowerBI rigs to a live system that never breaks. Our model is simple: a flat founding rate of $29/mo for Personal or $39/mo for Business. We avoid asset-percentage fees and hidden brokerage commissions because your growth should belong to you.
+The transition from manual spreadsheets happens in three steps. First, connect your primary accounts. Second, categorize your business entities and private holdings. Third, let the system automate your valuations. You move from the hours of manual labor required for custom PowerBI rigs to a live system that never breaks. Our model is simple: a flat of $29/mo for Personal or $79/mo for Business. We avoid asset-percentage fees and hidden brokerage commissions because your growth should belong to you.
 
 ### Choosing the Right Wealth Intelligence Platform
 

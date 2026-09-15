@@ -123,6 +123,6 @@ Deterministic means the same inputs always produce the same outputs, and the rea
 
 ### What does IOMI cost?
 
-Personal is $29/mo and Business is $39/mo at the founding rate, locked while subscribed (regular $79). Annual billing gives two months free. Both include the insights described here — Next Dollar Allocation, Simulator, Projection, Goals, Daily Brief, cash-flow forecast — with the IOMI AI at 100 messages/day on Personal and 200/day with priority on Business. There is a 1-month free trial with no credit card required; details at [iomifinance.com/pricing](https://iomifinance.com/pricing).
+Personal is $29/mo and Business is $79/mo, locked while subscribed (regular $79). Annual billing gives two months free. Both include the insights described here — Next Dollar Allocation, Simulator, Projection, Goals, Daily Brief, cash-flow forecast — with the IOMI AI at 100 messages/day on Personal and 200/day with priority on Business. There is a 1-month free trial with no credit card required; details at [iomifinance.com/pricing](https://iomifinance.com/pricing).
 
 IOMI is not a bank, broker or financial advisor. It does not custody assets, execute trades or provide personalized investment advice. All outputs are educational.

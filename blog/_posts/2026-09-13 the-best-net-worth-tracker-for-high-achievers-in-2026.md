@@ -107,7 +107,7 @@ A practical adoption path, whichever tool you choose:
 4. **Separate entities before you polish.** Get personal vs. business boundaries right early; retrofitting compartments later is the annoying way.
 5. **Then let the intelligence run.** With everything connected, the score, projection, and daily brief work from a complete picture — which is the only picture worth automating.
 
-IOMI's [Personal plan is $29/month and Business is $39/month](https://iomifinance.com/pricing) — founding rates, locked while subscribed — with annual billing giving two months free. There's a 1-month free trial with no credit card required, which is enough time to connect everything and see whether your balance sheet fits.
+IOMI's [Personal plan is $29/month and Business is $79/month](https://iomifinance.com/pricing) —s, locked while subscribed — with annual billing giving two months free. There's a 1-month free trial with no credit card required, which is enough time to connect everything and see whether your balance sheet fits.
 
 ## Frequently Asked Questions
 

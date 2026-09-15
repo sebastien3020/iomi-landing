@@ -125,6 +125,6 @@ No — and that's deliberate. Projection (year-by-year path from today's holding
 
 ### How much does AI net worth tracking cost in 2026?
 
-Pricing across the category varies widely, so compare structures rather than headline numbers. IOMI is a flat subscription — $29/month Personal, $39/month Business at the founding rate — never a percentage of assets, no commissions, no products pushed. Annual billing adds two months free, and the 1-month trial requires no credit card. Details at [iomifinance.com/pricing](https://iomifinance.com/pricing).
+Pricing across the category varies widely, so compare structures rather than headline numbers. IOMI is a flat subscription — $29/month Personal, $79/month Business — never a percentage of assets, no commissions, no products pushed. Annual billing adds two months free, and the 1-month trial requires no credit card. Details at [iomifinance.com/pricing](https://iomifinance.com/pricing).
 
 IOMI is not a bank, broker or financial advisor. It does not custody assets, execute trades or provide personalized investment advice. All outputs are educational.

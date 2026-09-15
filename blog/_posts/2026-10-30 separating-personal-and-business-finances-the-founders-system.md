@@ -89,7 +89,7 @@ This is the payoff the "open a business checking account" advice never mentions.
 
 The founder's system for separating personal and business finances comes down to five moves. Separate accounts and cards per entity, with money crossing only through named channels. A deliberate, scheduled pay structure, designed with your CPA. A distinct cash policy on each side of the boundary. Separate books with a consolidated read-only view, so separation doesn't cost you visibility. And a habit of asking cross-boundary questions against real numbers instead of mental estimates.
 
-None of it requires a finance team. The structural layer is a week of admin. The visibility layer is software: IOMI's [Business plan runs $39/month](https://iomifinance.com/pricing) — a flat subscription, never a percentage of assets — with a 1-month free trial and no credit card required. If you currently rebuild your combined picture by hand, connect everything once and see what the compartmentalized version looks like.
+None of it requires a finance team. The structural layer is a week of admin. The visibility layer is software: IOMI's [Business plan runs $79/month](https://iomifinance.com/pricing) — a flat subscription, never a percentage of assets — with a 1-month free trial and no credit card required. If you currently rebuild your combined picture by hand, connect everything once and see what the compartmentalized version looks like.
 
 ## Frequently Asked Questions
 
@@ -115,7 +115,7 @@ Your ownership stake does — and for most founders it's the largest single line
 
 ### How many entities can I track in IOMI?
 
-The Business plan supports up to three business entities, each as its own compartment with its own accounts and position, plus your personal finances tracked alongside — never mixed — with a consolidated view across everything. It's $39/month at the founding rate, flat, with annual billing giving two months free.
+The Business plan supports up to three business entities, each as its own compartment with its own accounts and position, plus your personal finances tracked alongside — never mixed — with a consolidated view across everything. It's $79/month, flat, with annual billing giving two months free.
 
 ### What's the biggest mistake founders make after separating their finances?
 

@@ -87,7 +87,7 @@ Periodically: revaluation. Annually for most categories, or when a market visibl
 
 Continuously, at no effort: the system does the rest. The collection appears in every net worth view, every allocation, every score, every conversation with the IOMI AI. The Daily Brief covers material changes across the connected picture; the collection's share simply rides along, visible whenever you look.
 
-The economics are trivial next to the assets involved: IOMI is a flat $29/mo Personal or $39/mo Business at founding rates — never a percentage of assets — with a 1-month free trial requiring no credit card. If you are comparing platforms for tracking alternative assets, the [IOMI vs. Kubera comparison](https://iomifinance.com/compare/kubera) covers how two all-asset trackers approach the problem differently; pricing details live at [iomifinance.com/pricing](https://iomifinance.com/pricing).
+The economics are trivial next to the assets involved: IOMI is a flat $29/mo Personal or $79/mo Business ats — never a percentage of assets — with a 1-month free trial requiring no credit card. If you are comparing platforms for tracking alternative assets, the [IOMI vs. Kubera comparison](https://iomifinance.com/compare/kubera) covers how two all-asset trackers approach the problem differently; pricing details live at [iomifinance.com/pricing](https://iomifinance.com/pricing).
 
 The bottom line is symmetry. You would not run a company without knowing what it owns. The founder's personal balance sheet deserves the same completeness — and for most founders, collectibles are the last unlit room in the house.
 

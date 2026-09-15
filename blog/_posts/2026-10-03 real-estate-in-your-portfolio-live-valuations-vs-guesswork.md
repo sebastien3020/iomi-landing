@@ -85,7 +85,7 @@ If you are evaluating tools, the checklist is short:
 - **Full-portfolio context.** Property alongside every other asset class, feeding shared metrics — not a silo.
 - **Read-only architecture.** Visibility without any ability to move money.
 
-A standalone **real estate portfolio tracker** typically delivers the first two; the last three require a platform built for whole-portfolio oversight. IOMI's version of that argument is on [Why IOMI](https://iomifinance.com/why-iomi), and the flat pricing — $29/month Personal, $39/month Business at the founding rate, never a percentage of assets, 1-month free trial with no credit card — is at [iomifinance.com/pricing](https://iomifinance.com/pricing).
+A standalone **real estate portfolio tracker** typically delivers the first two; the last three require a platform built for whole-portfolio oversight. IOMI's version of that argument is on [Why IOMI](https://iomifinance.com/why-iomi), and the flat pricing — $29/month Personal, $79/month Business, never a percentage of assets, 1-month free trial with no credit card — is at [iomifinance.com/pricing](https://iomifinance.com/pricing).
 
 ## Four Mistakes Property Owners Make in Portfolio Tracking
 

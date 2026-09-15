@@ -146,7 +146,7 @@ Imagine an assistant that never sleeps and has perfect recall of every transacti
 
 Most **wealth software** and advisory services have a conflict of interest. They charge a percentage of your assets, meaning their revenue grows as yours does, regardless of the value they provide. IOMI operates on a transparent, flat subscription model. We don't take commissions. We don't sell data. We provide a premium tool for a fixed rate. 
 
-The Personal plan is $29/mo, designed for individuals seeking total oversight of their personal net worth. For those managing up to three entities, the Business plan is $39/mo at the founding rate. This includes QuickBooks sync and the ability to separate business compartments from personal wealth. Security is non-negotiable. We use Stripe-powered billing and read-only Plaid integrations. Your capital stays exactly where it belongs. Every new user starts with a 1-month free trial and a 30-day money-back guarantee. Move from chaos to clarity. Risk-free. Effortless. Strategic.
+The Personal plan is $29/mo, designed for individuals seeking total oversight of their personal net worth. For those managing up to three entities, the Business plan is $79/mo. This includes QuickBooks sync and the ability to separate business compartments from personal wealth. Security is non-negotiable. We use Stripe-powered billing and read-only Plaid integrations. Your capital stays exactly where it belongs. Every new user starts with a 1-month free trial and a 30-day money-back guarantee. Move from chaos to clarity. Risk-free. Effortless. Strategic.
 
 ## The Command Center for Your Next Strategic Move
 
@@ -188,7 +188,7 @@ No, IOMI does not provide tax filing or tax optimization services. It is a wealt
 
 ### How much does a professional wealth intelligence platform cost in 2026?
 
-IOMI uses a transparent, flat subscription model instead of asset-percentage fees. The Personal plan is $29 per month for total personal oversight. The Business plan is currently available at a $39 per month founding rate for those managing up to three entities. There are no hidden commissions or data-selling practices. Every user starts with a one-month free trial to experience the transition to **wealth software**.
+IOMI uses a transparent, flat subscription model instead of asset-percentage fees. The Personal plan is $29 per month for total personal oversight. The Business plan is currently available at a $79 per month for those managing up to three entities. There are no hidden commissions or data-selling practices. Every user starts with a one-month free trial to experience the transition to **wealth software**.
 
 ![Sebastien](https://getautoseo.com/storage/author-thumbnails/site_82435_author_1787488732.jpeg)
 

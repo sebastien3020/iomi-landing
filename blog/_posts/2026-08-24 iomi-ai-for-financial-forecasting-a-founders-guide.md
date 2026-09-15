@@ -38,7 +38,7 @@ You've felt the cognitive load of managing multiple entities while fearing a maj
   * Reduce cognitive load by using IOMI AI for financial forecasting to manage complex multi-entity structures and personal assets in one unified dashboard.
   * Identify and reallocate idle capital using the Capital Efficiency Score (CES) to maximize your compounding potential and eliminate financial drag.
   * Execute high-stakes financial moves with confidence by running deterministic simulations that model the exact outcome of every major reallocation.
-  * Transition from manual data entry to automated oversight with a founding rate that scales alongside your business growth.
+  * Transition from manual data entry to automated oversight with a that scales alongside your business growth.
 
 
 
@@ -127,9 +127,9 @@ Transitioning from manual tracking to automated intelligence isn't a migration p
 
 Selecting [the right plan](https://iomifinance.com/pricing) depends on your structural complexity. The Personal plan at $29/mo provides a comprehensive view for individual investors. It includes live net worth tracking, the Capital Efficiency Score, and the AI assistant. For serial entrepreneurs managing multiple LLCs, the Business plan is the modern standard. It offers dedicated multi-entity support and deeper business-specific integrations. You can test the entire Wealth OS for one month for free without providing a credit card. It's a risk-free entry into a new era of financial clarity.
 
-### The Founding Rate Advantage
+### Annual Billing and Early Access
 
-Early adopters gain a significant strategic edge. You can lock in the $39/mo founding rate for the Business plan, which is regularly $79/mo. This isn't just a temporary discount; it's a permanent investment in a system that scales alongside your professional growth. Annual billing provides an even sharper advantage, effectively granting you two months of service for free every year. Early access to new features ensures you stay ahead of the curve as the market evolves. Secure your position, lock in your rate, and scale your intelligence.
+The Business plan is $79/mo, or $780/year. Annual billing effectively grants you two months of service for free every year. Early access to new features ensures you stay ahead of the curve as the market evolves.
 
 ### Security and Privacy: The Read-Only Standard
 
@@ -137,7 +137,7 @@ Security is the foundation of the IOMI platform. The system operates on a strict
 
 ## Command Your Financial Trajectory
 
-Static spreadsheets are a liability in a high-speed market. You've seen how fragmentation creates cognitive load and leaves capital idle while inflation erodes your purchasing power. By consolidating personal and business assets through 12,000+ financial institution integrations, you gain total oversight. Start **using IOMI AI for financial forecasting** to replace guesswork with deterministic logic. You get a live Wealth OS for a flat subscription fee; there are no asset-percentage charges to drag down your compounding potential. It's time to stop tracking history and start engineering your growth. You now have the tools to model every scenario and deploy capital with absolute precision. Transition from a state of disorder to one of total strategic command. Your future net worth depends on the speed of your intelligence. Every day spent in manual entry is a day lost to strategic execution. Secure your founding rate and take control of your trajectory today.
+Static spreadsheets are a liability in a high-speed market. You've seen how fragmentation creates cognitive load and leaves capital idle while inflation erodes your purchasing power. By consolidating personal and business assets through 12,000+ financial institution integrations, you gain total oversight. Start **using IOMI AI for financial forecasting** to replace guesswork with deterministic logic. You get a live Wealth OS for a flat subscription fee; there are no asset-percentage charges to drag down your compounding potential. It's time to stop tracking history and start engineering your growth. You now have the tools to model every scenario and deploy capital with absolute precision. Transition from a state of disorder to one of total strategic command. Your future net worth depends on the speed of your intelligence. Every day spent in manual entry is a day lost to strategic execution. Secure your and take control of your trajectory today.
 
 [Replace your spreadsheets with the IOMI Wealth OS today](https://app.iomifinance.com/create-account)
 
@@ -157,7 +157,7 @@ A credit score measures your ability to borrow; the Capital Efficiency Score (CE
 
 ### What is the difference between the Personal and Business plans?
 
-The Personal plan costs $29/mo and focuses on individual net worth tracking with standard AI assistant access. The Business plan, currently offered at a $39/mo founding rate, is designed for entrepreneurs managing up to three distinct LLCs or holding companies. It includes a live QuickBooks balance sync and doubles your daily AI message limit. Business users receive priority for complex queries involving multi-entity forecasting and professional asset structures that require deeper oversight.
+The Personal plan costs $29/mo and focuses on individual net worth tracking with standard AI assistant access. The Business plan, currently offered at a $79/mo, is designed for entrepreneurs managing up to three distinct LLCs or holding companies. It includes a live QuickBooks balance sync and doubles your daily AI message limit. Business users receive priority for complex queries involving multi-entity forecasting and professional asset structures that require deeper oversight.
 
 ### Does IOMI AI provide specific investment advice?
 

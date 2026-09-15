@@ -120,7 +120,7 @@ Enough for its stated job, and no more — the useful move is giving every entit
 
 ### Can IOMI handle multiple entities?
 
-Yes — that is the core of its business model. Each business entity is its own compartment, tracked side by side with personal and never mixed, with a consolidated view across everything. The Business plan supports up to three entities at $39/month (founding rate), flat — never a percentage of assets. Connections are read-only through Plaid across 12,000+ institutions, so partner-owned entities can be visible without anyone gaining the power to move funds.
+Yes — that is the core of its business model. Each business entity is its own compartment, tracked side by side with personal and never mixed, with a consolidated view across everything. The Business plan supports up to three entities at $79/month, flat — never a percentage of assets. Connections are read-only through Plaid across 12,000+ institutions, so partner-owned entities can be visible without anyone gaining the power to move funds.
 
 ### What are the biggest mistakes founders make with holding company finances?
 

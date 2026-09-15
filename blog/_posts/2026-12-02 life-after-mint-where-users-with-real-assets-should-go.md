@@ -75,7 +75,7 @@ IOMI is built for the Mint refugee whose finances outgrew Mint before Mint died.
 
 **Intelligence:** the Capital Efficiency Score grades how well your capital is deployed — 0 to 100, across liquidity, idle capital, drag, risk balance, and concentration. Insights include a cash-flow forecast, a year-by-year Projection from today's holdings, a deterministic Simulator for testing moves before making them, Goals with milestones, Next Dollar Allocation, and a Daily Brief. And IOMI AI answers questions from your real holdings — never estimating when data is missing — which is what a money assistant should mean, as opposed to [a general chatbot guessing about your finances](https://iomifinance.com/compare/chatgpt).
 
-**Pricing:** flat. Personal is $29/month, Business $39/month (a founding rate, locked while you stay subscribed), annual billing gives two months free, and the trial is a full month with no credit card required. Never a percentage of assets, no commissions, no products pushed — the [pricing page](https://iomifinance.com/pricing) has the details.
+**Pricing:** flat. Personal is $29/month, Business $79/month (a, locked while you stay subscribed), annual billing gives two months free, and the trial is a full month with no credit card required. Never a percentage of assets, no commissions, no products pushed — the [pricing page](https://iomifinance.com/pricing) has the details.
 
 What IOMI deliberately is not: a budgeting app. There are no envelope budgets or spending challenges. If you want both disciplines — spending control and wealth oversight — running a budgeting app alongside IOMI is a perfectly rational stack; they do not overlap.
 
@@ -115,7 +115,7 @@ Check the access model. IOMI connects through Plaid in read-only mode: it can se
 
 ### How much do Mint replacements cost?
 
-Mint's free model was subsidized by ads and data; nearly all successors charge subscriptions, and pricing changes often enough that current numbers belong on each product's site. The structural question matters more than the monthly figure: prefer flat subscriptions over percentage-of-assets pricing. IOMI is flat — $29/month Personal, $39/month Business at the founding rate, with a free month to start and no credit card required.
+Mint's free model was subsidized by ads and data; nearly all successors charge subscriptions, and pricing changes often enough that current numbers belong on each product's site. The structural question matters more than the monthly figure: prefer flat subscriptions over percentage-of-assets pricing. IOMI is flat — $29/month Personal, $79/month Business, with a free month to start and no credit card required.
 
 ### Why not just use a spreadsheet?
 

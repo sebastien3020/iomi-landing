@@ -96,7 +96,7 @@ Run these five tests during a free trial with your real accounts and the decisio
 
 If real usage concentrates on five features, two conclusions follow. First, compare wealth management platform features by depth on the short list, not by length of the long one — a vendor that nails entity separation and grounded AI beats one with forty shallow checkboxes. Second, pricing should reward that concentration rather than punish it. Asset-based fees — the traditional wealth management model — charge you more every year for the same five features as your capital grows. A flat subscription does not.
 
-IOMI is flat: Personal at $29/month, Business at $39/month at the founding rate (regular $79), locked while you stay subscribed. Never a percentage of assets, no commissions, no product pushing. Annual billing earns two months free, and the 1-month free trial requires no credit card — long enough to discover, with your own accounts connected, which features you actually use. Details at [iomifinance.com/pricing](https://iomifinance.com/pricing).
+IOMI is flat: Personal at $29/month, Business at $79/month, locked while you stay subscribed. Never a percentage of assets, no commissions, no product pushing. Annual billing earns two months free, and the 1-month free trial requires no credit card — long enough to discover, with your own accounts connected, which features you actually use. Details at [iomifinance.com/pricing](https://iomifinance.com/pricing).
 
 ## Frequently Asked Questions
 
@@ -122,7 +122,7 @@ It is useful precisely when it is grounded. IOMI AI answers from your connected 
 
 ### How much does a wealth management platform cost?
 
-Models vary from free-with-ads to a percentage of assets. IOMI charges a flat subscription: $29/month Personal, $39/month Business at the founding rate, with two months free on annual billing and a 1-month free trial, no credit card required.
+Models vary from free-with-ads to a percentage of assets. IOMI charges a flat subscription: $29/month Personal, $79/month Business, with two months free on annual billing and a 1-month free trial, no credit card required.
 
 ### How do I know if I'll actually use a platform before paying?
 

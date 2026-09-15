@@ -77,7 +77,7 @@ The difference between a resolution and a system is what happens when you stop p
 
 **A quarterly re-plan, not an annual re-vow.** Put four thirty-minute reviews on the calendar now — end of March, June, September, December. Agenda: is each mechanism still running, is each metric moving, does any resolution need resizing or retiring? Resolutions survive by being *adjusted* — the annual pattern of abandoning in February and re-promising next January is exactly the loop this replaces.
 
-The whole stack — connections, score, brief, goals, simulator — is a flat [$29–$39/month](https://iomifinance.com/pricing), with a one-month free trial and no credit card required, which happens to fit the January experiment perfectly: instrument the resolutions in the free month, and by February the system is either visibly carrying you or it isn't.
+The whole stack — connections, score, brief, goals, simulator — is a flat [$29–$79/month](https://iomifinance.com/pricing), with a one-month free trial and no credit card required, which happens to fit the January experiment perfectly: instrument the resolutions in the free month, and by February the system is either visibly carrying you or it isn't.
 
 ## The January Checklist
 

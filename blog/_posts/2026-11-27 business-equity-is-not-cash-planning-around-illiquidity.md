@@ -93,7 +93,7 @@ The through-line of all of this is a visibility requirement: you need total net 
 
 In practice that means a system where the business equity sits on the balance sheet at its documented value, clearly marked as what it is; where bank, brokerage, and crypto positions update via read-only connections (IOMI connects 12,000+ institutions through Plaid — it can see balances and transactions, never move money, and never sees credentials); and where the analytical layer — efficiency scoring, simulation, [a net worth view built for founders](/blog/what-is-my-net-worth-the-founders-guide-to-total-wealth-intelligence) — computes across the whole picture.
 
-That is the product IOMI is: a flat-subscription wealth platform ($29/month Personal, $39/month Business — [pricing here](https://iomifinance.com/pricing), never a percentage of assets) built for people whose wealth spans exactly this paper–cash divide. You can [try it free for a month](https://iomifinance.com), no credit card required, and see both of your numbers on one screen — probably for the first time.
+That is the product IOMI is: a flat-subscription wealth platform ($29/month Personal, $79/month Business — [pricing here](https://iomifinance.com/pricing), never a percentage of assets) built for people whose wealth spans exactly this paper–cash divide. You can [try it free for a month](https://iomifinance.com), no credit card required, and see both of your numbers on one screen — probably for the first time.
 
 ## Frequently Asked Questions
 

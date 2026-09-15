@@ -85,7 +85,7 @@ Drag reduction is unglamorous, which is exactly why it works — no market view 
 - **Simulate before you move.** IOMI's Simulator models reallocations and planned cash-flow events deterministically — explicit arithmetic, no black box — so you can compare configurations before committing. The Projection then shows the year-by-year path from today's holdings.
 - **Re-check quarterly, not constantly.** Drag accumulates slowly; a quarterly review against your CES trend is enough. The Daily Brief handles the in-between by flagging what changed.
 
-None of this is investment advice — what to hold is between you and your judgment or your licensed advisor. What a platform can do is make the friction visible and measurable so the decisions get made with open eyes. That visibility runs $29/month on IOMI's Personal plan, $39 on Business at the founding rate, with a 1-month free trial and no credit card required — details at [iomifinance.com/pricing](https://iomifinance.com/pricing).
+None of this is investment advice — what to hold is between you and your judgment or your licensed advisor. What a platform can do is make the friction visible and measurable so the decisions get made with open eyes. That visibility runs $29/month on IOMI's Personal plan, $79 on Business, with a 1-month free trial and no credit card required — details at [iomifinance.com/pricing](https://iomifinance.com/pricing).
 
 ## A Worked Example: Anatomy of a Founder's Drag
 
@@ -127,6 +127,6 @@ No, and by design. IOMI is read-only — it can never move money. What it does i
 
 ### Does IOMI's own pricing create drag?
 
-The pricing model is built to avoid it: a flat subscription ($29/month Personal, $39/month Business at the founding rate), never a percentage of assets, no commissions, no product pushing. A flat fee does not scale against your growth the way asset-based fees do.
+The pricing model is built to avoid it: a flat subscription ($29/month Personal, $79/month Business), never a percentage of assets, no commissions, no product pushing. A flat fee does not scale against your growth the way asset-based fees do.
 
 IOMI is not a bank, broker or financial advisor. It does not custody assets, execute trades or provide personalized investment advice. All outputs are educational.

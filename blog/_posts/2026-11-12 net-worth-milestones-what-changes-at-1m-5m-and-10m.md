@@ -75,7 +75,7 @@ Strip the numbers away and the through-line across all net worth milestones is c
 
 The habit looks the same at every level. One consolidated, current view of everything — personal and business, liquid and illiquid, every asset class from bank accounts to collectibles. A small set of standing questions: allocation, concentration, idle capital, runway. A regular rhythm of review — a daily five-minute brief or a weekly pass, not a quarterly archaeology session. And a way to test moves before making them: at $1M the simulations are simple ("what if I move $50k?"), at $10M they involve entities and sequencing, but the discipline of modeling before committing is identical.
 
-This is the layer IOMI is built to own at any of these milestones — flat subscription at [$29–$39/month](https://iomifinance.com/pricing), never a percentage of assets, with a one-month free trial and no credit card required. The milestones change what you decide. The visibility that decisions depend on should not have to be rebuilt at each one.
+This is the layer IOMI is built to own at any of these milestones — flat subscription at [$29–$79/month](https://iomifinance.com/pricing), never a percentage of assets, with a one-month free trial and no credit card required. The milestones change what you decide. The visibility that decisions depend on should not have to be rebuilt at each one.
 
 ## Frequently Asked Questions
 

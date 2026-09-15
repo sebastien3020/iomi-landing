@@ -87,7 +87,7 @@ That reframing changes behavior in three ways.
 
 **An exit becomes thinkable.** E-commerce businesses are bought and sold constantly. A founder who has tracked the business as an asset — with clean separation, honest inventory marks, and documented financials — is structurally prepared for a sale conversation years before it happens. One who has run it as an extension of their checking account is not.
 
-The starting point for all of it is the same: one complete, current picture. [IOMI's free month](https://iomifinance.com) — no credit card required — is enough to connect the business and personal accounts, enter the inventory position, and see, possibly for the first time, what your whole operation actually adds up to. Pricing stays flat after that: $29/month Personal, $39/month Business at the founding rate, per the [pricing page](https://iomifinance.com/pricing) — never a percentage of what you have built.
+The starting point for all of it is the same: one complete, current picture. [IOMI's free month](https://iomifinance.com) — no credit card required — is enough to connect the business and personal accounts, enter the inventory position, and see, possibly for the first time, what your whole operation actually adds up to. Pricing stays flat after that: $29/month Personal, $79/month Business, per the [pricing page](https://iomifinance.com/pricing) — never a percentage of what you have built.
 
 ## Frequently Asked Questions
 

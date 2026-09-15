@@ -102,7 +102,7 @@ The system above sounds like a project; it is closer to a weekend habit. A minim
 
 **Then — run the rhythm.** Weekly glance, monthly review, quarterly decisions. The system holds the picture; you hold the judgment.
 
-The Business plan — personal side plus up to three entity compartments — is $39/month at the founding rate, with [a 1-month free trial, no credit card required](https://iomifinance.com/pricing). Set against the instrumentation owners cheerfully fund for their companies, giving the actual objective a system is overdue.
+The Business plan — personal side plus up to three entity compartments — is $79/month, with [a 1-month free trial, no credit card required](https://iomifinance.com/pricing). Set against the instrumentation owners cheerfully fund for their companies, giving the actual objective a system is overdue.
 
 ## Frequently Asked Questions
 
@@ -132,6 +132,6 @@ Weekly: a two-minute glance at the consolidated position and anything anomalous.
 
 ### What does IOMI cost for a business owner?
 
-The Business plan is $39/month at the founding rate (locked while subscribed; regular price $79), covering the personal space plus up to 3 business entity compartments, the Capital Efficiency Score, goals, projections, the Simulator, and IOMI AI at 200 messages a day. Annual billing takes two months off, and there is a 1-month free trial with no credit card required. Pricing is a flat subscription — never a percentage of assets, with no commissions and no products pushed.
+The Business plan is $79/month (locked while subscribed; regular price $79), covering the personal space plus up to 3 business entity compartments, the Capital Efficiency Score, goals, projections, the Simulator, and IOMI AI at 200 messages a day. Annual billing takes two months off, and there is a 1-month free trial with no credit card required. Pricing is a flat subscription — never a percentage of assets, with no commissions and no products pushed.
 
 IOMI is not a bank, broker or financial advisor. It does not custody assets, execute trades or provide personalized investment advice. All outputs are educational.

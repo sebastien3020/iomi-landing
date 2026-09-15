@@ -144,7 +144,7 @@ Consolidation is only the first step. IOMI AI functions as a 24/7 strategist, co
 
 Trust is built on security. IOMI uses read-only access, meaning the system can see your data but cannot move your money. This architectural choice eliminates the risk of unauthorized transactions while providing the visibility you need to make informed decisions. When you choose [wealth software](https://blog.iomifinance.com/post/how-to-choose-wealth-software-the-founders-guide-to-total-oversight-in-2026), privacy is paramount. IOMI doesn't sell your data to third parties. Your financial life remains your own, protected by enterprise-grade encryption and a commitment to founder-first values. You get the intelligence of the cloud with the privacy of a vault.
 
-The transition to a unified Wealth OS is accessible and direct. IOMI offers a Personal plan at $29/mo for individuals looking to streamline their private holdings. For founders managing multi-entity structures, the Business plan provides a $39/mo founding rate. This investment replaces the cognitive load of manual tracking with the power of **capital efficiency modeling**. You gain total oversight. You maximize compounding. You lead your net worth with absolute confidence.
+The transition to a unified Wealth OS is accessible and direct. IOMI offers a Personal plan at $29/mo for individuals looking to streamline their private holdings. For founders managing multi-entity structures, the Business plan provides a $79/mo. This investment replaces the cognitive load of manual tracking with the power of **capital efficiency modeling**. You gain total oversight. You maximize compounding. You lead your net worth with absolute confidence.
 
 ## Take Command of Your Strategic Cockpit
 

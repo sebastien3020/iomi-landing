@@ -84,7 +84,7 @@ Intelligence is only valuable if it's current. Software automates the valuation 
 
 ### Where Advisors Still Play a Role
 
-Technology hasn't replaced the need for specialized legal or psychological support. Advisors remain essential for complex estate planning and navigating multi-generational legal structures where nuance beats automation. They serve as a human sounding board during extreme market volatility, providing the emotional distance a founder might lack. Even so, modern [wealth management software](https://blog.iomifinance.com/post/wealth-management-software-the-strategic-cockpit-for-founders-in-2026) acts as the primary intelligence layer. It empowers tax pros and attorneys with clean, live data rather than replacing them entirely. The choice is about the cost of the conversation. Contrast a flat $39/mo business rate against a standard 1% AUM fee. On a $5M portfolio, that's the difference between a subscription and a $50,000 annual bill. Efficiency is the only logical choice.
+Technology hasn't replaced the need for specialized legal or psychological support. Advisors remain essential for complex estate planning and navigating multi-generational legal structures where nuance beats automation. They serve as a human sounding board during extreme market volatility, providing the emotional distance a founder might lack. Even so, modern [wealth management software](https://blog.iomifinance.com/post/wealth-management-software-the-strategic-cockpit-for-founders-in-2026) acts as the primary intelligence layer. It empowers tax pros and attorneys with clean, live data rather than replacing them entirely. The choice is about the cost of the conversation. Contrast a flat $79/mo business rate against a standard 1% AUM fee. On a $5M portfolio, that's the difference between a subscription and a $50,000 annual bill. Efficiency is the only logical choice.
 
 ## The Intelligence Gap: Why Static Analysis Can’t Compete with AI
 
@@ -128,7 +128,7 @@ Manual tracking creates cognitive drag. It's a distraction from your core busine
 
 The choice between **wealth management software vs advisor** isn't about choosing a tool. It's about choosing an operating system for your life's work. IOMI is the first Wealth OS designed specifically for the unique complexities of the founder's lifestyle. It provides a unified, live picture of your entire financial world. Banks. Real estate. Private equity. Digital assets. Everything is consolidated into a single cockpit that updates in real time. You no longer have to guess where you stand. You know.
 
-The IOMI Business Plan is engineered for high-performance builders. For a founding rate of $39/mo, you gain support for up to three business entities with full QuickBooks synchronization. This plan includes unlimited account connections and priority access to IOMI AI. While traditional advisors charge thousands in AUM fees for basic reporting, IOMI provides advanced wealth intelligence for a flat subscription. It's a strategic shift from paying for a relationship to paying for results. You can start with a 1-month free trial to replace your fragmented spreadsheets and experience total oversight immediately.
+The IOMI Business Plan is engineered for high-performance builders. For a of $79/mo, you gain support for up to three business entities with full QuickBooks synchronization. This plan includes unlimited account connections and priority access to IOMI AI. While traditional advisors charge thousands in AUM fees for basic reporting, IOMI provides advanced wealth intelligence for a flat subscription. It's a strategic shift from paying for a relationship to paying for results. You can start with a 1-month free trial to replace your fragmented spreadsheets and experience total oversight immediately.
 
 ### Built for How You Build: The Founder-First Dashboard
 
@@ -176,7 +176,7 @@ No, IOMI is a wealth intelligence platform, not a brokerage or advisory service.
 
 ### How much does IOMI cost for small business owners?
 
-IOMI offers transparent, flat-fee pricing that contrasts sharply with AUM-based models. For founders, the Business founding rate is $39/mo. This includes support for three entities and priority AI assistance. We also offer a Personal plan at $29/mo for individual wealth tracking. There are no hidden fees, no percentage-based management costs, and no misaligned incentives. You pay for the intelligence, not a portion of your portfolio.
+IOMI offers transparent, flat-fee pricing that contrasts sharply with AUM-based models. For founders, the Business is $79/mo. This includes support for three entities and priority AI assistance. We also offer a Personal plan at $29/mo for individual wealth tracking. There are no hidden fees, no percentage-based management costs, and no misaligned incentives. You pay for the intelligence, not a portion of your portfolio.
 
 ### Can I simulate financial moves like a house purchase or business exit?
 

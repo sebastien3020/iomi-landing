@@ -124,7 +124,7 @@ Your **alternative asset dashboard** is powered by secure, read-only connections
 
 ### Choosing the Right Plan for Your Growth
 
-Selecting a plan depends on the complexity of your ecosystem. The Personal Plan at $29 per month provides full personal oversight and access to the Capital Efficiency Score. It's built for high-achievers who need a sleek, modern interface for their private holdings. The Business Plan, offered at a $39 per month founding rate, is the standard for entrepreneurs. It supports up to three entity compartments and includes QuickBooks sync. This allows you to lock in significant value while your portfolio grows. You get the power of a sophisticated family office at a fraction of the cost.
+Selecting a plan depends on the complexity of your ecosystem. The Personal Plan at $29 per month provides full personal oversight and access to the Capital Efficiency Score. It's built for high-achievers who need a sleek, modern interface for their private holdings. The Business Plan, offered at a $79 per month, is the standard for entrepreneurs. It supports up to three entity compartments and includes QuickBooks sync. This allows you to lock in significant value while your portfolio grows. You get the power of a sophisticated family office at a fraction of the cost.
 
 ### Getting Started: Your First 30 Days
 

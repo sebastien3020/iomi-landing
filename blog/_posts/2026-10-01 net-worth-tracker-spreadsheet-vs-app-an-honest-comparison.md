@@ -57,7 +57,7 @@ Then there is the layer no spreadsheet can build: analysis on live data. The Cap
 
 Symmetric honesty. Apps have real limitations:
 
-- **Cost.** Spreadsheets are free; IOMI is $29/month Personal or $39/month Business at the founding rate. Real money, though flat — never a percentage of assets — and cheap against the value of decisions made on current data. Judge for yourself at [iomifinance.com/pricing](https://iomifinance.com/pricing).
+- **Cost.** Spreadsheets are free; IOMI is $29/month Personal or $79/month Business. Real money, though flat — never a percentage of assets — and cheap against the value of decisions made on current data. Judge for yourself at [iomifinance.com/pricing](https://iomifinance.com/pricing).
 - **Structural opinions.** An app has a data model. It is designed for the shapes wealth actually takes, but if you want a truly bespoke calculation — a custom vesting waterfall, a one-off deal model — a spreadsheet remains the right scratchpad.
 - **Connection dependency.** Aggregation depends on institutions cooperating. Connections occasionally need re-authentication. The mitigation is design: IOMI flags missing data rather than papering over it, which preserves trust in the total.
 - **A subscription is a relationship.** Your spreadsheet cannot shut down. A responsible app answers this with exportability and with an architecture — read-only, no custody — that means leaving costs you nothing but convenience.
@@ -124,6 +124,6 @@ No. Demote it. Let the app be the system of record for balances and valuations; 
 
 ### What does a net worth tracking app cost?
 
-IOMI runs $29/month for Personal and $39/month for Business at the founding rate (regular $79), flat — never a percentage of assets, no commissions. Annual billing earns two months free, and there is a 1-month free trial with no credit card required.
+IOMI runs $29/month for Personal and $79/month for Business, flat — never a percentage of assets, no commissions. Annual billing earns two months free, and there is a 1-month free trial with no credit card required.
 
 IOMI is not a bank, broker or financial advisor. It does not custody assets, execute trades or provide personalized investment advice. All outputs are educational.

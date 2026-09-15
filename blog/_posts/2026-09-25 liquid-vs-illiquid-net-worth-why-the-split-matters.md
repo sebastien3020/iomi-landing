@@ -91,7 +91,7 @@ A secondary sale is the classic split-shifter: converting a slice of the dominan
 
 An exit is the split inverting entirely — and the founders who navigate post-exit wealth best are typically the ones who built the seeing-and-deciding habit years earlier, on a smaller balance sheet.
 
-In each case the pattern is identical: the event moves value across the liquid/illiquid line, and the quality of what happens next depends on whether the line was visible. That visibility is the product: [IOMI](https://iomifinance.com) exists to keep the full picture — both sides of the line, every entity, every class — live and legible, for a flat $29/mo Personal or $39/mo Business at founding rates, with a 1-month free trial and no credit card required.
+In each case the pattern is identical: the event moves value across the liquid/illiquid line, and the quality of what happens next depends on whether the line was visible. That visibility is the product: [IOMI](https://iomifinance.com) exists to keep the full picture — both sides of the line, every entity, every class — live and legible, for a flat $29/mo Personal or $79/mo Business ats, with a 1-month free trial and no credit card required.
 
 ## Frequently Asked Questions
 

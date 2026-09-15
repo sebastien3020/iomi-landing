@@ -120,7 +120,7 @@ Founders don't live in silos. Your holding companies, personal LLCs, and brokera
 
 Data without action is noise. IOMI AI turns your holdings into answers. You can ask plain-English queries about your liquidity, risk, or allocation. The Daily Briefing functions as your financial daily standup. It highlights your wins, flags your risks, and suggests your next move. The Next Dollar Allocation feature ranks potential reallocations to optimize your Capital Efficiency Score. You stop guessing. You start executing. IOMI is an always-on assistant that is tireless, objective, and hyper-intelligent. It provides exactly what you need to make a decision, then steps back to let you lead.
 
-Transparency is our baseline. The Personal plan is $29/mo, while the Business founding rate is $39/mo. There are no hidden fees or enterprise complexity. It’s a premium experience at a practical price point. You’ve built the capital; now it’s time to master it. [Join IOMI and scale your wealth with intelligence](https://www.iomifinance.com) today. Move from cognitive load to total oversight. Your future deserves a strategic cockpit.
+Transparency is our baseline. The Personal plan is $29/mo, while the Business is $79/mo. There are no hidden fees or enterprise complexity. It’s a premium experience at a practical price point. You’ve built the capital; now it’s time to master it. [Join IOMI and scale your wealth with intelligence](https://www.iomifinance.com) today. Move from cognitive load to total oversight. Your future deserves a strategic cockpit.
 
 ## Command Your Capital with Mathematical Certainty
 
@@ -162,7 +162,7 @@ IOMI is designed for the personal and business hybrid life of a founder. The Bus
 
 ### How much does IOMI cost for entrepreneurs?
 
-Transparency is a core value of the platform. The Personal plan is $29/mo, or approximately $24/mo when billed annually. For entrepreneurs managing entities, the Business plan offers a $39/mo founding rate, which is locked as long as your subscription remains active. Both plans include a one-month free trial with no credit card required. There are no asset-percentage fees or hidden commissions; it is a flat subscription for total financial oversight.
+Transparency is a core value of the platform. The Personal plan is $29/mo, or approximately $24/mo when billed annually. For entrepreneurs managing entities, the Business plan offers a $79/mo, which is locked as long as your subscription remains active. Both plans include a one-month free trial with no credit card required. There are no asset-percentage fees or hidden commissions; it is a flat subscription for total financial oversight.
 
 ![Sebastien](https://getautoseo.com/storage/author-thumbnails/site_82435_author_1787488732.jpeg)
 

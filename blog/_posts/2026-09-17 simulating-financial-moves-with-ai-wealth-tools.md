@@ -102,7 +102,7 @@ Tools change outcomes only when they change behavior. A workflow that sticks:
 
 **Keep the loop short.** Fifteen minutes from question to compared trajectories is the standard a good tool should hit. Longer than that and simulation becomes a quarterly project instead of a reflex.
 
-IOMI's Simulator, Projection, and Goals run on both plans — [Personal at $29/month, Business at $39/month](https://iomifinance.com/pricing), flat subscription, never a percentage of assets — with a 1-month free trial and no credit card required. Enough time to connect everything and test the decision you're currently sitting on.
+IOMI's Simulator, Projection, and Goals run on both plans — [Personal at $29/month, Business at $79/month](https://iomifinance.com/pricing), flat subscription, never a percentage of assets — with a 1-month free trial and no credit card required. Enough time to connect everything and test the decision you're currently sitting on.
 
 ## Frequently Asked Questions
 

@@ -128,7 +128,7 @@ A general chatbot cannot see your accounts, so any specific answer is assembled 
 
 ### How many questions can I ask IOMI AI?
 
-The Personal plan includes 100 messages per day; Business includes 200 per day with priority. Both plans are flat subscriptions — $29 and $39 per month at the founding rate — never a percentage of assets, with a 1-month free trial and no credit card required.
+The Personal plan includes 100 messages per day; Business includes 200 per day with priority. Both plans are flat subscriptions — $29 and $79 per month — never a percentage of assets, with a 1-month free trial and no credit card required.
 
 ### How can I test whether any AI money tool guesses?
 

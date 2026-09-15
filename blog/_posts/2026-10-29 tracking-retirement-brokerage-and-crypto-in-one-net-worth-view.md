@@ -100,7 +100,7 @@ A practical sequence for going from fragments to one view:
 5. **Audit the classification.** Check that holdings landed in the right buckets — crypto as crypto, money market as cash, retirement in its own compartment.
 6. **Then stop maintaining it.** The entire point is that from here, the view refreshes on every sync. Your job shifts from assembling data to reading it.
 
-The whole exercise fits inside an hour — after which you track net worth across accounts by simply opening the app — and there is a [one-month free trial with no credit card required](https://iomifinance.com/pricing) if you want to run it before deciding — Personal at $29/mo, Business at $39/mo for founders who also need entity compartments.
+The whole exercise fits inside an hour — after which you track net worth across accounts by simply opening the app — and there is a [one-month free trial with no credit card required](https://iomifinance.com/pricing) if you want to run it before deciding — Personal at $29/mo, Business at $79/mo for founders who also need entity compartments.
 
 ## Frequently Asked Questions
 

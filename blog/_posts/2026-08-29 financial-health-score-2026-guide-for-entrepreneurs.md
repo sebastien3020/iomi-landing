@@ -128,15 +128,15 @@ To keep your **financial health score for entrepreneurs** top-of-mind, the syste
 
 Standard financial tools treat you like an employee. They focus on savings accounts and basic 401(k)s. Founders need more. You need a system that recognizes your business as your primary wealth engine. IOMI is built specifically for the unique needs of founders and operators. It moves beyond passive observation. It provides a strategic cockpit for high-achievers who value time and efficiency. This platform is the modern standard for those who view traditional methods as obsolete relics.
 
-Transparency is non-negotiable. Unlike traditional wealth management, IOMI operates on a flat subscription model. There are no AUM fees. We don't sell your data to third parties. You pay for a premium experience that prioritizes your visibility and compounding. Choosing your plan is straightforward. The Personal plan is $29/mo. The Business plan is offered at a $39/mo founding rate. This ensures you have a **financial health score for entrepreneurs** that isn't compromised by hidden incentives or misaligned goals.
+Transparency is non-negotiable. Unlike traditional wealth management, IOMI operates on a flat subscription model. There are no AUM fees. We don't sell your data to third parties. You pay for a premium experience that prioritizes your visibility and compounding. Choosing your plan is straightforward. The Personal plan is $29/mo. The Business plan is offered at a $79/mo. This ensures you have a **financial health score for entrepreneurs** that isn't compromised by hidden incentives or misaligned goals.
 
 ### The Business Plan Advantage
 
-The Business plan is designed for active builders managing multiple revenue streams. It features a QuickBooks balance sync for up to 3 business entities. This allows for real-time tracking of your holding companies and LLCs without manual entry. You gain priority AI limits with up to 200 messages per day. This is essential for complex financial querying and deep analysis of your portfolio's strategic drag. Locking in the founding rate now ensures long-term strategic oversight as the platform evolves. It is the definitive way to implement a [net worth tracker](https://blog.iomifinance.com/post/the-modern-net-worth-tracker-a-founders-guide-to-wealth-intelligence) that actually understands the mechanics of entrepreneurship.
+The Business plan is designed for active builders managing multiple revenue streams. It features a QuickBooks balance sync for up to 3 business entities. This allows for real-time tracking of your holding companies and LLCs without manual entry. You gain priority AI limits with up to 200 messages per day. This is essential for complex financial querying and deep analysis of your portfolio's strategic drag. Locking in the now ensures long-term strategic oversight as the platform evolves. It is the definitive way to implement a [net worth tracker](https://blog.iomifinance.com/post/the-modern-net-worth-tracker-a-founders-guide-to-wealth-intelligence) that actually understands the mechanics of entrepreneurship.
 
 ### Start Scaling Safely Today
 
-Onboarding is effortless and risk-free. Every new account starts with a 1-month free trial. This gives you full access to the system to see how it consolidates your data and calculates your score. If you choose to continue, we offer a 30-day money-back guarantee on your first paid month. There is no reason to stay trapped in a state of fragmentation. You move from cognitive load to total oversight in minutes. It is time to establish your **financial health score for entrepreneurs** and lead with precision. [Create your account and get your score now](https://app.iomifinance.com/create-account) to secure your founding rate and start scaling safely.
+Onboarding is effortless and risk-free. Every new account starts with a 1-month free trial. This gives you full access to the system to see how it consolidates your data and calculates your score. If you choose to continue, we offer a 30-day money-back guarantee on your first paid month. There is no reason to stay trapped in a state of fragmentation. You move from cognitive load to total oversight in minutes. It is time to establish your **financial health score for entrepreneurs** and lead with precision. [Create your account and get your score now](https://app.iomifinance.com/create-account) to secure your and start scaling safely.
 
 ## Master Your Founder-Led Wealth
 
@@ -178,7 +178,7 @@ No, IOMI is a wealth intelligence platform, not a financial advisor. We don't pr
 
 ### Is there a free trial available for founders?
 
-Yes, founders can access a one-month free trial with no credit card required. This allows you to connect your accounts and see your live **financial health score for entrepreneurs** immediately. We also offer a 30-day money-back guarantee on your first paid month. You can choose between the Personal plan at $29 per month or the Business plan at a $39 per month founding rate to lock in long-term oversight.
+Yes, founders can access a one-month free trial with no credit card required. This allows you to connect your accounts and see your live **financial health score for entrepreneurs** immediately. We also offer a 30-day money-back guarantee on your first paid month. You can choose between the Personal plan at $29 per month or the Business plan at a $79 per month to lock in long-term oversight.
 
 ![Sebastien](https://getautoseo.com/storage/author-thumbnails/site_82435_author_1787488732.jpeg)
 

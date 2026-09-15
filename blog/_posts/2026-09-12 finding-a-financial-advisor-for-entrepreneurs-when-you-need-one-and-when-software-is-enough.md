@@ -79,7 +79,7 @@ An advisor answers these annually, from data you assembled for the meeting. Soft
 
 The parts of "advice" that are actually computation are handled deterministically. The Capital Efficiency Score grades how well your capital is deployed across liquidity, idle capital, drag, risk balance, and concentration. The Simulator models reallocations and planned cash-flow events before you commit. Projection shows the year-by-year path from today's holdings. And IOMI AI answers questions from your real numbers — never estimates when data is missing — rather than from generic rules of thumb. If you want the full comparison of what software covers versus what an advisor covers, the [software vs. advisor framework](/blog/wealth-management-software-vs-advisor-the-2026-founders-framework) walks through it decision by decision.
 
-The economics are hard to ignore. A 1% AUM fee on $2M is $20,000 a year, every year, growing as your assets grow. IOMI's [Business plan is $39/month](https://iomifinance.com/pricing) — a flat subscription, never a percentage of assets, with no commissions and no products being sold to you. If most of what you'd pay an advisor for is reporting and monitoring, you are overpaying by roughly two orders of magnitude.
+The economics are hard to ignore. A 1% AUM fee on $2M is $20,000 a year, every year, growing as your assets grow. IOMI's [Business plan is $79/month](https://iomifinance.com/pricing) — a flat subscription, never a percentage of assets, with no commissions and no products being sold to you. If most of what you'd pay an advisor for is reporting and monitoring, you are overpaying by roughly two orders of magnitude.
 
 ## The Hybrid Model: Software First, Advice on Demand
 
@@ -137,7 +137,7 @@ A fiduciary is legally obligated to act in your best interest rather than merely
 
 ### How is IOMI different from hiring an advisor?
 
-IOMI is a wealth intelligence platform, not an advisory firm. It connects your accounts read-only through Plaid, tracks personal and business entities side by side, scores how efficiently your capital is deployed, and lets you simulate financial moves before making them. It costs a flat $29–$39 per month rather than a percentage of assets. It gives you the complete, current picture that makes your decisions — and any advisor you hire — better informed.
+IOMI is a wealth intelligence platform, not an advisory firm. It connects your accounts read-only through Plaid, tracks personal and business entities side by side, scores how efficiently your capital is deployed, and lets you simulate financial moves before making them. It costs a flat $29–$79 per month rather than a percentage of assets. It gives you the complete, current picture that makes your decisions — and any advisor you hire — better informed.
 
 ### When in the founder journey does an advisor become worth it?
 

@@ -55,7 +55,7 @@ Asset coverage matches an owner's reality: bank and wallet accounts, brokerage a
 
 On top of the picture sits the analytical layer consumer apps lack. The Capital Efficiency Score grades how well your capital is deployed — a 0–100 health check scored on liquidity, idle capital, drag, risk balance, and concentration. The Simulator models reallocations and planned cash-flow events deterministically. Projection shows the year-by-year path from today's holdings, and IOMI AI answers questions from your real numbers, never estimating when data is missing.
 
-Pricing is flat: [$29/month Personal, $39/month Business](https://iomifinance.com/pricing) at the founding rate, with a 1-month free trial and no credit card required — never a percentage of assets, no commissions, no products pushed.
+Pricing is flat: [$29/month Personal, $79/month Business](https://iomifinance.com/pricing), with a 1-month free trial and no credit card required — never a percentage of assets, no commissions, no products pushed.
 
 The honest caveat cuts the other way: IOMI is not a budgeting app. If granular spending categorization is a job you need done, IOMI is the wrong tool for that job, and one of the next two alternatives should be in your stack. The full feature-by-feature breakdown is at [iomifinance.com/compare/copilot](https://iomifinance.com/compare/copilot).
 
@@ -123,6 +123,6 @@ The mainstream tools in this article, IOMI included, connect through aggregators
 
 ### What does IOMI cost compared to Copilot?
 
-IOMI is $29/month for Personal and $39/month for Business at the founding rate (regular $79), flat — never a percentage of assets — with annual billing worth two months free and a 1-month free trial without a credit card. We do not quote other products' prices here because they change; check their pricing pages directly and compare against the job each tool does for you.
+IOMI is $29/month for Personal and $79/month for Business, flat — never a percentage of assets — with annual billing worth two months free and a 1-month free trial without a credit card. We do not quote other products' prices here because they change; check their pricing pages directly and compare against the job each tool does for you.
 
 IOMI is not a bank, broker or financial advisor. It does not custody assets, execute trades or provide personalized investment advice. All outputs are educational.

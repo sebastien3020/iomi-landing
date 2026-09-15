@@ -65,7 +65,7 @@ Now the part comparison articles usually skip: you may not need to leave Wealthf
 
 A robo-advisor and a wealth intelligence platform do different jobs, and for many self-directed people the strongest setup uses both. The diversified liquid slice stays on autopilot at Wealthfront — automation is genuinely the right tool for that slice. IOMI becomes the system of record above it: every account, every entity, every illiquid asset, one live picture, with the analysis and simulation running across the whole. The robo-advisor is a holding; the platform is the cockpit.
 
-The economics are worth stating plainly because the models differ in kind, not just in size. Wealthfront charges a percentage of the assets it manages — small, but scaling with your portfolio forever. IOMI charges a [flat subscription](https://iomifinance.com/pricing): $29/month Personal, $39/month Business at the founding rate — never a percentage of assets, no commissions, no products pushed. A flat fee for oversight of everything; a management fee only on the slice you choose to have managed. As net worth grows, that structure matters more each year.
+The economics are worth stating plainly because the models differ in kind, not just in size. Wealthfront charges a percentage of the assets it manages — small, but scaling with your portfolio forever. IOMI charges a [flat subscription](https://iomifinance.com/pricing): $29/month Personal, $79/month Business — never a percentage of assets, no commissions, no products pushed. A flat fee for oversight of everything; a management fee only on the slice you choose to have managed. As net worth grows, that structure matters more each year.
 
 When does full replacement make sense? If you are a confident self-directed investor who would rather hold a few index funds directly at a plain brokerage — a legitimate preference that saves the management fee — then the "alternative to Wealthfront" is a cheap brokerage account plus the oversight layer. The [software vs advisor framework](/blog/wealth-management-software-vs-advisor-the-2026-founders-framework) walks the broader version of that decision. What almost never makes sense is the common default: sophisticated automation on the small simple slice, and nothing at all on the large complex remainder.
 
@@ -97,7 +97,7 @@ Yes, and it is a common setup. Wealthfront automates the diversified liquid slic
 
 ### Why would I pay for IOMI when Wealthfront's fee is so low?
 
-They price different things. Wealthfront's fee is a percentage of managed assets — small, but growing with your portfolio indefinitely, and covering only what it manages. IOMI is a flat $29–$39 per month regardless of asset size, covering oversight of everything you own. For a simple all-in-one-account life, the robo fee alone may be all you need to pay. Once meaningful wealth sits outside any managed account, flat-fee oversight of the whole typically becomes the higher-value spend.
+They price different things. Wealthfront's fee is a percentage of managed assets — small, but growing with your portfolio indefinitely, and covering only what it manages. IOMI is a flat $29–$79 per month regardless of asset size, covering oversight of everything you own. For a simple all-in-one-account life, the robo fee alone may be all you need to pay. Once meaningful wealth sits outside any managed account, flat-fee oversight of the whole typically becomes the higher-value spend.
 
 ### Does Wealthfront track net worth across all my accounts?
 

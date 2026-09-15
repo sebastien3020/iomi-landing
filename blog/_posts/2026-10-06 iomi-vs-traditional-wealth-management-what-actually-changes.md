@@ -19,7 +19,7 @@ The honest question is not "which one wins?" It is "what does each one actually 
 
 ## Key Takeaways
 
-- Traditional wealth management charges a percentage of assets (typically around 1% per year); IOMI charges a flat subscription — $29/mo Personal, $39/mo Business at the founding rate — that never scales with your net worth.
+- Traditional wealth management charges a percentage of assets (typically around 1% per year); IOMI charges a flat subscription — $29/mo Personal, $79/mo Business — that never scales with your net worth.
 - Advisors report quarterly and mostly cover the assets they manage. IOMI connects 12,000+ institutions through Plaid in read-only mode and refreshes on every sync, covering bank accounts, brokerage, crypto, real estate, private equity, and collectibles.
 - Traditional advisors rarely see your business. IOMI tracks personal and business side by side in separate compartments, with a consolidated view — built for founders whose largest asset is their company.
 - IOMI replaces the "how am I doing?" conversation with the Capital Efficiency Score, a 0–100 health check across liquidity, idle capital, drag, risk balance, and concentration.
@@ -51,7 +51,7 @@ An advisor paid on assets under management has a structural reason to prefer tha
 
 ## The Fee Model: Percentage of Assets vs Flat Subscription
 
-This is the difference you can compute on a napkin. A typical advisory fee of 1% per year on a $2M portfolio is $20,000 a year — every year, growing as your assets grow. IOMI's Business plan at the $39/mo founding rate is $468 a year, and the price does not change whether you track $200k or $20M. There are no commissions and no product recommendations paid by third parties. [Pricing is public](https://iomifinance.com/pricing), annual billing gives you two months free, and the trial is one month with no credit card required.
+This is the difference you can compute on a napkin. A typical advisory fee of 1% per year on a $2M portfolio is $20,000 a year — every year, growing as your assets grow. IOMI's Business plan at the $79/mo is $468 a year, and the price does not change whether you track $200k or $20M. There are no commissions and no product recommendations paid by third parties. [Pricing is public](https://iomifinance.com/pricing), annual billing gives you two months free, and the trial is one month with no credit card required.
 
 To be fair to advisors: you are not paying 1% for software. You are paying for advice, execution, and accountability. The fee is only wasted if you were not using those things — which, in practice, is exactly the situation many self-directed founders find themselves in. They meet their advisor twice a year, make their own decisions anyway, and pay five figures for the privilege. If that pattern sounds familiar, the fee comparison stops being theoretical. The full decision framework is in [wealth management software vs advisor](/blog/wealth-management-software-vs-advisor-the-2026-founders-framework).
 
@@ -106,11 +106,11 @@ Not fully, and it does not claim to be. IOMI replaces the visibility and reporti
 
 ### How does IOMI make money if it doesn't charge a percentage of assets?
 
-A flat subscription: $29/mo for Personal and $39/mo for Business at the founding rate (regular $79), with two months free on annual billing. There are no commissions, no product pushing, and no percentage of assets — the incentive is simply to build software worth subscribing to.
+A flat subscription: $29/mo for Personal and $79/mo for Business, with two months free on annual billing. There are no commissions, no product pushing, and no percentage of assets — the incentive is simply to build software worth subscribing to.
 
 ### What does "IOMI vs traditional wealth management" mean for fees in real numbers?
 
-A 1% advisory fee on $2M is about $20,000 a year and grows with your portfolio. IOMI Business at the founding rate is $468 a year, flat, at any asset level. The comparison is only meaningful if reporting and visibility are what you were paying the advisor for — advice and execution are separate services that software does not replicate.
+A 1% advisory fee on $2M is about $20,000 a year and grows with your portfolio. IOMI Business is $468 a year, flat, at any asset level. The comparison is only meaningful if reporting and visibility are what you were paying the advisor for — advice and execution are separate services that software does not replicate.
 
 ### Can IOMI see accounts my advisor doesn't manage?
 

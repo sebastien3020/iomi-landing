@@ -139,7 +139,7 @@ The transition from a manual spreadsheet to a high-performance **financial dashb
 
 ### Choosing the Right Plan for Your Growth
 
-IOMI is designed to scale with your complexity. For those focused on foundational net worth tracking across personal accounts and basic assets, the Personal plan at $29 per month provides a sleek, unified view. It's the standard for individuals who value clarity and time. For entrepreneurs managing multiple entities, the Business plan offers a more robust suite at a founding rate of $39 per month. This tier supports up to 3 business entities and includes full QuickBooks balance syncing for real-time business health. Both plans offer a significant advantage when you choose annual billing, which grants you 2 months free. This is a commitment to your long-term compounding.
+IOMI is designed to scale with your complexity. For those focused on foundational net worth tracking across personal accounts and basic assets, the Personal plan at $29 per month provides a sleek, unified view. It's the standard for individuals who value clarity and time. For entrepreneurs managing multiple entities, the Business plan offers a more robust suite at a of $79 per month. This tier supports up to 3 business entities and includes full QuickBooks balance syncing for real-time business health. Both plans offer a significant advantage when you choose annual billing, which grants you 2 months free. This is a commitment to your long-term compounding.
 
 The most critical distinction of the IOMI model is its flat subscription structure. Traditional wealth platforms often hide behind asset-percentage fees or commissions that drain your capital as you grow. We don't. Your growth shouldn't be penalized. You pay a predictable, transparent fee for the intelligence of the platform, ensuring your capital remains yours to deploy. It's a no-nonsense approach to results that respects your bottom line.
 
@@ -187,7 +187,7 @@ A high-performance system must account for every asset class you own. IOMI provi
 
 ### How much does a professional financial dashboard cost?
 
-IOMI uses a transparent, flat subscription model with no asset-percentage fees. The Personal plan is $29 per month. The Business plan is currently offered at a founding rate of $39 per month. Choosing annual billing provides 2 months free, bringing costs down to approximately $24 and $33 per month respectively. This pricing ensures your growth isn't penalized by commissions. We provide a 1-month free trial with no credit card required to experience total oversight.
+IOMI uses a transparent, flat subscription model with no asset-percentage fees. The Personal plan is $29 per month. The Business plan is currently offered at a of $79 per month. Choosing annual billing provides 2 months free, bringing costs down to approximately $24 and $33 per month respectively. This pricing ensures your growth isn't penalized by commissions. We provide a 1-month free trial with no credit card required to experience total oversight.
 
 ![Sebastien](https://getautoseo.com/storage/author-thumbnails/site_82435_author_1787488732.jpeg)
 

@@ -81,7 +81,7 @@ Architecture answers "what can it do." Incentives answer "what will it want to d
 
 The pattern to scrutinize is free or cheap tools monetized sideways: selling aggregated data, generating leads for financial products, or steering you toward partners who pay for placement. None of this requires anything nefarious at the connection layer — the tool can be perfectly read-only and still exist primarily to market to you based on what it sees. Your financial data is not being stolen; it is being *worked*.
 
-A flat-subscription model removes that pressure. IOMI charges [$29/mo Personal, $39/mo Business](https://iomifinance.com/pricing) — never a percentage of assets, no commissions, no products being pushed — which means the product's only way to earn its fee is to be worth it to you, not to be worth *you* to an advertiser. That doesn't make any company beyond scrutiny; it means the incentive gradient points in the right direction, and you should ask the incentive question of every tool: *how does this company make money, and does that answer involve my data or my attention being sold?*
+A flat-subscription model removes that pressure. IOMI charges [$29/mo Personal, $79/mo Business](https://iomifinance.com/pricing) — never a percentage of assets, no commissions, no products being pushed — which means the product's only way to earn its fee is to be worth it to you, not to be worth *you* to an advertiser. That doesn't make any company beyond scrutiny; it means the incentive gradient points in the right direction, and you should ask the incentive question of every tool: *how does this company make money, and does that answer involve my data or my attention being sold?*
 
 ## A Trust Checklist You Can Run on Any Tool
 

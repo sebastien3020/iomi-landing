@@ -127,7 +127,7 @@ Most trackers stop at visualization. They show you what you have. They don't hel
 
 IOMI is not just another tool. It is a standard for the ambitious. While a basic **collectibles portfolio tracker** might list your watches or cars, IOMI functions as your entire personal and business net worth in one live picture. It replaces the cognitive load of fragmented data with decisive clarity. It consolidates business equity, personal cash, and alternative holdings into a single, high-performance dashboard. This is wealth intelligence built for the modern founder. It is tireless, objective, and hyper-intelligent.
 
-The Capital Efficiency Score (CES) serves as your ultimate financial health check. It moves beyond simple net worth numbers to measure how effectively your capital is working. It identifies stagnant assets. It highlights growth opportunities. It ensures your portfolio isn't just large, but efficient. For entrepreneurs managing multiple entities, this visibility is a strategic advantage. You can secure the Business plan at a founding rate of $39/mo, locked for life. It is an investment in total oversight and long-term compounding.
+The Capital Efficiency Score (CES) serves as your ultimate financial health check. It moves beyond simple net worth numbers to measure how effectively your capital is working. It identifies stagnant assets. It highlights growth opportunities. It ensures your portfolio isn't just large, but efficient. For entrepreneurs managing multiple entities, this visibility is a strategic advantage. You can secure the Business plan at a of $79/mo, locked for life. It is an investment in total oversight and long-term compounding.
 
 ### AI Suggestions for High-Achievers
 
@@ -177,7 +177,7 @@ The Business plan allows you to track up to 3 distinct business entities. Each e
 
 ### What is the difference between the Personal and Business plans?
 
-The Personal plan costs $29 per month and targets individual investors. The Business plan is built for founders and features a $39 per month founding rate. It includes unlimited business accounts, QuickBooks sync, and support for up to 3 entities. It also offers higher AI limits of 200 messages per day and priority support. Both plans include the CES and Simulator. It's wealth intelligence made for how you build.
+The Personal plan costs $29 per month and targets individual investors. The Business plan is built for founders and features a $79 per month. It includes unlimited business accounts, QuickBooks sync, and support for up to 3 entities. It also offers higher AI limits of 200 messages per day and priority support. Both plans include the CES and Simulator. It's wealth intelligence made for how you build.
 
 ![Sebastien](https://getautoseo.com/storage/author-thumbnails/site_82435_author_1787488732.jpeg)
 

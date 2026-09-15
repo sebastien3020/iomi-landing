@@ -63,7 +63,7 @@ The second bet is that a list is not an answer. On top of the tracking sits the 
 
 And the honest limits, stated as plainly as the competitors': IOMI does not do budgeting — no spending categories, no envelopes; Monarch is better at that job and this blog says so regularly. It is not a tax engine — anything with tax consequences belongs with your CPA. And its structure has a cost in simplicity: if all you want is a minimal list, Kubera's restraint may fit you better than IOMI's instrumentation.
 
-Pricing is flat by principle — [$29/month Personal, $39/month Business](https://iomifinance.com/pricing) at founding rates, never a percentage of assets, with a one-month free trial and no credit card required.
+Pricing is flat by principle — [$29/month Personal, $79/month Business](https://iomifinance.com/pricing) ats, never a percentage of assets, with a one-month free trial and no credit card required.
 
 ## The Founder's Decision Grid
 

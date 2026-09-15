@@ -132,7 +132,7 @@ The era of manual tracking is over. You need a system as ambitious as your goals
 
 ## Command Your Capital Legacy
 
-Managing a high-growth portfolio in 2026 requires more than a spreadsheet; it requires a live intelligence layer. The right wealth management software transforms disorder into oversight: it bridges liquid cash and alternative assets, replaces cognitive load with clarity, and gives you the visibility to move with speed. By focusing on your Capital Efficiency Score, you move from passive conservation to active compounding — while IOMI AI watches for idle capital as you lead your company. Transparent pricing (Personal $29/mo, Business $39/mo, one-month free trial), read-only connections, no custody. [Master your wealth with IOMI](https://iomifinance.com).
+Managing a high-growth portfolio in 2026 requires more than a spreadsheet; it requires a live intelligence layer. The right wealth management software transforms disorder into oversight: it bridges liquid cash and alternative assets, replaces cognitive load with clarity, and gives you the visibility to move with speed. By focusing on your Capital Efficiency Score, you move from passive conservation to active compounding — while IOMI AI watches for idle capital as you lead your company. Transparent pricing (Personal $29/mo, Business $79/mo, one-month free trial), read-only connections, no custody. [Master your wealth with IOMI](https://iomifinance.com).
 
 ## Frequently Asked Questions
 

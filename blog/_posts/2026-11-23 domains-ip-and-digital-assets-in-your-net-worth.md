@@ -84,7 +84,7 @@ Measurement changes behavior. Once digital assets sit on the balance sheet at ho
 
 **The estate and continuity note.** Digital assets are uniquely easy to lose at transfer: registrar accounts, wallet access, channel credentials. An inventory with values — which is what your balance sheet now is — is the foundation of making sure the assets survive you administratively. The legal structure around that is your attorney's domain.
 
-None of this happens while the assets live scattered across dashboards. All of it becomes routine once they live in one picture. That's the argument for a [flat-subscription consolidated view](https://iomifinance.com/pricing) — $29/month Personal, $39/month Business, never a percentage of assets — and you can [try the full setup free for a month](https://iomifinance.com), no credit card required: connect what connects, enter what doesn't, and see what your complete net worth actually is.
+None of this happens while the assets live scattered across dashboards. All of it becomes routine once they live in one picture. That's the argument for a [flat-subscription consolidated view](https://iomifinance.com/pricing) — $29/month Personal, $79/month Business, never a percentage of assets — and you can [try the full setup free for a month](https://iomifinance.com), no credit card required: connect what connects, enter what doesn't, and see what your complete net worth actually is.
 
 ## Frequently Asked Questions
 

@@ -85,7 +85,7 @@ Founders can build things, so the DIY itch is real. Here is the honest assessmen
 
 **The pragmatic architecture** most founders converge on: a platform as the stack — ingestion, classification, storage, analytics, simulation, query, all maintained by someone else — plus a spreadsheet as the scratchpad for custom analysis, fed by the platform's numbers rather than replacing them. You keep the engineering joy where it pays (bespoke analysis) and outsource the plumbing where it doesn't (keeping pipes alive).
 
-The economics make the decision easier than most infra choices: [IOMI is $29/month Personal, $39/month Business](https://iomifinance.com/pricing) at the founding rate — flat, never a percentage of assets — with a one-month free trial and no credit card required. Against the honest hourly cost of maintaining your own pipeline, the buy side of this build-vs-buy is unusually lopsided. Connect everything at [iomifinance.com](https://iomifinance.com) and you have a running stack before a DIY version would have finished its first schema debate.
+The economics make the decision easier than most infra choices: [IOMI is $29/month Personal, $79/month Business](https://iomifinance.com/pricing) — flat, never a percentage of assets — with a one-month free trial and no credit card required. Against the honest hourly cost of maintaining your own pipeline, the buy side of this build-vs-buy is unusually lopsided. Connect everything at [iomifinance.com](https://iomifinance.com) and you have a running stack before a DIY version would have finished its first schema debate.
 
 ## Frequently Asked Questions
 

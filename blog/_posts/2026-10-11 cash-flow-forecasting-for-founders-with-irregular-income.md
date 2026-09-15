@@ -94,7 +94,7 @@ A forecast is a living instrument, and irregular income gives it a short shelf l
 - **Glance daily, decide weekly.** A [five-minute daily review](/blog/the-daily-brief-what-a-5-minute-financial-review-looks-like) catches threshold crossings — runway below target, a planned event inside two weeks. Decisions belong in a weekly sitting with the full forecast open.
 - **Audit the fixed floor quarterly.** Fixed costs ratchet silently. A quarterly pass through the burn number is the cheapest raise you will ever give yourself.
 
-Irregular income never becomes regular. But it can become legible — a floor you trust, a runway you watch, events you saw coming, and scenarios you have already rehearsed. That is what forecasting is for. If you want the computed version over your own accounts, [IOMI's plans](https://iomifinance.com/pricing) are flat — $29/mo Personal, $39/mo Business at the founding rate — with a 1-month free trial, no credit card required.
+Irregular income never becomes regular. But it can become legible — a floor you trust, a runway you watch, events you saw coming, and scenarios you have already rehearsed. That is what forecasting is for. If you want the computed version over your own accounts, [IOMI's plans](https://iomifinance.com/pricing) are flat — $29/mo Personal, $79/mo Business — with a 1-month free trial, no credit card required.
 
 ## Frequently Asked Questions
 

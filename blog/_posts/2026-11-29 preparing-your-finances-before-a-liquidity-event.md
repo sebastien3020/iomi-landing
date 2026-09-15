@@ -91,7 +91,7 @@ The last block is behavioral. Decide now, in writing, what happens in the twelve
 
 **Your monitoring cadence.** Post-exit, your finances change shape — from one dominant illiquid asset to a portfolio that needs actual oversight. Decide the rhythm now: a daily thirty-second brief, a weekly efficiency check, a monthly review against goals. IOMI's Capital Efficiency Score is built for exactly this phase — grading deployment 0–100 across liquidity, idle capital, drag, risk balance, and concentration — because post-exit is when deployment quality starts to matter more than hustle.
 
-If you want the infrastructure in place before the event rather than after, [IOMI's free month](https://iomifinance.com) — no credit card required — is enough to build the complete picture and run the first scenarios. The [pricing](https://iomifinance.com/pricing) stays flat ($29–$39/month, never a percentage of assets), which post-exit founders tend to appreciate for structural reasons: a tool with no AUM fee has no incentive to influence what you do with the proceeds.
+If you want the infrastructure in place before the event rather than after, [IOMI's free month](https://iomifinance.com) — no credit card required — is enough to build the complete picture and run the first scenarios. The [pricing](https://iomifinance.com/pricing) stays flat ($29–$79/month, never a percentage of assets), which post-exit founders tend to appreciate for structural reasons: a tool with no AUM fee has no incentive to influence what you do with the proceeds.
 
 ## Frequently Asked Questions
 

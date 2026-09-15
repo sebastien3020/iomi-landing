@@ -173,7 +173,7 @@ No, IOMI doesn't provide personalized investment advice or financial planning se
 
 ### How much does IOMI cost for a business plan?
 
-The IOMI Business plan is currently available at a founding rate of $39 per month. This rate is locked for as long as your subscription remains active, even if the regular price returns to $79 per month. If you choose annual billing, the cost is approximately $33 per month. This plan includes support for three business entities, QuickBooks sync, and priority access to the IOMI AI assistant with 200 messages per day.
+The IOMI Business plan is currently available at a of $79 per month. This rate is locked for as long as your subscription remains active, even if the regular price returns to $79 per month. If you choose annual billing, the cost is approximately $33 per month. This plan includes support for three business entities, QuickBooks sync, and priority access to the IOMI AI assistant with 200 messages per day.
 
 ### Can I use a financial dashboard to simulate future investments?
 

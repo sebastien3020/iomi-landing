@@ -91,7 +91,7 @@ The last design decision is rhythm. A plan checked never dies in March; a plan c
 
 That is the whole of 2027 financial planning as a system: a consolidated baseline, an honest review, three wired targets, milestones against a status-quo line, and a three-speed cadence. Total setup cost: one afternoon in late December. Everything after that, the infrastructure carries.
 
-If the infrastructure is the missing piece, [IOMI's free month](https://iomifinance.com) — no credit card required — covers the entire setup window: consolidate, baseline, set the three targets, and start January measured. Plans are at [iomifinance.com/pricing](https://iomifinance.com/pricing): $29/month Personal, $39/month Business at the founding rate, flat, never a percentage of assets. The targets are yours; 2027 should get to see whether you hit them.
+If the infrastructure is the missing piece, [IOMI's free month](https://iomifinance.com) — no credit card required — covers the entire setup window: consolidate, baseline, set the three targets, and start January measured. Plans are at [iomifinance.com/pricing](https://iomifinance.com/pricing): $29/month Personal, $79/month Business, flat, never a percentage of assets. The targets are yours; 2027 should get to see whether you hit them.
 
 ## Frequently Asked Questions
 

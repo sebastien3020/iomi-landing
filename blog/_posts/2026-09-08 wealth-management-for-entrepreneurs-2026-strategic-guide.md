@@ -116,7 +116,7 @@ A high-performance AI assistant must be tireless and objective. Test the limits 
 
 IOMI is the premier **wealth management platform for entrepreneurs** who value time above all else. It is not a passive tracker. It is a high-performance strategic cockpit built for how founders actually build. While traditional systems focus on historical reporting, the IOMI Wealth Intelligence Platform provides a live, unified picture of your personal and business net worth. It replaces the cognitive load of fragmented spreadsheets with total oversight. It is tireless. It is objective. It is hyper-intelligent.
 
-Transparency is a core pillar of the IOMI experience. We don't charge asset-based fees that tax your growth. Instead, we offer simple, flat-rate SaaS pricing. The Personal tier is available at a $29/mo founding rate, while the Business tier is $39/mo. This ensures your software costs remain predictable as your capital scales. You can experience the full power of the platform with a 1-month free trial; no credit card is required to start. We also provide a 30-day money-back guarantee because we believe the logic of the system is self-evident.
+Transparency is a core pillar of the IOMI experience. We don't charge asset-based fees that tax your growth. Instead, we offer simple, flat-rate SaaS pricing. The Personal tier is available at a $29/mo, while the Business tier is $79/mo. This ensures your software costs remain predictable as your capital scales. You can experience the full power of the platform with a 1-month free trial; no credit card is required to start. We also provide a 30-day money-back guarantee because we believe the logic of the system is self-evident.
 
 ### From Data Consolidation to Actionable Suggestions
 

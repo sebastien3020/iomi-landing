@@ -100,7 +100,7 @@ The conversion is mostly connection. IOMI links 12,000+ institutions through Pla
 
 And once it is live, it starts working for you rather than the reverse. The Capital Efficiency Score reads the balance sheet's properties — liquidity, idle capital, drag, risk balance, concentration — and grades deployment 0–100, turning the static document into an evaluation. The Simulator computes what a contemplated move does to the whole picture, deterministically. IOMI AI answers balance-sheet questions — "what's my liquid total?", "how concentrated am I?" — from the real, current data, never estimating when something is missing. The document you used to rebuild annually becomes the substrate for every financial decision you make.
 
-The whole system runs [$29–$39 a month, flat](https://iomifinance.com/pricing) — never a percentage of the assets on the sheet — and the [first month is free, no credit card](https://iomifinance.com). Build the balance sheet once, properly, and never rebuild it again.
+The whole system runs [$29–$79 a month, flat](https://iomifinance.com/pricing) — never a percentage of the assets on the sheet — and the [first month is free, no credit card](https://iomifinance.com). Build the balance sheet once, properly, and never rebuild it again.
 
 ## Frequently Asked Questions
 

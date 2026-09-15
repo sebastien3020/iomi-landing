@@ -94,7 +94,7 @@ The fix is live aggregation. IOMI connects 12,000+ institutions through Plaid in
 
 On top of the structure, IOMI AI answers portfolio questions from your actual holdings — never estimating when data is missing — and the Daily Brief compresses the day's movement into a scan. **Multiple revenue streams tracking** stops being a chore you owe your spreadsheet and becomes ambient: the picture is simply there, current, whenever a decision needs it.
 
-IOMI Business is $39/month at the founding rate — flat, never a percentage of assets — and covers up to three business entities alongside your personal wealth. The trial is [a full month, free, no credit card](https://iomifinance.com/pricing). If you run more streams than you can currently see, that month will tell you things you did not know about your own portfolio.
+IOMI Business is $79/month — flat, never a percentage of assets — and covers up to three business entities alongside your personal wealth. The trial is [a full month, free, no credit card](https://iomifinance.com/pricing). If you run more streams than you can currently see, that month will tell you things you did not know about your own portfolio.
 
 ## Frequently Asked Questions
 
@@ -120,7 +120,7 @@ No. IOMI is a wealth intelligence platform: it consolidates accounts, entities, 
 
 ### How many business entities can I track in IOMI?
 
-The Business plan ($39/month at the founding rate, regular $79) supports up to 3 business entities, each as its own sealed compartment, alongside your personal wealth, with a consolidated view across everything. Personal and business are tracked side by side and never mixed. The Personal plan ($29/month) covers personal wealth without business entities.
+The Business plan ($79/month, regular $79) supports up to 3 business entities, each as its own sealed compartment, alongside your personal wealth, with a consolidated view across everything. Personal and business are tracked side by side and never mixed. The Personal plan ($29/month) covers personal wealth without business entities.
 
 ### What should I do with cash my revenue streams generate?
 

@@ -77,7 +77,7 @@ IOMI's design target is precisely the balance sheet this article is about. The h
 
 **An AI assistant with an honesty rule.** IOMI AI answers from your real holdings and never estimates when data is missing — no invented numbers, ever. (100 messages/day on Personal, 200/day with priority on Business.)
 
-**Flat pricing.** Personal $29/mo, Business $39/mo (founding rate, locked while subscribed; regular $79), annual billing gives 2 months free, and there's a 1-month free trial with no credit card. Never a percentage of assets, no commissions, no products pushed — an alignment point that matters more the larger your balance sheet gets, as the [software-versus-advisor framework](/blog/wealth-management-software-vs-advisor-the-2026-founders-framework) spells out.
+**Flat pricing.** Personal $29/mo, Business $79/mo, annual billing gives 2 months free, and there's a 1-month free trial with no credit card. Never a percentage of assets, no commissions, no products pushed — an alignment point that matters more the larger your balance sheet gets, as the [software-versus-advisor framework](/blog/wealth-management-software-vs-advisor-the-2026-founders-framework) spells out.
 
 What IOMI is *not*: a budgeting app (Monarch is better there), a robo-advisor (it never manages or moves money), or a tax engine (cost-basis and tax questions belong with your CPA).
 
@@ -122,6 +122,6 @@ No. IOMI is read-only by design: it connects through Plaid, sees balances and tr
 
 ### What does IOMI cost compared to the alternatives?
 
-IOMI Personal is $29/month and Business is $39/month (a founding rate, locked in while subscribed; the regular Business price is $79), with 2 months free on annual billing and a 1-month free trial with no credit card required. We don't quote competitors' prices here because they change; check each vendor's current pricing directly and compare against the [IOMI pricing page](https://iomifinance.com/pricing).
+IOMI Personal is $29/month and Business is $79/month (a, locked in while subscribed; the regular Business price is $79), with 2 months free on annual billing and a 1-month free trial with no credit card required. We don't quote competitors' prices here because they change; check each vendor's current pricing directly and compare against the [IOMI pricing page](https://iomifinance.com/pricing).
 
 IOMI is not a bank, broker or financial advisor. It does not custody assets, execute trades or provide personalized investment advice. All outputs are educational.

@@ -89,7 +89,7 @@ The structural differences from everything above:
 
 **An AI grounded in your data.** IOMI AI answers from your real holdings and never estimates when data is missing — 100 messages/day on Personal, 200 with priority on Business.
 
-Connections run read-only through Plaid across 12,000+ institutions: IOMI sees balances and transactions, can never move money, and never sees your credentials. [Pricing](https://iomifinance.com/pricing) is flat — $29/mo Personal, $39/mo Business at the founding rate (locked while subscribed; regular $79), annual billing gives two months free, and the 1-month trial needs no credit card. Never a percentage of assets, no commissions, nothing being sold to you.
+Connections run read-only through Plaid across 12,000+ institutions: IOMI sees balances and transactions, can never move money, and never sees your credentials. [Pricing](https://iomifinance.com/pricing) is flat — $29/mo Personal, $79/mo Business (locked while subscribed; regular $79), annual billing gives two months free, and the 1-month trial needs no credit card. Never a percentage of assets, no commissions, nothing being sold to you.
 
 The honest scoping, one more time: if your need is budgeting, Monarch is the better quicken alternative. If your need is a minimal list of assets, Kubera's restraint may suit you. IOMI earns the switch when the question behind the question is not "what do I own?" but "what should I do about it?"
 

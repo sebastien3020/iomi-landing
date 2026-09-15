@@ -93,7 +93,7 @@ Pulling the seven features together, here is the evaluation checklist worth carr
 - **Grounded AI.** Does the assistant answer from your connected data, and admit when data is missing?
 - **A daily surface.** Is there a brief you would actually read every morning?
 
-Also check the pricing model. Enterprise software habits — per-seat pricing, annual contracts negotiated by sales — do not fit a founder managing their own capital. IOMI charges a flat subscription: Personal at $29/month and Business at $39/month at the founding rate, never a percentage of assets, with no commissions and no product pushing. A 1-month free trial requires no credit card. Details are on the [pricing page](https://iomifinance.com/pricing), and the broader philosophy is covered on [Why IOMI](https://iomifinance.com/why-iomi).
+Also check the pricing model. Enterprise software habits — per-seat pricing, annual contracts negotiated by sales — do not fit a founder managing their own capital. IOMI charges a flat subscription: Personal at $29/month and Business at $79/month, never a percentage of assets, with no commissions and no product pushing. A 1-month free trial requires no credit card. Details are on the [pricing page](https://iomifinance.com/pricing), and the broader philosophy is covered on [Why IOMI](https://iomifinance.com/why-iomi).
 
 ## Getting From Zero to Operational
 
@@ -129,7 +129,7 @@ No. It replaces the spreadsheet your CFO or advisor wishes you would stop mainta
 
 ### What does an enterprise financial dashboard cost?
 
-Traditional enterprise reporting tools often price per seat or as a percentage of assets. IOMI charges a flat subscription — Personal $29/month, Business $39/month at the founding rate (regular $79) — with annual billing earning two months free. There is a 1-month free trial with no credit card required.
+Traditional enterprise reporting tools often price per seat or as a percentage of assets. IOMI charges a flat subscription — Personal $29/month, Business $79/month — with annual billing earning two months free. There is a 1-month free trial with no credit card required.
 
 ### Can the AI in a dashboard be trusted with financial questions?
 
