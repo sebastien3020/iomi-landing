@@ -6,7 +6,7 @@ status: published
 source: iomi
 target_keyword: "financial advisor for entrepreneurs"
 description: "When does a founder actually need a financial advisor, and when is software enough? A practical framework for entrepreneurs deciding where to get advice."
-hero_image: 
+hero_image: assets/finding-a-financial-advisor-for-entrepreneurs-when-you-need-one-and-when-software-is-enough.jpg
 word_count: 2456
 tags: [wealth-management]
 ---

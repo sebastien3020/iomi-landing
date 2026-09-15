@@ -4,3 +4,6 @@ node_modules
 
 previous-versions/
 login-preview/
+
+# local secrets (never committed)
+.env

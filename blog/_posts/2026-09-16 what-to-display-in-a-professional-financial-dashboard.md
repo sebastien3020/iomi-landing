@@ -6,7 +6,7 @@ status: scheduled
 source: iomi
 target_keyword: "professional financial dashboard"
 description: "The metrics a professional financial dashboard should show — and the noise it should drop. A layer-by-layer blueprint for founders and operators in 2026."
-hero_image: 
+hero_image: assets/what-to-display-in-a-professional-financial-dashboard.jpg
 word_count: 2312
 tags: [dashboards]
 ---

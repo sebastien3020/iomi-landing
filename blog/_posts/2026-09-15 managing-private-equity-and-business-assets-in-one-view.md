@@ -6,7 +6,7 @@ status: scheduled
 source: iomi
 target_keyword: "private equity tracking software"
 description: "Why founders need private equity tracking software that holds company stakes, LLCs, and angel positions next to liquid assets — and how to set it up properly."
-hero_image: 
+hero_image: assets/managing-private-equity-and-business-assets-in-one-view.jpg
 word_count: 2386
 tags: [asset-consolidation]
 ---

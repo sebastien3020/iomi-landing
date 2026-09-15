@@ -6,7 +6,7 @@ status: published
 source: iomi
 target_keyword: "best net worth tracker"
 description: "What separates the best net worth tracker from a pretty balance page in 2026: full asset coverage, entity separation, and intelligence that tells you what to do next."
-hero_image: 
+hero_image: assets/the-best-net-worth-tracker-for-high-achievers-in-2026.jpg
 word_count: 2239
 tags: [net-worth]
 ---

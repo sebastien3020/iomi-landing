@@ -97,9 +97,15 @@
 <!-- blog:auto -->
   <url>
     <loc>https://www.iomifinance.com/blog</loc>
-    <lastmod>2026-09-14</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.iomifinance.com/blog/managing-private-equity-and-business-assets-in-one-view</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.iomifinance.com/blog/how-to-improve-your-capital-efficiency-score</loc>
