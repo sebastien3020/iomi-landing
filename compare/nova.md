@@ -15,7 +15,7 @@ Nova Net Worth is the closest tool to IOMI by positioning: an "agentic balance s
 ## Pricing
 
 - Nova Net Worth: $15/month, single plan, 14-day trial.
-- IOMI: Personal $29/month, Business $39/month founding rate ($79 regular), 1-month free trial, no credit card, 30-day money-back guarantee on the first paid month.
+- IOMI: Personal $29/month, Business $79/month, 1-month free trial, no credit card, 30-day money-back guarantee on the first paid month.
 
 ## Who should pick which
 
