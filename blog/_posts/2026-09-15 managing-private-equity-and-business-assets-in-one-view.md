@@ -2,7 +2,7 @@
 title: "Managing Private Equity and Business Assets in One View"
 slug: managing-private-equity-and-business-assets-in-one-view
 date: 2026-09-15
-status: scheduled
+status: published
 source: iomi
 target_keyword: "private equity tracking software"
 description: "Why founders need private equity tracking software that holds company stakes, LLCs, and angel positions next to liquid assets — and how to set it up properly."
